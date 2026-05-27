@@ -1,0 +1,98 @@
+{
+  "Publishers": [
+    {
+      "Id": "687089a4-28f3-420d-9b73-853e924c3a6e",
+      "Name": "Publisher",
+      "ConnectionSecret": "",
+      "DataSets": [
+        {
+          "Name": "SparkPlugEnabledDataSet",
+          "Fields": [
+            {
+              "Name": "Id",
+              "DataType": "System.Guid",
+              "Query": "item.GlobalId",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Name",
+              "DataType": "System.String",
+              "Query": "item.Node.Name",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "DeviceId",
+              "DataType": "System.Guid",
+              "Query": "item.Node.getProperty<Guid>(\"DeviceId\")",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "TimeStamp",
+              "DataType": "System.DateTime",
+              "Query": "item.TimeStamp",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Value",
+              "DataType": "System.Object",
+              "Query": "item.Value",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "DataType",
+              "DataType": "System.Type",
+              "Query": "item.Node.DataType",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "SparkPlug:DeviceNodeId",
+              "DataType": "System.String",
+              "Query": "item.Node.getProperty<String>(\"SparkPlug:DeviceNodeId\")",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "SparkPlug:EdgeNodeId",
+              "DataType": "System.String",
+              "Query": "item.Node.getProperty<String>(\"SparkPlug:EdgeNodeId\")",
+              "Tag": "",
+              "Properties": {}
+            }
+          ],
+          "NodeFilter": "node.hasProperty<bool>(\"EnableSparkPlug\", true)",
+          "Tag": "",
+          "Type": "DataNode",
+          "Properties": {}
+        }
+      ],
+      "NetworkTimeout": 30000.0,
+      "PayloadScriptFile": "",
+      "Address": "localhost",
+      "CleanSession": true,
+      "ClientCaCertificateFile": "",
+      "ClientCertificateFile": "",
+      "ClientCertificatePassword": "",
+      "Password": "",
+      "Username": "",
+      "GroupId": "DeviceGroup1",
+      "EdgeNodeId": "",
+      "MqttProtocolVersion": "V500",
+      "ProcessOnlyValidData": true,
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "925aa5c8-d7c4-4d6b-a26a-3e101fc8e90f",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "3dda3f32-4d2d-486d-a359-278be3079011",
+        "Properties": {}
+      }
+    }
+  ],
+  "Properties": {}
+}

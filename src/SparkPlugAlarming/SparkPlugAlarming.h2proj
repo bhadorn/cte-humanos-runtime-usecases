@@ -1,0 +1,136 @@
+{
+  "Path": "SparkPlugAlarming.h2proj",
+  "Name": "SparkPlugAlarming",
+  "Description": "Example show how Alarms of a control can be processed and passed to SparkPlug Clients",
+  "Author": "CyberTech Engineering GmbH",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+      "Path": "FanucAlarms_v1.json",
+      "Id": "24af8236-c06f-49b0-9d98-cc38274001b0",
+      "Name": "FanucAlarms_v1",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n63303733376366313832626338313437343236313466346433326235613363393634323832336134\r\n3530633565316138366362393336383064393861613931640a376339663735306634386331393534\r\n32613561316363336133373934643130653266633066303132623831363762343334343665616537\r\n6333643432626566300a373661303630376637613863646664393661383663613139363235323236\r\n38663863633930383634343361623261656232633036356335386239636565393864306464633034\r\n3966636631313032326134393630333066373633323436663936\r\n"
+      }
+    ],
+    "Id": "02b51aa9-c2ba-4f83-aecf-8ca3024949ff",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "2402240b-8b30-41d0-8662-afe046fb8f8c",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.10",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "2402240b-8b30-41d0-8662-afe046fb8f8c",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.10"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "192.168.0.1:8193",
+          "DeviceTemplateId": "24af8236-c06f-49b0-9d98-cc38274001b0",
+          "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "SubDevices": [],
+          "Type": "0i-TD",
+          "Variables": [],
+          "Path": "FANUC Rack.json",
+          "Id": "2fae8db7-c389-401c-a50b-6d9db5f3ca80",
+          "Name": "FANUC Rack",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "AlarmProcessorScript.cs",
+              "Id": "6092263a-7961-461c-a528-45ca4355384d",
+              "Name": "AlarmProcessorScript.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.FanucControl",
+          "Id": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "Name": "HumanOS.UHAL.FanucControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.SparkPlugClient",
+          "Id": "5aee79b6-1f80-4dd4-8cdd-3e085b9b9250",
+          "Name": "HumanOS.PeSeL.SparkPlugClient",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
