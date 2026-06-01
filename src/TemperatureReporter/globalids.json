@@ -1,0 +1,27 @@
+{
+  "FileName": "c:\\temp\\hos2\\temperaturereporter\\globalids.json",
+  "Ids": {
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1": "5bbb4e5f-973f-4cd2-9185-39686117aaf1",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Temperature1": "a29c1db1-7377-4cae-b525-35c7e1cf1344",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Temperature2": "2101f833-5490-44a0-978d-a493fdaf15f3",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Alert": "b6421aa9-a90e-4a54-b9e8-1d5f3f2ce5d0",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/ProcessingNetwork": "a0fab534-5331-4212-b354-2159394d5afa",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/ProcessingNetwork/TempReportProcessor": "083f5597-2479-4b27-b9b5-84842482985c",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Port Matching Rule": "8c840797-f523-48c9-8f65-52066444afdd",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Temperature": "90daece5-d899-48d0-a582-7e83e242def1",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Alert50": "b30c78a3-067e-4b1b-8d43-c76740c3b475",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Alert60": "f56a024c-1365-4cba-9658-62ef336a8a01",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Alert70": "65baa74e-bc13-4d8c-983c-e4e59d6857a9",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/ProcessingNetwork/Temp50Processor": "5b467ae9-74c2-4f43-86a2-31cb48e13f99",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/ProcessingNetwork/Temp60Processor": "61150cb3-ad97-4e41-9941-a1079515847a",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/ProcessingNetwork/Temp70Processor": "f53e9eea-c52a-410d-99b8-456f377a523f",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/ProcessingNetwork/AlertProcessor": "00b4e8b6-1043-4d01-adaa-a8d6c84ecf3f",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Temperature60Out": "e3d7c90a-2738-4be6-8a16-39f57ec51912",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Alerts": "2f01a151-e4c0-416e-946b-c883f00c03a1",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Alerts/Alert50": "16768ac8-9209-45ce-a8fe-befbcb9be3a6",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Alerts/Alert60": "71f917bd-f568-4103-8912-cd23cceab0c9",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Alerts/Alert70": "3ee6a318-9a47-4516-b9b7-a8f780c0cfd0",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Reports": "38fcd251-bbda-498e-b086-1e7a5fd0304e",
+    "be6b4b10-c67d-418e-b5be-3128048c105f/Simulator_v1/Reports/Temperature60Out": "895b0f09-32a6-4403-a69e-49f44a20753c"
+  }
+}

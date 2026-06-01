@@ -1,0 +1,135 @@
+{
+  "Path": "TemperatureReporter.h2proj",
+  "Name": "TemperatureReporter",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "Simulator_v1.json",
+      "Id": "3eda33c5-5ebc-44d1-84e4-917e52b060b8",
+      "Name": "Simulator_v1",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n64656664326332363438616566623937336431333563356466626466383638613630383261663633\r\n3338643366626561396435313030636262653332626230640a326433653034613137663465633439\r\n63373161643032626131376232633264333838633166336134363864366638666161353139386531\r\n3062653136643231390a346231633163626633616664653962643731613665386563633935636637\r\n63333530343261306235623632643565313732323736616464643130663364346435666230343764\r\n3130626666643163323963643562326430343338366335633263\r\n"
+      }
+    ],
+    "Id": "96ee1962-b8cb-4668-895b-648294cb22c5",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "c37d26b9-1ef3-4a8b-90db-f5302446a6a1",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "c37d26b9-1ef3-4a8b-90db-f5302446a6a1",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.11",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "..\\..\\..\\Simulator.json",
+          "DeviceTemplateId": "3eda33c5-5ebc-44d1-84e4-917e52b060b8",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "JSON",
+          "Variables": [],
+          "Path": "Simulator.json",
+          "Id": "be6b4b10-c67d-418e-b5be-3128048c105f",
+          "Name": "Simulator",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "AlertProcessingScript.cs",
+              "Id": "17263a7b-4de8-4113-833a-59f5fc438921",
+              "Name": "AlertProcessingScript.cs",
+              "Description": ""
+            },
+            {
+              "Path": "ReportProcessingScript.cs",
+              "Id": "c93887f1-12d6-4c15-8dfa-f2ba16033c46",
+              "Name": "ReportProcessingScript.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.FileReader",
+          "Id": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "Name": "HumanOS.UHAL.FileReader",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

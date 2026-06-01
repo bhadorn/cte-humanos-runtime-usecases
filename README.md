@@ -18,6 +18,7 @@ Further, following tools might support you:
 ## Use Cases
 
 - [SparkPlug Configuration for Alarming](./src/SparkPlugAlarming/Readme.md)
+- [Temperature Reporting using Threshold Triggers](./src/TemperatureReporter/Readme.md)
 
 ## HumanOS Runtime
 

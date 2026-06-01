@@ -171,7 +171,7 @@
           "InitialData": [
             "AlarmProcessorScript.cs"
           ],
-          "SamplingRate": 10.0,
+          "SamplingRate": 30.0,
           "Type": "CSharpScriptProcessingNode",
           "Ports": [
             {
