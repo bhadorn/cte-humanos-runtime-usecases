@@ -1,10 +1,17 @@
+---
+id: usecase-sparkplug-alarming
+title: "Use Case: SparkPlug Configuration for Alarming"
+subject: "FANUC Alarm Forwarding via MQTT SparkPlug B"
+keywords: [HumanOS, FANUC, SparkPlug, SparkPlug B, MQTT, alarming, alarm forwarding, FanucControl, IoT messaging]
+---
+
 # SparkPlug Configuration for Alarming
 
 Demonstrates how to forward machine alarms from a **FANUC** controller to MQTT clients using the **SparkPlug B** protocol. The SparkPlug standard does not define a dedicated alarm message type, so this use case encodes active alarms as a JSON array and transmits it as a regular SparkPlug metric that updates whenever the alarm state changes.
 
 ## Architecture
 
-```
+```text
 FANUC Controller (192.168.0.1:8193)
         │  FanucControl connector
         ▼
@@ -32,6 +39,7 @@ SparkPlug Client  →  MQTT Broker  →  SparkPlug subscribers
 ### Device Template — `FanucAlarms_v1.json`
 
 Configures:
+
 - A **FANUC Rack** device connecting to the controller via the FanucControl connector
 - An **AlarmEvent Pool Node** that subscribes to machine alarms from the controller
 - A **System Alarm Task** that activates the alarm collection pipeline
@@ -43,9 +51,10 @@ Configures:
 Runs on a 30-second cycle. Reads all active alarms from the AlarmEvent Pool, serializes them into a JSON array (preserving alarm code, message, and severity), and writes the result to the output port connected to the alarm stream data node.
 
 Example output:
+
 ```json
 [
-  { "Code": 1001, "Message": "Servo alarm: axis 1", "Severity": "High" },
+  { "Code": 1001, "Message": "Servo alarm: axis 1",         "Severity": "High"   },
   { "Code": 2005, "Message": "Overtravel: axis 2 positive", "Severity": "Medium" }
 ]
 ```

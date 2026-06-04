@@ -1,10 +1,17 @@
+---
+id: usecase-sinumerik-powerline
+title: "Use Case: Sinumerik 840D PowerLine"
+subject: "CNC DNC Communication and OEE/MDE Data Acquisition"
+keywords: [HumanOS, Siemens, Sinumerik, 840D, DNC, OEE, MDE, CNC, SinumerikControl, NC programs, tool data]
+---
+
 # Sinumerik 840D PowerLine
 
 Shows how to connect a **Siemens Sinumerik 840D PL** CNC controller to HumanOS using the SinumerikControl connector. The project provides two independent device templates covering the two most common integration scenarios: DNC file exchange and production data acquisition (OEE/MDE).
 
 ## Architecture
 
-```
+```text
 Sinumerik 840D PL (s840d.pl://<ip>)
         │
         │  SinumerikControl connector

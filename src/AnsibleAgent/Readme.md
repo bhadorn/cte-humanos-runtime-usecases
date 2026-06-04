@@ -1,10 +1,17 @@
+---
+id: usecase-ansible-agent
+title: "Use Case: Ansible Agent"
+subject: "IT Automation via Semaphore REST API and HumanOS Workflows"
+keywords: [HumanOS, Ansible, Semaphore, REST API, WebControl, workflow, ICT automation, job orchestration]
+---
+
 # Ansible Agent
 
 Integrates [Ansible Semaphore](https://semaphoreui.com) — an open-source web UI and REST API wrapper for Ansible — into HumanOS Platform Pipelines. The agent provisions all required Semaphore resources (project, repository, environment, inventory, SSH key, playbook template) on the fly, starts a task, polls for completion, and returns structured JSON feedback to the HumanOS workflow engine.
 
 ## Architecture
 
-```
+```text
 HumanOS Workflow
       │
       ▼
@@ -36,32 +43,33 @@ Defines the REST API interface using the **WebControl connector**. Each command 
 
 ### Scripts (WebControl plugin)
 
-| Script | Purpose |
-|---|---|
-| `Login.cs` | Authenticates with Semaphore and parses the session cookie |
-| `Logout.cs` | Terminates the Semaphore session |
-| `GetProjectByName.cs` | Looks up a project by name, returns its ID |
-| `CreateProject.cs` | Creates a new Semaphore project |
-| `GetRepositoryByName.cs` / `CreateOrUpdateRepository.cs` | Manages Git repository entries |
-| `GetEnvironmentByName.cs` / `CreateOrUpdateEnvironment.cs` | Manages environment variable sets |
-| `GetInventoryByName.cs` / `CreateOrUpdateInventory.cs` | Manages dynamic Ansible inventories |
-| `GetKeyByName.cs` / `CreateOrUpdateKey.cs` | Manages SSH keys (stored Base64-encoded) |
-| `GetTemplateByName.cs` / `CreateOrUpdateTemplate.cs` | Manages playbook template definitions |
-| `StartTask.cs` | Launches a Semaphore task, returns the integer task ID |
-| `GetTaskStatus.cs` | Retrieves current task status |
-| `GetTaskOutput.cs` | Retrieves raw task log output |
+| Script                                                       | Purpose                                                    |
+| :----------------------------------------------------------- | :--------------------------------------------------------  |
+| `Login.cs`                                                   | Authenticates with Semaphore and parses the session cookie |
+| `Logout.cs`                                                  | Terminates the Semaphore session                           |
+| `GetProjectByName.cs`                                        | Looks up a project by name, returns its ID                 |
+| `CreateProject.cs`                                           | Creates a new Semaphore project                            |
+| `GetRepositoryByName.cs` / `CreateOrUpdateRepository.cs`     | Manages Git repository entries                             |
+| `GetEnvironmentByName.cs` / `CreateOrUpdateEnvironment.cs`   | Manages environment variable sets                          |
+| `GetInventoryByName.cs` / `CreateOrUpdateInventory.cs`       | Manages dynamic Ansible inventories                        |
+| `GetKeyByName.cs` / `CreateOrUpdateKey.cs`                   | Manages SSH keys (stored Base64-encoded)                   |
+| `GetTemplateByName.cs` / `CreateOrUpdateTemplate.cs`         | Manages playbook template definitions                      |
+| `StartTask.cs`                                               | Launches a Semaphore task, returns the integer task ID     |
+| `GetTaskStatus.cs`                                           | Retrieves current task status                              |
+| `GetTaskOutput.cs`                                           | Retrieves raw task log output                              |
 
 ### Orchestration Scripts
 
-| Script | Purpose |
-|---|---|
-| `UHAL_StartJob.cs` | Full idempotent setup: logs in, ensures all Semaphore resources exist, starts the task |
+| Script                 | Purpose                                                                                |
+| :--------------------- | :------------------------------------------------------------------------------------- |
+| `UHAL_StartJob.cs`     | Full idempotent setup: logs in, ensures all Semaphore resources exist, starts the task |
 | `UHAL_GetJobStatus.cs` | Polls task status with authenticated session; returns `running`, `success`, or `error` |
-| `UHAL_GetJobOutput.cs` | Extracts JSON-structured feedback from task log output |
+| `UHAL_GetJobOutput.cs` | Extracts JSON-structured feedback from task log output                                 |
 
 ### Workflow — `JobOperation.cs`
 
 An async HumanOS workflow that:
+
 1. Calls `UHAL_StartJob` to provision resources and start the task
 2. Polls `UHAL_GetJobStatus` until the task completes or fails
 3. Calls `UHAL_GetJobOutput` and stores the result in the HumanOS data model

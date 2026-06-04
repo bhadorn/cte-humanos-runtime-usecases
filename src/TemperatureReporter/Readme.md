@@ -1,3 +1,10 @@
+---
+id: usecase-temperature-reporter
+title: "Use Case: Temperature Reporting using Threshold Triggers"
+subject: "Threshold-Based Alerting with OnThreshold Triggers and TThresholdCalculator"
+keywords: [HumanOS, threshold, OnThreshold, alerting, temperature, TThresholdCalculator, triggers, hysteresis, FileReader]
+---
+
 # Temperature Reporting using Threshold Triggers
 
 Demonstrates the **OnThreshold trigger type** in HumanOS data nodes and processing ports. Instead of polling on a fixed interval, data is forwarded only when a value crosses a configured threshold — reducing unnecessary processing and network traffic. The use case also shows how to implement multiple alert levels using the `TThresholdCalculator` helper class.
@@ -6,7 +13,7 @@ A **file-based simulator** is included, so no physical hardware is required to r
 
 ## Architecture
 
-```
+```text
 Simulator (JSON file, FileReader plugin)
         │  reads temperature value
         ▼
@@ -48,11 +55,11 @@ In this example the data node fires at 50 °C (alarm on) and resets at 48 °C (h
 
 A built-in HumanOS helper class that tracks whether a value is currently above or below a threshold, including hysteresis. The `AlertProcessingScript` instantiates one calculator per alert level:
 
-| Instance | Threshold | Hysteresis |
-|---|---|---|
-| `_alert1` | 50 °C | threshold − 2 °C |
-| `_alert2` | 60 °C | threshold − 2 °C |
-| `_alert3` | 70 °C | threshold − 2 °C |
+| Instance  | Threshold | Hysteresis        |
+| :-------- | :-------: | :---------------- |
+| `_alert1` |   50 °C   | threshold − 2 °C  |
+| `_alert2` |   60 °C   | threshold − 2 °C  |
+| `_alert3` |   70 °C   | threshold − 2 °C  |
 
 Each calculator independently reports whether the temperature is currently in the alert zone, allowing fine-grained alert management without manual state tracking.
 

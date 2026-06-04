@@ -1,10 +1,17 @@
+---
+id: usecase-fraisa-toolexpert
+title: "Use Case: Fraisa ToolExpert"
+subject: "Cloud REST API Integration via WebControl, Exposed as OPC-UA Service"
+keywords: [HumanOS, Fraisa, ToolExpert, REST API, WebControl, OPC-UA, tool data, article number]
+---
+
 # Fraisa ToolExpert
 
 Demonstrates how to expose a third-party cloud REST API as an OPC-UA service using HumanOS. The use case queries the [FRAISA ToolExpert](https://toolexpert.fraisa.com) product database by article number and makes the structured tool data available to OPC-UA clients.
 
 ## Architecture
 
-```
+```text
 OPC-UA Client
       │  (calls OPC-UA command node)
       ▼
@@ -35,6 +42,7 @@ Defines one command node that accepts an article number as input and returns the
 ### Script — `ToolExpert_ImportResourceData.cs`
 
 A `TAbstractHttpScriptObject`-based script that:
+
 1. Receives the article number (e.g. `P527930`) as input argument
 2. Sends an HTTP GET request to the FRAISA ToolExpert API
 3. Parses the JSON response and extracts product data fields
