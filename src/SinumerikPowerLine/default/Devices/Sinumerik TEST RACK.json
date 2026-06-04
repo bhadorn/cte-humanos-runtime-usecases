@@ -1,0 +1,905 @@
+{
+  "Id": "3d3e3bcc-0b4e-45eb-8d57-4005a88d365b",
+  "Name": "Sinumerik TEST RACK",
+  "DriverId": "b657332c-a383-47ee-bedd-6156af9c9083",
+  "Address": "s840d.pl://10.1.6.2?nck-mpi=3",
+  "Properties": [
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "mtc:DeviceId",
+      "DataType": "System.String",
+      "Value": "Machine_1"
+    },
+    {
+      "Name": "mtc:DeviceName",
+      "DataType": "System.String",
+      "Value": "Machine1"
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "840D PL"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "46e4466e-f8f6-4199-9660-fc0afe72bc8e",
+      "Name": "Available",
+      "Address": "/Global/Available",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "Receive": true
+      },
+      "Properties": [
+        {
+          "Name": "EnableAzureIoT",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableInflux",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableMqtt",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "mtc:DataItemId",
+          "DataType": "System.String",
+          "Value": "Lavail"
+        },
+        {
+          "Name": "mtc:InformationType",
+          "DataType": "System.String",
+          "Value": "AVAILABILITY"
+        },
+        {
+          "Name": "mtc:Values",
+          "DataType": "System.String",
+          "Value": "1=AVAILABLE;*=NOT_AVAILABLE"
+        },
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "AvailableType"
+        },
+        {
+          "Name": "EnableRest",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableRmq",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    },
+    {
+      "Id": "07e36b7e-a54d-4017-9768-47d8ffdc0fcb",
+      "Name": "SignOfLife",
+      "Address": "/Global/SignOfLife",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "Receive": true
+      },
+      "Properties": [
+        {
+          "Name": "EnableAzureIoT",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableInflux",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableMqtt",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableRest",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableRmq",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "fe1c3b94-6667-4708-988c-884d2ed06040",
+      "Name": "Controller",
+      "Properties": [
+        {
+          "Name": "mtc:ComponentName",
+          "DataType": "System.String",
+          "Value": "Controller"
+        },
+        {
+          "Name": "mtc:ComponentId",
+          "DataType": "System.String",
+          "Value": "Lct1"
+        }
+      ],
+      "DataNodes": [
+        {
+          "Id": "18c14239-077b-47be-864b-c9fdc5a17129",
+          "Name": "OperationMode",
+          "Address": "/Bag/State/opMode[u1]",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "mtc:DataItemId",
+              "DataType": "System.String",
+              "Value": "Lpmode"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "CONTROLLER_MODE"
+            },
+            {
+              "Name": "mtc:Values",
+              "DataType": "System.String",
+              "Value": "0=MANUAL_DATA_INPUT;1=AUTOMATIC;*=MANUAL"
+            },
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "OperationModeType"
+            },
+            {
+              "Name": "EnableAzureIoT",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableInflux",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableMqtt",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRest",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRmq",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "Id": "fb72eb12-b9e5-469b-9466-3d0d1e9864bb",
+          "Name": "RunningState",
+          "Address": "/Channel/State/acProg[u1,1]",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "mtc:DataItemId",
+              "DataType": "System.String",
+              "Value": "Lpexecution"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "EXECUTION"
+            },
+            {
+              "Name": "mtc:Values",
+              "DataType": "System.String",
+              "Value": "*=PROGRAM_STOPPED;2=FEED_HOLD;3=ACTIVE"
+            },
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "RunningStateType"
+            },
+            {
+              "Name": "EnableAzureIoT",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableInflux",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableMqtt",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRest",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRmq",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "Id": "ad8142df-37a5-4cce-b2c3-19a0678ac376",
+          "Name": "DataGud",
+          "Address": "SGUD/CC_ADAS_VALUE[1]",
+          "DataType": "System.Double",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": [
+        {
+          "Id": "2ecf69d1-e33f-41f1-8392-9963bb7b1140",
+          "Name": "NCPath1",
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/Controller/NCPath1"
+            }
+          ],
+          "DataNodes": [
+            {
+              "Id": "b1ac300b-1a82-4bb3-bedc-9a156df3d356",
+              "Name": "CurrentNcBlock",
+              "Address": "/Channel/ProgramInfo/actBlockA[u1,1]",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "Receive": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "923a3b9c-692a-4a25-af27-f0fcc7dd3ca2",
+              "Name": "CurrentProgram",
+              "Address": "/Channel/ProgramInfo/progName[u1]",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "Receive": true
+              },
+              "Properties": [
+                {
+                  "Name": "mtc:DataItemId",
+                  "DataType": "System.String",
+                  "Value": "Lpprogram"
+                },
+                {
+                  "Name": "mtc:InformationSubType",
+                  "DataType": "System.String",
+                  "Value": "x:ACTUAL"
+                },
+                {
+                  "Name": "mtc:InformationType",
+                  "DataType": "System.String",
+                  "Value": "PROGRAM"
+                },
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "CurrentProgramType"
+                }
+              ]
+            },
+            {
+              "Id": "a39ee5a8-cf86-43b8-b5d2-7b3ea341b045",
+              "Name": "CurrentSequenceNr",
+              "Address": "/Channel/ProgramInfo/blockNoStr[u1]",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "Receive": true
+              },
+              "Properties": [
+                {
+                  "Name": "mtc:DataItemId",
+                  "DataType": "System.String",
+                  "Value": "seq"
+                },
+                {
+                  "Name": "mtc:InformationType",
+                  "DataType": "System.String",
+                  "Value": "SEQUENCE_NUMBER"
+                }
+              ]
+            },
+            {
+              "Id": "4eea62fb-5d85-4404-b12c-a447c9c37dd5",
+              "Name": "CurrentToolId",
+              "Address": "/Channel/State/actTNumberLong[u1,1]",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "Receive": true
+              },
+              "Properties": [
+                {
+                  "Name": "mtc:DataItemId",
+                  "DataType": "System.String",
+                  "Value": "tid"
+                },
+                {
+                  "Name": "mtc:InformationType",
+                  "DataType": "System.String",
+                  "Value": "TOOL_NUMBER"
+                }
+              ]
+            },
+            {
+              "Id": "56cce40c-a2da-4b1a-a9dc-db07cd721b09",
+              "Name": "MainProgram",
+              "Address": "/Channel/ProgramPointer/progNameVL[u1,1]",
+              "DataType": "System.String",
+              "Unit": "",
+              "Disabled": true,
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "EnableAzureIoT",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "EnableInflux",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "EnableMqtt",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "EnableRest",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "EnableRmq",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "MainProgramType"
+                }
+              ]
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [
+            {
+              "Id": "6af4e948-15de-429c-a3c1-bd2fe603b3a2",
+              "Name": "OpenFileStream",
+              "Address": "OpenFileStream",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "AccessMode",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                },
+                {
+                  "Name": "AsyncToken",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                },
+                {
+                  "Name": "Handle",
+                  "Type": "Output",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                },
+                {
+                  "Name": "Name",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/OpenFileStream"
+                }
+              ]
+            },
+            {
+              "Id": "23df1766-4787-423b-ab20-213d09d13402",
+              "Name": "CloseFileStream",
+              "Address": "CloseFileStream",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "AsyncToken",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                },
+                {
+                  "Name": "Handle",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/CloseFileStream"
+                }
+              ]
+            },
+            {
+              "Id": "2f68c842-e98d-40e2-833f-a813f8a19022",
+              "Name": "GetFileStreamStatus",
+              "Address": "GetFileStreamStatus",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "Type": "Output",
+                  "DataType": "System.String",
+                  "Description": "JSON formatted string"
+                },
+                {
+                  "Name": "Handle",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/GetFileStreamStatus"
+                }
+              ]
+            },
+            {
+              "Id": "81c98c58-a243-4569-9a3d-dc8407604739",
+              "Name": "ReadFileStream",
+              "Address": "ReadFileStream",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "Type": "Output",
+                  "DataType": "System.Byte[]",
+                  "Description": ""
+                },
+                {
+                  "Name": "Handle",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                },
+                {
+                  "Name": "LastContent",
+                  "Type": "Output",
+                  "DataType": "System.Boolean",
+                  "Description": ""
+                },
+                {
+                  "Name": "MaxBytes",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/ReadFileStream"
+                }
+              ]
+            },
+            {
+              "Id": "4c67225d-d6c5-476a-ba80-3e02270a29cf",
+              "Name": "WriteFileStream",
+              "Address": "WriteFileStream",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "DataType": "System.Byte[]",
+                  "Description": ""
+                },
+                {
+                  "Name": "Handle",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/WriteFileStream"
+                }
+              ]
+            },
+            {
+              "Id": "710ea356-b4ff-405f-bab3-283cf1d8888a",
+              "Name": "ReadDirectory",
+              "Address": "ReadDirectory",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "Type": "Output",
+                  "DataType": "System.String",
+                  "Description": ""
+                },
+                {
+                  "Name": "Name",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/ReadDirectory"
+                }
+              ]
+            },
+            {
+              "Id": "5b525cd7-8830-40b8-b0f6-ff35bb3fa21a",
+              "Name": "ReadFile",
+              "Address": "ReadNcFile",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "Type": "Output",
+                  "DataType": "System.String",
+                  "Description": ""
+                },
+                {
+                  "Name": "Name",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/ReadFile"
+                }
+              ]
+            },
+            {
+              "Id": "6c1ea1a1-5549-4cf1-a74e-0b32ac9b104b",
+              "Name": "WriteFile",
+              "Address": "WriteNcFile",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "DataType": "System.String",
+                  "Description": ""
+                },
+                {
+                  "Name": "Name",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/WriteFile"
+                }
+              ]
+            },
+            {
+              "Id": "5e78804e-e0d2-4f73-8665-5c6aecf027c7",
+              "Name": "DeleteFile",
+              "Address": "DeleteFile",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Name",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/DeleteFile"
+                }
+              ]
+            },
+            {
+              "Id": "b8ebd8c9-acfc-4549-bda1-0002f38a3839",
+              "Name": "DeleteDirectory",
+              "Address": "DeleteDirectory",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Name",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/DeleteDirectory"
+                }
+              ]
+            },
+            {
+              "Id": "3e2a2dab-191f-4b0f-9ba1-802f52383dea",
+              "Name": "MakeDirectory",
+              "Address": "CreateDirectory",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Name",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/MakeDirectory"
+                }
+              ]
+            },
+            {
+              "Id": "cfeb98cd-247e-4b43-ad9f-0162f85d1524",
+              "Name": "GetCurrentDirectory",
+              "Address": "GetCurrentDirectory",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Name",
+                  "Type": "Output",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/GetCurrentDirectory"
+                }
+              ]
+            },
+            {
+              "Id": "13185f03-e8f5-428c-aa4b-366f506c1654",
+              "Name": "SetCurrentDirectory",
+              "Address": "ChangeDirectory",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "Name",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/SetCurrentDirectory"
+                }
+              ]
+            },
+            {
+              "Id": "2d100101-9b78-46ed-b690-6ee80a859d4e",
+              "Name": "ReadToolRecord",
+              "Address": "Nc1.ReadToolRecord",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Disabled": true,
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "Type": "Output",
+                  "DataType": "System.String",
+                  "Description": ""
+                },
+                {
+                  "Name": "ToolId",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/ReadToolRecord"
+                }
+              ]
+            },
+            {
+              "Id": "24d14ee6-d184-457f-b7ac-600d59d352d1",
+              "Name": "WriteToolRecord",
+              "Address": "Nc1.WriteToolRecord",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Disabled": true,
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "DataType": "System.String",
+                  "Description": ""
+                },
+                {
+                  "Name": "ToolId",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/WriteToolRecord"
+                }
+              ]
+            },
+            {
+              "Id": "ed688a5a-4f3b-44e8-ae9b-b373399fa0ed",
+              "Name": "CreateToolRecord",
+              "Address": "Nc1.CreateToolRecord",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Disabled": true,
+              "Arguments": [
+                {
+                  "Name": "Content",
+                  "DataType": "System.String",
+                  "Description": ""
+                },
+                {
+                  "Name": "ToolId",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/CreateToolRecord"
+                }
+              ]
+            },
+            {
+              "Id": "937b3c30-a77a-4d68-9ac7-13a033934722",
+              "Name": "DeleteToolRecord",
+              "Address": "Nc1.DeleteToolRecord",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Disabled": true,
+              "Arguments": [
+                {
+                  "Name": "ToolId",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/Controller/NCPath1/DeleteToolRecord"
+                }
+              ]
+            }
+          ],
+          "Groups": []
+        }
+      ]
+    }
+  ],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

@@ -1,0 +1,41 @@
+{
+  "Id": "678ab96c-cd8a-44f3-9bce-ae3de20c571f",
+  "Name": "ToolExpert_v1",
+  "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "1e7edba1-1090-4598-aeaf-a84c1c443418",
+      "Name": "ToolSearch",
+      "Address": "api/searcheverything?keyword=$(ReferenceId)&lang=en",
+      "ScriptFile": "ToolExpert_ImportResourceData.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ReferenceId",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

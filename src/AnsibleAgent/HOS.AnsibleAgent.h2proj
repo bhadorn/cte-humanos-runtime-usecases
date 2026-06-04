@@ -1,0 +1,289 @@
+{
+  "Path": "HOS.AnsibleAgent.h2proj",
+  "Name": "HOS.AnsibleAgent",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "PublishNumber": 14,
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+      "Path": "SemaphoreAPI.json",
+      "Id": "ff2cb9b7-d6a6-426e-b41e-acbd6c48abc9",
+      "Name": "SemaphoreAPI",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n31643235333835366632366335336131626337343739643639336530333136633861646562376338\r\n6330626132393732636431333034393762373336613733380a363734386364326230666264626439\r\n66653232613237636639353930383731646164353031333334373633653431343565343839373961\r\n6538613065653135310a316463646461343965313331343466323438643333663766393835356230\r\n32666166373936643665623166653637643661646132363863623565383264643739626162666363\r\n6366636264623264666438323136316464636462376562623130\r\n"
+      }
+    ],
+    "Id": "5acce020-0bca-49cd-82b6-1d4be1180530",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "HOS.AnsibleAgent1",
+      "Id": "db8afa96-dab4-483c-85be-a6922332caeb",
+      "Name": "HOS.AnsibleAgent1",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "C:\\Temp\\",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishDestination": "Directory",
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for Ansible",
+      "ServiceName": "$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "db8afa96-dab4-483c-85be-a6922332caeb",
+        "HumanOS.ServiceName": "$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.SharedNodeSpace.Type": "",
+        "HumanOS.SharedNodeSpace.Address": "localhost",
+        "HumanOS.SharedNodeSpace.MasterSystemControllerId": "6bbca83f-8bba-48f6-8d70-1113094e5c42",
+        "HumanOS.SharedNodeSpace.MasterAgentOrchestratorId": "3d84402b-f65e-48f3-87e7-52c1e195b010",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "HumanOS.RuntimeVersion": "2.8"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [
+          {
+            "Path": "Agent.json",
+            "Id": "c479ca06-07ce-4249-9ecc-6c0b4f517b81",
+            "Name": "Agent.json",
+            "Description": ""
+          }
+        ],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "https://192.168.0.55",
+          "DeviceTemplateId": "ff2cb9b7-d6a6-426e-b41e-acbd6c48abc9",
+          "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "SubDevices": [],
+          "Type": "REST API",
+          "Variables": [
+            {
+              "Name": "IgnoreCertificateErrors",
+              "DataType": "System.Boolean",
+              "Value": "false"
+            },
+            {
+              "Name": "Password",
+              "DataType": "System.String",
+              "Value": ""
+            },
+            {
+              "Name": "RepositoryName",
+              "DataType": "System.String",
+              "Value": "localhost"
+            },
+            {
+              "Name": "RepositoryPath",
+              "DataType": "System.String",
+              "Value": "/etc/ansible"
+            },
+            {
+              "Name": "UserName",
+              "DataType": "System.String",
+              "Value": ""
+            }
+          ],
+          "Path": "Semaphore Instance.json",
+          "Id": "581cada8-dbac-4909-b533-ffe70b9588a5",
+          "Name": "Semaphore Instance",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "Login.cs",
+              "Id": "1249437f-0eaf-4cfd-987d-64d171599068",
+              "Name": "Login.cs",
+              "Description": ""
+            },
+            {
+              "Path": "CreateOrUpdateInventory.cs",
+              "Id": "397602e9-0de7-4913-859c-d08e4a41ac9e",
+              "Name": "CreateOrUpdateInventory.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetProjectByName.cs",
+              "Id": "eb5c12d2-2424-4c5f-afdc-b9a089c40187",
+              "Name": "GetProjectByName.cs",
+              "Description": ""
+            },
+            {
+              "Path": "CreateOrUpdateEnvironment.cs",
+              "Id": "ecebdf0f-1404-4462-97ec-fb4b73c81d56",
+              "Name": "CreateOrUpdateEnvironment.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetEnvironmentByName.cs",
+              "Id": "25fe4fd2-78af-4145-8148-e71ee5a0b4ad",
+              "Name": "GetEnvironmentByName.cs",
+              "Description": ""
+            },
+            {
+              "Path": "Logout.cs",
+              "Id": "53e4883c-78c9-452d-92d4-b014e3c9742b",
+              "Name": "Logout.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetRepositoryByName.cs",
+              "Id": "f1d9e4c2-3490-43d2-af1b-ac2b945e1500",
+              "Name": "GetRepositoryByName.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetTaskStatus.cs",
+              "Id": "9c253c9c-5cb8-42b9-aa50-cd128effb985",
+              "Name": "GetTaskStatus.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetTaskOutput.cs",
+              "Id": "6703dda8-76db-4fd4-8539-a90cf5151b55",
+              "Name": "GetTaskOutput.cs",
+              "Description": ""
+            },
+            {
+              "Path": "CreateOrUpdateTemplate.cs",
+              "Id": "ccc8b6bc-e2b3-4ef2-aecb-79564aee00b4",
+              "Name": "CreateOrUpdateTemplate.cs",
+              "Description": ""
+            },
+            {
+              "Path": "CreateProject.cs",
+              "Id": "cd9fba28-4795-420c-80ed-c76e27111cb6",
+              "Name": "CreateProject.cs",
+              "Description": ""
+            },
+            {
+              "Path": "UHAL_StartJob.cs",
+              "Id": "56d21288-72d1-4704-8924-4779e65ef717",
+              "Name": "UHAL_StartJob.cs",
+              "Description": ""
+            },
+            {
+              "Path": "CreateOrUpdateRepository.cs",
+              "Id": "8b7feac7-5c7f-49fc-a98f-afce3f67245b",
+              "Name": "CreateOrUpdateRepository.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetKeyByName.cs",
+              "Id": "21881b85-f605-431c-ad4c-0dee94cbb9f6",
+              "Name": "GetKeyByName.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetInventoryByName.cs",
+              "Id": "0ea359d8-8e5d-4af6-89ec-f7c668d09b55",
+              "Name": "GetInventoryByName.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetTemplateByName.cs",
+              "Id": "b36d59ef-ce02-422a-a4e4-741f0dfb8ef9",
+              "Name": "GetTemplateByName.cs",
+              "Description": ""
+            },
+            {
+              "Path": "StartTask.cs",
+              "Id": "ac2749e8-42de-4206-a327-40f95690cc1e",
+              "Name": "StartTask.cs",
+              "Description": ""
+            },
+            {
+              "Path": "UHAL_GetJobStatus.cs",
+              "Id": "3a405f26-8334-4ce7-b911-604edcba6422",
+              "Name": "UHAL_GetJobStatus.cs",
+              "Description": ""
+            },
+            {
+              "Path": "UHAL_GetJobOutput.cs",
+              "Id": "d3478862-21f5-495b-b03e-c1f7f734c97d",
+              "Name": "UHAL_GetJobOutput.cs",
+              "Description": ""
+            },
+            {
+              "Path": "CreateOrUpdateKey.cs",
+              "Id": "9f0e3b29-1b95-4f81-ae74-198b187bb3a0",
+              "Name": "CreateOrUpdateKey.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.WebControl",
+          "Id": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "Name": "HumanOS.UHAL.WebControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [
+          {
+            "Path": "JobOperation.cs",
+            "Id": "a5b14724-0285-4749-b34a-99503db32448",
+            "Name": "JobOperation.cs",
+            "Description": ""
+          }
+        ],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

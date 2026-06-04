@@ -17,6 +17,9 @@ Further, following tools might support you:
 
 ## Use Cases
 
+- [Ansible Agent](./src/AnsibleAgent/Readme.md)
+- [Fraisa ToolExpert](./src/Fraisa.ToolExpert/Readme.md)
+- [Sinumerik 840D PowerLine](./src/SinumerikPowerLine/Readme.md)
 - [SparkPlug Configuration for Alarming](./src/SparkPlugAlarming/Readme.md)
 - [Temperature Reporting using Threshold Triggers](./src/TemperatureReporter/Readme.md)
 
