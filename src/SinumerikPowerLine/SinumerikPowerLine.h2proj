@@ -1,0 +1,129 @@
+{
+  "Path": "SinumerikPowerLine.h2proj",
+  "Name": "SinumerikPowerLine",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "b657332c-a383-47ee-bedd-6156af9c9083",
+      "Path": "Sinumerik_OEE.json",
+      "Id": "bc89c9b8-efd3-461b-a75f-97ecd9c847f1",
+      "Name": "Sinumerik_OEE",
+      "Description": ""
+    },
+    {
+      "DriverId": "b657332c-a383-47ee-bedd-6156af9c9083",
+      "Path": "Sinumerik_DNC.json",
+      "Id": "033d32a6-f503-466b-a274-ea4f34fedb13",
+      "Name": "Sinumerik_DNC",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n31356432333766646264353439616239383965616164353361303662666131336439333032363335\r\n3436396132666661313062346433323866653465393033610a306233356336336565653366336537\r\n31343565343131646265626430633233633237386330306635646532383764336231666632376531\r\n6537396536623264640a343463346134366237383063633132343761333630376563373138653361\r\n30663636633636333331363965336232646365656663663338323430353963653363306661323132\r\n3063396462353939333530633436643761623364313362346332\r\n"
+      }
+    ],
+    "Id": "a4967480-d823-42f8-bbad-ecd65fb6904d",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "a3983ee7-eee8-492f-aa8b-74f6ae255e29",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Verbose",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "a3983ee7-eee8-492f-aa8b-74f6ae255e29",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "HumanOS.RuntimeVersion": "2.9"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "s840d.pl://10.1.6.2?nck-mpi=3",
+          "DeviceTemplateId": "033d32a6-f503-466b-a274-ea4f34fedb13",
+          "DriverId": "b657332c-a383-47ee-bedd-6156af9c9083",
+          "SubDevices": [],
+          "Type": "840D PL",
+          "Variables": [],
+          "Path": "Sinumerik TEST RACK.json",
+          "Id": "3d3e3bcc-0b4e-45eb-8d57-4005a88d365b",
+          "Name": "Sinumerik TEST RACK",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.SinumerikControl",
+          "Id": "b657332c-a383-47ee-bedd-6156af9c9083",
+          "Name": "HumanOS.UHAL.SinumerikControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

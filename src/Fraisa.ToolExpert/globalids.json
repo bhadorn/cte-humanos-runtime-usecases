@@ -1,0 +1,14 @@
+{
+  "FileName": "C:\\Projects\\Public\\cte-humanos-runtime-usecases\\src\\Fraisa.ToolExpert\\globalids.json",
+  "Ids": {
+    "5fd344fe-ebb7-44cf-b482-ac95819d677b/Fraisa": "2ab021e8-9e71-4351-ad86-c0a1df459e89",
+    "5fd344fe-ebb7-44cf-b482-ac95819d677b/Fraisa/ReadToolInfo": "3ed8ed0f-7f76-45c9-8e95-4a810a6f1f41",
+    "02ea012f-7eeb-4391-b47e-8cfeb776d193/ToolExpert_v1/ImportResourceData": "48a5be61-2ab8-4751-8600-c8a1305d6f8c",
+    "02ea012f-7eeb-4391-b47e-8cfeb776d193/ToolExpert_v1": "972e1cbe-e820-486c-aa25-22dbf809469a",
+    "55a78a7e-6341-4f0a-be9f-55abeb4e0b98/ToolExpert_v1": "a86926e6-c138-4d94-ba5b-f52d7f7c3fc9",
+    "55a78a7e-6341-4f0a-be9f-55abeb4e0b98/ToolExpert_v1/ImportResourceData": "829a6e85-bd20-447d-b82a-d1671ceb8ebf",
+    "26697ec3-8078-4111-b92d-53615e53995b/ToolExpert_v1": "f2cc08ae-979c-4136-a711-5a7faa7c7aa0",
+    "26697ec3-8078-4111-b92d-53615e53995b/ToolExpert_v1/ImportResourceData": "2faec79d-8ee7-4d91-8afd-ffcbb888bafc",
+    "26697ec3-8078-4111-b92d-53615e53995b/ToolExpert_v1/ToolSearch": "6da64018-fc30-4533-9310-da80007b5401"
+  }
+}

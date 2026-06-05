@@ -1,0 +1,1135 @@
+{
+  "Id": "581cada8-dbac-4909-b533-ffe70b9588a5",
+  "Name": "Semaphore Instance",
+  "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+  "Address": "https://192.168.0.55",
+  "Properties": [
+    {
+      "Name": "ContentType",
+      "DataType": "System.String",
+      "Value": "application/json"
+    },
+    {
+      "Name": "EnableSemaphore",
+      "DataType": "System.Boolean",
+      "Value": "true"
+    },
+    {
+      "Name": "Semaphore.RepositoryName",
+      "DataType": "System.String",
+      "Value": "$(RepositoryName)"
+    },
+    {
+      "Name": "Semaphore.RepositoryPath",
+      "DataType": "System.String",
+      "Value": "$(RepositoryPath)"
+    },
+    {
+      "Name": "IgnoreCertificateErrors",
+      "DataType": "System.Boolean",
+      "Value": "$(IgnoreCertificateErrors)"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "REST API"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "b2b7b796-b019-4419-8488-d02a3c1aec2e",
+      "Name": "LoginUser",
+      "Address": "api/auth/login",
+      "ScriptFile": "Login.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        },
+        {
+          "Name": "Password",
+          "DataType": "System.String",
+          "Value": "$(Password)"
+        },
+        {
+          "Name": "UserName",
+          "DataType": "System.String",
+          "Value": "$(UserName)"
+        }
+      ]
+    },
+    {
+      "Id": "8f5c7966-db09-461d-89fe-e54a49e2f701",
+      "Name": "CreateInventory",
+      "Address": "api/project/$(ProjectId)/inventory",
+      "ScriptFile": "CreateOrUpdateInventory.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Content",
+          "DataType": "System.String",
+          "Description": "YAML content"
+        },
+        {
+          "Name": "InventoryId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": "Returns the reference id"
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "KeyId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "c292e9fc-02e9-4bf4-819c-5a52ad8b159b",
+      "Name": "GetTaskOutput",
+      "Address": "api/project/$(ProjectId)/tasks/$(TaskId)/output",
+      "ScriptFile": "GetTaskOutput.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "TaskId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    },
+    {
+      "Id": "5404510a-e0c2-4a72-8328-ce5833f36958",
+      "Name": "StartTask",
+      "Address": "api/project/$(ProjectId)/tasks",
+      "ScriptFile": "StartTask.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Content",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Debug",
+          "DataType": "System.Boolean",
+          "Description": ""
+        },
+        {
+          "Name": "Diff",
+          "DataType": "System.Boolean",
+          "Description": ""
+        },
+        {
+          "Name": "DryRun",
+          "DataType": "System.Boolean",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "TaskId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "TemplateId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "9df4cfae-f424-48bb-b7f5-d33c2ad43828",
+      "Name": "GetTaskStatus",
+      "Address": "api/project/$(ProjectId)/tasks/$(TaskId)",
+      "ScriptFile": "GetTaskStatus.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "TaskId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Status",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": "Status of Task"
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    },
+    {
+      "Id": "d8ddea95-9d05-4232-b871-bccf968c8476",
+      "Name": "StopTask",
+      "Address": "api/project/$(ProjectId)/tasks/$(TaskId)/stop",
+      "ScriptFile": "StopTask.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "TaskId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "e44ab293-afc1-4305-9d43-5a2bca8d7d7d",
+      "Name": "CreateEnvironment",
+      "Address": "api/project/$(ProjectId)/environment",
+      "ScriptFile": "CreateOrUpdateEnvironment.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Content",
+          "DataType": "System.String",
+          "Description": "YAML content"
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "7caf1337-b946-45db-9a38-95b657da23cf",
+      "Name": "GetRepositoryByName",
+      "Address": "api/project/$(ProjectId)/repositories",
+      "ScriptFile": "GetRepositoryByName.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "RepositoryId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    },
+    {
+      "Id": "dfd3fbe7-0c40-45a9-8e12-466471a8e479",
+      "Name": "CreateTemplate",
+      "Address": "api/project/$(ProjectId)/templates",
+      "ScriptFile": "CreateOrUpdateTemplate.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Description",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "EnvironmentId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "InventoryId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "PlayBookFileName",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "RepositoryId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "TemplateId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "VaultId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "VaultName",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "7d69b7f7-112a-4b7e-93a8-0bdfce3bd21a",
+      "Name": "GetProjectByName",
+      "Address": "api/projects",
+      "ScriptFile": "GetProjectByName.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String[]",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    },
+    {
+      "Id": "935709a6-cb9e-4790-ac7f-6b5c00f58fea",
+      "Name": "GetEnvironmentByName",
+      "Address": "api/project/$(ProjectId)/environment",
+      "ScriptFile": "GetEnvironmentByName.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "EnvironmentId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    },
+    {
+      "Id": "91ecb116-d0c8-45bc-8fdd-44d7e31df3cb",
+      "Name": "LogoutUser",
+      "Address": "api/auth/logout",
+      "ScriptFile": "Logout.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "ab905af2-54eb-4a87-b032-07cbc2a2d112",
+      "Name": "CreateProject",
+      "Address": "api/projects",
+      "ScriptFile": "CreateProject.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "f9303044-743d-431d-b740-fc5401823f7f",
+      "Name": "UpdateEnvironment",
+      "Address": "api/project/$(ProjectId)/environment/$(EnvironmentId)",
+      "ScriptFile": "CreateOrUpdateEnvironment.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Content",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "EnvironmentId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "PUT"
+        }
+      ]
+    },
+    {
+      "Id": "5760f931-8bcb-4339-ac56-32d5341ec622",
+      "Name": "StartJob",
+      "ScriptFile": "UHAL_StartJob.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Arguments",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "EntityId",
+          "DataType": "System.Guid",
+          "Description": ""
+        },
+        {
+          "Name": "Environment",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Inventory",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "JobName",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "TaskId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": []
+    },
+    {
+      "Id": "02ad9d9e-3cac-4c23-80ef-0c8ebd699eac",
+      "Name": "CreateRepository",
+      "Address": "api/project/$(ProjectId)/repositories",
+      "ScriptFile": "CreateOrUpdateRepository.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Path",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "KeyId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "2b48e3ce-a19c-4331-83cd-e77159f854c6",
+      "Name": "UpdateRepository",
+      "Address": "api/project/$(ProjectId)/repositories/$(RepositoryId)",
+      "ScriptFile": "CreateOrUpdateRepository.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Path",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "RepositoryId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "KeyId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "PUT"
+        }
+      ]
+    },
+    {
+      "Id": "a8061a21-e649-42e4-8a74-4681e3cdc450",
+      "Name": "GetKeyByName",
+      "Address": "api/project/$(ProjectId)/keys",
+      "ScriptFile": "GetKeyByName.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "KeyId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    },
+    {
+      "Id": "f2093f9d-43d8-4b15-918c-142ff37aec80",
+      "Name": "GetInventoryByName",
+      "Address": "api/project/$(ProjectId)/inventory",
+      "ScriptFile": "GetInventoryByName.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "InventoryId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    },
+    {
+      "Id": "4b80c190-75cc-49e1-976d-6103a3ea521e",
+      "Name": "UpdateInventory",
+      "Address": "api/project/$(ProjectId)/inventory/$(InventoryId)",
+      "ScriptFile": "CreateOrUpdateInventory.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Content",
+          "DataType": "System.String",
+          "Description": "YAML content"
+        },
+        {
+          "Name": "InventoryId",
+          "DataType": "System.Int32",
+          "Description": "Returns the reference id"
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "KeyId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "PUT"
+        }
+      ]
+    },
+    {
+      "Id": "f62aa285-a181-442f-ab4a-a4401779d30c",
+      "Name": "GetTemplateByName",
+      "Address": "api/project/$(ProjectId)/templates",
+      "ScriptFile": "GetTemplateByName.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "TemplateId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    },
+    {
+      "Id": "50316640-022d-42ac-9f63-f81b73230107",
+      "Name": "UpdateTemplate",
+      "Address": "api/project/$(ProjectId)/templates/$(TemplateId)",
+      "ScriptFile": "CreateOrUpdateTemplate.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Description",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "EnvironmentId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "InventoryId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "PlayBookFileName",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "RepositoryId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "TemplateId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "VaultId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "VaultName",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "PUT"
+        }
+      ]
+    },
+    {
+      "Id": "814e1e44-32bf-4d0a-b525-ef2c155297c0",
+      "Name": "GetJobStatus",
+      "Address": "",
+      "ScriptFile": "UHAL_GetJobStatus.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Status",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": "Status of Task"
+        },
+        {
+          "Name": "TaskId",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": []
+    },
+    {
+      "Id": "4a99fa6b-7671-4705-92e5-567ec95f627c",
+      "Name": "GetJobOutput",
+      "Address": "",
+      "ScriptFile": "UHAL_GetJobOutput.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": "Status of Task"
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "TaskId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Feedback",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": "JSON Feedback"
+        }
+      ],
+      "Properties": []
+    },
+    {
+      "Id": "3496b1ed-f699-4d02-bb87-51c417173520",
+      "Name": "CreateKey",
+      "Address": "api/project/$(ProjectId)/keys",
+      "ScriptFile": "CreateOrUpdateKey.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "KeyId",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Password",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "UserName",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "POST"
+        }
+      ]
+    },
+    {
+      "Id": "85298d43-846a-42a4-9ad3-bf1cec9a41f6",
+      "Name": "UpdateKey",
+      "Address": "api/project/$(ProjectId)/keys/$(KeyId)",
+      "ScriptFile": "CreateOrUpdateKey.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "AuthCookie",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "KeyId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Password",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "ProjectId",
+          "DataType": "System.Int32",
+          "Description": ""
+        },
+        {
+          "Name": "UserName",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "PUT"
+        }
+      ]
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

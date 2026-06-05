@@ -1,0 +1,41 @@
+# HumanOS Runtime UseCases
+
+> A collection of self-contained HumanOS IoT Runtime integration examples for industrial automation. Each use case is a deployable HumanOS IoT Designer project (.h2proj) demonstrating a specific connector, protocol, or feature pattern — covering REST API orchestration, CNC machine connectivity, MQTT/SparkPlug B messaging, and threshold-based alerting.
+
+## Overview
+
+- [README](README.md): Index of all use cases, required tooling, and links to the HumanOS Runtime reference manual.
+
+## Use Cases
+
+- [Ansible Agent](src/AnsibleAgent/Readme.md): Integrates Ansible Semaphore via REST API (WebControl connector) into HumanOS Platform Pipelines. Provisions Semaphore resources idempotently, starts playbook tasks, polls for completion, and returns structured JSON feedback via the HumanOS workflow engine.
+- [Fraisa ToolExpert](src/Fraisa.ToolExpert/Readme.md): Queries the FRAISA ToolExpert cloud REST API by article number (WebControl connector) and exposes the parsed tool data as an OPC-UA command node.
+- [Sinumerik 840D PowerLine](src/SinumerikPowerLine/Readme.md): Connects a Siemens Sinumerik 840D PL CNC controller (SinumerikControl connector, s840d.pl:// protocol) with two templates — DNC bi-directional NC-program/tool-data exchange and OEE/MDE production data acquisition.
+- [SparkPlug Alarming](src/SparkPlugAlarming/Readme.md): Forwards active FANUC controller alarms (FanucControl connector) to MQTT clients via SparkPlug B. Serializes the AlarmEvent Pool to a JSON array every 30 seconds; the SparkPlug Client publishes on change.
+- [Temperature Reporter](src/TemperatureReporter/Readme.md): Demonstrates the OnThreshold trigger type and TThresholdCalculator class for multi-level temperature alerting (50 °C / 60 °C / 70 °C with hysteresis). Includes a file-based simulator — no hardware required.
+
+## Key Source Files
+
+- [AlarmProcessorScript.cs](src/SparkPlugAlarming/default/HumanOS.UHAL.DeviceDetectors/AlarmProcessorScript.cs): Reads the AlarmEvent Pool and serializes active alarms to a JSON array for SparkPlug transmission.
+- [AlertProcessingScript.cs](src/TemperatureReporter/default/HumanOS.UHAL.FileReader/AlertProcessingScript.cs): Uses three TThresholdCalculator instances to evaluate multi-level temperature thresholds with hysteresis.
+- [ReportProcessingScript.cs](src/TemperatureReporter/default/HumanOS.UHAL.FileReader/ReportProcessingScript.cs): Logs temperature reports and forwards the value to downstream outputs.
+- [UHAL_StartJob.cs](src/AnsibleAgent/HOS.AnsibleAgent1/HumanOS.UHAL.WebControl/UHAL_StartJob.cs): Idempotent Semaphore setup — logs in, creates or resolves all required resources, and starts the Ansible task.
+- [JobOperation.cs](src/AnsibleAgent/Scripts/Workflows/JobOperation.cs): Async HumanOS workflow managing the full Ansible job lifecycle (start → poll → fetch output).
+- [ToolExpert_ImportResourceData.cs](src/Fraisa.ToolExpert/default/HumanOS.UHAL.WebControl/ToolExpert_ImportResourceData.cs): HTTP script that queries the FRAISA API by article number and returns parsed tool data.
+
+## Documentation
+
+- [HumanOS Runtime Reference Manual](https://doc.cybertech.swiss/runtime/intro): Full documentation for connectors, device templates, scripts, plugins, and deployment.
+- [WebControl Connector Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.UHAL.WebControl/): REST API connector used in AnsibleAgent and FraisaToolExpert.
+- [SparkPlug Client Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.PeSeL.SparkPlugClient/): MQTT SparkPlug B publisher used in SparkPlugAlarming.
+- [Sinumerik Connector Manual](https://doc.cybertech.swiss/runtime/2.11/Manuals/HumanOS.UHAL.SinumerikControl/): CNC connector used in SinumerikPowerLine.
+- [Trigger Types Reference](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.Runtime/GenericInformationModelNodes/DataNodes.md#trigger-types): Documents OnThreshold, OnChange, and other trigger types used across use cases.
+- [Tutorials](https://doc.cybertech.swiss/runtime/Tutorials/): Step-by-step guides from getting started to complex data types and WebService integration.
+
+## Optional
+
+- [OPC-UA Server Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.PeSeL.OPCUAServer/): Used as the service interface in FraisaToolExpert and available in all use cases.
+- [HumanOS OEE Model](https://doc.cybertech.swiss/runtime/Models/HumanOS.OEE/): Standardized OEE information model used in SinumerikPowerLine.
+- [HumanOS DNC Model](https://doc.cybertech.swiss/runtime/Models/HumanOS.DNC/): DNC information model for NC-program and tool-data exchange.
+- [Use Case Heidenhain (online)](https://doc.cybertech.swiss/runtime/UseCases/): Companion use case with full step-by-step setup guide including screenshots.
+- [HumanOS Platform / Workflow Engine](https://doc.cybertech.swiss/platform/intro): Platform-level workflows and pipelines used in the AnsibleAgent use case.

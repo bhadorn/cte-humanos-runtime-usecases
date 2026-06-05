@@ -1,0 +1,32 @@
+{
+  "Id": "ea6ef28b-6e85-41a4-850b-f9ea081f4e4c",
+  "Name": "AgentSchema",
+  "Checksum": -4337219625250558350,
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [
+    {
+      "Id": "f61e934f-7770-4feb-b23d-d26ef930fc96",
+      "Name": "AnsibleAgent",
+      "Type": "HosAgent",
+      "Skills": [
+        "b794d93e-cdf2-4994-a970-a33c1d098e78"
+      ],
+      "Properties": []
+    }
+  ],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [],
+  "Skills": [],
+  "Timers": [],
+  "Workflows": []
+}

@@ -1,0 +1,135 @@
+{
+  "Path": "HOS.ToolExpert.h2proj",
+  "Name": "HOS.ToolExpert",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "https://localhost:8080",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "PublishNumber": 33,
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+      "Path": "ToolExpert_v1.json",
+      "Id": "678ab96c-cd8a-44f3-9bce-ae3de20c571f",
+      "Name": "ToolExpert_v1",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n62386361306564646561663666636532613339616565643964306237643835306432386434663365\r\n3737353237636335343034366162386266643162643362350a363138653735383561386233623864\r\n31633031653464663165363464623737626330636139623961383336386434366130363539633933\r\n6364303737356636630a353535336363653035356331613539383839303762323230653738636436\r\n64366333346462346233393439663933393663326261323837303434623038653064633266633463\r\n3431356530363433663966356564666334656634356631393235\r\n"
+      }
+    ],
+    "Id": "7bfead16-9392-4acf-aa9c-8115f56b3c09",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "ff6a88ef-eae1-4f70-b81b-9162f0025088",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "C:\\Temp\\",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishDestination": "Platform",
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HOS.ToolExpert",
+      "ServiceName": "HOS.ToolExpert",
+      "ServiceStartType": "Automatic",
+      "SharedNodeSpacePluginId": "0dae9067-44eb-40b9-9385-dd6efb353e11",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "ff6a88ef-eae1-4f70-b81b-9162f0025088",
+        "HumanOS.ServiceName": "HOS.ToolExpert",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.SharedNodeSpace.Type": "HumanOS.PeMiL.MQTTMessageBus.TSharedNodeSpaceHub, HumanOS.PeMiL.MQTTMessageBus",
+        "HumanOS.SharedNodeSpace.Address": "localhost",
+        "HumanOS.SharedNodeSpace.MasterSystemControllerId": "6bbca83f-8bba-48f6-8d70-1113094e5c42",
+        "HumanOS.RuntimeVersion": "2.11",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "https://toolexpert.fraisa.com",
+          "DeviceTemplateId": "678ab96c-cd8a-44f3-9bce-ae3de20c571f",
+          "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "SubDevices": [],
+          "Type": "REST API",
+          "Variables": [],
+          "Path": "ToolExpert.json",
+          "Id": "26697ec3-8078-4111-b92d-53615e53995b",
+          "Name": "ToolExpert",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "ToolExpert_ImportResourceData.cs",
+              "Id": "6a7a752c-9f16-4a8a-98da-845ce214c15c",
+              "Name": "ToolExpert_ImportResourceData.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.WebControl",
+          "Id": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "Name": "HumanOS.UHAL.WebControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
