@@ -19,6 +19,8 @@ Further, following tools might support you:
 
 - [SparkPlug Configuration for Alarming](./src/SparkPlugAlarming/Readme.md)
 - [Temperature Reporting using Threshold Triggers](./src/TemperatureReporter/Readme.md)
+- [Heidenhain CSV data logger](./src/Heidenhain/Heidenhain_CSV_DataLogger/Readme.md)
+- [Heidenhain OEE](./src/Heidenhain/Heidenhain_OEE/Readme.md)
 
 ## HumanOS Runtime
 

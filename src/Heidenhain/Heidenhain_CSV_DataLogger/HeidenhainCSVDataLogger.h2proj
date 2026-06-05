@@ -1,0 +1,130 @@
+{
+  "Path": "HeidenhainCSVDataLogger.h2proj",
+  "Name": "HeidenhainCSVDataLogger",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+      "Path": "HeidenhainOEE.json",
+      "Id": "d089d2ef-1b36-4520-8f8a-7158893f5d8e",
+      "Name": "HeidenhainOEE",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n62616537626136336161336139303663633637326565306462663233313064646130643831323864\r\n3262366565363134623532393433316464353065633131630a343265366364383631613633313936\r\n39363764343430376438656230666234343132663238343832653561336633653162353238343462\r\n6230306463343664650a386537643635623664386634376233343062313762303231303731303666\r\n61306462373030353230343762666638333566366235633363376334623962323266336439646530\r\n3566666133316565393933646165343030363064636461343566\r\n"
+      }
+    ],
+    "Id": "1c691260-ef2c-4939-95d5-526e9bae62a9",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "683c143d-b7e9-4894-ad04-466bfdabe9a7",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86",
+      "RuntimeVersion": "2.10",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "683c143d-b7e9-4894-ad04-466bfdabe9a7",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.10"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "ItncSim",
+          "DeviceTemplateId": "d089d2ef-1b36-4520-8f8a-7158893f5d8e",
+          "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+          "SubDevices": [],
+          "Type": "iTNC530",
+          "Variables": [],
+          "Path": "Heidenhain iTNC530 Simulator.json",
+          "Id": "83f6d7ae-6f1a-42ba-9418-4d4d3f6d14a3",
+          "Name": "Heidenhain iTNC530 Simulator",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "TMainProgramHeaderProcessorScript.cs",
+              "Id": "88c2c618-496a-48a2-92a6-1594a1edb8bd",
+              "Name": "TMainProgramHeaderProcessorScript.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.HeidenhainControl",
+          "Id": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+          "Name": "HumanOS.UHAL.HeidenhainControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.CsvDataLogger",
+          "Id": "e4666421-b016-4e88-ac45-02f1a3c9a122",
+          "Name": "HumanOS.PeSeL.CsvDataLogger",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

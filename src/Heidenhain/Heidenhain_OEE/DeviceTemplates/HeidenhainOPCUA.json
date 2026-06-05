@@ -1,0 +1,285 @@
+{
+  "Id": "efb3e6d4-3469-4cc0-919e-04fc83001fb3",
+  "Name": "HeidenhainOPCUA",
+  "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "879d75b3-6273-4d3f-9041-063cf8636b87",
+      "Name": "Controller",
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "4e3580c4-bbbc-4696-bcaf-0e597b7d8f9a",
+          "Name": "RunningState",
+          "Address": "Nc1.Automatic.Int32:1",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "mtc:DataItemId",
+              "DataType": "System.String",
+              "Value": "Lpexecution"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "EXECUTION"
+            },
+            {
+              "Name": "mtc:Values",
+              "DataType": "System.String",
+              "Value": "*=PROGRAM_STOPPED;3=FEED_HOLD;1=ACTIVE"
+            },
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "RunningStateType"
+            },
+            {
+              "Name": "EnableMqtt",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableInflux",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRmq",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRest",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableAzureIoT",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "Id": "fe921090-86d9-4c2d-90e5-e13e58f196b9",
+          "Name": "OperationMode",
+          "Address": "Nc1.Automatic.Int32:0",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "HistoryMode": {
+            "Retention": 8000,
+            "SamplingRate": 2,
+            "HistoryTableName": "",
+            "IdField": "",
+            "TaggedFields": [],
+            "TrackedFields": []
+          },
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "EnableAzureIoT",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableInflux",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableMqtt",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRest",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRmq",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "mtc:DataItemId",
+              "DataType": "System.String",
+              "Value": "Lpmode"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "CONTROLLER_MODE"
+            },
+            {
+              "Name": "mtc:Values",
+              "DataType": "System.String",
+              "Value": "1=MANUAL_DATA_INPUT;4=AUTOMATIC;*=MANUAL"
+            },
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "OperationModeType"
+            }
+          ]
+        },
+        {
+          "Id": "a24dd597-8dca-44a8-90e2-bf30770e02bb",
+          "Name": "MachinePositions",
+          "Address": "Nc1.Axis.Float64:0",
+          "DataType": "System.Double[]",
+          "Unit": "mm",
+          "DataClass": "Stream",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "1fe92f58-a5ea-4b32-a317-f5a92e5811af",
+          "Name": "CurrentProgram",
+          "Address": "Nc1.Automatic.String:2",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "mtc:DataItemId",
+              "DataType": "System.String",
+              "Value": "Lpprogram"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "PROGRAM"
+            },
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "CurrentProgramType"
+            },
+            {
+              "Name": "mtc:InformationSubType",
+              "DataType": "System.String",
+              "Value": "x:ACTUAL"
+            }
+          ]
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [
+        {
+          "Id": "b709c50e-35b2-4c08-82af-ecf9007d1a00",
+          "Name": "ReadFile",
+          "Address": "Nc1.ReadFile",
+          "Type": "CommandNode",
+          "Arguments": [
+            {
+              "Name": "Name",
+              "DataType": "System.String",
+              "Description": ""
+            },
+            {
+              "Name": "Content",
+              "Type": "Output",
+              "DataType": "System.String",
+              "Description": ""
+            }
+          ],
+          "Properties": []
+        }
+      ],
+      "Groups": []
+    }
+  ],
+  "AlarmEventPool": {
+    "Id": "9e0832da-1747-4323-a0d3-e945d460dcbd",
+    "Name": "MachineAlarming",
+    "Tasks": [
+      {
+        "Id": "608a08a5-046b-4089-9671-d1afb40f9d19",
+        "Name": "SystemAlarms",
+        "Address": "Nc1.NcAlarmEvent:0",
+        "Properties": []
+      }
+    ],
+    "HistoryMode": {
+      "Retention": 720,
+      "SamplingRate": 2000,
+      "HistoryTableName": "",
+      "IdField": "",
+      "TaggedFields": [],
+      "TrackedFields": []
+    },
+    "Properties": [
+      {
+        "Name": "EnableAzureIoT",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "EnableInflux",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "EnableMqtt",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "EnableRest",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "EnableRmq",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "mtc:DataItemId",
+        "DataType": "System.String",
+        "Value": "Lsystem"
+      },
+      {
+        "Name": "mtc:InformationType",
+        "DataType": "System.String",
+        "Value": "SYSTEM"
+      },
+      {
+        "Name": "PortMatchId",
+        "DataType": "System.String",
+        "Value": "MachineAlarmingType"
+      }
+    ]
+  },
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}
