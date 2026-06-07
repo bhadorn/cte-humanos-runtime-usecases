@@ -1,0 +1,13 @@
+{
+  "Disabled": false,
+  "Devices": [
+    {
+      "MainTaskProcessor": {
+        "Name": "Main TaskProcessor",
+        "ProcessingPriority": "Normal",
+        "MaxSchedulingTimeSlice": 200,
+        "MinSchedulingTimeSlice": 10
+      }
+    }
+  ]
+}

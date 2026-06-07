@@ -23,6 +23,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 
 - **Ansible Agent**: Running [Semaphore](https://semaphoreui.com) instance with Ansible configured
 - **Fraisa ToolExpert**: Network access to [toolexpert.fraisa.com](https://toolexpert.fraisa.com)
+- **DMG MoriSeiki**: Reading data from older MoriSeiki machines
 - **Sinumerik PowerLine**: Siemens Sinumerik 840D PL controller or simulator
 - **SparkPlug Alarming**: FANUC controller or simulator, MQTT broker (e.g. [Mosquitto](https://mosquitto.org)), [MQTT Explorer](https://mqtt-explorer.com)
 - **Temperature Reporter**: No additional hardware required (file-based simulator included)
@@ -33,13 +34,14 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 
 ## Use Cases
 
-| Use Case                                                       | Connector                | Key Feature                                               |
-| :------------------------------------------------------------- | :----------------------- | :-------------------------------------------------------- |
-| [Ansible Agent](./src/AnsibleAgent/Readme.md)                  | WebControl (REST)        | IT automation via Semaphore API and HumanOS workflows     |
-| [Fraisa ToolExpert](./src/Fraisa.ToolExpert/Readme.md)         | WebControl (REST)        | Tool lookup from cloud API, exposed via OPC-UA            |
-| [Sinumerik 840D PowerLine](./src/SinumerikPowerLine/Readme.md) | SinumerikControl         | DNC file transfer and OEE/MDE data acquisition from CNC   |
-| [SparkPlug Alarming](./src/SparkPlugAlarming/Readme.md)        | FanucControl + SparkPlug | Alarm forwarding from FANUC controller via MQTT SparkPlug |
-| [Temperature Reporter](./src/TemperatureReporter/Readme.md)    | FileReader (simulator)   | Threshold-based alerting with multiple alarm levels       |
+| Use Case                                                       | Connector                | Key Feature                                                 |
+| :------------------------------------------------------------- | :----------------------- | :---------------------------------------------------------- |
+| [Ansible Agent](./src/AnsibleAgent/Readme.md)                  | WebControl (REST)        | IT automation via Semaphore API and HumanOS workflows       |
+| [Fraisa ToolExpert](./src/Fraisa.ToolExpert/Readme.md)         | WebControl (REST)        | Tool lookup from cloud API, exposed via OPC-UA              |
+| [Mori Seiki](./src/MoriSeiki/Readme.md)                        | TCP/IP Connector         | Machine data acquisition (MDA) using native TCP/IP protocol |
+| [Sinumerik 840D PowerLine](./src/SinumerikPowerLine/Readme.md) | SinumerikControl         | DNC file transfer and OEE/MDE data acquisition from CNC     |
+| [SparkPlug Alarming](./src/SparkPlugAlarming/Readme.md)        | FanucControl + SparkPlug | Alarm forwarding from FANUC controller via MQTT SparkPlug   |
+| [Temperature Reporter](./src/TemperatureReporter/Readme.md)    | FileReader (simulator)   | Threshold-based alerting with multiple alarm levels         |
 
 ## HumanOS Runtime
 
