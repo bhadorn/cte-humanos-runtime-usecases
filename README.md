@@ -27,6 +27,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 - **Sinumerik PowerLine**: Siemens Sinumerik 840D PL controller or simulator
 - **SparkPlug Alarming**: FANUC controller or simulator, MQTT broker (e.g. [Mosquitto](https://mosquitto.org)), [MQTT Explorer](https://mqtt-explorer.com)
 - **Temperature Reporter**: No additional hardware required (file-based simulator included)
+- **Timing Example**: No additional hardware required (file-based simulator included)
 
 **Recommended general tooling**:
 
@@ -42,6 +43,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [Sinumerik 840D PowerLine](./src/SinumerikPowerLine/Readme.md) | SinumerikControl         | DNC file transfer and OEE/MDE data acquisition from CNC     |
 | [SparkPlug Alarming](./src/SparkPlugAlarming/Readme.md)        | FanucControl + SparkPlug | Alarm forwarding from FANUC controller via MQTT SparkPlug   |
 | [Temperature Reporter](./src/TemperatureReporter/Readme.md)    | FileReader (simulator)   | Threshold-based alerting with multiple alarm levels         |
+| [Timing Example](./src/TimingExample/Readme.md)                | FileReader (simulator)   | Example how to use timers to execute commands               |
 
 ## HumanOS Runtime
 

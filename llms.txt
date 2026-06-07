@@ -14,6 +14,7 @@
 - [Sinumerik 840D PowerLine](src/SinumerikPowerLine/Readme.md): Connects a Siemens Sinumerik 840D PL CNC controller (SinumerikControl connector, s840d.pl:// protocol) with two templates — DNC bi-directional NC-program/tool-data exchange and OEE/MDE production data acquisition.
 - [SparkPlug Alarming](src/SparkPlugAlarming/Readme.md): Forwards active FANUC controller alarms (FanucControl connector) to MQTT clients via SparkPlug B. Serializes the AlarmEvent Pool to a JSON array every 30 seconds; the SparkPlug Client publishes on change.
 - [Temperature Reporter](src/TemperatureReporter/Readme.md): Demonstrates the OnThreshold trigger type and TThresholdCalculator class for multi-level temperature alerting (50 °C / 60 °C / 70 °C with hysteresis). Includes a file-based simulator — no hardware required.
+- [Timing Example](src/TimingExample/Readme.md): Demonstrates timer-driven periodic command execution using HumanOS Timers, GenericRules, and TCommandHelper. A 2-second timer triggers a C# rule script that queries all connected devices and calls ReadFile on each; includes a file-based simulator — no hardware required.
 
 ## Key Source Files
 
@@ -21,6 +22,7 @@
 - [MoriSeikiPayloadProcessor.cs](src/MoriSeiki/default/HumanOS.UHAL.TcpClientControl/MoriSeikiPayloadProcessor.cs): Implements TAbstractStreamScriptObject to parse the DMG Mori Seiki native TCP stream (pipe-delimited ASCII, port 7878) and map key/value pairs to HumanOS data nodes; normalizes ON/OFF and AVAILABLE/UNAVAILABLE to boolean.
 - [AlertProcessingScript.cs](src/TemperatureReporter/default/HumanOS.UHAL.FileReader/AlertProcessingScript.cs): Uses three TThresholdCalculator instances to evaluate multi-level temperature thresholds with hysteresis.
 - [ReportProcessingScript.cs](src/TemperatureReporter/default/HumanOS.UHAL.FileReader/ReportProcessingScript.cs): Logs temperature reports and forwards the value to downstream outputs.
+- [Timer_Script.cs](src/TimingExample/default/Scripts/Rules/Timer_Script.cs): Rule script triggered by OnTimer; queries all devices with a DriverId property via Kernel.NodeSpace.queryNodes and calls ReadFile on each via TCommandHelper, logging success or failure per device.
 - [UHAL_StartJob.cs](src/AnsibleAgent/HOS.AnsibleAgent1/HumanOS.UHAL.WebControl/UHAL_StartJob.cs): Idempotent Semaphore setup — logs in, creates or resolves all required resources, and starts the Ansible task.
 - [JobOperation.cs](src/AnsibleAgent/Scripts/Workflows/JobOperation.cs): Async HumanOS workflow managing the full Ansible job lifecycle (start → poll → fetch output).
 - [ToolExpert_ImportResourceData.cs](src/Fraisa.ToolExpert/default/HumanOS.UHAL.WebControl/ToolExpert_ImportResourceData.cs): HTTP script that queries the FRAISA API by article number and returns parsed tool data.
