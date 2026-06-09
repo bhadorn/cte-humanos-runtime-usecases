@@ -1,0 +1,86 @@
+{
+  "Services": [
+    {
+      "Id": "7a6ad01e-4fe7-40f1-96e9-33d37adc8a91",
+      "Name": "CommandInterface",
+      "Port": 80,
+      "X509CertificateFile": "",
+      "X509CertificatePassword": "",
+      "AcceptedCalls": [],
+      "Modules": [
+        {
+          "Id": "05178137-3e8e-412b-a7b2-d1a53f938d41",
+          "Name": "Robot",
+          "Functions": [
+            {
+              "Id": "15829736-ae81-47cb-90cb-3c5be8f54f47",
+              "Name": "Start",
+              "Methods": [
+                "POST"
+              ],
+              "Script": "Robot.Start.cs",
+              "Properties": {}
+            },
+            {
+              "Id": "5a76f393-04e6-43f1-b16a-1744b47276e0",
+              "Name": "Stop",
+              "Methods": [
+                "POST"
+              ],
+              "Script": "Robot.Stop.cs",
+              "Properties": {}
+            },
+            {
+              "Id": "6d267b7b-a116-4cad-bbc3-d73e57e2a6bd",
+              "Name": "Teach",
+              "Methods": [
+                "POST"
+              ],
+              "Script": "Robot.Teach.cs",
+              "Properties": {}
+            },
+            {
+              "Id": "de13b3db-ea9f-417f-b1bf-63b06b70836f",
+              "Name": "ChangeFeedrate",
+              "Methods": [
+                "POST"
+              ],
+              "Script": "Robot.ChangeFeedrate.cs",
+              "Properties": {}
+            }
+          ],
+          "Properties": {}
+        },
+        {
+          "Id": "e8bafa0c-fd63-440b-a4fa-2f655fda8203",
+          "Name": "Storage",
+          "Functions": [
+            {
+              "Id": "20c1a3cb-da8f-4d96-ad86-a984a9de58d5",
+              "Name": "Load",
+              "Methods": [],
+              "Script": "Storage.Load.cs",
+              "Properties": {}
+            },
+            {
+              "Id": "d6d09477-3753-44c5-8243-75fe7407825b",
+              "Name": "Unload",
+              "Methods": [],
+              "Script": "Storage.Unload.cs",
+              "Properties": {}
+            }
+          ],
+          "Properties": {}
+        }
+      ],
+      "Properties": {},
+      "ServiceRule": {
+        "Devices": [],
+        "Drivers": [],
+        "Properties": {}
+      }
+    }
+  ],
+  "Proxies": [],
+  "Properties": {}
+}

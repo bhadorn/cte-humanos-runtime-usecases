@@ -1,0 +1,73 @@
+{
+  "Id": "7c978b25-1cbf-4512-8ac5-52046bd332ad",
+  "Name": "vHub_v1",
+  "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+  "Address": "https://api.vhub.ch",
+  "Variables": [],
+  "Properties": [
+    {
+      "Name": "AuthorizationParameter",
+      "DataType": "System.String",
+      "Value": "<vhub token>"
+    },
+    {
+      "Name": "AuthorizationType",
+      "DataType": "System.String",
+      "Value": "Basic"
+    },
+    {
+      "Name": "CustomHeader:User-Agent",
+      "DataType": "System.String",
+      "Value": "HumanOS"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    }
+  ],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "79907650-ade3-4e93-9201-b92fe7919222",
+      "Name": "ReadWayPoints",
+      "Address": "api/v2/datasets/93b71904-4967-48d7-8a0f-4e56711c6c22/json",
+      "ScriptFile": "ReadWayPoints.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "RouteId",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Accept",
+          "DataType": "System.String",
+          "Value": "*/*"
+        },
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

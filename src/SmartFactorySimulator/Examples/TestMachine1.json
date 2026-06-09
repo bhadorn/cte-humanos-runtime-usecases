@@ -1,0 +1,13 @@
+{
+  "Controller": {
+    "IsPowerOn": true,
+    "RunningState": 0,
+    "AlarmState": 0,
+    "CurrentJobId": "",
+    "PartsToProcess": 0,
+    "PartsProcessed": 0,
+    "TotalPartCounter": 26
+  },
+  "TrayIn": "",
+  "TrayOut": ""
+}

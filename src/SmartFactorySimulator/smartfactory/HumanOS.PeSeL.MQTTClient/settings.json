@@ -1,0 +1,97 @@
+{
+  "Publishers": [
+    {
+      "Id": "8de69602-9469-43fb-ab13-952ca708d663",
+      "Name": "DataPublishLogger",
+      "ConnectionSecret": "",
+      "DataSets": [
+        {
+          "Name": "Data",
+          "Fields": [
+            {
+              "Name": "Id",
+              "DataType": "System.Guid",
+              "Query": "item.GlobalId",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Name",
+              "DataType": "System.String",
+              "Query": "item.Node.Name",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "DeviceId",
+              "DataType": "System.Guid",
+              "Query": "item.Node.getProperty<Guid>(\"DeviceId\")",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "TimeStamp",
+              "DataType": "System.DateTime",
+              "Query": "item.TimeStamp",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Value",
+              "DataType": "System.Object",
+              "Query": "item.Value",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "DataType",
+              "DataType": "System.Type",
+              "Query": "item.Node.DataType",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "State",
+              "DataType": "System.Int32",
+              "Query": "item.DataState",
+              "Tag": "",
+              "Properties": {}
+            }
+          ],
+          "NodeFilter": "node.hasProperty<bool>(\"EnableRoboterData\", true)",
+          "Tag": "",
+          "Type": "DataNode",
+          "Properties": {}
+        }
+      ],
+      "NetworkTimeout": 5000.0,
+      "PayloadDumpFileName": "$(AppConfig:CommonAppPath)\\Dumps\\MqttClient\\DataPublishLogger.log",
+      "PayloadDumpRetentionTime": 2,
+      "PayloadScriptFile": "TDataLakePayload.cs",
+      "Disabled": true,
+      "Address": "localhost",
+      "CleanSession": true,
+      "ClientCaCertificateFile": "",
+      "ClientCertificateFile": "",
+      "ClientCertificatePassword": "",
+      "Password": "",
+      "Username": "",
+      "ProtocolVersion": "V500",
+      "QualityOfService": 2,
+      "RetainMessages": true,
+      "Topic": "datalake/stream",
+      "Properties": {
+        "StreamId": "a480bf9d-28d7-4f98-9f88-5bab8ab990e9"
+      },
+      "ServiceRule": {
+        "BindingRuleId": "4c8adc40-0d82-4c05-b717-c63ce64ff1eb",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "68e722f3-f31f-4df6-a989-e4c58f7a98ab",
+        "Properties": {}
+      }
+    }
+  ],
+  "Subscribers": [],
+  "Properties": {}
+}
