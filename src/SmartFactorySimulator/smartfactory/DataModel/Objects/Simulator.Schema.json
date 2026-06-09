@@ -1,0 +1,51 @@
+{
+  "Id": "fea28d0d-111c-4ebb-97f5-eae378d43874",
+  "Name": "Simulator.Schema",
+  "Checksum": 6601979314438837280,
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [
+    {
+      "Id": "4febc90f-92c3-4400-9ea2-fdf60d0bb8e3",
+      "Name": "Agent",
+      "Type": "GenericActor",
+      "Skills": [
+        "54c4fa92-f385-4644-b929-5650310b4930"
+      ],
+      "Properties": [
+        {
+          "Name": "opc-ua:Ignore",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    }
+  ],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [],
+  "Skills": [
+    {
+      "Id": "54c4fa92-f385-4644-b929-5650310b4930",
+      "Name": "ScriptingSkill",
+      "Properties": [
+        {
+          "Name": "opc-ua:Ignore",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    }
+  ],
+  "Timers": [],
+  "Workflows": []
+}

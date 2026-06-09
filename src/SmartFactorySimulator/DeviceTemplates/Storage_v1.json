@@ -1,0 +1,161 @@
+{
+  "Id": "5c100e14-38c0-4e5c-885f-62af86964376",
+  "Name": "Storage_v1",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [
+    {
+      "Id": "421dbe09-9c23-426d-af30-53ac47f256c7",
+      "Name": "Temperature",
+      "Address": "$.Temperature",
+      "DataType": "System.Double",
+      "Unit": "°C",
+      "DataClass": "Stream",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "TemperatureType"
+        }
+      ]
+    },
+    {
+      "Id": "2ae04363-c4ed-465b-b2aa-297fa89d47ab",
+      "Name": "JobRegistry",
+      "Address": "$.JobRegistry",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "921593b8-aa6a-4c30-9e41-eb69606d2840",
+      "Name": "StoredParts",
+      "Address": "$.StoredParts",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "17735a18-4cf0-4e2b-a0ae-e7e570098f8f",
+      "Name": "LoadJob",
+      "ScriptFile": "StorageSimulator.LoadJob.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "JobId",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "NumberOfParts",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": []
+    },
+    {
+      "Id": "c6401373-2c41-4a99-b80d-16f6860264dc",
+      "Name": "UnloadJob",
+      "ScriptFile": "StorageSimulator.UnloadJob.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "JobId",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "NumberOfParts",
+          "Type": "Output",
+          "DataType": "System.Int32",
+          "Description": ""
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [
+    {
+      "Id": "ad3c1882-f2c9-4029-8497-1bef3fc1aef6",
+      "Name": "ProcessingNetwork",
+      "DataNodes": [],
+      "Links": [],
+      "Processors": [
+        {
+          "Id": "72a961ee-3ca4-4b87-9da1-e09acd6f71b2",
+          "Name": "TemperatureProcessor",
+          "InitialData": [
+            "StorageSimulator.TemperatureProcessing.cs"
+          ],
+          "SamplingRate": 10.0,
+          "Type": "CSharpScriptProcessingNode",
+          "Ports": [
+            {
+              "Name": "OutputPort",
+              "DataType": "System.Double",
+              "FlowDirection": "Output",
+              "Protocol": "Streaming",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "TemperatureType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Rules": [
+    {
+      "Id": "3dd02be6-3ade-49d2-b461-6109f4d394d8",
+      "Name": "Port Matching Rule",
+      "Type": "PortMatchingRule",
+      "Properties": []
+    }
+  ],
+  "SubDevices": []
+}

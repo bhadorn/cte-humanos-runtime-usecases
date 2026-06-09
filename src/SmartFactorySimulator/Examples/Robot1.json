@@ -1,0 +1,28 @@
+{
+  "Battery": {
+    "IsCharging": false,
+    "IsPowerOn": true,
+    "BatteryCapacity": 19.913268363625814,
+    "BatteryLevel": 99.56634336800407,
+    "PowerConsumption": 0.01
+  },
+  "Controller": {
+    "PositionX": 12,
+    "PositionY": 6,
+    "HorizontalAngle": 0,
+    "FeedrateOverride": 100,
+    "RunningState": 0,
+    "RunningMeters": 735.8238821128728,
+    "AlarmState": 0,
+    "SetSpeed": 1.5,
+    "SetTravelTime": 0,
+    "CurrentTravelTime": 0,
+    "SetTravelDistance": 14.803590302649559,
+    "CurrentProgram": "[\n  { \"PosX\": 0, \"PosY\": 0 }, { \"PosX\": 10, \"PosY\": 2 },\n  { \"PosX\": 10, \"PosY\": 3 },\n  { \"PosX\": 12, \"PosY\": 6 }\n]"
+  },
+  "Tray": {
+    "CurrentJobId": "Test3",
+    "NumberOfParts": 0
+  },
+  "TaughtWayPoints": "{\r\n  \"Storage1_TestMachine1\": {\r\n    \"Start\": \"Storage1\",\r\n    \"End\": \"TestMachine1\",\r\n    \"WayPoints\": [\r\n      {\r\n        \"PosX\": 10,\r\n        \"PosY\": 2\r\n      },\r\n      {\r\n        \"PosX\": 10,\r\n        \"PosY\": 3\r\n      },\r\n      {\r\n        \"PosX\": 12,\r\n        \"PosY\": 6\r\n      }\r\n    ]\r\n  },\r\n  \"Storage1_TestMachine2\": {\r\n    \"Start\": \"Storage1\",\r\n    \"End\": \"TestMachine2\",\r\n    \"WayPoints\": [\r\n      {\r\n        \"PosX\": 10,\r\n        \"PosY\": 2\r\n      },\r\n      {\r\n        \"PosX\": 10,\r\n        \"PosY\": 3\r\n      },\r\n      {\r\n        \"PosX\": 12,\r\n        \"PosY\": 7\r\n      }\r\n    ]\r\n  },\r\n  \"TestMachine1_TestMachine2\": {\r\n    \"Start\": \"TestMachine1\",\r\n    \"End\": \"TestMachine2\",\r\n    \"WayPoints\": []\r\n  }\r\n}"
+}

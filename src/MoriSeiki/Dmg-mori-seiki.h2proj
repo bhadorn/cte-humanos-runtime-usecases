@@ -1,0 +1,128 @@
+{
+  "Path": "Dmg-mori-seiki.h2proj",
+  "Name": "Dmg-mori-seiki",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "82ad96a4-5e4c-4fa6-b302-219cd92731bd",
+      "Path": "MoriSeiki.json",
+      "Id": "8b218ec2-60bc-4c76-93fa-a0d1504da94d",
+      "Name": "MoriSeiki",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n65623134666238643232633430346635303238333736366135343361353031643363613132613163\r\n3961323231613564633030373334616539343563333835620a663135646330393565326236366561\r\n36633339373335653263666562623261343732623064613665383163313633633038623931356439\r\n3763653563636537350a363664623437393965636439656135356534656664346132343162666332\r\n38393838616434323039613435346366303339633230613165333461633031393531633230383332\r\n3565356562363264326461393130333232303963646433383534\r\n"
+      }
+    ],
+    "Id": "a3003cde-7456-49e7-9e62-ea75e9bfb012",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "1fe73cc9-0df3-47a5-800d-28190776ff14",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.9",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "1fe73cc9-0df3-47a5-800d-28190776ff14",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.9"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "192.168.0.10",
+          "DeviceTemplateId": "8b218ec2-60bc-4c76-93fa-a0d1504da94d",
+          "DriverId": "82ad96a4-5e4c-4fa6-b302-219cd92731bd",
+          "SubDevices": [],
+          "Type": "TCP",
+          "Variables": [],
+          "Path": "MoriSeiki.json",
+          "Id": "63f0bd2b-0b08-4800-8034-a7de386ffddc",
+          "Name": "MoriSeiki",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "MoriSeikiPayloadProcessor.cs",
+              "Id": "4cd8ec14-39e8-4cad-839c-f22665f8789f",
+              "Name": "MoriSeikiPayloadProcessor.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.TcpClientControl",
+          "Id": "82ad96a4-5e4c-4fa6-b302-219cd92731bd",
+          "Name": "HumanOS.UHAL.TcpClientControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

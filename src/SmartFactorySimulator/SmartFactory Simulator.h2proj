@@ -1,0 +1,428 @@
+{
+  "Path": "SmartFactory Simulator.h2proj",
+  "Name": "SmartFactory Simulator",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "PublishNumber": 1,
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "RobotSimulator_v1.json",
+      "Id": "505f6ba3-467d-4629-a88c-a9b09d1b0720",
+      "Name": "RobotSimulator_v1",
+      "Description": ""
+    },
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "TestMachineSimulator_v1.json",
+      "Id": "2a23940d-f6a3-4fc8-8f04-82eacf8a2548",
+      "Name": "TestMachineSimulator_v1",
+      "Description": ""
+    },
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "Storage_v1.json",
+      "Id": "5c100e14-38c0-4e5c-885f-62af86964376",
+      "Name": "Storage_v1",
+      "Description": ""
+    },
+    {
+      "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+      "Path": "vHub_v1.json",
+      "Id": "7c978b25-1cbf-4512-8ac5-52046bd332ad",
+      "Name": "vHub_v1",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n35346136343764343264313262333132666636633836313932616531343131376630393438646330\r\n6265663336303835633639623135356663376538663333340a343838633361333364656332633531\r\n36636533363332616233323233383737666663306466353265636633633032326461316564653735\r\n6464386135353333640a663461613531643133653534303638666332396135613164613330656439\r\n32623134313338656238663365366464373731636662353031343437653934666162663566646134\r\n6132386162626536366136623235613538306434346137316534\r\n"
+      },
+      {
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "Id": "5abad177-f768-4655-9da6-47ea3322e3e9",
+        "KeyName": "MySQLCredentials",
+        "Type": "UserPassword",
+        "UserName": "humanos",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n39306562396464663661626361336435633537316435373637623865383366353639623339393162\r\n3136666361303534323763393833653334353334663137630a306661393338633537643830316239\r\n35656563343066393039653265326539393635666139313562643038303262643438313662383138\r\n3338386436323131320a303731343531383433636139373531636330303530623639643138373734\r\n3831\r\n"
+      }
+    ],
+    "Id": "3beb8e52-a652-4e9b-b282-bf66e3a1cdf3",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "smartfactory",
+      "Id": "9c55d5d4-e358-4c88-a4d5-5efe1d9c3a1c",
+      "Name": "smartfactory",
+      "DisplayName": "Factory Simulator",
+      "Description": "",
+      "DirectoryPublishPath": "C:\\ProgramData\\CyberTech\\HumanOS.IoT.Gateways\\$(Target.Name)\\Updates",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishDestination": "Directory",
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "9c55d5d4-e358-4c88-a4d5-5efe1d9c3a1c",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "HumanOS.Repository.Secret": "MySQLCredentials",
+        "HumanOS.SharedNodeSpace.Type": "",
+        "HumanOS.SharedNodeSpace.Address": "localhost",
+        "HumanOS.SharedNodeSpace.MasterSystemControllerId": "00000000-0000-0000-0000-000000000000",
+        "HumanOS.SharedNodeSpace.MasterAgentOrchestratorId": "00000000-0000-0000-0000-000000000000",
+        "HumanOS.RuntimeVersion": "2.11"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [
+          {
+            "Path": "Simulator.Schema.json",
+            "Id": "d66892f0-6098-423b-b438-23a4c88ea369",
+            "Name": "Simulator.Schema.json",
+            "Description": ""
+          }
+        ],
+        "Rules": [
+          {
+            "Path": "Rules.Schema.json",
+            "Id": "eba35757-f0b2-477c-afe9-d6dd67068d69",
+            "Name": "Rules.Schema.json",
+            "Description": ""
+          }
+        ],
+        "Schema": [
+          {
+            "Path": "TestMachineWorkflow.Schema.json",
+            "Id": "13fbda3d-b313-4167-a9e2-913cc9b455b1",
+            "Name": "TestMachineWorkflow.Schema.json",
+            "Description": ""
+          },
+          {
+            "Path": "RobotWorkflow.Schema.json",
+            "Id": "b4a88ec0-8c99-4bd2-8a77-8ebfb87a10fe",
+            "Name": "RobotWorkflow.Schema.json",
+            "Description": ""
+          }
+        ],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "..\\..\\..\\Simulators\\TestMachine1.json",
+          "DeviceTemplateId": "2a23940d-f6a3-4fc8-8f04-82eacf8a2548",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "TESTMACHINE",
+          "Variables": [
+            {
+              "Name": "DefaultCycleTime",
+              "DataType": "System.Double",
+              "Value": "4"
+            }
+          ],
+          "Path": "TestMachine1.json",
+          "Id": "992f2441-2a5d-49a9-938a-97f24bfd2bd8",
+          "Name": "TestMachine1",
+          "Description": ""
+        },
+        {
+          "Address": "..\\..\\..\\Simulators\\TestMachine2.json",
+          "DeviceTemplateId": "2a23940d-f6a3-4fc8-8f04-82eacf8a2548",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "TESTMACHINE",
+          "Variables": [
+            {
+              "Name": "DefaultCycleTime",
+              "DataType": "System.Double",
+              "Value": "120"
+            }
+          ],
+          "Path": "TestMachine2.json",
+          "Id": "83a63f18-8f53-4d2e-b94d-c3a1000e78b4",
+          "Name": "TestMachine2",
+          "Description": ""
+        },
+        {
+          "Address": "..\\..\\..\\Simulators\\Robot1.json",
+          "DeviceTemplateId": "505f6ba3-467d-4629-a88c-a9b09d1b0720",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "ROBOT",
+          "Variables": [],
+          "Path": "Robot1.json",
+          "Id": "6eb164f0-3adf-4272-89fe-4ffe618cf3ad",
+          "Name": "Robot1",
+          "Description": ""
+        },
+        {
+          "Address": "..\\..\\..\\Simulators\\Storage1.json",
+          "DeviceTemplateId": "5c100e14-38c0-4e5c-885f-62af86964376",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "STORAGE",
+          "Variables": [],
+          "Path": "Storage1.json",
+          "Id": "6ca54108-b083-495c-ad67-2507003197a1",
+          "Name": "Storage1",
+          "Description": ""
+        },
+        {
+          "Address": "https://api.vhub.ch",
+          "DeviceTemplateId": "7c978b25-1cbf-4512-8ac5-52046bd332ad",
+          "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "ProductLicenseId": "b022df01-c0eb-45df-a3ca-d6fdd413c052",
+          "SubDevices": [],
+          "Type": "REST API",
+          "Variables": [],
+          "Path": "vHub.json",
+          "Id": "0f9a647b-95d7-4838-bc38-28ccb5c50269",
+          "Name": "vHub",
+          "Description": ""
+        },
+        {
+          "Address": "..\\..\\..\\Simulators\\Robot2.json",
+          "DeviceTemplateId": "505f6ba3-467d-4629-a88c-a9b09d1b0720",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "ROBOT",
+          "Variables": [],
+          "Path": "Robot2.json",
+          "Id": "f9d40c1c-4515-420c-9d33-2b34ede66737",
+          "Name": "Robot2",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "Robot.Start.cs",
+              "Id": "10b71dd7-dd9f-4be1-94a3-87a613480ae8",
+              "Name": "Robot.Start.cs",
+              "Description": ""
+            },
+            {
+              "Path": "Robot.Stop.cs",
+              "Id": "71b0418b-82ba-4e9f-835b-6a10ab6f8e60",
+              "Name": "Robot.Stop.cs",
+              "Description": ""
+            },
+            {
+              "Path": "Robot.Teach.cs",
+              "Id": "13a1441a-9d68-4750-a634-259ceff60231",
+              "Name": "Robot.Teach.cs",
+              "Description": ""
+            },
+            {
+              "Path": "Robot.ChangeFeedrate.cs",
+              "Id": "8e7fbb05-b7bb-4423-8981-4c4cd2d02585",
+              "Name": "Robot.ChangeFeedrate.cs",
+              "Description": ""
+            },
+            {
+              "Path": "Storage.Load.cs",
+              "Id": "b7b623db-421f-4e05-b27c-33ca20bfe372",
+              "Name": "Storage.Load.cs",
+              "Description": ""
+            },
+            {
+              "Path": "Storage.Unload.cs",
+              "Id": "4da15c7e-4a3e-44c1-9048-5d7cf7687603",
+              "Name": "Storage.Unload.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.PeSeL.WebService",
+          "Id": "650a866d-5958-4ff6-bb11-b0a74cc76151",
+          "Name": "HumanOS.PeSeL.WebService",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "RobotSimulator.Start.cs",
+              "Id": "bb1c3867-dd92-4925-9de4-c5089fd84729",
+              "Name": "RobotSimulator.Start.cs",
+              "Description": ""
+            },
+            {
+              "Path": "RobotSimulator.ChangeFeedrate.cs",
+              "Id": "a0e1bc23-8ed3-459a-964c-ad432aa3c18a",
+              "Name": "RobotSimulator.ChangeFeedrate.cs",
+              "Description": ""
+            },
+            {
+              "Path": "RobotSimulator.Stop.cs",
+              "Id": "bed77c34-606d-42dd-aac3-27fe3e04c7a8",
+              "Name": "RobotSimulator.Stop.cs",
+              "Description": ""
+            },
+            {
+              "Path": "RobotSimulator.Teach.cs",
+              "Id": "c1f22601-7137-451a-ae8c-071a9a919993",
+              "Name": "RobotSimulator.Teach.cs",
+              "Description": ""
+            },
+            {
+              "Path": "StorageSimulator.LoadJob.cs",
+              "Id": "05b1d3ef-14a0-4a46-98b1-376d04ceaf35",
+              "Name": "StorageSimulator.LoadJob.cs",
+              "Description": ""
+            },
+            {
+              "Path": "StorageSimulator.UnloadJob.cs",
+              "Id": "c6e6e49c-c78e-40ac-850d-30da0ea30aae",
+              "Name": "StorageSimulator.UnloadJob.cs",
+              "Description": ""
+            },
+            {
+              "Path": "StorageSimulator.TemperatureProcessing.cs",
+              "Id": "22d10181-8d2f-4574-b54b-ff961b13afb7",
+              "Name": "StorageSimulator.TemperatureProcessing.cs",
+              "Description": ""
+            },
+            {
+              "Path": "TestMachineSimulator.LoadJob.cs",
+              "Id": "360e4679-063c-4367-8561-a96cfb4d10d9",
+              "Name": "TestMachineSimulator.LoadJob.cs",
+              "Description": ""
+            },
+            {
+              "Path": "TestMachineSimulator.UnloadJob.cs",
+              "Id": "cad55183-3e29-40af-823b-309128f03ddd",
+              "Name": "TestMachineSimulator.UnloadJob.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.FileReader",
+          "Id": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "Name": "HumanOS.UHAL.FileReader",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "tdatalakepayload.cs",
+              "Id": "1e1c10da-82f7-4c1c-9af2-137e9a110099",
+              "Name": "tdatalakepayload.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.PeSeL.MQTTClient",
+          "Id": "16e29c41-3ce5-4fd6-8d61-2e47c93c7a7a",
+          "Name": "HumanOS.PeSeL.MQTTClient",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "ReadWayPoints.cs",
+              "Id": "8fe93153-e7dc-491e-97de-12cb640322ea",
+              "Name": "ReadWayPoints.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.WebControl",
+          "Id": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "Name": "HumanOS.UHAL.WebControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "tdatalakepayload.cs",
+              "Id": "b92e749c-e548-4ebf-8bc4-815fb5bccbbd",
+              "Name": "tdatalakepayload.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.PeSeL.NodeSpaceDataLogger",
+          "Id": "f433a67f-4216-4baa-9cbe-555fd4905682",
+          "Name": "HumanOS.PeSeL.NodeSpaceDataLogger",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [
+          {
+            "Path": "RobotInit.cs",
+            "Id": "f2cbc1c8-7565-463a-8ece-54b1732732da",
+            "Name": "RobotInit.cs",
+            "Description": ""
+          },
+          {
+            "Path": "RobotController.cs",
+            "Id": "6ff93d42-f3a0-4be0-b1a8-16d4de348002",
+            "Name": "RobotController.cs",
+            "Description": ""
+          },
+          {
+            "Path": "TestMachineInit.cs",
+            "Id": "fbae1679-b3c4-49cf-a48a-79bb2b4ac51a",
+            "Name": "TestMachineInit.cs",
+            "Description": ""
+          },
+          {
+            "Path": "TestMachineController.cs",
+            "Id": "b8fdf474-eee8-4b2b-9427-58a84720cac5",
+            "Name": "TestMachineController.cs",
+            "Description": ""
+          }
+        ],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "Id": "1f14cc19-b80c-4248-a63e-806c49b2af4d",
+  "Name": "Simulator_v1",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "1446d8ab-8c3b-4b72-adbd-1f24552bedcd",
+      "Name": "ReadFile",
+      "Address": "ReadFile",
+      "ScriptFile": "",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

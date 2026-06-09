@@ -1,0 +1,102 @@
+{
+  "Id": "0f9a647b-95d7-4838-bc38-28ccb5c50269",
+  "Name": "vHub",
+  "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+  "Address": "https://api.vhub.ch",
+  "Properties": [
+    {
+      "Name": "AuthorizationParameter",
+      "DataType": "System.String",
+      "Value": "<vhub token>"
+    },
+    {
+      "Name": "AuthorizationType",
+      "DataType": "System.String",
+      "Value": "Basic"
+    },
+    {
+      "Name": "CustomHeader:User-Agent",
+      "DataType": "System.String",
+      "Value": "HumanOS"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "REST API"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "0ae148f9-2134-4b0c-adfd-089bd0dd0425",
+      "Name": "ReadWayPoints",
+      "Address": "api/v2/datasets/93b71904-4967-48d7-8a0f-4e56711c6c22/json",
+      "ScriptFile": "ReadWayPoints.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "RouteId",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "Accept",
+          "DataType": "System.String",
+          "Value": "*/*"
+        },
+        {
+          "Name": "Method",
+          "DataType": "System.String",
+          "Value": "GET"
+        }
+      ]
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

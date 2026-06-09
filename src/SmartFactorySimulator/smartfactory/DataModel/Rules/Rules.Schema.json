@@ -1,0 +1,42 @@
+{
+  "Id": "5975a2af-749d-46d7-96b6-4d2e37255e19",
+  "Name": "Rules.Schema",
+  "Checksum": 6183761532184211391,
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [
+    {
+      "Id": "{E57646DB-814D-4F5B-A6BD-535F1D781F69}",
+      "Name": "InstantiationOfWorkflows",
+      "SchemaId": "f101c817-7cd1-4b40-a778-05d61fdef102",
+      "TriggerCondition": "Context.Node is IGroupRelation && Context.Node.getProperty<string>(\"Type\") == \"ROBOT\"",
+      "TriggerEvent": "OnObjectAppeared",
+      "Type": "InstantiationRule",
+      "Properties": []
+    },
+    {
+      "Id": "7f597860-efef-444a-b239-c1efd932b05a",
+      "Name": "InstantiationOfWorkflows",
+      "SchemaId": "bb88595f-d611-48dc-800c-f34aa111c2de",
+      "TriggerCondition": "Context.Node is IGroupRelation && Context.Node.getProperty<string>(\"Type\") == \"TESTMACHINE\"",
+      "TriggerEvent": "OnObjectAppeared",
+      "Type": "InstantiationRule",
+      "Properties": []
+    }
+  ],
+  "Skills": [],
+  "Timers": [],
+  "Workflows": []
+}

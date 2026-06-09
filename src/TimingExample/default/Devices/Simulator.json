@@ -1,0 +1,71 @@
+{
+  "Id": "ae300575-3767-4470-a2ea-f8f1fd0121ee",
+  "Name": "Simulator",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "..\\..\\..\\Simulator.json",
+  "Properties": [
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "JSON"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "74cdf979-83da-4ba5-9d27-14f005254ef1",
+      "Name": "ReadFile",
+      "Address": "ReadFile",
+      "ScriptFile": "",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Name",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

@@ -1,0 +1,47 @@
+{
+  "Id": "bd363913-c3fe-4705-bbf7-f79c2ca07602",
+  "Name": "Blank Schema",
+  "Checksum": 5220489180081641948,
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [
+    {
+      "Name": "Test.ScriptedRule1",
+      "Action": {
+        "ScriptFile": "Timer_Script.cs",
+        "Type": "ScriptFile",
+        "Arguments": []
+      },
+      "TriggerCondition": "",
+      "TriggerEvent": "OnTimer",
+      "Type": "GenericRule",
+      "Properties": []
+    }
+  ],
+  "Skills": [],
+  "Timers": [
+    {
+      "Id": "59184997-5e0c-45db-ae37-362f2890d8d1",
+      "Name": "Timer",
+      "TriggerConfig": {
+        "Id": "21cfe9f1-5195-4852-86c6-d9515e045fc3",
+        "Interval": 2000,
+        "RepeatCount": 2147483647
+      },
+      "Properties": []
+    }
+  ],
+  "Workflows": []
+}

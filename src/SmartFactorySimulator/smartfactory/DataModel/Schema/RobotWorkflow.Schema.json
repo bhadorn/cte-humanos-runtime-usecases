@@ -1,0 +1,145 @@
+{
+  "Id": "f101c817-7cd1-4b40-a778-05d61fdef102",
+  "Name": "RobotWorkflow.Schema",
+  "Checksum": -6915386544538005415,
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [],
+  "Skills": [],
+  "Timers": [],
+  "Workflows": [
+    {
+      "Name": "RobotWorkflow",
+      "Arguments": [
+        {
+          "Name": "Workflow",
+          "DataType": "System.Object",
+          "Description": ""
+        }
+      ],
+      "Nodes": [
+        {
+          "Type": "InitialNode",
+          "Name": "Start",
+          "Operations": [],
+          "ControlFlows": [],
+          "ObjectFlows": [],
+          "Ports": [],
+          "Properties": []
+        },
+        {
+          "Type": "GenericActivity",
+          "Name": "InitialActivity",
+          "ActorSkill": "54c4fa92-f385-4644-b929-5650310b4930",
+          "AutoReset": true,
+          "Operations": [
+            {
+              "Name": "Operation",
+              "Condition": "",
+              "Description": "",
+              "Instruction": "RobotInit.cs",
+              "Type": "CSharpScriptOperation",
+              "Properties": []
+            }
+          ],
+          "ControlFlows": [],
+          "ObjectFlows": [],
+          "Ports": [],
+          "Properties": []
+        },
+        {
+          "Type": "ForkNode",
+          "Name": "Fork",
+          "Operations": [],
+          "ControlFlows": [],
+          "ObjectFlows": [],
+          "Ports": [],
+          "Properties": []
+        },
+        {
+          "Type": "GenericActivity",
+          "Name": "ControllerActivity",
+          "ActorSkill": "54c4fa92-f385-4644-b929-5650310b4930",
+          "AutoReset": true,
+          "Operations": [
+            {
+              "Name": "Operation",
+              "Condition": "",
+              "Description": "",
+              "Instruction": "RobotController.cs",
+              "Type": "CSharpScriptOperation",
+              "Properties": []
+            }
+          ],
+          "ControlFlows": [],
+          "ObjectFlows": [],
+          "Ports": [],
+          "Properties": []
+        },
+        {
+          "Type": "JoinNode",
+          "Name": "Join",
+          "Operations": [],
+          "ControlFlows": [],
+          "ObjectFlows": [],
+          "Ports": [],
+          "Properties": []
+        },
+        {
+          "Type": "ActivityFinalNode",
+          "Name": "End",
+          "Operations": [],
+          "ControlFlows": [],
+          "ObjectFlows": [],
+          "Ports": [],
+          "Properties": []
+        }
+      ],
+      "ControlFlows": [
+        {
+          "Name": "Start_InitialActivity",
+          "Node1RefName": "Start",
+          "Node2RefName": "InitialActivity"
+        },
+        {
+          "Name": "InitialActivity_Fork",
+          "Node1RefName": "InitialActivity",
+          "Node2RefName": "Fork"
+        },
+        {
+          "Name": "Join_End",
+          "GuardCondition": "",
+          "Node1RefName": "Join",
+          "Node2RefName": "End"
+        },
+        {
+          "Name": "Fork_ControllerActivity",
+          "GuardCondition": "",
+          "Node1RefName": "Fork",
+          "Node2RefName": "ControllerActivity"
+        },
+        {
+          "Name": "ControllerActivity_Join",
+          "GuardCondition": "",
+          "Node1RefName": "ControllerActivity",
+          "Node2RefName": "Join"
+        }
+      ],
+      "ObjectFlows": [],
+      "Ports": [],
+      "Properties": []
+    }
+  ]
+}
