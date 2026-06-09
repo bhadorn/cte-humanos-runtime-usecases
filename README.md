@@ -46,6 +46,8 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [SparkPlug Alarming](./src/SparkPlugAlarming/Readme.md)        | FanucControl + SparkPlug | Alarm forwarding from FANUC controller via MQTT SparkPlug   |
 | [Temperature Reporter](./src/TemperatureReporter/Readme.md)    | FileReader (simulator)   | Threshold-based alerting with multiple alarm levels         |
 | [Timing Example](./src/TimingExample/Readme.md)                | FileReader (simulator)   | Example how to use timers to execute commands               |
+| [Heidenhain CSV data logger](./src/Heidenhain/Heidenhain_CSV_DataLogger/Readme.md)       | Heidenhain + CSV Logger  | CSV data logger from Heidenhain   |
+| [Heidenhain OEE](./src/Heidenhain/Heidenhain_OEE/Readme.md)                              | Heidenhain + OEE         | OEE Template from Heidenhain      |
 
 ## HumanOS Runtime
 

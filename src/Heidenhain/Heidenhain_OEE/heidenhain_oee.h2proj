@@ -1,0 +1,150 @@
+{
+  "Path": "heidenhain_oee.h2proj",
+  "Name": "heidenhain_oee",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+      "Path": "HeidenhainOPCUA.json",
+      "Id": "efb3e6d4-3469-4cc0-919e-04fc83001fb3",
+      "Name": "HeidenhainOPCUA",
+      "Description": ""
+    },
+    {
+      "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+      "Path": "HeidenhainOEE.json",
+      "Id": "dfb5507b-09ee-42cd-982a-d7cc0a1ddecd",
+      "Name": "HeidenhainOEE",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n33343630663464636662376130643537653437326439623935383834353537613339306339313033\r\n3434626361636362356237313261663138346566326632390a343937633266313036336535383834\r\n61343937646434333232336234316261623762646262386564356466666633313866313837633130\r\n6664376334363137620a626336663435653532316139653630656533386130656139313733366333\r\n65636263386438633938393563316437666631653636626633626466323335393562663333396466\r\n3465303633643537306233336338313738356438383938326630\r\n"
+      }
+    ],
+    "Id": "9c7a8fb2-1dd9-45f5-b2ad-c6d25c6a6118",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "4ccdfb2f-792b-47fb-ad2d-a460c4e6ccfd",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86",
+      "RuntimeVersion": "2.10",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "4ccdfb2f-792b-47fb-ad2d-a460c4e6ccfd",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.10"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "ItncSim",
+          "DeviceTemplateId": "efb3e6d4-3469-4cc0-919e-04fc83001fb3",
+          "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+          "SubDevices": [],
+          "Type": "iTNC530",
+          "Variables": [],
+          "Path": "Heidenhain iTNC530 Simulator.json",
+          "Id": "80ea07c9-503d-4cfe-a005-dc704134d9a7",
+          "Name": "Heidenhain iTNC530 Simulator",
+          "Description": ""
+        },
+        {
+          "Address": "ItncSim",
+          "DeviceTemplateId": "dfb5507b-09ee-42cd-982a-d7cc0a1ddecd",
+          "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+          "SubDevices": [],
+          "Type": "iTNC530",
+          "Variables": [],
+          "Path": "Heidenhain iTNC530 OEE Simulator.json",
+          "Id": "8133f4b6-6e14-4285-9ddd-fed2e6484c2f",
+          "Name": "Heidenhain iTNC530 OEE Simulator",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "TMainProgramHeaderProcessorScript.cs",
+              "Id": "b5e1d777-34ab-47b2-a287-acae52666380",
+              "Name": "TMainProgramHeaderProcessorScript.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.HeidenhainControl",
+          "Id": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+          "Name": "HumanOS.UHAL.HeidenhainControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
