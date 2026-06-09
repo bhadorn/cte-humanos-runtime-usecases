@@ -1,0 +1,175 @@
+{
+  "Path": "Tutorial.Scripting.h2proj",
+  "Name": "Tutorial.Scripting",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+      "Path": "MazakConnector.json",
+      "Id": "c0cfe755-93dc-4dc9-b989-6b64b7a1c548",
+      "Name": "MazakConnector",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n61633061613633306136326636336561313736336439616164303562363164393931316233653663\r\n6561376436653566356138323062393064396535613461320a363463613763353937613462643962\r\n65626530383538666335653337643065363566316432333165643061643331366431633961326661\r\n3962663337623139350a336338306439336635643861623631303930663233323632656530356265\r\n39303730353563646633373061306139616265323233363137353164623636653939646362396133\r\n3861313231656132326631313662623333343538303366633436\r\n"
+      }
+    ],
+    "Id": "5c97518d-5192-4217-84c6-203d26caf5af",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "3fabb58d-ca45-4191-a5cb-285c614fe803",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86",
+      "RuntimeVersion": "2.10",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "3fabb58d-ca45-4191-a5cb-285c614fe803",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.10"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [
+          {
+            "Path": "GlobalCommands.json",
+            "Id": "f0398118-3815-4803-a6c6-e67a6121fcb0",
+            "Name": "GlobalCommands.json",
+            "Description": ""
+          }
+        ],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "http://mtconnect.mazakcorp.com:5719",
+          "DeviceTemplateId": "c0cfe755-93dc-4dc9-b989-6b64b7a1c548",
+          "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+          "SubDevices": [],
+          "Type": "MTConnect",
+          "Variables": [],
+          "Path": "Mazak.json",
+          "Id": "7d96f2f6-7a5a-4e39-bff8-77ea43025946",
+          "Name": "Mazak",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "MTConnectPayloadProcessor.cs",
+              "Id": "e02aaa77-554e-4540-84c1-9af8d4a959d2",
+              "Name": "MTConnectPayloadProcessor.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.WebControl",
+          "Id": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "Name": "HumanOS.UHAL.WebControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.MqttServer",
+          "Id": "73534114-43e1-4591-9fad-93991367625f",
+          "Name": "HumanOS.PeSeL.MqttServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "MqttPayloadScript.cs",
+              "Id": "ff0f6315-4303-44bd-9d5e-426576307874",
+              "Name": "MqttPayloadScript.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.PeSeL.MQTTClient",
+          "Id": "16e29c41-3ce5-4fd6-8d61-2e47c93c7a7a",
+          "Name": "HumanOS.PeSeL.MQTTClient",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.WebService",
+          "Id": "650a866d-5958-4ff6-bb11-b0a74cc76151",
+          "Name": "HumanOS.PeSeL.WebService",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [
+          {
+            "Path": "Command1.cs",
+            "Id": "7aa0c6c3-ae0e-44a7-a9bc-825715bff4bf",
+            "Name": "Command1.cs",
+            "Description": ""
+          }
+        ],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

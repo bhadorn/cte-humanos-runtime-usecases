@@ -1,0 +1,20 @@
+{
+  "Services": [
+    {
+      "Id": "7a6ad01e-4fe7-40f1-96e9-33d37adc8a91",
+      "Port": 8081,
+      "X509CertificateFile": "",
+      "X509CertificatePassword": "",
+      "AcceptedCalls": [],
+      "Modules": [],
+      "Properties": {},
+      "ServiceRule": {
+        "Devices": [],
+        "Drivers": [],
+        "Properties": {}
+      }
+    }
+  ],
+  "Proxies": [],
+  "Properties": {}
+}

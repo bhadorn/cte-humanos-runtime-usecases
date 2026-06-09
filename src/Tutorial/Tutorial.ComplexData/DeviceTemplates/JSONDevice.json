@@ -1,0 +1,72 @@
+{
+  "Id": "9196ef86-b913-4b90-b12a-71643619c23c",
+  "Name": "JSONDevice",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [
+    {
+      "Id": "deb17eb5-fa97-4ffa-9cd4-a0def1d435fa",
+      "Name": "ReadComplexData",
+      "Address": "$.OrderNumber",
+      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "SelectedEntityType",
+          "DataType": "System.Guid",
+          "Value": "ca4ab12d-895c-4d25-85e2-a849e1585644"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [
+    {
+      "Id": "ca4ab12d-895c-4d25-85e2-a849e1585644",
+      "Name": "ComplexTypeA",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "System.Guid",
+          "IsKey": true
+        },
+        {
+          "Name": "OrderNumber",
+          "DataType": "System.String",
+          "ArraySize": 1,
+          "Length": 32
+        },
+        {
+          "Name": "PartCount",
+          "DataType": "System.Int32",
+          "ArraySize": 1,
+          "Length": 255
+        },
+        {
+          "Name": "CycleTime",
+          "DataType": "System.Double",
+          "ArraySize": 1,
+          "Length": 255
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

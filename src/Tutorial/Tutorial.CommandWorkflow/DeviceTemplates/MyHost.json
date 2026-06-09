@@ -1,0 +1,30 @@
+{
+  "Id": "7d28d134-6aa8-4c70-a7ed-a7594c9da49c",
+  "Name": "MyHost",
+  "DriverId": "46f00888-dac9-4bb8-a0a2-703e7716624c",
+  "Address": "",
+  "Variables": [],
+  "Properties": [
+    {
+      "Name": "InjectEnabled",
+      "DataType": "System.Boolean",
+      "Value": "true"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    }
+  ],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

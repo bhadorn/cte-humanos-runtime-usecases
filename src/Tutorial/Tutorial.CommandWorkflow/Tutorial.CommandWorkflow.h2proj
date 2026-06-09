@@ -1,0 +1,191 @@
+{
+  "Path": "Tutorial.CommandWorkflow.h2proj",
+  "Name": "Tutorial.CommandWorkflow",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "46f00888-dac9-4bb8-a0a2-703e7716624c",
+      "Path": "MyHost.json",
+      "Id": "7d28d134-6aa8-4c70-a7ed-a7594c9da49c",
+      "Name": "MyHost",
+      "Description": ""
+    },
+    {
+      "DriverId": "46f00888-dac9-4bb8-a0a2-703e7716624c",
+      "Path": "MyHostWithoutInject.json",
+      "Id": "e55cccac-f1eb-4920-b385-1d7eea07615a",
+      "Name": "MyHostWithoutInject",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n66313833383637653964333365363263303766363535636337636130303734306332363437633966\r\n6233626639653339656462613462353937303261643335370a346236373561303830656230343864\r\n36666262646339633264393135396465396234616532306339346631393633653161323133643164\r\n6138643731633830380a653333333334663133666433353466313139323237616638366433643630\r\n39633039643932366139326438666432653130316238623533653531303737656365323865333135\r\n6463316261386538333434633030643939366365633835653462\r\n"
+      }
+    ],
+    "Id": "6e737b6d-e813-42f0-84f6-6e9ac9296323",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "cf8ee221-5ce1-46e0-b89f-cb51ccf074e5",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86",
+      "RuntimeVersion": "2.10",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "cf8ee221-5ce1-46e0-b89f-cb51ccf074e5",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.10"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [
+          {
+            "Path": "ScriptingSkills.json",
+            "Id": "02449367-136b-49b5-833e-7f668f03a7b8",
+            "Name": "ScriptingSkills.json",
+            "Description": ""
+          }
+        ],
+        "Rules": [
+          {
+            "Path": "InjectionRule.json",
+            "Id": "71fc6211-37a0-4751-b9d8-a1414805bbbe",
+            "Name": "InjectionRule.json",
+            "Description": ""
+          }
+        ],
+        "Schema": [
+          {
+            "Path": "InjectionSchema.json",
+            "Id": "cf7bdd11-7c74-4e66-a4aa-0e5f6bb8dfe3",
+            "Name": "InjectionSchema.json",
+            "Description": ""
+          }
+        ],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "localhost",
+          "DeviceTemplateId": "7d28d134-6aa8-4c70-a7ed-a7594c9da49c",
+          "DriverId": "46f00888-dac9-4bb8-a0a2-703e7716624c",
+          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+          "SubDevices": [],
+          "Type": "HostControl",
+          "Variables": [],
+          "Path": "MyHost.json",
+          "Id": "8bde1d9e-64f6-4f27-b967-d7a25a0823d0",
+          "Name": "MyHost",
+          "Description": ""
+        },
+        {
+          "Address": "localhost",
+          "DeviceTemplateId": "e55cccac-f1eb-4920-b385-1d7eea07615a",
+          "DriverId": "46f00888-dac9-4bb8-a0a2-703e7716624c",
+          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+          "SubDevices": [],
+          "Type": "HostControl",
+          "Variables": [],
+          "Path": "MyHost2.json",
+          "Id": "aa4289cd-851d-406c-9a55-2ab8a471d160",
+          "Name": "MyHost2",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.HostControl",
+          "Id": "46f00888-dac9-4bb8-a0a2-703e7716624c",
+          "Name": "HumanOS.UHAL.HostControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [
+          {
+            "Path": "ExecuteWorkflow.cs",
+            "Id": "5cab5331-e4ba-4e48-a7fd-7cd402f531c4",
+            "Name": "ExecuteWorkflow.cs",
+            "Description": ""
+          }
+        ],
+        "Processing": [],
+        "Rules": [
+          {
+            "Path": "InjectToDevices.cs",
+            "Id": "6a3e6238-03c4-4fe2-92d6-bad6173e0512",
+            "Name": "InjectToDevices.cs",
+            "Description": ""
+          }
+        ],
+        "Workflows": [
+          {
+            "Path": "Operation_One.cs",
+            "Id": "964424b9-b510-429e-b2cc-a7c65a7dc343",
+            "Name": "Operation_One.cs",
+            "Description": ""
+          },
+          {
+            "Path": "TTerminateHumanOS.cs",
+            "Id": "29a66322-e62f-4248-b929-cda4a8c20d97",
+            "Name": "TTerminateHumanOS.cs",
+            "Description": ""
+          }
+        ],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "Id": "b38cd631-333c-4603-ab9b-411b17d8b5b6",
+  "Name": "JsonSource",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [
+    {
+      "Id": "d6abef9d-20cb-4732-88ef-de66c0415934",
+      "Name": "DataValue1",
+      "Address": "$.Value1",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "679d23e3-ccc0-451e-ac57-6195ce70bf66",
+      "Name": "DataValue2",
+      "Address": "$.Value2",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

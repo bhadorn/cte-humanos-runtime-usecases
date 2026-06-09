@@ -1,0 +1,43 @@
+{
+  "Id": "36760765-482d-45ca-9453-e3b2ec07f800",
+  "Name": "GlobalCommandsGroup1",
+  "Checksum": 1265734438701307200,
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [
+    {
+      "Id": "9e23f3c2-c4c1-467c-bf29-9115084119ef",
+      "Name": "ExecuteCommand1",
+      "Type": "CSharpScriptCommandNode",
+      "Arguments": [
+        {
+          "Name": "Arg1",
+          "DataType": "System.String",
+          "Description": ""
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "ScriptFileName",
+          "DataType": "System.String",
+          "Value": "Command1.cs"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [],
+  "Skills": [],
+  "Timers": [],
+  "Workflows": []
+}

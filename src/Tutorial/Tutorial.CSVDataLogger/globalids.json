@@ -1,0 +1,20 @@
+{
+  "FileName": "C:\\Temp\\hos\\Tutorial.CSVDataLogger\\globalids.json",
+  "Ids": {
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource": "3d997afc-b32e-4bb8-86a6-0b6af31d7420",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/DataValue1": "d5037402-476a-416f-b4c8-697c89575992",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/DataValue2": "8151f7f9-6006-4161-bb8b-ba99d9393f6b",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/Controller": "08bf50fa-6155-4e71-8586-6b573ecd8e0d",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/Controller/RunningState": "41751e35-8728-49da-a0d7-637516dc5330",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/Controller/OperationMode": "48535574-37b6-4fd3-b350-ba21bfb708c2",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/Controller/MachinePositions": "f9e44e09-00e7-4f54-a81a-c45364f3ab9c",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/Controller/CurrentProgram": "a9a8567e-3a13-45f8-a903-ce3ed41679d3",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/Controller/ReadFile": "f0cabc51-7a48-4f5c-a4a4-3774af193023",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/Alarm": "5f08dae3-738e-4765-9991-ae549da8b308",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/OEEMachineState": "de8293da-78e3-48ee-920b-8e7b4592bbe8",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/OEEMachineStateName": "f56c1798-d115-416a-abe0-4d5c66ef4591",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/DataProcessors": "217c869b-671c-43b0-b285-93a4eff973fe",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/DataProcessors/MachineStateProcessor": "a988c419-7449-4aba-b9a3-c48a6116dd91",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/PortMatchingRule": "169001fd-7997-4711-a138-167bfe25c692"
+  }
+}

@@ -36,18 +36,31 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 
 ## Use Cases
 
-| Use Case                                                       | Connector                | Key Feature                                                 |
-| :------------------------------------------------------------- | :----------------------- | :---------------------------------------------------------- |
-| [Ansible Agent](./src/AnsibleAgent/Readme.md)                  | WebControl (REST)        | IT automation via Semaphore API and HumanOS workflows       |
-| [Fraisa ToolExpert](./src/Fraisa.ToolExpert/Readme.md)         | WebControl (REST)        | Tool lookup from cloud API, exposed via OPC-UA              |
-| [Mori Seiki](./src/MoriSeiki/Readme.md)                        | TCP/IP Connector         | Machine data acquisition (MDA) using native TCP/IP protocol |
-| [Sinumerik 840D PowerLine](./src/SinumerikPowerLine/Readme.md) | SinumerikControl         | DNC file transfer and OEE/MDE data acquisition from CNC     |
-| [SmartFactory Simulator](./src/SmartFactorySimulator/Readme.md) | FileReader + WebControl  | Full factory simulation: robots, test machines, storage, OEE |
-| [SparkPlug Alarming](./src/SparkPlugAlarming/Readme.md)        | FanucControl + SparkPlug | Alarm forwarding from FANUC controller via MQTT SparkPlug   |
-| [Temperature Reporter](./src/TemperatureReporter/Readme.md)    | FileReader (simulator)   | Threshold-based alerting with multiple alarm levels         |
-| [Timing Example](./src/TimingExample/Readme.md)                | FileReader (simulator)   | Example how to use timers to execute commands               |
-| [Heidenhain CSV data logger](./src/Heidenhain/Heidenhain_CSV_DataLogger/Readme.md)       | Heidenhain + CSV Logger  | CSV data logger from Heidenhain   |
-| [Heidenhain OEE](./src/Heidenhain/Heidenhain_OEE/Readme.md)                              | Heidenhain + OEE         | OEE Template from Heidenhain      |
+| Use Case                                                                             | Connector                         | Key Feature                                                 |
+| :----------------------------------------------------------------------------------- | :-------------------------------- | :---------------------------------------------------------- |
+| [Ansible Agent](./src/AnsibleAgent/Readme.md)                                        | WebControl (REST)                 | IT automation via Semaphore API and HumanOS workflows       |
+| [Fraisa ToolExpert](./src/Fraisa.ToolExpert/Readme.md)                               | WebControl (REST)                 | Tool lookup from cloud API, exposed via OPC-UA              |
+| [Heidenhain CSV data logger](./src/Heidenhain/Heidenhain_CSV_DataLogger/Readme.md)   | HeidenhainControl + CSV Logger    | CSV data logging from Heidenhain iTNC530                    |
+| [Heidenhain OEE](./src/Heidenhain/Heidenhain_OEE/Readme.md)                          | HeidenhainControl + OPC-UA Server | OEE data from Heidenhain iTNC530 via OPC-UA                 |
+| [Mori Seiki](./src/MoriSeiki/Readme.md)                                              | TCP/IP Connector                  | Machine data acquisition (MDA) using native TCP/IP protocol |
+| [Sinumerik 840D PowerLine](./src/SinumerikPowerLine/Readme.md)                       | SinumerikControl                  | DNC file transfer and OEE/MDE data acquisition from CNC     |
+| [SmartFactory Simulator](./src/SmartFactorySimulator/Readme.md)                      | FileReader + WebControl           | Full factory simulation: robots, test machines, storage, OEE|
+| [SparkPlug Alarming](./src/SparkPlugAlarming/Readme.md)                              | FanucControl + SparkPlug          | Alarm forwarding from FANUC controller via MQTT SparkPlug   |
+| [Temperature Reporter](./src/TemperatureReporter/Readme.md)                          | FileReader (simulator)            | Threshold-based alerting with multiple alarm levels         |
+| [Timing Example](./src/TimingExample/Readme.md)                                      | FileReader (simulator)            | Example how to use timers to execute commands               |
+
+## Tutorials
+
+| Tutorial                                                                                              | Connector                          | Key Feature                                                             |
+| :---------------------------------------------------------------------------------------------------- | :--------------------------------- | :---------------------------------------------------------------------- |
+| [Command Workflow](./src/Tutorial/Tutorial.CommandWorkflow)                                           | HostControl                        | Commands, injection rules, and scripted multi-step workflows            |
+| [Complex Data](./src/Tutorial/Tutorial.ComplexData)                                                   | FileReader (JSON)                  | Reading nested JSON data structures and exposing them via OPC-UA        |
+| [CSV Data Logger](./src/Tutorial/Tutorial.CSVDataLogger)                                              | FileReader + CSV Logger            | Logging device data to CSV files with a custom file-reader script       |
+| [Data Aggregation](./src/Tutorial/Tutorial.DataAggregation)                                           | FileReader (JSONAggregator)        | Aggregating values from multiple JSON sources into a single OPC-UA node |
+| [OPC-UA Bridge](./src/Tutorial/Tutorial.OPCUABridge)                                                  | FileReader + OPC-UA Server         | Bridging device data across two independent OPC-UA gateway instances    |
+| [OPC-UA Bridge Extension](./src/Tutorial/Tutorial.OPCUABridgeExtension)                               | FileReader + OPC-UA Server         | Extending the OPC-UA bridge with a custom C# file-reader script         |
+| [Scripting](./src/Tutorial/Tutorial.Scripting)                                                        | WebControl (MTConnect) + MQTT      | Custom payload processing for a Mazak CNC machine with MQTT forwarding  |
+| [Web Service](./src/Tutorial/Tutorial.WebService)                                                     | WebService                         | Exposing gateway data via a REST endpoint with a custom payload script  |
 
 ## HumanOS Runtime
 

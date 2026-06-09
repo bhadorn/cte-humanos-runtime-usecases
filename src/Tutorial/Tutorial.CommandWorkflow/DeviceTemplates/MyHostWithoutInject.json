@@ -1,0 +1,19 @@
+{
+  "Id": "e55cccac-f1eb-4920-b385-1d7eea07615a",
+  "Name": "MyHostWithoutInject",
+  "DriverId": "46f00888-dac9-4bb8-a0a2-703e7716624c",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

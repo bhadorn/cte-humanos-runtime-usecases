@@ -1,0 +1,73 @@
+{
+  "Publishers": [
+    {
+      "Id": "64822840-ffe1-46d4-b516-e7cbf6fccb41",
+      "Name": "Publisher",
+      "Connection": "C:\\Temp\\JSONData.csv",
+      "ConnectionSecret": "",
+      "DataSets": [
+        {
+          "Name": "DataSet",
+          "Fields": [
+            {
+              "Name": "Id",
+              "DataType": "System.Guid",
+              "Query": "item.GlobalId",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Value",
+              "DataType": "System.Double",
+              "Query": "item.Value",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "State",
+              "DataType": "System.Int32",
+              "Query": "item.DataState",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "db8b8527-ceed-4f37-87de-c8734a8ba68b",
+              "Name": "Name",
+              "DataType": "System.String",
+              "Query": "item.Node.Name",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "9c02c679-e779-464b-8757-6209f05cfc5a",
+              "Name": "TimeStamp",
+              "DataType": "System.DateTime",
+              "Query": "item.TimeStamp",
+              "Tag": "",
+              "Properties": {}
+            }
+          ],
+          "NodeFilter": "node.hasProperty<bool>(\"EnableCsv\", true)",
+          "Tag": "",
+          "Type": "DataNode",
+          "Properties": {}
+        }
+      ],
+      "PayloadDumpFileName": "$(AppConfig:CommonAppPath)\\Dumps\\CsvDataLogger\\Publisher.log",
+      "PayloadDumpRetentionTime": 2,
+      "PrintHeader": true,
+      "RetentionDays": 1,
+      "RetentionEnabled": true,
+      "Separator": "semicolon",
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "d421ff77-6c9c-41cd-afd1-d293b93734c5",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "a27057c0-c1d8-4fec-93eb-b7fab069b61a",
+        "Properties": {}
+      }
+    }
+  ],
+  "Properties": {}
+}

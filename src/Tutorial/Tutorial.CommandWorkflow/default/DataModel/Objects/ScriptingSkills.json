@@ -1,0 +1,18 @@
+{
+  "Id": "C5597B6F-AB75-4F6C-BECC-BEC361314ACB",
+  "Name": "Objects.Schema",
+  "Agents": [
+    {
+      "Id": "{34779630-197D-4924-8C27-210D462930B7}",
+      "Name": "ScriptingActor",
+      "Type": "GenericActor",
+      "Skills": [ "54C4FA92-F385-4644-B929-5650310B4930" ]
+    }
+  ],
+  "Skills": [
+    {
+      "Id": "54C4FA92-F385-4644-B929-5650310B4930",
+      "Name": "Objects.ScriptingSkill"
+    }
+  ]
+}

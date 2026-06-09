@@ -1,0 +1,335 @@
+{
+  "Id": "b38cd631-333c-4603-ab9b-411b17d8b5b6",
+  "Name": "JsonSource",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [
+    {
+      "Id": "679d23e3-ccc0-451e-ac57-6195ce70bf66",
+      "Name": "Alarm",
+      "Address": "$.Alarm",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "AlarmType"
+        }
+      ]
+    },
+    {
+      "Id": "680fbae5-de09-40e7-b99d-f083a63d2931",
+      "Name": "OEEMachineState",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "OEEMachineStateType"
+        }
+      ]
+    },
+    {
+      "Id": "3b2c77eb-5c56-47dd-8d61-588a751cf692",
+      "Name": "OEEMachineStateName",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "OEEMachineStateNameType"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "485e1dce-0e06-4b4f-876e-349a4f79d45b",
+      "Name": "Controller",
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "677dbff5-6751-41cf-92c4-760c5d88e2e5",
+          "Name": "RunningState",
+          "Address": "$.RunningState",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "RunningStateType"
+            }
+          ]
+        },
+        {
+          "Id": "d740af30-18b0-4afd-bac9-e6473ffb6748",
+          "Name": "OperationMode",
+          "Address": "$.OperationMode",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "HistoryMode": {
+            "Retention": 8000,
+            "SamplingRate": 2,
+            "HistoryTableName": "",
+            "IdField": "",
+            "TaggedFields": [],
+            "TrackedFields": []
+          },
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "OperationModeType"
+            }
+          ]
+        },
+        {
+          "Id": "80487364-52ce-4982-9f75-72a47eaf8dea",
+          "Name": "MachinePositions",
+          "Address": "$.MachinePositions",
+          "DataType": "System.Double[]",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "MachinePositionsType"
+            }
+          ]
+        },
+        {
+          "Id": "bba8373e-8b20-44fa-92fc-704380e532ec",
+          "Name": "CurrentProgram",
+          "Address": "$.CurrentProgram",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "CurrentProgramType"
+            }
+          ]
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [
+        {
+          "Id": "47a7edb4-3478-436d-8333-007872dbd0e7",
+          "Name": "ReadFile",
+          "ScriptFile": "ReadFile.cs",
+          "Type": "CommandNode",
+          "Arguments": [
+            {
+              "Name": "Content",
+              "Type": "Output",
+              "DataType": "System.String",
+              "Description": ""
+            },
+            {
+              "Name": "Name",
+              "DataType": "System.String",
+              "Description": ""
+            }
+          ],
+          "Properties": []
+        }
+      ],
+      "Groups": []
+    }
+  ],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [
+    {
+      "Id": "a2dce1b2-bf15-406b-a794-6140d1481498",
+      "Name": "DataProcessors",
+      "DataNodes": [],
+      "Links": [],
+      "Processors": [
+        {
+          "Id": "8f3188ef-8f33-462d-9fe5-558968876294",
+          "Name": "MachineStateProcessor",
+          "InitialData": [
+            "Alarm != 0 and Alarm <= 98 => OutputMachineState=999; OutputMachineStateName=\"Error\"",
+            "Alarm != 0 and Alarm > 98 => OutputMachineState=999; OutputMachineStateName=\"Emergency\"",
+            "RunningState == 0   => OutputMachineState=1; OutputMachineStateName=\"Disturbance\"",
+            "OperationMode != 4  => OutputMachineState=100; OutputMachineStateName=\"Setup\"",
+            "OperationMode == 4 and RunningState == 1 => OutputMachineState=320; OutputMachineStateName=\"Stopped: Missing Personal\"",
+            "OperationMode == 4 and RunningState == 2 => OutputMachineState=110; OutputMachineStateName=\"Warmup\"",
+            "OperationMode == 4 and RunningState == 3 => OutputMachineState=200; OutputMachineStateName=\"Production\"",
+            "OperationMode == 4 and RunningState > 3 => OutputMachineState=320; OutputMachineStateName=\"Stopped: Missing Material\""
+          ],
+          "Type": "SituationProcessingNode",
+          "Ports": [
+            {
+              "Id": "0422c798-a6b3-469e-b9bb-fa8d0d97674a",
+              "Name": "CurrentProgram",
+              "DataType": "System.String",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "CurrentProgramType"
+                }
+              ]
+            },
+            {
+              "Id": "3b2b8cc4-dc90-4a06-bd7b-0a48d5e0e481",
+              "Name": "MachinePositions",
+              "DataType": "System.Double[]",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "MachinePositionsType"
+                }
+              ]
+            },
+            {
+              "Id": "06a9f249-92b1-458b-95d0-6df3570b7024",
+              "Name": "OperationMode",
+              "DataType": "System.Int32",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OperationModeType"
+                }
+              ]
+            },
+            {
+              "Id": "12d353bd-2e84-45d0-ab81-0940cfc153b8",
+              "Name": "RunningState",
+              "DataType": "System.Int32",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "RunningStateType"
+                }
+              ]
+            },
+            {
+              "Id": "055f5cd0-2c35-45c3-b316-1bd37cceae59",
+              "Name": "OutputMachineState",
+              "DataType": "System.Int32",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OEEMachineStateType"
+                }
+              ]
+            },
+            {
+              "Id": "438d16a1-14ea-4c98-b2bf-0cc9b643e277",
+              "Name": "OutputMachineStateName",
+              "DataType": "System.String",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OEEMachineStateNameType"
+                }
+              ]
+            },
+            {
+              "Id": "aae5faa3-25ff-4a1b-95ec-d7e19d4c209b",
+              "Name": "Alarm",
+              "DataType": "System.Int32",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "AlarmType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 1000
+            }
+          ]
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Rules": [
+    {
+      "Id": "f26da1d0-9bc0-4f2c-8b96-96e629a89e4a",
+      "Name": "PortMatchingRule",
+      "Type": "PortMatchingRule",
+      "Properties": []
+    }
+  ],
+  "SubDevices": []
+}
