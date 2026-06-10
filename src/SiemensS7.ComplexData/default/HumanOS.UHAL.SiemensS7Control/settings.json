@@ -1,0 +1,25 @@
+{
+  "Disabled": false,
+  "Devices": [
+    {
+      "MainTaskProcessor": {
+        "Name": "Main TaskProcessor",
+        "ProcessingPriority": "Normal",
+        "MaxSchedulingTimeSlice": 200,
+        "MinSchedulingTimeSlice": 10
+      },
+      "SubTaskProcessors": [
+        {
+          "Name": "AlarmEventProcessor",
+          "ProcessingPriority": "Normal",
+          "MemoryMappings": [
+            {
+              "MemoryBase": "Plc1",
+              "MemoryType": "Alarming"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "Path": "FANUC.DataAggregation.h2proj",
+  "Name": "FANUC.DataAggregation",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+      "Path": "FanucAggregatorTemplate.json",
+      "Id": "dc5304b8-527b-4502-9261-652f80a67ebf",
+      "Name": "FanucAggregatorTemplate",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n65626438656638353165616534383263623938663966653364393765303633386562633439666534\r\n6632656163323131623631613033313234653035323530650a613830383963353961643535346464\r\n30636333373838636563326432313230343461396261353337353036356538643330393831376338\r\n3063336338303761300a336633633235346566623764653733363633653233653966663033633239\r\n39303638353365316463366336386466326332366661616337666635346232666664366537333137\r\n3734333734363633343137643964626331653338613337323262\r\n"
+      }
+    ],
+    "Id": "2b631afd-130f-45fc-a1b2-7b793b4a3ce7",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "539d022d-a2d7-4a40-808a-db2dc8e3c6c8",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.5",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway",
+      "ServiceName": "HumanOS.IoT.Gateway",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "539d022d-a2d7-4a40-808a-db2dc8e3c6c8",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.5"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "NCGUIDE!",
+          "DeviceTemplateId": "dc5304b8-527b-4502-9261-652f80a67ebf",
+          "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "SubDevices": [],
+          "Type": "FANUC 0i-F",
+          "Variables": [],
+          "Path": "FanucSimulator.json",
+          "Id": "4f296eb4-e448-4e54-bb1f-db05900b723e",
+          "Name": "FanucSimulator",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.FanucControl",
+          "Id": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "Name": "HumanOS.UHAL.FanucControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
