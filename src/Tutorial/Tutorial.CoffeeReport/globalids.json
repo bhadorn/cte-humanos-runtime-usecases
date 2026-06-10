@@ -1,0 +1,24 @@
+{
+  "Ids": {
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee": "19e0df4f-94c2-4f79-8bec-29a1b13e0a29",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessedDataRecord": "307a2296-5e50-430a-801f-b3a2e5550090",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/RawData": "1770257b-7095-4205-9b9a-b08cac1eb7b9",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/RawData/CoffeeAmount": "ff6ce606-f27b-416c-9d6e-88f8c04cd6a5",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/RawData/Brand": "8dfcc882-7b26-487a-a444-a4c779355c84",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/RawData/MilkAmount": "249af5b1-220e-4088-bfb9-9049dd88b4f5",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/RawData/Strength": "f0b543eb-7075-4e5f-8b61-8552ba52d137",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/RawData/Name": "caa9eb6f-1671-4bff-858c-c21df0d6f207",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/RawData/CapsuleNetWeight": "4a30d799-4583-453d-96e2-8235742b2a84",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessedData": "807892e3-c6cc-4823-974f-c7c2c9053dda",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessedData/CoffeePercent": "59e048a4-e507-4e06-9652-418200bb3c8f",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessedData/CoffeeAmount": "ca974d86-e21b-4ea6-95fd-e2bdb4db18cc",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessedData/StrengthPercent": "e386dd84-84b5-4623-8ae5-1af46a1ac902",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessedData/CapsuleNetWeight": "f02b28be-fee3-4056-8a58-43da18b38ab5",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessedData/MilkPercent": "4097a892-e357-468e-946c-a5dbb89c488e",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessedData/MilkAmount": "2824aef2-ffa8-42db-ad90-fe835f7dcef9",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessingNetwork": "5a67372c-78d1-4ea0-bdea-9e10d269553b",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessingNetwork/CoffeeProcessor": "ff0eeb82-8645-4545-b0c0-034eebf2fee6",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/ProcessingNetwork/Data Aggregator": "81b271d2-2913-4a25-8ac9-a0eab1bc89af",
+    "03afaf09-1acb-443d-a07c-b702b635b292/Coffee/Port Matching Rule": "74bbe26f-88f7-4894-9712-9e88a6f04035"
+  }
+}

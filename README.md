@@ -58,6 +58,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 
 | Tutorial                                                                                              | Connector                          | Key Feature                                                             |
 | :---------------------------------------------------------------------------------------------------- | :--------------------------------- | :---------------------------------------------------------------------- |
+| [Coffee Report](./src/Tutorial/Tutorial.CoffeeReport)                                                 | FileReader + SQL Data Logger       | Custom C# script processing with dual-export to OPC-UA and MySQL        |
 | [Command Workflow](./src/Tutorial/Tutorial.CommandWorkflow)                                           | HostControl                        | Commands, injection rules, and scripted multi-step workflows            |
 | [Complex Data](./src/Tutorial/Tutorial.ComplexData)                                                   | FileReader (JSON)                  | Reading nested JSON data structures and exposing them via OPC-UA        |
 | [CSV Data Logger](./src/Tutorial/Tutorial.CSVDataLogger)                                              | FileReader + CSV Logger            | Logging device data to CSV files with a custom file-reader script       |

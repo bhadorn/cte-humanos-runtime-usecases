@@ -1,0 +1,136 @@
+{
+  "Path": "Tutorial.CoffeeReport.h2proj",
+  "Name": "Tutorial.CoffeeReport",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "Coffee.json",
+      "Id": "82bc2b10-ab3c-4cb9-9c0f-6b9508daae54",
+      "Name": "Coffee",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n61326235366138366432363166333333383833383034323961616164666364353838366165363762\r\n3033303939376466366162643836663431363863643761660a333932643134396539363730663730\r\n38393235386363373864613935666463363466326436313834316165663331623735353430346664\r\n6664393961343336320a323066363164383939616136333466343066623835373237336631633037\r\n64333764336238363232396437333933343139636436353234333435333331643138356133363935\r\n6633383863323630643237633466633065653034646537663434\r\n"
+      }
+    ],
+    "Id": "1501ad58-00ca-4dc5-b984-8c54f967d027",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "b8bf80f2-34f1-496a-ab8f-d2ce87dc9bb9",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.6",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "b8bf80f2-34f1-496a-ab8f-d2ce87dc9bb9",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.6"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "C:\\Temp\\CoffeeProject\\coffee.json",
+          "DeviceTemplateId": "82bc2b10-ab3c-4cb9-9c0f-6b9508daae54",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "JSON",
+          "Variables": [],
+          "Path": "CoffeeFile.json",
+          "Id": "03afaf09-1acb-443d-a07c-b702b635b292",
+          "Name": "CoffeeFile",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "CoffeeProcessorScript.cs",
+              "Id": "f240e4e0-09dd-4f7a-9751-4cd9203e344a",
+              "Name": "CoffeeProcessorScript.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.FileReader",
+          "Id": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "Name": "HumanOS.UHAL.FileReader",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.SqlDataLogger",
+          "Id": "5f446805-c274-4e09-9bee-573ece5cf28f",
+          "Name": "HumanOS.PeSeL.SqlDataLogger",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
