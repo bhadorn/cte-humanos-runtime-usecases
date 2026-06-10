@@ -1,5 +1,5 @@
 {
-  "FileName": "C:\\Temp\\hos\\Tutorial.OPCUABridgeExtension\\globalids.json",
+  "FileName": "C:\\Projects\\cte-humanos-runtime-usecases\\src\\Tutorial\\Tutorial.OPCUABridgeExtension\\globalids.json",
   "Ids": {
     "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource": "3d997afc-b32e-4bb8-86a6-0b6af31d7420",
     "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/DataValue1": "d5037402-476a-416f-b4c8-697c89575992",
@@ -15,6 +15,7 @@
     "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/OEEMachineStateName": "f56c1798-d115-416a-abe0-4d5c66ef4591",
     "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/DataProcessors": "217c869b-671c-43b0-b285-93a4eff973fe",
     "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/DataProcessors/MachineStateProcessor": "a988c419-7449-4aba-b9a3-c48a6116dd91",
-    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/PortMatchingRule": "169001fd-7997-4711-a138-167bfe25c692"
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/PortMatchingRule": "169001fd-7997-4711-a138-167bfe25c692",
+    "91c431a7-a44d-4e3c-9260-d1cfece3c65e/JsonSource/MachineAlarming": "1622cae1-2847-49db-8fa1-862448de5d7a"
   }
 }

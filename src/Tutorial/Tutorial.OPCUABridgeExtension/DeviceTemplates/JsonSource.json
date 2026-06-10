@@ -191,6 +191,19 @@
       "Groups": []
     }
   ],
+  "AlarmEventPool": {
+    "Id": "f9790ae4-b736-4271-8aa5-cb6dcb1e0285",
+    "Name": "MachineAlarming",
+    "Tasks": [
+      {
+        "Id": "1cefed87-4fe3-459c-860c-e310dfada7a7",
+        "Name": "SystemAlarms",
+        "Address": "$.Alarms",
+        "Properties": []
+      }
+    ],
+    "Properties": []
+  },
   "Agents": [],
   "Skills": [],
   "TaskProcessors": [],
