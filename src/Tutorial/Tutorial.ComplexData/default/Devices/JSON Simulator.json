@@ -2,7 +2,7 @@
   "Id": "23f54ab4-ef2b-490f-80e9-2cd06dd81a49",
   "Name": "JSON Simulator",
   "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
-  "Address": "C:\\Temp\\TestFile2.json",
+  "Address": "C:\\Temp\\TestFile.json",
   "Properties": [
     {
       "Name": "Type",
@@ -39,7 +39,7 @@
     {
       "Id": "0f18e839-b48c-4614-a8df-04942b9c68ea",
       "Name": "ReadComplexData",
-      "Address": "$.OrderNumber",
+      "Address": "$.MachineData",
       "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
       "Unit": "",
       "Access": {
@@ -78,7 +78,7 @@
           "Name": "OrderNumber",
           "DataType": "System.String",
           "ArraySize": 1,
-          "Length": 32
+          "Length": 255
         },
         {
           "Name": "PartCount",

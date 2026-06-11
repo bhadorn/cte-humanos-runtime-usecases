@@ -9,14 +9,13 @@
     {
       "Id": "deb17eb5-fa97-4ffa-9cd4-a0def1d435fa",
       "Name": "ReadComplexData",
-      "Address": "$.OrderNumber",
+      "Address": "$.MachineData",
       "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
       "Unit": "",
       "Access": {
         "Read": true,
         "ReadConversion": {},
         "Receive": true,
-        "Write": true,
         "WriteConversion": {}
       },
       "Properties": [
@@ -48,7 +47,7 @@
           "Name": "OrderNumber",
           "DataType": "System.String",
           "ArraySize": 1,
-          "Length": 32
+          "Length": 255
         },
         {
           "Name": "PartCount",

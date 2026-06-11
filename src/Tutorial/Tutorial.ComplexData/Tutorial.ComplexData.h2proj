@@ -44,8 +44,8 @@
       "Protected": true,
       "PublishScript": "",
       "PublishScriptArguments": "",
-      "Runtime": "HumanOS.IoT.Runtime win-x86",
-      "RuntimeVersion": "2.10",
+      "Runtime": "HumanOS.IoT.Runtime binaries.gateway dev",
+      "RuntimeVersion": "2.11",
       "ServiceDescription": "",
       "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
       "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
@@ -59,7 +59,8 @@
         "HumanOS.Repository.Type": "",
         "HumanOS.Repository.Connection": "",
         "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
-        "HumanOS.RuntimeVersion": "2.10"
+        "HumanOS.RuntimeVersion": "2.11",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\"
       },
       "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
       "DataModel": {
@@ -71,7 +72,7 @@
       },
       "Devices": [
         {
-          "Address": "C:\\Temp\\TestFile2.json",
+          "Address": "C:\\Temp\\TestFile.json",
           "DeviceTemplateId": "9196ef86-b913-4b90-b12a-71643619c23c",
           "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
           "SubDevices": [],
