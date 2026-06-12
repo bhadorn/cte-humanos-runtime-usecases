@@ -1,0 +1,133 @@
+{
+  "Publishers": [
+    {
+      "Id": "bfe1f046-9564-42cc-9101-df459162c3ed",
+      "Name": "Publisher",
+      "Connection": "C:\\Temp\\HeidenhainData.csv",
+      "ConnectionSecret": "",
+      "DataSets": [
+        {
+          "Name": "DataSet",
+          "Fields": [
+            {
+              "Name": "Id",
+              "DataType": "System.Guid",
+              "Query": "item.GlobalId",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Value",
+              "DataType": "System.Double",
+              "Query": "item.Value",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "State",
+              "DataType": "System.Int32",
+              "Query": "item.DataState",
+              "Tag": "",
+              "Properties": {}
+            }
+          ],
+          "NodeFilter": "node.hasProperty<bool>(\"EnableCsv\", true)",
+          "Tag": "",
+          "Type": "DataNode",
+          "Properties": {}
+        }
+      ],
+      "PayloadDumpFileName": "$(AppConfig:CommonAppPath)\\Dumps\\CsvDataLogger\\Publisher.log",
+      "PayloadDumpRetentionTime": 2,
+      "PrintHeader": true,
+      "RetentionEnabled": true,
+      "Separator": "semicolon",
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "50a6fa74-cd79-450d-a143-bdc3254ff4fb",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "8be04767-a484-4f6e-84d2-a7d43f2c7859",
+        "Properties": {}
+      }
+    },
+    {
+      "Id": "b9e959a9-bbcf-49fc-88b5-eb0a5fc00f04",
+      "Name": "AEPublisher",
+      "Connection": "C:\\Temp\\HeidenhainAlarms.csv",
+      "ConnectionSecret": "",
+      "DataSets": [
+        {
+          "Id": "c025a7d3-2652-4916-a7c2-296f9ae5b197",
+          "Name": "AlarmDataSet",
+          "Fields": [
+            {
+              "Id": "3f9d4d6b-fcd6-400c-88d5-6c02fc698afd",
+              "Name": "ConditionName",
+              "DataType": "System.String",
+              "Query": "item.ConditionName",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "91f617e4-d53d-4bbe-95f1-09ac96f2b5dd",
+              "Name": "Message",
+              "DataType": "System.String",
+              "Query": "item.Message",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "579c97c0-4324-4e84-9842-786bd23b45ce",
+              "Name": "Active",
+              "DataType": "System.Boolean",
+              "Query": "item.Active",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "34efe2f7-21cb-4758-ac91-b547a9e0f9e8",
+              "Name": "AlarmType",
+              "DataType": "System.String",
+              "Query": "item.AlarmType",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "e12c6fbd-bd6f-4f43-a057-d90052f95c0c",
+              "Name": "SourceName",
+              "DataType": "System.String",
+              "Query": "item.SourceName",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "01b8fbde-5c4d-439a-bdd3-6144b6e07cba",
+              "Name": "Time",
+              "DataType": "System.DateTime",
+              "Query": "item.Time",
+              "Tag": "",
+              "Properties": {}
+            }
+          ],
+          "NodeFilter": "node.hasProperty<bool>(\"EnableCsv\", true)",
+          "Tag": "",
+          "Properties": {}
+        }
+      ],
+      "PayloadDumpFileName": "$(AppConfig:CommonAppPath)\\Dumps\\CsvDataLogger\\Publisher.log",
+      "PayloadDumpRetentionTime": 2,
+      "PrintHeader": true,
+      "Separator": "semicolon",
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "695e110d-067e-4600-9aac-d97750f7cff5",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "4e6bc08d-589d-42b5-886d-045d2a499ccd",
+        "Properties": {}
+      }
+    }
+  ],
+  "Properties": {}
+}

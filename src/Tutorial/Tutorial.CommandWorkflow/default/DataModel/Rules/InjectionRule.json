@@ -1,0 +1,41 @@
+{
+  "Id": "f8d52c3e-0566-46f3-a41f-e99c06031f56",
+  "Name": "Rules.Schema",
+  "Checksum": 5564496742669828254,
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [
+    {
+      "Name": "InjectToDevices",
+      "Action": {
+        "ScriptFile": "InjectToDevices.cs",
+        "Type": "ScriptFile",
+        "Arguments": [
+          {
+            "Name": "Node",
+            "Predicate": "Node.hasProperty('InjectEnabled')"
+          }
+        ]
+      },
+      "TriggerCondition": "Context.Node is IGroupRelation",
+      "TriggerEvent": "OnObjectAppeared",
+      "Type": "GenericRule",
+      "Properties": []
+    }
+  ],
+  "Skills": [],
+  "Timers": [],
+  "Workflows": []
+}

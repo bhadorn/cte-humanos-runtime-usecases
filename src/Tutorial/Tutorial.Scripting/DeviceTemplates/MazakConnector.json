@@ -1,0 +1,65 @@
+{
+  "Id": "c0cfe755-93dc-4dc9-b989-6b64b7a1c548",
+  "Name": "MazakConnector",
+  "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [
+    {
+      "Id": "259a3a87-397e-415d-a9e4-4d69b1c25622",
+      "Name": "OperationMode",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "EnableMqtt",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    },
+    {
+      "Id": "befed2a0-3222-49e1-abf3-a9a203b88161",
+      "Name": "PartCounter",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "EnableMqtt",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [
+    {
+      "Id": "22f67b93-9344-482d-a569-579d8919ccbc",
+      "Name": "Task Processor",
+      "ScriptFile": "MTConnectPayloadProcessor.cs",
+      "Properties": []
+    }
+  ],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

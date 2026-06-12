@@ -1,0 +1,603 @@
+{
+  "Id": "03afaf09-1acb-443d-a07c-b702b635b292",
+  "Name": "CoffeeFile",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "C:\\Temp\\CoffeeProject\\coffee.json",
+  "Properties": [
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "JSON"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "307a2296-5e50-430a-801f-b3a2e5550090",
+      "Name": "ProcessedDataRecord",
+      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "EnableSql",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "ProcessedDataRecordType"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "1770257b-7095-4205-9b9a-b08cac1eb7b9",
+      "Name": "RawData",
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "ff6ce606-f27b-416c-9d6e-88f8c04cd6a5",
+          "Name": "CoffeeAmount",
+          "Address": "$.coffeeamount",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "CoffeeAmountType"
+            }
+          ]
+        },
+        {
+          "Id": "8dfcc882-7b26-487a-a444-a4c779355c84",
+          "Name": "Brand",
+          "Address": "$.brand",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "BrandType"
+            }
+          ]
+        },
+        {
+          "Id": "249af5b1-220e-4088-bfb9-9049dd88b4f5",
+          "Name": "MilkAmount",
+          "Address": "$.milkamount",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true,
+            "Write": true
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "MilkAmountType"
+            }
+          ]
+        },
+        {
+          "Id": "f0b543eb-7075-4e5f-8b61-8552ba52d137",
+          "Name": "Strength",
+          "Address": "$.strength",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "StrengthType"
+            }
+          ]
+        },
+        {
+          "Id": "caa9eb6f-1671-4bff-858c-c21df0d6f207",
+          "Name": "Name",
+          "Address": "$.name",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "NameType"
+            }
+          ]
+        },
+        {
+          "Id": "4a30d799-4583-453d-96e2-8235742b2a84",
+          "Name": "CapsuleNetWeight",
+          "Address": "$.capsulenetweight",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "CapsuleNetWeightType"
+            }
+          ]
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": []
+    },
+    {
+      "Id": "807892e3-c6cc-4823-974f-c7c2c9053dda",
+      "Name": "ProcessedData",
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "59e048a4-e507-4e06-9652-418200bb3c8f",
+          "Name": "CoffeePercent",
+          "DataType": "System.Double",
+          "Unit": "%",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "CoffeePercentProcType"
+            }
+          ]
+        },
+        {
+          "Id": "ca974d86-e21b-4ea6-95fd-e2bdb4db18cc",
+          "Name": "CoffeeAmount",
+          "DataType": "System.Double",
+          "Unit": "ml",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {
+              "Type": "SimpleExpression",
+              "Instruction": "Value*2"
+            },
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "CoffeeAmountProcType"
+            }
+          ]
+        },
+        {
+          "Id": "e386dd84-84b5-4623-8ae5-1af46a1ac902",
+          "Name": "StrengthPercent",
+          "DataType": "System.Double",
+          "Unit": "%",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "StrengthPercentProcType"
+            }
+          ]
+        },
+        {
+          "Id": "f02b28be-fee3-4056-8a58-43da18b38ab5",
+          "Name": "CapsuleNetWeight",
+          "DataType": "System.Double",
+          "Unit": "g",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "CapsuleNetWeightProcType"
+            }
+          ]
+        },
+        {
+          "Id": "4097a892-e357-468e-946c-a5dbb89c488e",
+          "Name": "MilkPercent",
+          "DataType": "System.Double",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "MilkPercentProcType"
+            }
+          ]
+        },
+        {
+          "Id": "2824aef2-ffa8-42db-ad90-fe835f7dcef9",
+          "Name": "MilkAmount",
+          "DataType": "System.Double",
+          "Unit": "ml",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {
+              "Type": "SimpleExpression",
+              "Instruction": "Value*2"
+            },
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "MilkAmountProcType"
+            }
+          ]
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": []
+    }
+  ],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [
+    {
+      "Id": "5a67372c-78d1-4ea0-bdea-9e10d269553b",
+      "Name": "ProcessingNetwork",
+      "DataNodes": [],
+      "Links": [],
+      "Processors": [
+        {
+          "Id": "ff0eeb82-8645-4545-b0c0-034eebf2fee6",
+          "Name": "CoffeeProcessor",
+          "InitialData": [
+            "CoffeeProcessorScript.cs"
+          ],
+          "Type": "CSharpScriptProcessingNode",
+          "Ports": [
+            {
+              "Name": "InCoffeeAmount",
+              "DataType": "System.String",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "CoffeeAmountType"
+                }
+              ]
+            },
+            {
+              "Name": "OutCapsuleNetWeight",
+              "DataType": "System.Double",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "CapsuleNetWeightProcType"
+                }
+              ]
+            },
+            {
+              "Id": "dce0293a-032c-42c9-8da2-628148109c9c",
+              "Name": "InBrand",
+              "DataType": "System.String",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "BrandType"
+                }
+              ]
+            },
+            {
+              "Id": "fa338864-e083-4ba7-b1d3-186aa56b9ee0",
+              "Name": "InMilkAmount",
+              "DataType": "System.String",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "MilkAmountType"
+                }
+              ]
+            },
+            {
+              "Id": "83a9b7c2-e8c4-4829-a934-cfa0fc8a286a",
+              "Name": "InStrength",
+              "DataType": "System.String",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "StrengthType"
+                }
+              ]
+            },
+            {
+              "Id": "4176044a-1044-4b4d-bad0-d23f49c7da21",
+              "Name": "InName",
+              "DataType": "System.String",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "NameType"
+                }
+              ]
+            },
+            {
+              "Id": "caa296fa-3d27-4605-9f0f-4c6871dcb17c",
+              "Name": "InCapsuleNetWeight",
+              "DataType": "System.String",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "CapsuleNetWeightType"
+                }
+              ]
+            },
+            {
+              "Id": "7eb4f1d1-8eab-4391-91d6-882bd5b30ea7",
+              "Name": "OutCoffeeAmount",
+              "DataType": "System.Double",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "CoffeeAmountProcType"
+                }
+              ]
+            },
+            {
+              "Id": "cb8239c2-3f1f-490b-82cb-a628144a21bf",
+              "Name": "OutMilkPercent",
+              "DataType": "System.Double",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "MilkPercentProcType"
+                }
+              ]
+            },
+            {
+              "Id": "1ca94915-c62e-475f-b555-aecc71f4a88d",
+              "Name": "OutMilkAmount",
+              "DataType": "System.Double",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "MilkAmountProcType"
+                }
+              ]
+            },
+            {
+              "Id": "82190d86-d47a-4afe-a17f-094844b4fc13",
+              "Name": "OutStrengthPercent",
+              "DataType": "System.Double",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "StrengthPercentProcType"
+                }
+              ]
+            },
+            {
+              "Id": "ae9ce433-73bc-4cfc-b73b-28da550e4945",
+              "Name": "OutCoffeePercent",
+              "DataType": "System.Double",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "CoffeePercentProcType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "81b271d2-2913-4a25-8ac9-a0eab1bc89af",
+          "Name": "Data Aggregator",
+          "InitialData": [],
+          "Type": "DataAggregator",
+          "Ports": [
+            {
+              "Name": "CoffeePercent",
+              "DataType": "System.Double",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "CoffeePercentProcType"
+                }
+              ]
+            },
+            {
+              "Name": "MilkPercent",
+              "DataType": "System.Double",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "MilkPercentProcType"
+                }
+              ]
+            },
+            {
+              "Name": "ProcessedData",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ProcessedDataRecordType"
+                }
+              ]
+            },
+            {
+              "Id": "027ddd79-7e3b-4ba9-99d0-5605be14e6f0",
+              "Name": "StrengthPercent",
+              "DataType": "System.Double",
+              "Public": true,
+              "Necessity": "Mandatory",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "StrengthPercentProcType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 500
+            }
+          ]
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "opc-ua:Ignore",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    }
+  ],
+  "Rules": [
+    {
+      "Id": "74bbe26f-88f7-4894-9712-9e88a6f04035",
+      "Name": "Port Matching Rule",
+      "Type": "PortMatchingRule",
+      "Properties": []
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "Path": "Tutorial.DataAggregation.h2proj",
+  "Name": "Tutorial.DataAggregation",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "JSONAggregator.json",
+      "Id": "d9fc5cd6-8554-4751-b8c9-58b0de8629c0",
+      "Name": "JSONAggregator",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n66613538326164383538373464636639616130393166333361323532643838383466303638343430\r\n3766666336373830643664363331656663313865653464380a623436653463633232313366313930\r\n35363666303132326465363131623537343332366461643863623232336539626363343064306631\r\n6637323134646132340a343634333966333066303434363062636438313761333431333039353866\r\n62386132363838383235333165383238313037343931323162376333636565613537366531323463\r\n3264303435313234393432613664323366383964323336353063\r\n"
+      }
+    ],
+    "Id": "ab6c792c-c1c1-4c75-8218-dc8e539dbcea",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "fe3dd912-5cfc-4672-9af4-2d01a1f6104f",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86",
+      "RuntimeVersion": "2.10",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "fe3dd912-5cfc-4672-9af4-2d01a1f6104f",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.10",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "C:\\Temp\\TestFile.json",
+          "DeviceTemplateId": "d9fc5cd6-8554-4751-b8c9-58b0de8629c0",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "JSONAggregator",
+          "Variables": [],
+          "Path": "JSONSimulator.json",
+          "Id": "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9",
+          "Name": "JSONSimulator",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.FileReader",
+          "Id": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "Name": "HumanOS.UHAL.FileReader",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

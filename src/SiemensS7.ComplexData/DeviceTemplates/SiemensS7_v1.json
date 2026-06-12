@@ -1,0 +1,72 @@
+{
+  "Id": "f9123422-657b-48b6-865f-7dd59c4c2f04",
+  "Name": "SiemensS7_v1",
+  "DriverId": "f25f68f9-c720-4dd9-8a28-957c84aaa98c",
+  "Address": "",
+  "Properties": [],
+  "DataNodes": [
+    {
+      "Id": "1724b330-87e3-4c53-8737-4d0be8a9abb8",
+      "Name": "ReadComplexData",
+      "Address": "Plc1.DataBlock.ByteArray:2.20[100]",
+      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "InvertByteOrder",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "SelectedEntityType",
+          "DataType": "System.Guid",
+          "Value": "31daf84d-8ff0-464b-9715-8ee7470299fe"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [
+    {
+      "Id": "31daf84d-8ff0-464b-9715-8ee7470299fe",
+      "Name": "ComplexTypeA",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "System.Guid",
+          "IsKey": true,
+          "ArraySize": 1
+        },
+        {
+          "Name": "OrderNumber",
+          "DataType": "System.String",
+          "ArraySize": 32,
+          "Length": 32
+        },
+        {
+          "Name": "PartCount",
+          "DataType": "System.Int32",
+          "ArraySize": 1
+        },
+        {
+          "Name": "CycleTime",
+          "DataType": "System.Single",
+          "ArraySize": 1
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "ProcessingNetworks": [],
+  "Rules": []
+}

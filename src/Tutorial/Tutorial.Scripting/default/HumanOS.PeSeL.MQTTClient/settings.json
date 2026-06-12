@@ -1,0 +1,94 @@
+{
+  "Publishers": [
+    {
+      "Id": "f8a7efb3-a197-4f29-a811-022b280a0bae",
+      "Name": "Publisher",
+      "ConnectionSecret": "",
+      "DataSets": [
+        {
+          "Name": "MqttEnabledDataSet",
+          "Fields": [
+            {
+              "Name": "Id",
+              "DataType": "System.Guid",
+              "Query": "item.GlobalId",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Name",
+              "DataType": "System.String",
+              "Query": "item.Node.Name",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "DeviceId",
+              "DataType": "System.Guid",
+              "Query": "item.Node.getProperty<Guid>(\"DeviceId\")",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "TimeStamp",
+              "DataType": "System.DateTime",
+              "Query": "item.TimeStamp",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Value",
+              "DataType": "System.Object",
+              "Query": "item.Value",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "DataType",
+              "DataType": "System.Type",
+              "Query": "item.Node.DataType",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "State",
+              "DataType": "HumanOS.Kernel.DataModel.EDataState, HumanOS.Kernel.Base",
+              "Query": "item.DataState",
+              "Tag": "",
+              "Properties": {}
+            }
+          ],
+          "NodeFilter": "node.hasProperty<bool>(\"EnableMqtt\", true)",
+          "Tag": "",
+          "Type": "DataNode",
+          "Properties": {}
+        }
+      ],
+      "NetworkTimeout": 30000.0,
+      "PayloadDumpFileName": "$(AppConfig:CommonAppPath)\\Dumps\\MqttClient\\Publisher.log",
+      "PayloadDumpRetentionTime": 2,
+      "PayloadScriptFile": "MqttPayloadScript.cs",
+      "Address": "localhost",
+      "CleanSession": true,
+      "ClientCaCertificateFile": "",
+      "ClientCertificateFile": "",
+      "ClientCertificatePassword": "",
+      "Password": "",
+      "Username": "",
+      "ProtocolVersion": "V500",
+      "QualityOfService": 2,
+      "RetainMessages": true,
+      "Topic": "mazak/data",
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "0d16a357-0ad4-4d44-9227-4faee3474c65",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "ea763900-6c43-434e-ba70-616f959a6af5",
+        "Properties": {}
+      }
+    }
+  ],
+  "Subscribers": [],
+  "Properties": {}
+}

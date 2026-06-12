@@ -1,0 +1,80 @@
+{
+  "Id": "91c431a7-a44d-4e3c-9260-d1cfece3c65e",
+  "Name": "Simulator",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "C:\\Temp\\TestFile.json",
+  "Properties": [
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "JSONFile"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "d5037402-476a-416f-b4c8-697c89575992",
+      "Name": "DataValue1",
+      "Address": "$.Value1",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "8151f7f9-6006-4161-bb8b-ba99d9393f6b",
+      "Name": "DataValue2",
+      "Address": "$.Value2",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

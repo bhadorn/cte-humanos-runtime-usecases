@@ -1,0 +1,15 @@
+{
+  "FileName": "C:\\Temp\\hos\\Tutorial.DataAggregation\\globalids.json",
+  "Ids": {
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator": "c9323366-4dfb-4792-bf5a-5144573ca0a6",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/AggregatedDataNode": "c8a5d6cf-f0fd-4385-8f3d-94be58d302e1",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/Controller": "983e6c6d-1f85-4300-a138-eb7837f2f809",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/Controller/Available": "68792701-130c-4074-96f1-26706f76c542",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/Controller/MainProgram": "8d7a6d30-f659-4df5-b17f-63ab6d3835a5",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/Controller/OperationMode": "7fd7e3f3-73e6-4aa1-9513-ebec102e5474",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/Controller/PartCounter": "cdc5322a-df94-478b-907f-6903858ac894",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/ProcessingNetwork": "80d1b85f-fd48-47aa-96d6-d92718f7ebb0",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/ProcessingNetwork/Data Aggregator": "89d6bc1f-37d5-42ce-b500-57e0009229c6",
+    "7ef73ec9-0e3a-49d5-9e25-e1cd9ad798f9/JSONAggregator/Port Matching Rule": "cc4f303f-1575-40c2-9954-bdf3b0a26b49"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "Publishers": [
+    {
+      "ConnectionType": "mysql",
+      "Id": "1d31a3bd-0ede-4392-83a5-dde05a1eee64",
+      "Name": "MySQLDataLogger",
+      "Connection": "Server=localhost;SslMode=none;Database=humanos.datalogger;Uid=humanos;Pwd=humanos;",
+      "DataSets": [
+        {
+          "Name": "datastream1",
+          "Fields": [
+            {
+              "Name": "Id",
+              "DataType": "System.Guid",
+              "Query": "Guid.NewGuid()",
+              "Tag": "test",
+              "Properties": {}
+            },
+            {
+              "Name": "TimeStamp",
+              "DataType": "System.DateTime",
+              "Query": "item.TimeStamp",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "MilkPercent",
+              "DataType": "System.Double",
+              "Query": "item.getValue<double>(\"MilkPercent\")",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "CoffeePercent",
+              "DataType": "System.Double",
+              "Query": "item.getValue<double>(\"CoffeePercent\")",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "c8cb54e0-fd3f-4a5b-90f7-187b5a85be41",
+              "Name": "StrengthPercent",
+              "DataType": "System.Double",
+              "Query": "item.getValue<double>(\"StrengthPercent\")",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Id": "60e4b684-06bd-4d3c-a5a2-bbe11a92465c",
+              "Name": "State",
+              "DataType": "System.Int32",
+              "Query": "item.DataState",
+              "Tag": "",
+              "Properties": {}
+            }
+          ],
+          "NodeFilter": "node.hasProperty<bool>(\"EnableSql\", true)",
+          "Tag": "test",
+          "Type": "DataNode",
+          "Properties": {}
+        }
+      ],
+      "NetworkTimeout": 10000.0,
+      "PayloadDumpFileName": "$(AppConfig:CommonAppPath)\\Dumps\\SqlDataLogger\\MySQLDataLogger.log",
+      "PayloadDumpRetentionTime": 2,
+      "ProcessOnlyValidData": true,
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "730dcc18-d31f-4072-947f-73ba8eb8c151",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "4c740afd-2c36-4463-bf3e-5887f2421fe0",
+        "Properties": {}
+      }
+    }
+  ],
+  "Properties": {}
+}

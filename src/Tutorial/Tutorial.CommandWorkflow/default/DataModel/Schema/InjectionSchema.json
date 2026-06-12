@@ -1,0 +1,108 @@
+{
+  "Id": "A7FAA92A-99FC-4D38-BC68-E4915F333505",
+  "Name": "InjectionSchema",
+  "PersistanceMode": "Volatile",
+  "Commands": [
+    {
+      "Name": "ExecuteWorkflowCommand",
+      "Type": "CSharpScriptCommandNode",
+      "Arguments": [
+        {
+          "Name": "Arg1",
+          "Type": "Input",
+          "DataType": "System.String"
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "ScriptFileName",
+          "Value": "ExecuteWorkflow.cs"
+        }
+      ]
+    }
+  ],
+  "Workflows": [
+    {
+      "Arguments": [
+        {
+          "Name": "Arg1",
+          "DataType": "System.String",
+          "Type": "Input"
+        }
+      ],
+      "Name": "Workflow",
+      "Nodes": [
+        {
+          "Name": "Start",
+          "Type": "InitialNode"
+        },
+        {
+          "Name": "Fork1",
+          "Type": "ForkNode"
+        },
+        {
+          "Name": "Activity_One",
+          "Type": "GenericActivity",
+          "AutoReset": true,
+          "ActorSkill": "54C4FA92-F385-4644-B929-5650310B4930",
+          "Operations": [
+            {
+              "Name": "Operation",
+              "Type": "CSharpScriptOperation",
+              "Instruction": "Operation_One.cs"
+            }
+          ]
+        },
+        {
+          "Name": "ExceptionHandler",
+          "Type": "ExceptionHandler",
+          "Properties": [
+            {
+              "Name": "ExceptionTypeName",
+              "Value": "System.Exception"
+            }
+          ]
+        },
+        {
+          "Name": "TerminateActivity",
+          "Type": "GenericActivity",
+          "AutoReset": true,
+          "ActorSkill": "54C4FA92-F385-4644-B929-5650310B4930",
+          "Operations": [
+            {
+              "Name": "Operation1",
+              "Type": "CSharpScriptOperation",
+              "Instruction": "TTerminateHumanOS.cs"
+            }
+          ]
+        },
+        {
+          "Name": "End",
+          "Type": "ActivityFinalNode"
+        }
+      ],
+      "ControlFlows": [
+        {
+          "Name": "Flow_Start_Fork1",
+          "Node1RefName": "Start",
+          "Node2RefName": "Fork1"
+        },
+        {
+          "Name": "Flow_Fork1_Activity_One",
+          "Node1RefName": "Fork1",
+          "Node2RefName": "Activity_One"
+        },
+        {
+          "Name": "Flow_ExceptionHandler_TerminateActivity",
+          "Node1RefName": "ExceptionHandler",
+          "Node2RefName": "TerminateActivity"
+        },
+        {
+          "Name": "Flow_TerminateActivity_End",
+          "Node1RefName": "TerminateActivity",
+          "Node2RefName": "End"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "Servers": [
+    {
+      "Id": "d7375e9f-8430-4863-a5e2-330e8e71540d",
+      "Name": "MqttServer",
+      "Address": "0.0.0.0",
+      "AddressV6": "::",
+      "BlackListedClientIds": [],
+      "ProtocolVersion": "V500",
+      "WhiteListedClientIds": [],
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "e441f16b-c539-47a4-b2ca-330a68112017",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "d6925885-6e0e-431a-8c7c-b962edf55bd5",
+        "Properties": {}
+      }
+    }
+  ],
+  "Properties": {}
+}
