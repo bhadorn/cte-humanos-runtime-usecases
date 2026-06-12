@@ -1,0 +1,873 @@
+{
+  "Id": "1a2b3c4d-5e6f-7890-abcd-ef1234567890",
+  "Name": "FANUC Robot",
+  "DriverId": "f022ee3c-a2a5-428a-b588-46abacae39ee",
+  "Address": "opc.tcp://192.168.1.100:4880/FANUC/NanoUaServer",
+  "Properties": [
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": "FANUC R-30iB Plus Robot Controller connected via OPC-UA"
+    },
+    {
+      "Name": "opc:AutoGenerateClientCertificate",
+      "DataType": "System.Boolean",
+      "Value": "true"
+    },
+    {
+      "Name": "opc:CertificateHandling",
+      "DataType": "System.String",
+      "Value": "AcceptAll"
+    },
+    {
+      "Name": "opc:CertificatePath",
+      "DataType": "System.String",
+      "Value": "$(AppConfig:CertificatePath)"
+    },
+    {
+      "Name": "opc:SecuritySelection",
+      "DataType": "System.String",
+      "Value": "None"
+    },
+    {
+      "Name": "opc:Session.ConnectDisconnectTimeout",
+      "DataType": "System.Int32",
+      "Value": "30000"
+    },
+    {
+      "Name": "opc:Session.ReconnectDelay",
+      "DataType": "System.Int32",
+      "Value": "10000"
+    },
+    {
+      "Name": "opc:Session.WatchdogCycleTime",
+      "DataType": "System.Int32",
+      "Value": "5000"
+    },
+    {
+      "Name": "opc:Subscription.PublishingInterval",
+      "DataType": "System.Int32",
+      "Value": "500"
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String",
+      "Value": "FANUC"
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "FANUC R-30iB Plus"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String",
+      "Value": "Industrial Robot"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String",
+      "Value": "FANUC Robot"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String",
+      "Value": ""
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "d17bdc8c-37e0-4efa-a8bb-a6683726a1f6",
+      "Name": "Available",
+      "Address": "opc:Available",
+      "DataType": "System.Boolean",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "$(DeviceName)/Available"
+        }
+      ]
+    },
+    {
+      "Id": "a3ffe208-eaa3-447e-ae85-f5bef995346e",
+      "Name": "SignOfLife",
+      "Address": "opc:SignOfLife",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "$(DeviceName)/SignOfLife"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "ba17e873-8ab3-40ab-9ed6-dee8486efc60",
+      "Name": "RobotInformation",
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "$(DeviceName)/RobotInformation"
+        }
+      ],
+      "DataNodes": [
+        {
+          "Id": "b7714e6c-a131-4337-8b00-a5644e1c0a5f",
+          "Name": "Model",
+          "Address": "$(OpcNameSpace);s=RobotInformation.Model",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/Model"
+            }
+          ]
+        },
+        {
+          "Id": "5ff8d1f9-f170-4da1-affd-574b2d502662",
+          "Name": "SerialNumber",
+          "Address": "$(OpcNameSpace);s=RobotInformation.SerialNumber",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/SerialNumber"
+            }
+          ]
+        },
+        {
+          "Id": "9052332c-b8a0-42a3-bdf2-4bfec75572a2",
+          "Name": "Version",
+          "Address": "$(OpcNameSpace);s=RobotInformation.Version",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/Version"
+            }
+          ]
+        },
+        {
+          "Id": "2ade1064-fe7f-4e15-9128-e084b9b3f357",
+          "Name": "ServoState",
+          "Address": "$(OpcNameSpace);s=RobotInformation.ServoState",
+          "DataType": "System.Byte",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/ServoState"
+            },
+            {
+              "Name": "mtc:Values",
+              "DataType": "System.String",
+              "Value": "0=OFF;1=ON"
+            }
+          ]
+        },
+        {
+          "Id": "f1236551-379a-421e-984c-ccaf13b2e5e4",
+          "Name": "OperationState",
+          "Address": "$(OpcNameSpace);s=RobotInformation.OperationState",
+          "DataType": "System.UInt16",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/OperationState"
+            },
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "Bitmask: E-STOP(1) Abort(2) PROGRUN(4) PAUSED(8) HELD(16) FAULT(32) TPENBL(64) BATALM(128) BUSY(256)"
+            }
+          ]
+        },
+        {
+          "Id": "754451a6-e12a-4829-9c75-e311c0e2d3fc",
+          "Name": "ModeState",
+          "Address": "$(OpcNameSpace);s=RobotInformation.ModeState",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/ModeState"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "CONTROLLER_MODE"
+            },
+            {
+              "Name": "mtc:Values",
+              "DataType": "System.String",
+              "Value": "Auto=AUTOMATIC;T1=MANUAL;T2=MANUAL_DATA_INPUT"
+            }
+          ]
+        },
+        {
+          "Id": "62eeee6c-e800-4e68-95bf-93dab439d20d",
+          "Name": "ProgramSpeed",
+          "Address": "$(OpcNameSpace);s=RobotInformation.ProgramSpeed",
+          "DataType": "System.Byte",
+          "Unit": "%",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/ProgramSpeed"
+            }
+          ]
+        },
+        {
+          "Id": "564550d1-8c04-47e4-a6c9-1310b1505a05",
+          "Name": "Uptime",
+          "Address": "$(OpcNameSpace);s=RobotInformation.Uptime",
+          "DataType": "System.Int32",
+          "Unit": "min",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/Uptime"
+            }
+          ]
+        },
+        {
+          "Id": "2cdd15d2-b02e-4a4b-aa56-22b49e487544",
+          "Name": "Position",
+          "Address": "$(OpcNameSpace);s=RobotInformation.Position",
+          "DataType": "System.Single[]",
+          "Unit": "deg/mm",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/Position"
+            },
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "Float array: current position of each axis for group 1 (up to 6 axes)"
+            }
+          ]
+        },
+        {
+          "Id": "da5f3979-4ff4-4a22-b17d-63d944852536",
+          "Name": "Torque",
+          "Address": "$(OpcNameSpace);s=RobotInformation.Torque",
+          "DataType": "System.Single[]",
+          "Unit": "A",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/Torque"
+            },
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "Float array: Q-phase current (A) per axis for group 1 (up to 6 axes)"
+            }
+          ]
+        },
+        {
+          "Id": "dee26e25-b807-40da-8dd1-4700070379fe",
+          "Name": "Alarm",
+          "Address": "$(OpcNameSpace);s=RobotInformation.Alarm",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/RobotInformation/Alarm"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "ALARM"
+            },
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "Current alarm string, e.g. SRVO-001 Operator panel E-stop"
+            }
+          ]
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": []
+    },
+    {
+      "Id": "a51638b9-3a35-4d6e-bf77-c7967e3458ab",
+      "Name": "MotionDeviceSystem",
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "$(DeviceName)/MotionDeviceSystem"
+        }
+      ],
+      "DataNodes": [],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": [
+        {
+          "Id": "5d524e56-8b84-4edc-9526-7ee6743a05bb",
+          "Name": "MotionDevice_1",
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/MotionDeviceSystem/MotionDevice_1"
+            }
+          ],
+          "DataNodes": [
+            {
+              "Id": "31d7fb7b-925b-46cb-bbff-8f92b32c6339",
+              "Name": "SpeedOverride",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.MotionDevices.MotionDevice_1.SpeedOverride",
+              "DataType": "System.Double",
+              "Unit": "%",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/MotionDevice_1/SpeedOverride"
+                }
+              ]
+            },
+            {
+              "Id": "9b695a7b-a8c5-468c-9a26-34fea0014e8e",
+              "Name": "J1_ActualPosition",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.MotionDevices.MotionDevice_1.Axes.Axis_1.ActualPosition",
+              "DataType": "System.Double",
+              "Unit": "°",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/MotionDevice_1/Axes/Axis_1/ActualPosition"
+                }
+              ]
+            },
+            {
+              "Id": "2a852d91-3b11-49f1-ac1f-4428f2b68f0c",
+              "Name": "J2_ActualPosition",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.MotionDevices.MotionDevice_1.Axes.Axis_2.ActualPosition",
+              "DataType": "System.Double",
+              "Unit": "°",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/MotionDevice_1/Axes/Axis_2/ActualPosition"
+                }
+              ]
+            },
+            {
+              "Id": "7de89f98-1ceb-46c1-bf63-6b600529c5c4",
+              "Name": "J3_ActualPosition",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.MotionDevices.MotionDevice_1.Axes.Axis_3.ActualPosition",
+              "DataType": "System.Double",
+              "Unit": "°",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/MotionDevice_1/Axes/Axis_3/ActualPosition"
+                }
+              ]
+            },
+            {
+              "Id": "e235e6e0-da3c-4d3e-a456-1d027b87907f",
+              "Name": "J4_ActualPosition",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.MotionDevices.MotionDevice_1.Axes.Axis_4.ActualPosition",
+              "DataType": "System.Double",
+              "Unit": "°",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/MotionDevice_1/Axes/Axis_4/ActualPosition"
+                }
+              ]
+            },
+            {
+              "Id": "fa5b1405-ec40-4b48-9577-9f228a8ac477",
+              "Name": "J5_ActualPosition",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.MotionDevices.MotionDevice_1.Axes.Axis_5.ActualPosition",
+              "DataType": "System.Double",
+              "Unit": "°",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/MotionDevice_1/Axes/Axis_5/ActualPosition"
+                }
+              ]
+            },
+            {
+              "Id": "14798aee-692b-4352-b440-4a53ed7980d5",
+              "Name": "J6_ActualPosition",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.MotionDevices.MotionDevice_1.Axes.Axis_6.ActualPosition",
+              "DataType": "System.Double",
+              "Unit": "°",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/MotionDevice_1/Axes/Axis_6/ActualPosition"
+                }
+              ]
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "4c6b8a59-3cce-4b8a-ac10-a327e0e27a40",
+          "Name": "SafetyState_1",
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/MotionDeviceSystem/SafetyState_1"
+            }
+          ],
+          "DataNodes": [
+            {
+              "Id": "a067730a-e7b7-43a3-b0bc-d26996852561",
+              "Name": "OperationalMode",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.SafetyStates.SafetyState_1.OperationalMode",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/SafetyState_1/OperationalMode"
+                },
+                {
+                  "Name": "mtc:Values",
+                  "DataType": "System.String",
+                  "Value": "0=OTHER;1=T1;2=T2;3=AUTO_LOCAL;4=AUTO_REMOTE"
+                }
+              ]
+            },
+            {
+              "Id": "80dac7ea-b137-4063-a3f9-6b41980c37b6",
+              "Name": "EmergencyStop",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.SafetyStates.SafetyState_1.EmergencyStop",
+              "DataType": "System.Boolean",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/SafetyState_1/EmergencyStop"
+                }
+              ]
+            },
+            {
+              "Id": "1100d022-3b34-43ee-ae09-3d8ab1a703e0",
+              "Name": "ProtectiveStop",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.SafetyStates.SafetyState_1.ProtectiveStop",
+              "DataType": "System.Boolean",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/SafetyState_1/ProtectiveStop"
+                }
+              ]
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "e5c940b0-b809-46e9-9d3e-261f4fec5932",
+          "Name": "Controller_1",
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/MotionDeviceSystem/Controller_1"
+            }
+          ],
+          "DataNodes": [
+            {
+              "Id": "5d4f6ae5-cc41-4b2b-9a64-415432150c2b",
+              "Name": "TaskProgramName",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.Controllers.Controller_1.TaskControls.TaskControl_1.TaskProgramName",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/Controller_1/TaskProgramName"
+                },
+                {
+                  "Name": "mtc:InformationType",
+                  "DataType": "System.String",
+                  "Value": "PROGRAM"
+                }
+              ]
+            },
+            {
+              "Id": "98f2c492-ec1a-4b82-aeae-ecc06f4ec213",
+              "Name": "TaskProgramLoaded",
+              "Address": "$(OpcNameSpace);s=MotionDeviceSystem.Controllers.Controller_1.TaskControls.TaskControl_1.TaskProgramLoaded",
+              "DataType": "System.Boolean",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:NodeId",
+                  "DataType": "System.String",
+                  "Value": "$(DeviceName)/MotionDeviceSystem/Controller_1/TaskProgramLoaded"
+                }
+              ]
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        }
+      ]
+    },
+    {
+      "Id": "46dd36c8-8584-42cf-9993-cec14a1de554",
+      "Name": "ModbusArrays",
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "$(DeviceName)/ModbusArrays"
+        }
+      ],
+      "DataNodes": [
+        {
+          "Id": "59ec2958-36ea-47de-8318-a917cb2e344d",
+          "Name": "DiscreteInput",
+          "Address": "$(OpcNameSpace);i=301",
+          "DataType": "System.Boolean[]",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/ModbusArrays/DiscreteInput"
+            },
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "Boolean array. Index = Modbus address - 1. DI[x] = [x-1] (0..9999), RI[x] = [10000+x-1], UI[x] = [20000+x-1]"
+            }
+          ]
+        },
+        {
+          "Id": "7b78ef0f-1d9d-486d-8607-b8b3d93b7263",
+          "Name": "Coils",
+          "Address": "$(OpcNameSpace);i=302",
+          "DataType": "System.Boolean[]",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/ModbusArrays/Coils"
+            },
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "Boolean array (R/W). Index = Modbus address - 1. DO[x] = [x-1] (0..9999), RO[x] = [10000+x-1], F[x] = [20000+x-1]"
+            }
+          ]
+        },
+        {
+          "Id": "b7276fb9-50f2-4ac9-82eb-b10763b616c7",
+          "Name": "InputRegisters",
+          "Address": "$(OpcNameSpace);i=303",
+          "DataType": "System.UInt16[]",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "UInt16 array (read-only). Index = Modbus address - 1. GI[x] = [x-1] (0..999), GO[x] = [1000+x-1], AI[x] = [2000+x-1], AO[x] = [3000+x-1]"
+            },
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/ModbusArrays/InputRegisters"
+            }
+          ]
+        },
+        {
+          "Id": "256b1d21-41c9-41d8-bb0e-1fb0cba5722e",
+          "Name": "HoldingRegisters",
+          "Address": "$(OpcNameSpace);i=304",
+          "DataType": "System.Int16[]",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/ModbusArrays/HoldingRegisters"
+            },
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "Int16 array (R/W). Index = Modbus address - 1. Default: R[x] = [x-1] (0..9999). Also: PR[], current position, alarm history, program execution status per $SNPX_ASG assignment"
+            }
+          ]
+        },
+        {
+          "Id": "323bd540-727a-4c61-8c9e-a9174a6abd27",
+          "Name": "Command",
+          "Address": "$(OpcNameSpace);i=305",
+          "DataType": "System.String[]",
+          "Unit": "",
+          "Access": {
+            "ReadConversion": {},
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "Description",
+              "DataType": "System.String",
+              "Value": "String array (write-only). 128-byte command strings"
+            },
+            {
+              "Name": "opc-ua:NodeId",
+              "DataType": "System.String",
+              "Value": "$(DeviceName)/ModbusArrays/Command"
+            }
+          ]
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": []
+    }
+  ],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}
