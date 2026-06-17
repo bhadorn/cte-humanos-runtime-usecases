@@ -11,6 +11,9 @@ Demonstrates how to trigger a **named workflow** on every connected device from 
 
 No physical hardware is required — two `HostControl` devices simulate the connected targets.
 
+## Step by Step Guide
+In [Command Workflow Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial5/Example01.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture
 
 ```text

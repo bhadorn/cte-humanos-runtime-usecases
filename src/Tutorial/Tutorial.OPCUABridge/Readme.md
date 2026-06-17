@@ -11,6 +11,9 @@ Shows how to forward data from one HumanOS gateway to a second gateway purely ov
 
 This is the foundational pattern for multi-hop data distribution, DMZ bridging, or aggregating data from edge gateways into a central gateway.
 
+## Step by Step Guide
+In [OPC-UA Bridge Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial1/02_Example.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture
 
 ```text

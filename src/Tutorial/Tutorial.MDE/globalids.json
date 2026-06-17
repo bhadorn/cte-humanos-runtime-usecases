@@ -1,0 +1,30 @@
+{
+  "FileName": "c:\\temp\\tutorial.mde\\globalids.json",
+  "Ids": {
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource": "863edec8-52c2-46d9-9ef5-41a223814976",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Available": "431b1ab2-8668-4957-9c91-57c7408ba9cb",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/SignOfLife": "d9c23cf4-d4c8-4dca-ab6e-ced3b0c76019",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller": "ed315fbd-0c88-44f5-aebd-b9685e88b781",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/AlarmState": "89161697-3731-4c7a-8b94-3c83f90e1889",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/OperationMode": "972980d0-683d-4e45-812c-1f4dcee6d5be",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/RunningState": "22eae113-ea32-4a8f-a1b8-f54c1b368941",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/PartCounter": "d1a129fb-7e86-495a-9a53-b61508a20d27",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/FeedrateOverride": "f047fcc6-240b-49f5-b9a3-a5dbab06417e",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/SpindleOverride": "6d76b233-c758-493f-9946-c36d807b9682",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/CuttingTime": "e7038c26-b8ff-4def-8ac0-07722439f3f6",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/OperationTime": "dd7ad8ab-5d04-4130-9b6a-2c293e2b41d3",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/PowerOnTime": "bf9fc5ae-7706-4ea7-a709-ced7adba661f",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1": "88590a5f-056c-4ac4-a0ea-5acc11ec4962",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/CurrentFeed": "c6a2daea-a978-4395-8a1f-103a05753f5e",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/CurrentNcBlock": "34814ff5-f74e-44fe-b72d-d74ef96ab2fe",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/CurrentProgram": "11522616-2575-4a2e-9e1c-49623ef5d46a",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/CurrentSequenceNr": "0dd7c872-6025-40ca-92d4-16d6515560fb",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/CurrentSpindleSpeed": "5a17e63a-fb7b-4808-9b1e-d14ef452a836",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/CurrentToolId": "160a905e-6488-428d-b6e7-8c10a05ccc83",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/MainProgram": "d1e32c8e-09ba-455d-969a-893431b062f6",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/MainProgramHeader": "fd64a337-f3fb-4f5e-801a-7359910a5015",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/ProgrammedFeed": "053defa4-a375-4459-9ce7-b1debdf03aba",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/Controller/NCPath1/ProgrammedSpindleSpeed": "e500b712-dee0-4b7f-b72b-38bb2092fd45",
+    "464781f3-791e-49d5-a61b-db723de594be/JSONSource/MachineAlarming": "f92c83db-5636-4bf5-937f-77d0b6e38c07"
+  }
+}

@@ -11,6 +11,9 @@ Shows how to read a **nested JSON file** and automatically expose every field as
 
 A **file-based simulator** is included (`C:\Temp\TestFile.json`), so no physical hardware is required.
 
+## Step by Step Guide
+In [Complex Data Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial7/02_Example.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture
 
 ```text

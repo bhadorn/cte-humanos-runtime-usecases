@@ -9,6 +9,9 @@ keywords: [HumanOS, OPC-UA, bridge, FileReader, script, extension, UHAL, logic s
 
 Extends the `Tutorial.OPCUABridge` pattern by adding a **custom C# logic script** to the FileReader plugin on the source gateway. The script intercepts the read cycle, loads the file content from a runtime-specified path, and returns it to the driver — demonstrating how to inject custom logic into the data-acquisition path before values are published via OPC-UA. It is also shown, how alarm-events can be handled.
 
+## Step by Step Guide
+In [OPC-UA Bridge Extension Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial2/02_Example.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture
 
 ```text

@@ -11,6 +11,9 @@ Shows how to use the **JSONAggregator** device type to merge values from multipl
 
 A **file-based simulator** (`C:\Temp\TestFile.json`) is used as the data source.
 
+## Step by Step Guide
+In [Data Aggregation Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial6/02_Example.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture
 
 ```text

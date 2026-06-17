@@ -10,6 +10,9 @@ A HumanOS IoT Gateway tutorial project demonstrating JSON device integration, cu
 - Logging processed data to a MySQL database via the SQL Data Logger
 - Exposing live data over OPC-UA
 
+## Step by Step Guide
+In [Coffee Report Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial6/04_Example.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture overview
 
 ```

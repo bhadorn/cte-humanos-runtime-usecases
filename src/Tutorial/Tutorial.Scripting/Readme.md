@@ -11,6 +11,9 @@ Demonstrates three scripting patterns in a single project: a **WebControl HTTP s
 
 The data source is the public Mazak MTConnect demo server at `http://mtconnect.mazakcorp.com:5719`.
 
+## Step by Step Guide
+In [Scripting Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial4/02_Example.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture
 
 ```text

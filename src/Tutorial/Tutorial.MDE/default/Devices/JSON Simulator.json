@@ -1,0 +1,554 @@
+{
+  "Id": "464781f3-791e-49d5-a61b-db723de594be",
+  "Name": "JSON Simulator",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "C:\\Temp\\TestFile.json",
+  "Properties": [
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "JSON File"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "431b1ab2-8668-4957-9c91-57c7408ba9cb",
+      "Name": "Available",
+      "Address": "$.Available",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "EnableAzureIoT",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableInflux",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableMqtt",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableRest",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableRmq",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "mtc:DataItemId",
+          "DataType": "System.String",
+          "Value": "Lavail"
+        },
+        {
+          "Name": "mtc:InformationType",
+          "DataType": "System.String",
+          "Value": "AVAILABILITY"
+        },
+        {
+          "Name": "mtc:Values",
+          "DataType": "System.String",
+          "Value": "1=AVAILABLE;*=NOT_AVAILABLE"
+        },
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "AvailableType"
+        }
+      ]
+    },
+    {
+      "Id": "d9c23cf4-d4c8-4dca-ab6e-ced3b0c76019",
+      "Name": "SignOfLife",
+      "Address": "$.SignOfLife",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "EnableAzureIoT",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableInflux",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableMqtt",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableRest",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        },
+        {
+          "Name": "EnableRmq",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "ed315fbd-0c88-44f5-aebd-b9685e88b781",
+      "Name": "Controller",
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "89161697-3731-4c7a-8b94-3c83f90e1889",
+          "Name": "AlarmState",
+          "Address": "$.AlarmState",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "972980d0-683d-4e45-812c-1f4dcee6d5be",
+          "Name": "OperationMode",
+          "Address": "$.OperationMode",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": [
+            {
+              "Name": "EnableAzureIoT",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableInflux",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableMqtt",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRest",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRmq",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "mtc:DataItemId",
+              "DataType": "System.String",
+              "Value": "Lavail"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "AVAILABILITY"
+            },
+            {
+              "Name": "mtc:Values",
+              "DataType": "System.String",
+              "Value": "1=AVAILABLE;*=NOT_AVAILABLE"
+            },
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "AvailableType"
+            }
+          ]
+        },
+        {
+          "Id": "22eae113-ea32-4a8f-a1b8-f54c1b368941",
+          "Name": "RunningState",
+          "Address": "$.RunningState",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "d1a129fb-7e86-495a-9a53-b61508a20d27",
+          "Name": "PartCounter",
+          "Address": "$.PartCounter",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "f047fcc6-240b-49f5-b9a3-a5dbab06417e",
+          "Name": "FeedrateOverride",
+          "Address": "$.FeedrateOverride",
+          "DataType": "System.Double",
+          "Unit": "%",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "6d76b233-c758-493f-9946-c36d807b9682",
+          "Name": "SpindleOverride",
+          "Address": "$.SpindleOverride",
+          "DataType": "System.Double",
+          "Unit": "%",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "e7038c26-b8ff-4def-8ac0-07722439f3f6",
+          "Name": "CuttingTime",
+          "Address": "$.CuttingTime",
+          "DataType": "System.Double",
+          "Unit": "min",
+          "DataClass": "Stream",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "dd7ad8ab-5d04-4130-9b6a-2c293e2b41d3",
+          "Name": "OperationTime",
+          "Address": "$.OperationTime",
+          "DataType": "System.Double",
+          "Unit": "min",
+          "DataClass": "Stream",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "bf9fc5ae-7706-4ea7-a709-ced7adba661f",
+          "Name": "PowerOnTime",
+          "Address": "$.PowerOnTime",
+          "DataType": "System.Double",
+          "Unit": "min",
+          "DataClass": "Stream",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": [
+        {
+          "Id": "88590a5f-056c-4ac4-a0ea-5acc11ec4962",
+          "Name": "NCPath1",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "c6a2daea-a978-4395-8a1f-103a05753f5e",
+              "Name": "CurrentFeed",
+              "Address": "$.CurrentFeed",
+              "DataType": "System.Double",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            },
+            {
+              "Id": "34814ff5-f74e-44fe-b72d-d74ef96ab2fe",
+              "Name": "CurrentNcBlock",
+              "Address": "$.CurrentNcBlock",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            },
+            {
+              "Id": "11522616-2575-4a2e-9e1c-49623ef5d46a",
+              "Name": "CurrentProgram",
+              "Address": "$.CurrentProgram",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            },
+            {
+              "Id": "0dd7c872-6025-40ca-92d4-16d6515560fb",
+              "Name": "CurrentSequenceNr",
+              "Address": "$.CurrentSequenceNr",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            },
+            {
+              "Id": "5a17e63a-fb7b-4808-9b1e-d14ef452a836",
+              "Name": "CurrentSpindleSpeed",
+              "Address": "$.CurrentSpindleSpeed",
+              "DataType": "System.Double",
+              "Unit": "1/min",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            },
+            {
+              "Id": "160a905e-6488-428d-b6e7-8c10a05ccc83",
+              "Name": "CurrentToolId",
+              "Address": "$.CurrentToolId",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            },
+            {
+              "Id": "d1e32c8e-09ba-455d-969a-893431b062f6",
+              "Name": "MainProgram",
+              "Address": "$.MainProgram",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            },
+            {
+              "Id": "fd64a337-f3fb-4f5e-801a-7359910a5015",
+              "Name": "MainProgramHeader",
+              "Address": "$.MainProgramHeader",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            },
+            {
+              "Id": "053defa4-a375-4459-9ce7-b1debdf03aba",
+              "Name": "ProgrammedFeed",
+              "Address": "$.ProgrammedFeed",
+              "DataType": "System.Double",
+              "Unit": "mm/min",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "EnableAzureIoT",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "EnableInflux",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "EnableMqtt",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "EnableRest",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "EnableRmq",
+                  "DataType": "System.Boolean",
+                  "Value": "true"
+                },
+                {
+                  "Name": "mtc:DataItemId",
+                  "DataType": "System.String",
+                  "Value": "Lavail"
+                },
+                {
+                  "Name": "mtc:InformationType",
+                  "DataType": "System.String",
+                  "Value": "AVAILABILITY"
+                },
+                {
+                  "Name": "mtc:Values",
+                  "DataType": "System.String",
+                  "Value": "1=AVAILABLE;*=NOT_AVAILABLE"
+                },
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "AvailableType"
+                }
+              ]
+            },
+            {
+              "Id": "e500b712-dee0-4b7f-b72b-38bb2092fd45",
+              "Name": "ProgrammedSpindleSpeed",
+              "Address": "$.ProgrammedSpindleSpeed",
+              "DataType": "System.Double",
+              "Unit": "1/min",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        }
+      ]
+    }
+  ],
+  "AlarmEventPool": {
+    "Id": "f92c83db-5636-4bf5-937f-77d0b6e38c07",
+    "Name": "MachineAlarming",
+    "Tasks": [
+      {
+        "Id": "20b7f119-bb3e-4d50-8c50-7ff96669dfbd",
+        "Name": "SystemAlarms",
+        "Address": "$.Alarms",
+        "Properties": []
+      }
+    ],
+    "HistoryMode": {
+      "Retention": 720,
+      "SamplingRate": 2000,
+      "HistoryTableName": "",
+      "IdField": "",
+      "TaggedFields": [],
+      "TrackedFields": []
+    },
+    "Properties": []
+  },
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

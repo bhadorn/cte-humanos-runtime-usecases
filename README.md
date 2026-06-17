@@ -67,6 +67,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [Data Aggregation](./src/Tutorial/Tutorial.DataAggregation)                                           | FileReader (JSONAggregator)        | Aggregating values from multiple JSON sources into a single OPC-UA node |
 | [OPC-UA Bridge](./src/Tutorial/Tutorial.OPCUABridge)                                                  | FileReader + OPC-UA Server         | Bridging device data across two independent OPC-UA gateway instances    |
 | [OPC-UA Bridge Extension](./src/Tutorial/Tutorial.OPCUABridgeExtension)                               | FileReader + OPC-UA Server         | Extending the OPC-UA bridge with a custom C# file-reader script         |
+| [OPC-UA Bridge MDE](./src/Tutorial/Tutorial.MDE)                                                      | FileReader + OPC-UA Server         | Extending the OPC-UA bridge with a MDE structure                        |
 | [Scripting](./src/Tutorial/Tutorial.Scripting)                                                        | WebControl (MTConnect) + MQTT      | Custom payload processing for a Mazak CNC machine with MQTT forwarding  |
 | [Web Service](./src/Tutorial/Tutorial.WebService)                                                     | WebService                         | Exposing gateway data via a REST endpoint with a custom payload script  |
 

@@ -11,6 +11,9 @@ Shows how to expose the HumanOS gateway as a **custom REST API** using the `Huma
 
 No physical hardware or device connector is required; the tutorial focuses entirely on the web service scripting pattern.
 
+## Step by Step Guide
+In [Web Service Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial8/01_Example.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture
 
 ```text

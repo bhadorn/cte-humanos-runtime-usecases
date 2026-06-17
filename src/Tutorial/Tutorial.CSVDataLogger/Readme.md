@@ -11,6 +11,9 @@ Shows how to combine a **custom FileReader script** with the **CSV Data Logger**
 
 A **file-based simulator** (`C:\Temp\TestFile.json`) replaces physical hardware.
 
+## Step by Step Guide
+In [CSV Data Logger Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial3/02_Example.md) you can find a step-by-step instruction of this tutorial.
+
 ## Architecture
 
 ```text
