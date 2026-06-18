@@ -35,6 +35,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 - **TCP/IP Demo**: .NET 10 SDK to build and run the included test TCP server (`TestServerClient/`)
 - **Temperature Reporter**: No additional hardware required (file-based simulator included)
 - **Timing Example**: No additional hardware required (file-based simulator included)
+- **Traub CNC**: No additional hardware required (OPC-UA machine simulator included); for a real machine, a Traub CNC controller with OPC-UA server enabled
 
 **Recommended general tooling**:
 
@@ -59,6 +60,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [TCP/IP Demo](./src/TCPIPDemo/Readme.md)                                           | TcpClientControl                  | CSV stream acquisition over raw TCP/IP with OEE state derivation; includes .NET 8 test server simulator                     |
 | [Temperature Reporter](./src/TemperatureReporter/Readme.md)                        | FileReader (simulator)            | Threshold-based alerting with multiple alarm levels                                                                         |
 | [Timing Example](./src/TimingExample/Readme.md)                                    | FileReader (simulator)            | Example how to use timers to execute commands                                                                               |
+| [Traub CNC](./src/Traub/Readme.md)                                                 | OpcUaControl                      | OPC-UA bridge with OEE state derivation and NC program header parsing; includes a full machine simulator                    |
 
 ## Tutorials
 

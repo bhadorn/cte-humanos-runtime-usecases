@@ -1,0 +1,510 @@
+{
+  "Id": "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07",
+  "Name": "TraubControl",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "..\\..\\..\\control.json",
+  "Properties": [
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "SIMULATOR"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "c8cade92-cb2e-417a-9271-5152d52b93c0",
+      "Name": "AlarmState",
+      "Address": "$.AlarmState",
+      "DataType": "System.Boolean",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "10811"
+        }
+      ]
+    },
+    {
+      "Id": "c67be153-f3bc-4672-96e3-d7fecc41d50b",
+      "Name": "AutoCycle",
+      "Address": "$.AutoCycle",
+      "DataType": "System.Boolean",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "1002"
+        }
+      ]
+    },
+    {
+      "Id": "d2a23b8f-18e0-48e4-847b-8d0c7bc9c806",
+      "Name": "CuttingTime",
+      "Address": "$.CuttingTime",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "11"
+        }
+      ]
+    },
+    {
+      "Id": "c02a8e11-4094-4d81-8487-f5bfbaaa48a7",
+      "Name": "CycleTime",
+      "Address": "$.CycleTime",
+      "DataType": "System.Double",
+      "Unit": "",
+      "DataClass": "Stream",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "893"
+        }
+      ]
+    },
+    {
+      "Id": "42865cfc-80ab-4b63-bc7a-cdf95f32b3e0",
+      "Name": "CycleTimeNetto",
+      "Address": "$.CycleTimeNetto",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "12"
+        }
+      ]
+    },
+    {
+      "Id": "0af40e48-8894-4763-9795-d3e30c20a66d",
+      "Name": "FeedrateOverride",
+      "Address": "$.FeedrateOverride",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "30503"
+        }
+      ]
+    },
+    {
+      "Id": "1b63f0a1-5bcd-42e7-807a-475266158f58",
+      "Name": "OperationMode",
+      "Address": "$.OperationMode",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "30505"
+        }
+      ]
+    },
+    {
+      "Id": "95ca9fbb-0ed7-4952-91ec-fe745abfd8f7",
+      "Name": "OperationTime",
+      "Address": "$.OperationTime",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "892"
+        }
+      ]
+    },
+    {
+      "Id": "6fa14bcb-a030-4d59-be15-3b364cd58df5",
+      "Name": "PowerOnTime",
+      "Address": "$.PowerOnTime",
+      "DataType": "System.Double",
+      "Unit": "",
+      "DataClass": "Stream",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "889"
+        }
+      ]
+    },
+    {
+      "Id": "6a369c97-9b6e-4e9d-90d5-4a6e202bf53e",
+      "Name": "RunningState",
+      "Address": "$.RunningState",
+      "DataType": "System.Boolean",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "10002"
+        }
+      ]
+    },
+    {
+      "Id": "c2d8c097-fad1-4184-b35b-ee81be1a1017",
+      "Name": "SpindleOverride",
+      "Address": "$.SpindleOverride",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "20064"
+        }
+      ]
+    },
+    {
+      "Id": "cc943069-5fa1-47bf-a386-4f69ab6472f9",
+      "Name": "CurrentFeed",
+      "Address": "$.CurrentFeed",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "11301"
+        }
+      ]
+    },
+    {
+      "Id": "10612637-3360-450c-8e1e-da6ee44eb1c6",
+      "Name": "CurrentNcBlock",
+      "Address": "$.CurrentNcBlock",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "15"
+        }
+      ]
+    },
+    {
+      "Id": "1e46be9b-0ed2-4e9d-b85c-2330c683df9e",
+      "Name": "CurrentProgram",
+      "Address": "$.CurrentProgram",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "10001"
+        }
+      ]
+    },
+    {
+      "Id": "85bb4a7a-7b56-4e63-9e22-c9158b26e782",
+      "Name": "CurrentSequenceNr",
+      "Address": "$.CurrentSequenceNr",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "17"
+        }
+      ]
+    },
+    {
+      "Id": "7f5b149a-457d-4c5a-be58-f70b82bcd64c",
+      "Name": "CurrentSpindleSpeed",
+      "Address": "$.CurrentSpindleSpeed",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "11111"
+        }
+      ]
+    },
+    {
+      "Id": "aa96e2c7-3ed3-4129-bc64-416e732ea297",
+      "Name": "CurrentToolId",
+      "Address": "$.CurrentToolId",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "18"
+        }
+      ]
+    },
+    {
+      "Id": "0778be5d-b162-4d73-b9a1-2fa6af814ea2",
+      "Name": "MainProgram",
+      "Address": "$.MainProgram",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "19"
+        }
+      ]
+    },
+    {
+      "Id": "a952142d-98d8-474a-b622-28a09016e6fc",
+      "Name": "MainProgramHeader",
+      "Address": "$.MainProgramHeader",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "20"
+        }
+      ]
+    },
+    {
+      "Id": "3525f578-51e5-47d1-921b-cf6896d22257",
+      "Name": "ProgrammedFeed",
+      "Address": "$.ProgrammedFeed",
+      "DataType": "System.Double",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "21"
+        }
+      ]
+    },
+    {
+      "Id": "2cdb4517-430c-42bd-91e3-8cfa32985a4d",
+      "Name": "ProgrammedSpindleSpeed",
+      "Address": "$.ProgrammedSpindleSpeed",
+      "DataType": "System.Boolean",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "11101"
+        }
+      ]
+    },
+    {
+      "Id": "70d9505f-da27-4528-8c00-efc075242150",
+      "Name": "PartCounter",
+      "Address": "$.PartCounter",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "10102"
+        }
+      ]
+    },
+    {
+      "Id": "78001224-6ffd-41f0-9415-a9da8ee1bcc4",
+      "Name": "PartCounterTotal",
+      "Address": "$.PartCounterTotal",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:NodeId",
+          "DataType": "System.String",
+          "Value": "22"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": []
+}

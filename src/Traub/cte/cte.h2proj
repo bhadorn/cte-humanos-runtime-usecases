@@ -1,0 +1,167 @@
+{
+  "Path": "cte.h2proj",
+  "Name": "POC cte",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "f022ee3c-a2a5-428a-b588-46abacae39ee",
+      "Path": "cte_Traub_ctProduction.json",
+      "Id": "35f9d25c-852e-4851-9437-18f12bc36ab6",
+      "Name": "cte_Traub_ctProduction",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n65303735333461386530333561373565646464646632356336373530356538636236306637326138\r\n3635343063613362343334383665386462646630653561650a313238653564393062353665616532\r\n30383861343764313264613033613934323861646633393534396439376232383736333535663034\r\n3632623464656362380a643630393239366361323963613934343631363139393865656536306163\r\n33383337333337323837666462353038333331656633316231336436366239353162633365643335\r\n3266376266316438613839363735633766393635656535656433\r\n"
+      }
+    ],
+    "Id": "a996a64d-9ff2-45c1-8e07-ffffb8a7a968",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "7ad6756a-8ac1-44fb-9339-bad793b2a2e2",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x64",
+      "RuntimeVersion": "2.10",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "7ad6756a-8ac1-44fb-9339-bad793b2a2e2",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "HumanOS.SharedNodeSpace.Type": "",
+        "HumanOS.SharedNodeSpace.Address": "localhost",
+        "HumanOS.SharedNodeSpace.MasterSystemControllerId": "6bbca83f-8bba-48f6-8d70-1113094e5c42",
+        "HumanOS.RuntimeVersion": "2.10"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "opc.tcp://localhost:4880",
+          "DeviceTemplateId": "35f9d25c-852e-4851-9437-18f12bc36ab6",
+          "DriverId": "f022ee3c-a2a5-428a-b588-46abacae39ee",
+          "MachineInventoryNumber": "",
+          "MachineName": "",
+          "MachineSerialNumber": "",
+          "MachineType": "",
+          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+          "SubDevices": [],
+          "SupplierName": "",
+          "Type": "Test Device",
+          "Variables": [
+            {
+              "Name": "DeviceName",
+              "DataType": "System.String",
+              "Value": "Traub NCControl0/"
+            },
+            {
+              "Name": "NameSpaceTypePrefix",
+              "DataType": "System.String",
+              "Value": "s="
+            },
+            {
+              "Name": "OpcUaNameSpace",
+              "DataType": "System.String",
+              "Value": "ns=2"
+            },
+            {
+              "Name": "RootDeviceNode",
+              "DataType": "System.String",
+              "Value": "Objects/Devices/"
+            }
+          ],
+          "Path": "OPC-UA Test.json",
+          "Id": "44afa326-9c70-473a-ab38-65314570d0fc",
+          "Name": "OPC-UA Test",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "TMainProgramHeaderProcessorScript.cs",
+              "Id": "34bd8138-6960-4fb1-8eed-cc97ef569e25",
+              "Name": "TMainProgramHeaderProcessorScript.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.OpcUaControl",
+          "Id": "f022ee3c-a2a5-428a-b588-46abacae39ee",
+          "Name": "HumanOS.UHAL.OpcUaControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [
+          {
+            "Path": "TMainProgramHeaderProcessorScript.cs",
+            "Id": "11fa5f23-934b-48e8-86c0-940f6c17c21a",
+            "Name": "TMainProgramHeaderProcessorScript.cs",
+            "Description": ""
+          }
+        ],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
