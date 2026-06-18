@@ -1,0 +1,250 @@
+{
+  "Path": "flamesdemo.h2proj",
+  "Name": "FLAMESDemo",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "FLAMESDemo.json",
+      "Id": "dce1de8e-433d-48b0-bd28-e0ce46daf0a1",
+      "Name": "FLAMESDemo",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n39666234363831623834313739343235653338326566373634376634656566386637393665633135\r\n3464616562323563666563656537663132393865393063350a663436353538383764636562653736\r\n66333531333738323162303961353831626130353737663164306536306165343165376531653862\r\n3330356265376362340a396263666466316638613362626565373833333339393332613634323362\r\n37353562343139343737633333373630333633376139643136363435336161343032616363316438\r\n3635656464386635646533376532356464356163636531653331\r\n"
+      }
+    ],
+    "Id": "8b4d06ca-40c7-43ef-bf1b-e20d5e470480",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "95586d41-19ab-4609-a1f1-aedc09aef990",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Debug",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "95586d41-19ab-4609-a1f1-aedc09aef990",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.11",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "..\\..\\..\\Machine.json",
+          "DeviceTemplateId": "dce1de8e-433d-48b0-bd28-e0ce46daf0a1",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "DemoFile",
+          "Variables": [],
+          "Path": "FLAMESDemo.json",
+          "Id": "45f57e1f-ba15-4156-824a-311ade753d18",
+          "Name": "FLAMESDemo",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [
+            {
+              "Path": "flames2.xml",
+              "Id": "4637d2e2-1e5c-45ea-b868-d7e3b47b3710",
+              "Name": "flames2.xml",
+              "Description": ""
+            },
+            {
+              "Path": "cybertech.iiotgateway.flames.xml",
+              "Id": "803ba8e9-8527-415d-8661-dd3c3abd1ac3",
+              "Name": "cybertech.iiotgateway.flames.xml",
+              "Description": ""
+            },
+            {
+              "Path": "Opc.Ua.NodeSet2.xml",
+              "Id": "f176cbfa-b7b6-4070-b217-138bb3545e01",
+              "Name": "Opc.Ua.NodeSet2.xml",
+              "Description": ""
+            }
+          ],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "ProductionStateMachineScript.cs",
+              "Id": "36aa2599-9110-4a3a-a3d0-c87d0baa4bb0",
+              "Name": "ProductionStateMachineScript.cs",
+              "Description": ""
+            },
+            {
+              "Path": "OccupancyReconciliationStateMachineScript.cs",
+              "Id": "4ed0e5ea-9393-46cb-b590-636552ff4aac",
+              "Name": "OccupancyReconciliationStateMachineScript.cs",
+              "Description": ""
+            },
+            {
+              "Path": "TransportStateMachineScript.cs",
+              "Id": "d31b428c-ffac-4bb2-94b0-bd719348f66d",
+              "Name": "TransportStateMachineScript.cs",
+              "Description": ""
+            },
+            {
+              "Path": "ToolUsedEventScript.cs",
+              "Id": "9e399286-0220-4229-b7a9-cd1da8f2a31f",
+              "Name": "ToolUsedEventScript.cs",
+              "Description": ""
+            },
+            {
+              "Path": "AutomationStateChangedEventScript.cs",
+              "Id": "3d5acc52-1f8b-4ea6-b1a0-d26c3c645ed9",
+              "Name": "AutomationStateChangedEventScript.cs",
+              "Description": ""
+            },
+            {
+              "Path": "ToolLoadedEventScript.cs",
+              "Id": "51a47d34-f57b-4d2f-8fee-f6defa4cc3b1",
+              "Name": "ToolLoadedEventScript.cs",
+              "Description": ""
+            },
+            {
+              "Path": "StartProductionProgramCommand.cs",
+              "Id": "6d0d4920-264b-44e9-a4cf-d17b338c9171",
+              "Name": "StartProductionProgramCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "SetAutomationModeCommand.cs",
+              "Id": "85e2de0a-b0c0-415a-9886-6f23b5e93cc7",
+              "Name": "SetAutomationModeCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "SetIndicatorModeCommand.cs",
+              "Id": "1e71c8b7-d160-44ef-9631-60773b3e4705",
+              "Name": "SetIndicatorModeCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "FileSystemCreateDirectory.cs",
+              "Id": "b12ac901-d2e3-42ec-ac63-d3cdc28ba81f",
+              "Name": "FileSystemCreateDirectory.cs",
+              "Description": ""
+            },
+            {
+              "Path": "MarkForUnloadingCommand.cs",
+              "Id": "b4da9daf-9034-4ed3-a231-0e2a04d61fdd",
+              "Name": "MarkForUnloadingCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "SupplyToolDatasetCommand.cs",
+              "Id": "9dc0341f-a2bc-4c6b-88a4-fe94963bfa15",
+              "Name": "SupplyToolDatasetCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "NotifyDirectToolChangeCommand.cs",
+              "Id": "355d63b7-7744-4799-a198-55d0cf95e8db",
+              "Name": "NotifyDirectToolChangeCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "SupplyHandlingParametersCommand.cs",
+              "Id": "fad7efa5-f47c-45f8-a91d-28db57fe33a0",
+              "Name": "SupplyHandlingParametersCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "SupplyPositionCoordinatesCommand.cs",
+              "Id": "000288eb-6225-419b-b748-d63189905891",
+              "Name": "SupplyPositionCoordinatesCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "SupplyWorkpieceInformationCommand.cs",
+              "Id": "760f0c17-8b7f-4871-99a7-811243b8f0c5",
+              "Name": "SupplyWorkpieceInformationCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "RequestTransportCommand.cs",
+              "Id": "77bab482-b25a-43d5-995e-bde8c9da6c32",
+              "Name": "RequestTransportCommand.cs",
+              "Description": ""
+            },
+            {
+              "Path": "UpdateToolsScript.cs",
+              "Id": "d94618f1-4e16-42b3-86ad-fc0b6e8ed94f",
+              "Name": "UpdateToolsScript.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.FileReader",
+          "Id": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "Name": "HumanOS.UHAL.FileReader",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
