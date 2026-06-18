@@ -1,0 +1,28 @@
+{
+  "Ids": {
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1": "0855c87c-b6b5-4594-9eba-8f2ea4a7240c",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/AutoCycle": "c67be153-f3bc-4672-96e3-d7fecc41d50b",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/AlarmState": "c8cade92-cb2e-417a-9271-5152d52b93c0",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CuttingTime": "d2a23b8f-18e0-48e4-847b-8d0c7bc9c806",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CycleTime": "c02a8e11-4094-4d81-8487-f5bfbaaa48a7",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CycleTimeNetto": "42865cfc-80ab-4b63-bc7a-cdf95f32b3e0",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/FeedrateOverride": "0af40e48-8894-4763-9795-d3e30c20a66d",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/OperationMode": "1b63f0a1-5bcd-42e7-807a-475266158f58",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/OperationTime": "95ca9fbb-0ed7-4952-91ec-fe745abfd8f7",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/PowerOnTime": "6fa14bcb-a030-4d59-be15-3b364cd58df5",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/RunningState": "6a369c97-9b6e-4e9d-90d5-4a6e202bf53e",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/SpindleOverride": "c2d8c097-fad1-4184-b35b-ee81be1a1017",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CurrentFeed": "cc943069-5fa1-47bf-a386-4f69ab6472f9",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CurrentNcBlock": "10612637-3360-450c-8e1e-da6ee44eb1c6",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CurrentProgram": "1e46be9b-0ed2-4e9d-b85c-2330c683df9e",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CurrentSequenceNr": "85bb4a7a-7b56-4e63-9e22-c9158b26e782",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CurrentSpindleSpeed": "7f5b149a-457d-4c5a-be58-f70b82bcd64c",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/CurrentToolId": "aa96e2c7-3ed3-4129-bc64-416e732ea297",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/MainProgram": "0778be5d-b162-4d73-b9a1-2fa6af814ea2",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/MainProgramHeader": "a952142d-98d8-474a-b622-28a09016e6fc",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/ProgrammedFeed": "3525f578-51e5-47d1-921b-cf6896d22257",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/ProgrammedSpindleSpeed": "2cdb4517-430c-42bd-91e3-8cfa32985a4d",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/PartCounter": "70d9505f-da27-4528-8c00-efc075242150",
+    "a6f6ed6f-8aac-4fb8-9b9c-7f4eefeaab07/TraubControl_v1/PartCounterTotal": "78001224-6ffd-41f0-9415-a9da8ee1bcc4"
+  }
+}
