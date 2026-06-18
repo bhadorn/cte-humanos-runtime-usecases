@@ -1,0 +1,288 @@
+{
+  "Flames": {
+    "UniqueId": "unique-id-145",
+    "AutomationState": {
+      "Trigger": 2,
+      "RemoteMode": false,
+      "OperationState": 2,
+      "ServiceRequest": 2
+    },
+    "Positions": {
+      "Chuck": {
+        "UniqueId": "unique-id-2122",
+        "Occupied": true
+      },
+      "Chuck2": {
+        "UniqueId": "unique-id-1235",
+        "Occupied": false
+      }
+    },
+    "FileSystem": {
+      "Description": "dynamic file system node handled in code"
+    },
+    "ProductionManagement": {
+      "ProductionProgram": {
+        "Identifier": "prog 11",
+        "State": {
+          "Trigger": 1
+        },
+        "LastProgramBlock": "last seq 124",
+        "LastTool": "last tool 133",
+        "LastInformation": "last info 1236",
+        "QualityWithinTolerances": false,
+        "ReasonForAbortion": 10
+      },
+      "ToolUsedEventData": {
+        "Updated": 5,
+        "CurrentTool": 1,
+        "OrigDiameter": 3,
+        "Diameter": 1,
+        "MinDiameter": 0,
+        "OrigWidth": 2,
+        "Width": 1,
+        "MinWidth": 0
+      }
+    },
+    "ToolDataManagement": {
+      "Tools": {
+        "Tool1": {
+          "Identifier": {
+            "Fields": {
+              "Id": {
+                "Name": "Id",
+                "FieldTypeName": "System.Guid",
+                "IsKey": true
+              },
+              "Name": {
+                "Name": "Name",
+                "FieldTypeName": "System.String"
+              },
+              "Duplonumber": {
+                "Name": "Duplonumber",
+                "FieldTypeName": "System.UInt32"
+              },
+              "UniqueId": {
+                "Name": "UniqueId",
+                "FieldTypeName": "System.String"
+              }
+            },
+            "Values": {
+              "Id": "{B930181D-2A88-49ED-BC6E-1D76E402157A}",
+              "Name": "tool-1",
+              "Duplonumber": 14,
+              "UniqueId": "T12"
+            }
+          },
+          "Locked": false,
+          "ToolLife": {
+            "Value": 15,
+            "EngineeringUnits": {
+              "Fields": {
+                "Id": {
+                  "Name": "Id",
+                  "FieldTypeName": "System.Guid",
+                  "IsKey": true
+                },
+                "UnitId": {
+                  "Name": "UnitId",
+                  "FieldTypeName": "System.Int32"
+                },
+                "NamespaceUri": {
+                  "Name": "NamespaceUri",
+                  "FieldTypeName": "System.String"
+                },
+                "DisplayName": {
+                  "Name": "DisplayName",
+                  "FieldTypeName": "CyberTech.TLocalizedText, CyberTech"
+                },
+                "Description": {
+                  "Name": "Description",
+                  "FieldTypeName": "CyberTech.TLocalizedText, CyberTech"
+                }
+              },
+              "Values": {
+                "Id": "{B930181D-2A88-49ED-BC6E-1D76E402157A}",
+                "NamespaceUri": "http://www.iso.org/iso/iso-80000-1_2009/en/",
+                "UnitId": 72,
+                "DisplayName": {
+                  "Text": "minutes",
+                  "Locale": "en"
+                },
+                "Description": {
+                  "Text": "Tool life in minutes",
+                  "Locale": "en"
+                }
+              }
+            }
+          },
+          "NativeDataset": "3712625AFF88119284",
+          "UnloadMarker": true,
+          "ApplicationData": [
+            {
+              "Fields": {
+                "Id": {
+                  "Name": "Id",
+                  "FieldTypeName": "System.Guid",
+                  "IsKey": true
+                },
+                "Key": {
+                  "Name": "Key",
+                  "FieldTypeName": "System.String"
+                },
+                "Value": {
+                  "Name": "Value",
+                  "FieldTypeName": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base"
+                }
+              },
+              "Values": {
+                "Id": "{B930181D-2A88-49ED-BC6E-1D76E402157A}",
+                "Key": "test2",
+                "Value": {
+                  "Fields": {
+                    "Id": {
+                      "Name": "Id",
+                      "FieldTypeName": "System.Guid",
+                      "IsKey": true
+                    },
+                    "StringValue": {
+                      "Name": "StringValue",
+                      "FieldTypeName": "System.String"
+                    }
+                  },
+                  "Values": {
+                    "Id": "{B930181D-2A88-49ED-BC6E-1D76E402157A}",
+                    "StringValue": "Testsadfsfsadsdafsdafsdafdf"
+                  }
+                }
+              }
+            },
+            {
+              "Fields": {
+                "Id": {
+                  "Name": "Id",
+                  "FieldTypeName": "System.Guid",
+                  "IsKey": true
+                },
+                "Key": {
+                  "Name": "Key",
+                  "FieldTypeName": "System.String"
+                },
+                "Value": {
+                  "Name": "Value",
+                  "FieldTypeName": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base"
+                }
+              },
+              "Values": {
+                "Id": "{B930181D-2A88-49ED-BC6E-1D76E402157A}",
+                "Key": "test4",
+                "Value": {
+                  "Fields": {
+                    "Id": {
+                      "Name": "Id",
+                      "FieldTypeName": "System.Guid",
+                      "IsKey": true
+                    },
+                    "StringValue": {
+                      "Name": "StringValue",
+                      "FieldTypeName": "System.String"
+                    }
+                  },
+                  "Values": {
+                    "Id": "{B930181D-2A88-49ED-BC6E-1D76E402157A}",
+                    "StringValue": "222ws"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "Tool2": {
+          "Identifier": {
+            "Fields": {
+              "Id": {
+                "Name": "Id",
+                "FieldTypeName": "System.Guid",
+                "IsKey": true
+              },
+              "Name": {
+                "Name": "Name",
+                "FieldTypeName": "System.String"
+              },
+              "Duplonumber": {
+                "Name": "Duplonumber",
+                "FieldTypeName": "System.UInt32"
+              },
+              "UniqueId": {
+                "Name": "UniqueId",
+                "FieldTypeName": "System.String"
+              }
+            },
+            "Values": {
+              "Id": "{6310A866-7382-42B2-9053-CC4BEEBBD75C}",
+              "Name": "tool-2",
+              "Duplonumber": 22,
+              "UniqueId": "T22"
+            }
+          },
+          "Locked": false,
+          "ToolLife": {
+            "Value": 23,
+            "EngineeringUnits": {
+              "Fields": {
+                "Id": {
+                  "Name": "Id",
+                  "FieldTypeName": "System.Guid",
+                  "IsKey": true
+                },
+                "UnitId": {
+                  "Name": "UnitId",
+                  "FieldTypeName": "System.Int32"
+                },
+                "NamespaceUri": {
+                  "Name": "NamespaceUri",
+                  "FieldTypeName": "System.String"
+                },
+                "DisplayName": {
+                  "Name": "DisplayName",
+                  "FieldTypeName": "CyberTech.TLocalizedText, CyberTech"
+                },
+                "Description": {
+                  "Name": "Description",
+                  "FieldTypeName": "CyberTech.TLocalizedText, CyberTech"
+                }
+              },
+              "Values": {
+                "Id": "{6310A866-7382-42B2-9053-CC4BEEBBD75C}",
+                "NamespaceUri": "http://www.iso.org/iso/iso-80000-1_2009/en/",
+                "UnitId": 72,
+                "DisplayName": {
+                  "Text": "minutes",
+                  "Locale": "en"
+                },
+                "Description": {
+                  "Text": "Tool life in minutes",
+                  "Locale": "en"
+                }
+              }
+            }
+          },
+          "NativeDataset": "3712625AFF88119284",
+          "UnloadMarker": true          
+        }
+      },
+      "NodeVersion": "4"
+    },
+    "ToolStorage": {
+      "ToolPosition1": {
+        "OccupyingToolNodeId": "C1FB29E5-7DB9-46D2-A740-686903722704",
+        "UniqueId": "tool-position-123",
+        "Occupied": true
+      }
+    },
+    "JustInTimeSupply": {},
+    "AutomationDataManagement": {},
+    "TransportUnit": {
+      "CurrentPosition": 12
+    }
+  }
+}

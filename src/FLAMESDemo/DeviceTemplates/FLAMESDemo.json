@@ -1,0 +1,4362 @@
+{
+  "Id": "dce1de8e-433d-48b0-bd28-e0ce46daf0a1",
+  "Name": "FLAMESDemo",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "..\\..\\..\\Machine.json",
+  "Variables": [],
+  "Properties": [
+    {
+      "Name": "EnableFlames",
+      "DataType": "System.Boolean",
+      "Value": "true"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "Json"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String",
+      "Value": ""
+    }
+  ],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "d4c5c67d-cee5-4487-b3e3-b09ebeb96f67",
+      "Name": "Controller",
+      "Properties": [],
+      "DataNodes": [],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": [
+        {
+          "Id": "24c60afd-4ca2-4ed7-8141-330dbe5c4e3b",
+          "Name": "Commands",
+          "Disabled": true,
+          "Properties": [],
+          "DataNodes": [],
+          "ConstantNodes": [],
+          "Commands": [
+            {
+              "Id": "5d65ecc8-6fa4-4f18-b3c4-bd7c68b3e792",
+              "Name": "AcitvateProgram",
+              "Address": "Cnc0.Common.activateProgram",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "ProgramName",
+                  "DataType": "System.String",
+                  "Description": ""
+                }
+              ],
+              "Properties": []
+            },
+            {
+              "Id": "4d72060f-de51-4bb6-a36c-a24c80fc6368",
+              "Name": "ResetCnc",
+              "Address": "Cnc0.Common.resetCnc",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [],
+              "Properties": []
+            },
+            {
+              "Id": "7eb46efe-5d51-4389-930a-c04406b98c5e",
+              "Name": "StartCnc",
+              "Address": "Cnc0.Common.startCnc",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [],
+              "Properties": []
+            },
+            {
+              "Id": "490d7439-8d9d-4303-b542-7fd435b610ff",
+              "Name": "StopCnc",
+              "Address": "Cnc0.Common.stopCnc",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [],
+              "Properties": []
+            },
+            {
+              "Id": "8c5a94d0-e24a-481f-bace-721131250412",
+              "Name": "WriteCncMode",
+              "Address": "Cnc0.Common.writeCncMode",
+              "ScriptFile": "",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "CncMode",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": []
+            }
+          ],
+          "Groups": []
+        }
+      ]
+    },
+    {
+      "Id": "3365bd7f-04c2-43fa-8620-14292a419896",
+      "Name": "General",
+      "Disabled": true,
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "f2766854-64f3-4d48-b667-24c91548ac39",
+          "Name": "SignOfLife",
+          "Address": "Global.System.Control.Int32:5",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "EnableAzureIoT",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableInflux",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableMqtt",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRest",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRmq",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            }
+          ]
+        },
+        {
+          "Id": "766b3950-e7b4-4e9f-a39b-4d7b46b81a9d",
+          "Name": "Available",
+          "Address": "Global.System.Control.Int32:0",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": [
+            {
+              "Name": "EnableAzureIoT",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableInflux",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableMqtt",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRest",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "EnableRmq",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "mtc:DataItemId",
+              "DataType": "System.String",
+              "Value": "Lavail"
+            },
+            {
+              "Name": "mtc:InformationType",
+              "DataType": "System.String",
+              "Value": "AVAILABILITY"
+            },
+            {
+              "Name": "mtc:Values",
+              "DataType": "System.String",
+              "Value": "1=AVAILABLE;*=NOT_AVAILABLE"
+            },
+            {
+              "Name": "PortMatchId",
+              "DataType": "System.String",
+              "Value": "AvailableType"
+            }
+          ]
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": []
+    },
+    {
+      "Id": "a4655be7-b0dc-4e0d-86ef-9453c0dc3c66",
+      "Name": "FLAMES",
+      "Properties": [],
+      "DataNodes": [],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": [
+        {
+          "Id": "9cf80c89-469c-4616-9085-87ebbb6dd7f2",
+          "Name": "OccupancyReconciliationStateMachine",
+          "Disabled": true,
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "8d2ec253-51f8-4002-bdec-4b1e7490901b",
+              "Name": "OccupancyReconciliationSMInputState",
+              "Address": "$.OccupancyReconciliationSM.Input",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "Write": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OccupancyReconciliationSMInputType"
+                }
+              ]
+            },
+            {
+              "Id": "8ed744b6-e977-495e-800a-bd9d36c590eb",
+              "Name": "OccupancyReconciliationSMOutputState",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "Write": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OccupancyReconciliationSMOutputType"
+                }
+              ]
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "046db2cb-934f-40e8-82ef-f68ad78a3212",
+          "Name": "TransportStateMachine",
+          "Disabled": true,
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "06c79d5c-6f98-4cca-86e1-55c09d8c2486",
+              "Name": "TransportSMInputState",
+              "Address": "$.TransportSM.Input",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "Write": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "TransportSMInputType"
+                }
+              ]
+            },
+            {
+              "Id": "f8350fb0-d2b2-402f-950a-0567ff9deb71",
+              "Name": "TransportSMOutputState",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "Write": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "TransportSMOutputType"
+                }
+              ]
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "b60f9dcb-5aad-494b-9e4b-eff90992888b",
+          "Name": "Machine",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "23288fbd-d2e7-458e-ad61-5968765f05c7",
+              "Name": "UniqueId",
+              "Address": "$.Flames.UniqueId",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
+              },
+              "Properties": [
+                {
+                  "Name": "opc-ua:flames:Mapping",
+                  "DataType": "System.String",
+                  "Value": "UniqueId"
+                }
+              ]
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [
+            {
+              "Id": "351580e0-c4c2-42d0-a098-22a900a0b1ec",
+              "Name": "SetAutomationMode",
+              "ScriptFile": "SetAutomationModeCommand.cs",
+              "Type": "CommandNode",
+              "Arguments": [
+                {
+                  "Name": "applicationData",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                  "Description": ""
+                },
+                {
+                  "Name": "mode",
+                  "DataType": "System.Int32",
+                  "Description": ""
+                }
+              ],
+              "Properties": [
+                {
+                  "Name": "opc-ua:flames:Mapping",
+                  "DataType": "System.String",
+                  "Value": "SetAutomationMode"
+                }
+              ]
+            }
+          ],
+          "Groups": [
+            {
+              "Id": "431c9b2b-927c-465f-88d1-ed1efa0b9642",
+              "Name": "AutomationState",
+              "Properties": [],
+              "DataNodes": [
+                {
+                  "Id": "c331ae73-2631-4de8-966a-a67fec4fc1c5",
+                  "Name": "RemoteMode",
+                  "Address": "$.Flames.AutomationState.RemoteMode",
+                  "DataType": "System.Boolean",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationState/RemoteMode"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "AutomationStateChangedRemoteModeType"
+                    }
+                  ]
+                },
+                {
+                  "Id": "f9b77dd3-eef9-4702-b5ac-3d3a19b177c8",
+                  "Name": "OperationState",
+                  "Address": "$.Flames.AutomationState.OperationState",
+                  "DataType": "System.Int32",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationState/OperationState"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "AutomationStateChangedOperationStateType"
+                    }
+                  ]
+                },
+                {
+                  "Id": "6ed56ad8-0627-43f5-8082-30d5556311e0",
+                  "Name": "ServiceRequest",
+                  "Address": "$.Flames.AutomationState.ServiceRequest",
+                  "DataType": "System.Int32",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationState/ServiceRequest"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "AutomationStateChangedInputServiceRequestType"
+                    }
+                  ]
+                },
+                {
+                  "Id": "dfdb7425-80da-48e7-94bd-69fa76a1ffb8",
+                  "Name": "Trigger",
+                  "Address": "$.Flames.AutomationState.Trigger",
+                  "DataType": "System.Int32",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "InputAutomationStateChangedTriggerType"
+                    }
+                  ]
+                }
+              ],
+              "ConstantNodes": [],
+              "Commands": [],
+              "Groups": []
+            },
+            {
+              "Type": "HierarchyRelation",
+              "Id": "879d5cf3-bfe0-4844-8534-f26a40b2e9ba",
+              "Name": "FileSystem",
+              "Properties": [
+                {
+                  "Name": "opc-ua:flames:Mapping",
+                  "DataType": "System.String",
+                  "Value": "FileSystem"
+                }
+              ],
+              "DataNodes": [],
+              "ConstantNodes": [],
+              "Commands": [
+                {
+                  "Id": "1ccf0d52-f368-4fa0-9f94-afcf33c05a52",
+                  "Name": "CreateDirectory",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "directoryName",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "directoryNodeId",
+                      "Type": "Output",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "FileSystem/CreateDirectory"
+                    }
+                  ]
+                },
+                {
+                  "Id": "a35b232f-a714-4499-b0ad-b4902b01e977",
+                  "Name": "Delete",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "objectToDelete",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "FileSystem/Delete"
+                    }
+                  ]
+                },
+                {
+                  "Id": "3a170c67-1651-4f3f-9186-a2bf0af8ccba",
+                  "Name": "CreateFile",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "fileHandle",
+                      "Type": "Output",
+                      "DataType": "System.UInt32",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "fileName",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "fileNodeId",
+                      "Type": "Output",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "requestFileOpen",
+                      "DataType": "System.Boolean",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "FileSystem/CreateFile"
+                    }
+                  ]
+                },
+                {
+                  "Id": "61c2ff94-9cff-4edc-a4b9-2d5faf80475c",
+                  "Name": "MoveOrCopy",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "createCopy",
+                      "DataType": "System.Boolean",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "newName",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "newNodeId",
+                      "Type": "Output",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "objectToMoveOrCopy",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "targetDirectory",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "FileSystem/MoveOrCopy"
+                    }
+                  ]
+                }
+              ],
+              "Groups": [
+                {
+                  "Id": "9d44962a-aeea-41e6-8b05-462b78cf068c",
+                  "Name": "TemplateFile1",
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "FileSystem/TemplateFile1"
+                    },
+                    {
+                      "Name": "opc-ua:flames:TypeDefinition",
+                      "DataType": "System.String",
+                      "Value": "0,FileType"
+                    }
+                  ],
+                  "DataNodes": [
+                    {
+                      "Id": "34d91973-e677-408a-9dc8-7656acbff290",
+                      "Name": "Size",
+                      "DataType": "System.UInt64",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mappingopc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/Size"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "3a0ccc0a-857d-4d0e-b23a-2b68543f548f",
+                      "Name": "Writable",
+                      "DataType": "System.Boolean",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/Writable"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d1344b6c-1d16-4b1c-b275-70a20781fa91",
+                      "Name": "UserWritable",
+                      "DataType": "System.Boolean",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/UserWritable"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "6b6df4a8-7a7b-4bc4-bc58-e8685cd298f3",
+                      "Name": "OpenCount",
+                      "DataType": "System.UInt16",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/OpenCount"
+                        }
+                      ]
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [
+                    {
+                      "Id": "233bc8bd-ef20-45a0-aee2-488f64382353",
+                      "Name": "Close",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "fileHandle",
+                          "DataType": "System.Int32",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/Close"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "5acfcf98-4cc6-4475-aa92-aa44ca4cbd89",
+                      "Name": "Open",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "fileHandle",
+                          "Type": "Output",
+                          "DataType": "System.UInt32",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "mode",
+                          "DataType": "System.Byte",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/Open"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "c3ac983f-885c-4934-8377-5fe1159daa1d",
+                      "Name": "Read",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "data",
+                          "Type": "Output",
+                          "DataType": "System.String",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "fileHandle",
+                          "DataType": "System.UInt32",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "length",
+                          "DataType": "System.Int32",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/Read"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "45533e3e-0eaa-4824-b71c-1151ee657454",
+                      "Name": "Write",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "data",
+                          "DataType": "System.String",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "fileHandle",
+                          "DataType": "System.UInt32",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/Write"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "b96746d2-8657-4eff-94e8-8ce56e15fd7f",
+                      "Name": "GetPosition",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "fileHandle",
+                          "DataType": "System.UInt32",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "position",
+                          "Type": "Output",
+                          "DataType": "System.UInt64",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/GetPosition"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "a9b56761-3b3a-425b-bb0c-781707f49dab",
+                      "Name": "SetPosition",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "fileHandle",
+                          "DataType": "System.UInt32",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "position",
+                          "DataType": "System.UInt64",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateFile1/SetPosition"
+                        }
+                      ]
+                    }
+                  ],
+                  "Groups": []
+                },
+                {
+                  "Id": "b8a2f5c9-cd1b-4ee1-9702-1883515dd7ff",
+                  "Name": "TemplateDirectory1",
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "FileSystem/TemplateDirectory1"
+                    },
+                    {
+                      "Name": "opc-ua:flames:TypeDefinition",
+                      "DataType": "System.String",
+                      "Value": "0,FileDirectoryType"
+                    }
+                  ],
+                  "DataNodes": [],
+                  "ConstantNodes": [],
+                  "Commands": [
+                    {
+                      "Id": "d9be8714-5471-4572-8e4b-73f4e14b41d4",
+                      "Name": "CreateDirectory",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "directoryName",
+                          "DataType": "System.String",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "directoryNodeId",
+                          "Type": "Output",
+                          "DataType": "System.Guid",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateDirectory1/CreateDirectory"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "64ffa6ca-546f-4258-9a10-b001b34bbbd1",
+                      "Name": "Delete",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "objectToDelete",
+                          "DataType": "System.Guid",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateDirectory1/Delete"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "870d1954-2018-4aa9-9cab-272bef8ee623",
+                      "Name": "CreateFile",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "fileHandle",
+                          "Type": "Output",
+                          "DataType": "System.UInt32",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "fileName",
+                          "DataType": "System.String",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "fileNodeId",
+                          "Type": "Output",
+                          "DataType": "System.Guid",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "requestFileOpen",
+                          "DataType": "System.Boolean",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateDirectory1/CreateFile"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "3e688a37-52aa-4dc8-8cec-04cb32a1476d",
+                      "Name": "MoveOrCopy",
+                      "ScriptFile": "FileSystemCreateDirectory.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "createCopy",
+                          "DataType": "System.Boolean",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "newName",
+                          "DataType": "System.String",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "newNodeId",
+                          "Type": "Output",
+                          "DataType": "System.Guid",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "objectToMoveOrCopy",
+                          "DataType": "System.Guid",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "targetDirectory",
+                          "DataType": "System.Guid",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "FileSystem/TemplateDirectory1/MoveOrCopy"
+                        }
+                      ]
+                    }
+                  ],
+                  "Groups": []
+                }
+              ]
+            },
+            {
+              "Id": "77dfd93e-882b-4316-ab1d-ac26d58ae73e",
+              "Name": "Positions",
+              "Properties": [
+                {
+                  "Name": "opc-ua:flames:Mapping",
+                  "DataType": "System.String",
+                  "Value": "Positions"
+                }
+              ],
+              "DataNodes": [],
+              "ConstantNodes": [],
+              "Commands": [
+                {
+                  "Id": "71a1a704-538a-48e9-be72-a3e471d8061e",
+                  "Name": "CreatePosition_Internal",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "positionName",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "positionNodeId",
+                      "Type": "Output",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": []
+                },
+                {
+                  "Id": "31333f9f-8ae1-4571-accb-01460964cb22",
+                  "Name": "Delete_Internal",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "objectToDelete",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": []
+                }
+              ],
+              "Groups": [
+                {
+                  "Id": "ac224d57-5759-46a5-9436-5c0c5d7690d2",
+                  "Name": "Chuck",
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "Positions/Chuck"
+                    },
+                    {
+                      "Name": "opc-ua:flames:TypeDefinition",
+                      "DataType": "System.String",
+                      "Value": "FacilityComponentPositionType"
+                    }
+                  ],
+                  "DataNodes": [
+                    {
+                      "Id": "ad3a8a02-4224-407e-80fa-add05450b4d1",
+                      "Name": "Occupied",
+                      "Address": "$.Flames.Positions.Chuck.Occupied",
+                      "DataType": "System.Boolean",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "Positions/Chuck/Occupied"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "55983619-d6b7-4b4e-9c06-4b418e6b7531",
+                      "Name": "UniqueId",
+                      "Address": "$.Flames.Positions.Chuck.UniqueId",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "Positions/Chuck/UniqueId"
+                        }
+                      ]
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [
+                    {
+                      "Id": "e5416d43-70c4-42f6-a41f-32874021f0ab",
+                      "Name": "SetIndicatorMode",
+                      "ScriptFile": "SetIndicatorModeCommand.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "applicationData",
+                          "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "mode",
+                          "DataType": "System.Int32",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "Positions/Chuck/SetIndicatorMode"
+                        }
+                      ]
+                    }
+                  ],
+                  "Groups": []
+                },
+                {
+                  "Id": "575bab79-f012-4fe4-ad27-6fd4a12b9c3a",
+                  "Name": "Chuck2",
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "Positions/Chuck2"
+                    },
+                    {
+                      "Name": "opc-ua:flames:TypeDefinition",
+                      "DataType": "System.String",
+                      "Value": "FacilityComponentPositionType"
+                    }
+                  ],
+                  "DataNodes": [
+                    {
+                      "Id": "429985dd-bccc-4135-960b-8c7d6a872cc7",
+                      "Name": "Occupied",
+                      "Address": "$.Flames.Positions.Chuck2.Occupied",
+                      "DataType": "System.Boolean",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "Positions/Chuck2/Occupied"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "ad4a45c7-8c58-44e2-b1a5-a1037c97b71a",
+                      "Name": "UniqueId",
+                      "Address": "$.Flames.Positions.Chuck2.UniqueId",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "Positions/Chuck2/UniqueId"
+                        }
+                      ]
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [
+                    {
+                      "Id": "ed34bde5-63f9-4ec7-b344-4b77b0a75f45",
+                      "Name": "SetIndicatorMode",
+                      "ScriptFile": "SetIndicatorModeCommand.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "applicationData",
+                          "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "mode",
+                          "DataType": "System.Int32",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "Positions/Chuck2/SetIndicatorMode"
+                        }
+                      ]
+                    }
+                  ],
+                  "Groups": []
+                }
+              ]
+            },
+            {
+              "Id": "2f3a9da1-9db6-4aeb-82de-657a2101c62c",
+              "Name": "ProductionManagement",
+              "Properties": [
+                {
+                  "Name": "opc-ua:flames:Mapping",
+                  "DataType": "System.String",
+                  "Value": "ProductionManagement"
+                }
+              ],
+              "DataNodes": [],
+              "ConstantNodes": [],
+              "Commands": [
+                {
+                  "Id": "eae1119d-f41e-4ea6-9986-980a90607b9f",
+                  "Name": "StartProductionProgram",
+                  "ScriptFile": "StartProductionProgramCommand.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "applicationData",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "automaticStart",
+                      "DataType": "System.Boolean",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "errorCode",
+                      "Type": "Output",
+                      "DataType": "System.UInt32",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "programPath",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "workpieceLocation",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ProductionManagement/StartProductionProgram"
+                    }
+                  ]
+                }
+              ],
+              "Groups": [
+                {
+                  "Id": "a41a9bd1-3f9a-488e-828e-0c4a4b9a9432",
+                  "Name": "ProductionProgram",
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ProductionManagement/ProductionProgram"
+                    }
+                  ],
+                  "DataNodes": [
+                    {
+                      "Id": "7e2bdbab-c027-445f-93c9-07252433a6a2",
+                      "Name": "Identifier",
+                      "Address": "$.Flames.ProductionManagement.ProductionProgram.Identifier",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ProductionManagement/ProductionProgram/Identifier"
+                        },
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ProgramIdentifierType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "e6434dcb-f058-40bb-8bab-c06ed9008a5c",
+                      "Name": "LastProgramBlock",
+                      "Address": "$.Flames.ProductionManagement.ProductionProgram.LastProgramBlock",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ProductionManagement/ProductionProgram/LastProgramBlock"
+                        },
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "LastProgramBlockType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "0e51792d-d76b-46cf-b5e5-9b0e1eb3fbd8",
+                      "Name": "LastTool",
+                      "Address": "$.Flames.ProductionManagement.ProductionProgram.LastTool",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ProductionManagement/ProductionProgram/LastTool"
+                        },
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "LastToolType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "6c20e0fb-4c95-4144-b92f-62e6b1d586e0",
+                      "Name": "LastInformation",
+                      "Address": "$.Flames.ProductionManagement.ProductionProgram.LastInformation",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ProductionManagement/ProductionProgram/LastInformation"
+                        },
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "LastInformationType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "7b491bb7-88ee-464a-8ba7-98cdbe01840f",
+                      "Name": "QualityWithinTolerances",
+                      "Address": "$.Flames.ProductionManagement.ProductionProgram.QualityWithinTolerances",
+                      "DataType": "System.Boolean",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ProductionManagement/ProductionProgram/QualityWithinTolerances"
+                        },
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "QualityWithinTolerancesType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "b5d8ee22-c1eb-45a2-bba2-38a6c58f1f00",
+                      "Name": "ReasonForAbortion",
+                      "Address": "$.Flames.ProductionManagement.ProductionProgram.ReasonForAbortion",
+                      "DataType": "System.UInt32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ProductionManagement/ProductionProgram/ReasonForAbortion"
+                        },
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ReasonForAbortionType"
+                        }
+                      ]
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": [
+                    {
+                      "Id": "9069bb85-e676-4a3d-933b-b074328bed66",
+                      "Name": "State",
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ProductionManagement/ProductionProgram/State"
+                        },
+                        {
+                          "Name": "opc-ua:flames:TypeDefinition",
+                          "DataType": "System.String",
+                          "Value": "ProductionStateMachineType"
+                        }
+                      ],
+                      "DataNodes": [
+                        {
+                          "Id": "3b07d411-c483-469a-8969-a1ec3fa06977",
+                          "Name": "ProductionProgramTransitionEventTrigger",
+                          "Address": "$.Flames.ProductionManagement.ProductionProgram.State.Trigger",
+                          "DataType": "System.Int32",
+                          "Unit": "",
+                          "Access": {
+                            "Read": true,
+                            "ReadConversion": {},
+                            "Receive": true,
+                            "WriteConversion": {}
+                          },
+                          "Properties": [
+                            {
+                              "Name": "PortMatchId",
+                              "DataType": "System.String",
+                              "Value": "InputProductionSMType"
+                            }
+                          ]
+                        },
+                        {
+                          "Id": "42c4e048-0847-4525-8b29-9ab711427e5b",
+                          "Name": "CurrentState",
+                          "Address": "",
+                          "DataType": "CyberTech.TLocalizedText, CyberTech",
+                          "Unit": "",
+                          "Access": {
+                            "Read": true,
+                            "ReadConversion": {},
+                            "Receive": true,
+                            "Write": true,
+                            "WriteConversion": {}
+                          },
+                          "Properties": [
+                            {
+                              "Name": "opc-ua:flames:Mapping",
+                              "DataType": "System.String",
+                              "Value": "ProductionManagement/ProductionProgram/State/CurrentState"
+                            }
+                          ]
+                        }
+                      ],
+                      "ConstantNodes": [],
+                      "Commands": [],
+                      "Groups": []
+                    }
+                  ]
+                },
+                {
+                  "Id": "aaa79a74-dbdb-43d5-a005-a0ac9c0cddae",
+                  "Name": "PendingZeroOffsetRetrievalData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "d8b566db-2b0f-49a9-bfca-25720df24c52",
+                      "Name": "PendingZeroOffsetRetrievalTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "f051ba5c-d478-4b6e-a540-953de8701eea",
+                      "Name": "Out_PendingZeroOffsetRetrieval",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "73bce488-dce3-4f2d-a48e-0437b068d425",
+                  "Name": "ToolUsedEventData",
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "8876b108-5c4a-4b8b-bed4-d8ed758de743",
+                      "Name": "CurrentTool",
+                      "Address": "$.Flames.ProductionManagement.ToolUsedEventData.CurrentTool",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ToolUsedEventToolType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "055bcec2-bd7f-46a0-867b-e2881b477645",
+                      "Name": "OrigDiameter",
+                      "Address": "$.Flames.ProductionManagement.ToolUsedEventData.OrigDiameter",
+                      "DataType": "System.Double",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ToolUsedEventOrigDiameterType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "735430d7-040b-438e-b8fe-214732eb839e",
+                      "Name": "OrigWidth",
+                      "Address": "$.Flames.ProductionManagement.ToolUsedEventData.OrigWidth",
+                      "DataType": "System.Double",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ToolUsedEventOrigWidthType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "af4113e4-7841-4a79-88d9-6f9fca103ba5",
+                      "Name": "Width",
+                      "Address": "$.Flames.ProductionManagement.ToolUsedEventData.Width",
+                      "DataType": "System.Double",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ToolUsedEventWidthType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "3b5f25ad-9abf-4fe6-9530-aa9eab19775a",
+                      "Name": "Diameter",
+                      "Address": "$.Flames.ProductionManagement.ToolUsedEventData.Diameter",
+                      "DataType": "System.Double",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ToolUsedEventDiameterType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d6af1765-d2c3-41cf-ab7e-f3724d8cc891",
+                      "Name": "Out_ToolUsedEvent",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "OutputToolUsedEventType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "98f10802-a56f-4429-a1d3-285cc2dd6ec9",
+                      "Name": "MinWidth",
+                      "Address": "$.Flames.ProductionManagement.ToolUsedEventData.MinWidth",
+                      "DataType": "System.Double",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ToolUsedEventMinWidthType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "0aace9ee-6145-4745-90b7-8469f71f5350",
+                      "Name": "MinDiameter",
+                      "Address": "$.Flames.ProductionManagement.ToolUsedEventData.MinDiameter",
+                      "DataType": "System.Double",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ToolUsedEventMinDiameterType"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "b79a002f-15db-476a-b669-0223f8832473",
+                      "Name": "ToolUsedUpdated",
+                      "Address": "$.Flames.ProductionManagement.ToolUsedEventData.Updated",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "PortMatchId",
+                          "DataType": "System.String",
+                          "Value": "ToolUsedUpdatedType"
+                        }
+                      ]
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "659594ac-dfe9-48a7-8403-1e7afa09cb67",
+                  "Name": "PendingMeasurementResultRetrievalData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "24dbe66d-e1d7-41e0-8af0-b18306c82b03",
+                      "Name": "PendingMeasurementResultRetrievalTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "ce55084d-36b5-4cde-80cc-e1774019a5e4",
+                      "Name": "Out_PendingMeasurementResultRetrieval",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                }
+              ]
+            },
+            {
+              "Id": "7a466b4a-b30b-43e6-ae0d-e9fd2d593f05",
+              "Name": "ToolDataManagement",
+              "Properties": [
+                {
+                  "Name": "opc-ua:flames:Mapping",
+                  "DataType": "System.String",
+                  "Value": "ToolDataManagement"
+                }
+              ],
+              "DataNodes": [
+                {
+                  "Id": "0457a598-c633-4a5a-98cf-6402bfc539ed",
+                  "Name": "NodeVersion",
+                  "Address": "$.Flames.ToolDataManagement.NodeVersion",
+                  "DataType": "System.String",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolDataManagement/NodeVersion"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "ToolsDirectoryChangedType"
+                    }
+                  ]
+                }
+              ],
+              "ConstantNodes": [],
+              "Commands": [
+                {
+                  "Id": "b9fb331f-7fa5-4c36-a6f2-4a970141922b",
+                  "Name": "SupplyToolDataset",
+                  "ScriptFile": "SupplyToolDatasetCommand.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "applicationData",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "dataset",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "toolId",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolDataManagement/SupplyToolDataset"
+                    }
+                  ]
+                },
+                {
+                  "Id": "53506ca4-1d02-41a6-9193-578b26888c3f",
+                  "Name": "CreateTool_Internal",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "toolName",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "toolNodeId",
+                      "Type": "Output",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": []
+                },
+                {
+                  "Id": "be79efc9-b058-40d5-a5ec-4946fa4daa85",
+                  "Name": "Delete_Internal",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "objectToDelete",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": []
+                }
+              ],
+              "Groups": [
+                {
+                  "Id": "dac25848-a052-4e71-8d68-87d8a7a3f2b7",
+                  "Name": "MissingToolDatasetEventData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "2533988b-f2ef-4055-97cf-5c1b2b43b2ea",
+                      "Name": "MissingToolDatasetTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "808947b8-c198-47a4-bb18-dd42e023e86e",
+                      "Name": "Out_MissingToolDataset",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "fb2baf4c-0d6c-44d1-a230-8a2000bf65ff",
+                  "Name": "ToolDatasetUpdatedEventData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "dc14c16e-b331-4534-ab43-a42128e17520",
+                      "Name": "ToolDatasetUpdatedEventTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "25fcdbbb-a557-4d5a-8fc3-0c1fa3190348",
+                      "Name": "Out_ToolDatasetUpdatedEvent",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "299c4e84-5093-4aba-a969-1ee24f995e42",
+                  "Name": "PendingToolDatasetRetrievalEventData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "2e6ffc54-3691-4ad5-a5c2-8ea7f0f9a3fc",
+                      "Name": "PendingToolDatasetRetrievalTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "95b3547a-3733-4334-9fd9-10b01e8c765d",
+                      "Name": "Out_PendingToolDatasetRetrieval",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "5d4e3607-720e-4d26-918d-04e019165db4",
+                  "Name": "BaseModelChangeEventData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "32bbdc07-ae3d-4c81-88f0-3cf5e6d8862a",
+                      "Name": "BaseModelChangeEventTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "27acc8a8-1698-42b0-9c7c-a0bd33b6f865",
+                      "Name": "Out_BaseModelChangeEvent",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "f6aa2ae4-46aa-47e7-89ad-8d0e9b2d2c7f",
+                  "Name": "Tool1",
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolDataManagement/Tool1"
+                    },
+                    {
+                      "Name": "opc-ua:flames:TypeDefinition",
+                      "DataType": "System.String",
+                      "Value": "ToolType"
+                    }
+                  ],
+                  "DataNodes": [
+                    {
+                      "Id": "874b01f3-81ee-445f-8f4c-237d65f1326c",
+                      "Name": "Locked",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.Locked",
+                      "DataType": "System.Boolean",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/Locked"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "13bc4661-f6b6-4e93-a466-e94263e1dfed",
+                      "Name": "ToolLife",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.ToolLife.Value",
+                      "DataType": "System.UInt32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/ToolLife"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "219349c5-2eb2-49eb-bf30-e3d492f3bcd4",
+                      "Name": "NativeDataset",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.NativeDataset",
+                      "DataType": "CyberTech.TByteString, CyberTech",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/NativeDataset"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "8897f147-3658-40e8-817b-d7db8be6d029",
+                      "Name": "UnloadMarker",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.UnloadMarker",
+                      "DataType": "System.Boolean",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/UnloadMarker"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "f08e3df7-da11-42cd-9504-0b1dfdc0cfcd",
+                      "Name": "ToolLife.EngineeringUnits",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.ToolLife.EngineeringUnits",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/ToolLife/EngineeringUnits"
+                        },
+                        {
+                          "Name": "opc-ua:flames:DataTypeDefinition",
+                          "DataType": "System.String",
+                          "Value": "0,EUInformation"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d4a48bf2-2472-4ec0-9c99-cb2962c43331",
+                      "Name": "Identifier",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.Identifier",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/Identifier"
+                        },
+                        {
+                          "Name": "opc-ua:flames:TypeDefinition",
+                          "DataType": "System.String",
+                          "Value": "ToolIdentifierType"
+                        },
+                        {
+                          "Name": "opc-ua:flames:DataTypeDefinition",
+                          "DataType": "System.String",
+                          "Value": "ToolIdentifier"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "88fb4df5-0d74-4a9e-bd73-29c27d29fc2c",
+                      "Name": "Identifier.Duplonumber",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.Identifier.Values.Duplonumber",
+                      "DataType": "System.UInt32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/Identifier/Duplonumber"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "dac400e8-3dd3-4cec-9957-05c853c3f2ff",
+                      "Name": "Identifier.Name",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.Identifier.Values.Name",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/Identifier/Name"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "2f85fe1f-4410-4fa8-bc36-3b0c0ca5f07c",
+                      "Name": "ApplicationData",
+                      "Address": "$.Flames.ToolDataManagement.Tools.Tool1.ApplicationData",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:DataTypeDefinition",
+                          "DataType": "System.String",
+                          "Value": "ApplicationDataEntry"
+                        },
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/ApplicationData"
+                        }
+                      ]
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [
+                    {
+                      "Id": "5e3c9d8e-feea-4615-9805-20186c4cf91b",
+                      "Name": "MarkForUnloading",
+                      "ScriptFile": "MarkForUnloadingCommand.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "applicationData",
+                          "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "flagValue",
+                          "DataType": "System.Boolean",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolDataManagement/Tool1/MarkForUnloading"
+                        }
+                      ]
+                    }
+                  ],
+                  "Groups": []
+                }
+              ]
+            },
+            {
+              "Id": "416da52f-7d52-4759-81eb-eed384684af9",
+              "Name": "ToolStorage",
+              "Properties": [
+                {
+                  "Name": "opc-ua:flames:Mapping",
+                  "DataType": "System.String",
+                  "Value": "ToolStorage"
+                }
+              ],
+              "DataNodes": [],
+              "ConstantNodes": [],
+              "Commands": [
+                {
+                  "Id": "4d15cf63-fc4b-4df1-ab8d-6a04881fe09c",
+                  "Name": "CreateToolPosition_Internal",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "toolPositionName",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "toolPositionNodeId",
+                      "Type": "Output",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": []
+                },
+                {
+                  "Id": "953ed57e-2d87-44fb-8c40-187f20cd74a7",
+                  "Name": "Delete_Internal",
+                  "ScriptFile": "FileSystemCreateDirectory.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "objectToDelete",
+                      "DataType": "System.Guid",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": []
+                }
+              ],
+              "Groups": [
+                {
+                  "Id": "519470de-6ef9-4c8e-a66d-90fcdff45773",
+                  "Name": "ToolPosition1",
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolStorag/ToolPosition1"
+                    },
+                    {
+                      "Name": "opc-ua:flames:TypeDefinition",
+                      "DataType": "System.String",
+                      "Value": "FacilityComponentPositionType"
+                    }
+                  ],
+                  "DataNodes": [
+                    {
+                      "Id": "88ad975d-8b64-438b-9cd1-4fd6c0ac6068",
+                      "Name": "UniqueId",
+                      "Address": "$.Flames.ToolStorage.ToolPosition1.UniqueId",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolStorage/ToolPosition1/UniqueId"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "928c7228-52e3-4900-b72d-7c707801e280",
+                      "Name": "OccupyingToolNodeId",
+                      "Address": "$.Flames.ToolStorage.ToolPosition1.OccupyingToolNodeId",
+                      "DataType": "System.Guid",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolStorage/ToolPosition1/OccupyingToolNodeId"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "4866fcb5-7863-4f14-a01c-a5440925a536",
+                      "Name": "Occupied",
+                      "Address": "$.Flames.ToolStorage.ToolPosition1.Occupied",
+                      "DataType": "System.Boolean",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolStorage/ToolPosition1/Occupied"
+                        }
+                      ]
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [
+                    {
+                      "Id": "9bbbd541-3b02-4d09-806a-e4a813ef992a",
+                      "Name": "SetIndicatorMode",
+                      "ScriptFile": "SetIndicatorModeCommand.cs",
+                      "Type": "CommandNode",
+                      "Arguments": [
+                        {
+                          "Name": "applicationData",
+                          "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                          "Description": ""
+                        },
+                        {
+                          "Name": "mode",
+                          "DataType": "System.Int32",
+                          "Description": ""
+                        }
+                      ],
+                      "Properties": [
+                        {
+                          "Name": "opc-ua:flames:Mapping",
+                          "DataType": "System.String",
+                          "Value": "ToolStorage/ToolPosition1/SetIndicatorMode"
+                        }
+                      ]
+                    }
+                  ],
+                  "Groups": []
+                },
+                {
+                  "Id": "e21e064c-a1cf-43a4-8dd6-b888205db848",
+                  "Name": "ToolMovedEventData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "96f5ce5e-974a-4593-8bd4-ce101e927316",
+                      "Name": "ToolMovedTrigger",
+                      "Address": "$.Flames.ToolStorage.ToolPosition1.ToolMovedEventData.Trigger",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "466e6ec5-3692-48a4-9aef-3fb225a4f330",
+                      "Name": "Out_ToolMovedEvent",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                }
+              ]
+            },
+            {
+              "Id": "8ddb5227-ff99-453a-84c6-96ab1fe02cf9",
+              "Name": "JustInTimeToolSupply",
+              "Properties": [],
+              "DataNodes": [],
+              "ConstantNodes": [],
+              "Commands": [
+                {
+                  "Id": "7c92518d-7072-48b4-a23a-c4af940158c5",
+                  "Name": "NotifyDirectToolChange",
+                  "ScriptFile": "NotifyDirectToolChangeCommand.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "applicationData",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "loadedTool",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "unloadedTool",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "JustInTimeToolSupply/NotifyDirectToolChange"
+                    }
+                  ]
+                }
+              ],
+              "Groups": [
+                {
+                  "Id": "8523fd3b-2fab-40ab-9752-56e74f02b1ab",
+                  "Name": "DirectToolChangeData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "17cb72d5-9ce6-45db-b884-13028614be00",
+                      "Name": "DirectToolChangeTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "10435001-fa6d-42d6-bdc2-ef8d748f4c1a",
+                      "Name": "Out_DirectToolChange",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                }
+              ]
+            },
+            {
+              "Id": "4898bc76-b086-4cb2-a36f-eb4af9f413b6",
+              "Name": "AutomationDataManagement",
+              "Properties": [],
+              "DataNodes": [],
+              "ConstantNodes": [],
+              "Commands": [
+                {
+                  "Id": "5daf14ec-1d3d-4c67-bdf8-c27a4a3d157e",
+                  "Name": "SupplyPositionCoordinates",
+                  "ScriptFile": "SupplyPositionCoordinatesCommand.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "applicationData",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "positionIdentifier",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "relativeOffset",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "relativeOrientation",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationDataManagement/SupplyPositionCoordinates"
+                    }
+                  ]
+                },
+                {
+                  "Id": "39d3e411-9dd1-4250-bb95-0cddd43a16d1",
+                  "Name": "SupplyHandlingParameters",
+                  "ScriptFile": "SupplyHandlingParametersCommand.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "applicationData",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "parameterClass",
+                      "DataType": "System.Int32",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "parameters",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "typeId",
+                      "DataType": "System.String",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationDataManagement/SupplyHandlingParameters"
+                    }
+                  ]
+                },
+                {
+                  "Id": "bd275b66-6e6a-4087-8a8d-fefbce8dcd3e",
+                  "Name": "SupplyWorkpieceInformation",
+                  "ScriptFile": "SupplyWorkpieceInformationCommand.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "additionalParameters",
+                      "DataType": "System.String",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "applicationData",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "workpiece",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "workpieceLocation",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationDataManagement/SupplyWorkpieceInformation"
+                    }
+                  ]
+                }
+              ],
+              "Groups": [
+                {
+                  "Id": "be1b4361-09fc-442b-ac11-0dc71ab4c97f",
+                  "Name": " MissingPositionCoordinatesData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "2b12976e-4a2b-40fa-b6dd-74e70df7c1ff",
+                      "Name": "MissingPositionCoordinatesTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "7f841dd2-09dd-469c-a776-aa3f02a4e7a8",
+                      "Name": "Out_ MissingPositionCoordinates",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "e5b282f3-610b-4c7b-a9c5-08cf72e8e552",
+                  "Name": "MissingHandlingParametersData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "3f9c261c-94d0-435b-baeb-39e965cf4afa",
+                      "Name": "MissingHandlingParametersTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "21da0bad-666e-4b3a-90e4-9d2b89ff52f0",
+                      "Name": "Out_MissingHandlingParameters",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "2da0987e-459b-42eb-b983-01e6afd10883",
+                  "Name": "MissingWorkpieceInformationData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "e07ca1bd-971b-49ac-8c53-81ae4b82bcd2",
+                      "Name": "MissingWorkpieceInformationTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "8c34aaab-4abd-40ca-b7b5-87cee1e41472",
+                      "Name": "Out_MissingWorkpieceInformation",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                }
+              ]
+            },
+            {
+              "Id": "1cc8b30f-cffa-4a59-84b4-7ce969acc201",
+              "Name": "TransportUnit",
+              "Properties": [],
+              "DataNodes": [
+                {
+                  "Id": "4bef2d00-ef5a-4c22-a5fc-5bbbfb8dc673",
+                  "Name": "CurrentPosition",
+                  "Address": "$.Flames.TransportUnit.CurentPosition",
+                  "DataType": "System.UInt32",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "TransportUnit/CurrentPosition"
+                    }
+                  ]
+                }
+              ],
+              "ConstantNodes": [],
+              "Commands": [
+                {
+                  "Id": "05c88f7f-ae1f-4563-a353-710deab2b4e0",
+                  "Name": "RequestTransport",
+                  "ScriptFile": "RequestTransportCommand.cs",
+                  "Type": "CommandNode",
+                  "Arguments": [
+                    {
+                      "Name": "applicationData",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "destinationLocation",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "destinationObject",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "sourceLocation",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "sourceObject",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "transportClass",
+                      "DataType": "System.Int32",
+                      "Description": ""
+                    },
+                    {
+                      "Name": "transportObjectClass",
+                      "DataType": "System.Int32",
+                      "Description": ""
+                    }
+                  ],
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "TransportUnit/RequestTransport"
+                    }
+                  ]
+                }
+              ],
+              "Groups": [
+                {
+                  "Id": "dfd3a328-ac47-40d6-a78d-9ff2191f401e",
+                  "Name": "State",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "e2832328-9482-42a9-86b0-c59bc345b9dd",
+                      "Name": "CurrentState",
+                      "DataType": "System.String",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "2daf1dec-3b73-45f4-82a0-77ece17247f4",
+                  "Name": "TransportStepFinishedEventData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "d9cfaa9d-3e0c-4e25-bdb7-d91e6ca87fa0",
+                      "Name": "TransportStepFinishedEventTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "98266ac8-9140-47af-ac08-fd474ad84682",
+                      "Name": "Out_TransportStepFinishedEvent",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                },
+                {
+                  "Id": "de540ec1-99c3-4551-b24d-33504f0ec7fa",
+                  "Name": "TransportTransitionEventData",
+                  "Disabled": true,
+                  "Properties": [],
+                  "DataNodes": [
+                    {
+                      "Id": "b6b3e4f0-04e3-4dd8-bca0-022c901875e2",
+                      "Name": "TransportTransitionEventTrigger",
+                      "Address": "",
+                      "DataType": "System.Int32",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    },
+                    {
+                      "Id": "318cec3b-55d4-4402-9dfb-5ca7c92a265b",
+                      "Name": "Out_TransportTransitionEvent",
+                      "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                      "Unit": "",
+                      "Access": {
+                        "Read": true,
+                        "ReadConversion": {},
+                        "Receive": true,
+                        "Write": true,
+                        "WriteConversion": {}
+                      },
+                      "Properties": []
+                    }
+                  ],
+                  "ConstantNodes": [],
+                  "Commands": [],
+                  "Groups": []
+                }
+              ]
+            },
+            {
+              "Id": "4b8cfb6c-ec00-4cd5-a2c1-6c569508a0d0",
+              "Name": "Events",
+              "Properties": [],
+              "DataNodes": [
+                {
+                  "Id": "d443e4a6-701f-4fbf-a55b-17694c420ace",
+                  "Name": "AutomationStateChangedEvent",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationState"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "OutputAutomationStateChangedType"
+                    }
+                  ]
+                },
+                {
+                  "Id": "f4f0385f-74a1-4bbc-9f6d-cf9477653ee1",
+                  "Name": "ProductionProgramTransitionEvent",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ProductionManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "OutputProductionStateChangedType"
+                    }
+                  ]
+                },
+                {
+                  "Id": "78516e8f-f063-41b9-887a-bca7c996f4d8",
+                  "Name": "ToolUsedEvent",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ProductionManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "OutputToolUsedEventType"
+                    }
+                  ]
+                },
+                {
+                  "Id": "98208473-1f36-44f6-8fb9-236735da07ee",
+                  "Name": "MissingToolDataset",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolDataManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "a5105dc3-5b12-4ad2-b21e-b90e4731050a",
+                  "Name": "ToolDatasetUpdated",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolDataManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "5fa4d504-651c-44b5-b216-565d7c1eda2f",
+                  "Name": "PendingToolDatasetRetrieval",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolDataManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "3a9faf73-0c73-4844-8e53-3ae77bd74f15",
+                  "Name": "BaseModelChange",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolDataManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "88dc060d-75a4-4ea4-a89d-d9c435bb4fe9",
+                  "Name": "ToolMovedEvent",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ToolStorage"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "d1404103-f41b-4643-b29a-1bcac0de5f27",
+                  "Name": "DirectToolChangeCondition",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "JustInTimeToolSupply"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "f97177f3-85ae-4610-88d6-46dd009a5ea7",
+                  "Name": "MissingPositionCoordinates",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationDataManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "4e229e05-a6d6-4144-a9fb-d5e9a91701e1",
+                  "Name": "MissingHandlingParameters",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationDataManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "93633b20-b344-4630-9d61-38523a3dbe0f",
+                  "Name": "MissingWorkpieceInformation",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "AutomationDataManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "b02fd12f-bdd2-47fb-99e9-8346a0e1bd0c",
+                  "Name": "TransportStepFinishedEvent",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "TransportUnit"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "fda57d95-a8f1-4d49-8071-7e6292feca1e",
+                  "Name": "TransportTransitionEvent",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "TransportUnit"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    }
+                  ]
+                },
+                {
+                  "Id": "0f35e8c0-ac0d-47eb-9cbf-aa0a5fe6805f",
+                  "Name": "PendingZeroOffsetRetrievalCondition",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ProductionManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "OutputPendingZeroOffsetRetrievalConditionType"
+                    }
+                  ]
+                },
+                {
+                  "Id": "ae86e9e8-be07-429c-aa91-2a21c65cf298",
+                  "Name": "PendingMeasurementResultRetrievalCondition",
+                  "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+                  "Unit": "",
+                  "Disabled": true,
+                  "Access": {
+                    "Read": true,
+                    "ReadConversion": {},
+                    "Receive": true,
+                    "Write": true,
+                    "WriteConversion": {}
+                  },
+                  "Properties": [
+                    {
+                      "Name": "opc-ua:flames:Mapping",
+                      "DataType": "System.String",
+                      "Value": "ProductionManagement"
+                    },
+                    {
+                      "Name": "opc-ua:MapAsEvent",
+                      "DataType": "System.Boolean",
+                      "Value": "true"
+                    },
+                    {
+                      "Name": "PortMatchId",
+                      "DataType": "System.String",
+                      "Value": "OutputPendingMeasurementResultRetrievalConditionType"
+                    }
+                  ]
+                }
+              ],
+              "ConstantNodes": [],
+              "Commands": [],
+              "Groups": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AlarmEventPool": {
+    "Id": "665e458c-5e8f-40d0-813a-aacf69b94f7f",
+    "Name": "MachineAlarming",
+    "Disabled": true,
+    "Tasks": [
+      {
+        "Id": "608a08a5-046b-4089-9671-d1afb40f9d19",
+        "Name": "SystemAlarms",
+        "Address": "Cnc0.Nc0.NcAlarmEvent:0",
+        "Properties": []
+      }
+    ],
+    "HistoryMode": {
+      "Retention": 720,
+      "SamplingRate": 2000,
+      "HistoryTableName": "",
+      "IdField": "",
+      "TaggedFields": [],
+      "TrackedFields": []
+    },
+    "Properties": [
+      {
+        "Name": "EnableAzureIoT",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "EnableInflux",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "EnableMqtt",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "EnableRest",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "EnableRmq",
+        "DataType": "System.Boolean",
+        "Value": "true"
+      },
+      {
+        "Name": "mtc:DataItemId",
+        "DataType": "System.String",
+        "Value": "Lsystem"
+      },
+      {
+        "Name": "mtc:InformationType",
+        "DataType": "System.String",
+        "Value": "SYSTEM"
+      },
+      {
+        "Name": "PortMatchId",
+        "DataType": "System.String",
+        "Value": "MachineAlarmingType"
+      }
+    ]
+  },
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [
+    {
+      "Id": "73af92ed-b6b3-4c5d-8079-7426dbbc2205",
+      "Name": "Processors",
+      "DataNodes": [],
+      "Links": [],
+      "Processors": [
+        {
+          "Id": "bad2a311-9064-4343-b2f4-344e7a2c66d5",
+          "Name": "Flames_ProductionStateMachine",
+          "InitialData": [
+            "ProductionStateMachineScript.cs"
+          ],
+          "Schema": {
+            "Name": "StateMachine_1",
+            "States": [
+              {
+                "Name": "Initialized"
+              },
+              {
+                "Name": "Running"
+              },
+              {
+                "Name": "Ended"
+              },
+              {
+                "Name": "Aborted"
+              },
+              {
+                "Name": "Interrupted"
+              }
+            ],
+            "Transitions": [
+              {
+                "Source": "Initialized",
+                "Destination": "Running",
+                "Trigger": "e1"
+              },
+              {
+                "Source": "Running",
+                "Destination": "Ended",
+                "Trigger": "e2"
+              },
+              {
+                "Source": "Ended",
+                "Destination": "Initialized",
+                "Trigger": "e3"
+              },
+              {
+                "Source": "Running",
+                "Destination": "Aborted",
+                "Trigger": "e4"
+              },
+              {
+                "Source": "Aborted",
+                "Destination": "Initialized",
+                "Trigger": "e5"
+              },
+              {
+                "Source": "Running",
+                "Destination": "Interrupted",
+                "Trigger": "e6"
+              },
+              {
+                "Source": "Interrupted",
+                "Destination": "Aborted",
+                "Trigger": "e7"
+              },
+              {
+                "Source": "Interrupted",
+                "Destination": "Running",
+                "Trigger": "e8"
+              },
+              {
+                "Source": "Initialized",
+                "Destination": "Aborted",
+                "Trigger": "e9"
+              }
+            ],
+            "TriggerEvents": [
+              {
+                "Name": "e1",
+                "Expression": "Event_ValueIn == 1"
+              },
+              {
+                "Name": "e2",
+                "Expression": "Event_ValueIn == 2"
+              },
+              {
+                "Name": "e3",
+                "Expression": "Event_ValueIn == 3"
+              },
+              {
+                "Name": "e4",
+                "Expression": "Event_ValueIn == 4"
+              },
+              {
+                "Name": "e5",
+                "Expression": "Event_ValueIn == 5"
+              },
+              {
+                "Name": "e6",
+                "Expression": "Event_ValueIn == 6"
+              },
+              {
+                "Name": "e7",
+                "Expression": "Event_ValueIn == 7"
+              },
+              {
+                "Name": "e8",
+                "Expression": "Event_ValueIn == 8"
+              },
+              {
+                "Name": "e9",
+                "Expression": "Event_ValueIn == 9"
+              }
+            ]
+          },
+          "Type": "StateMachine",
+          "Ports": [
+            {
+              "Name": "Event_ValueIn",
+              "DataType": "System.Int32",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "InputProductionSMType"
+                }
+              ]
+            },
+            {
+              "Name": "State",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ProductionSMOutputType"
+                }
+              ]
+            },
+            {
+              "Id": "208cfc3a-d2dd-40c1-adff-613bc674259b",
+              "Name": "ProgramIdentifierIn",
+              "DataType": "System.String",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ProgramIdentifierType"
+                }
+              ]
+            },
+            {
+              "Id": "bbc219ec-2198-4275-a9a6-bed798568825",
+              "Name": "Output",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OutputProductionStateChangedType"
+                }
+              ]
+            },
+            {
+              "Id": "9973d162-3f5e-4782-b484-d63b550ceeb8",
+              "Name": "LastInformationIn",
+              "DataType": "System.String",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "LastInformationType"
+                }
+              ]
+            },
+            {
+              "Id": "36746a3d-2466-4405-92d3-c740a08a5ab9",
+              "Name": "LastProgramBlockIn",
+              "DataType": "System.String",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "LastProgramBlockType"
+                }
+              ]
+            },
+            {
+              "Id": "b0f91cd7-d381-4d82-919e-d943188448d8",
+              "Name": "LastToolIn",
+              "DataType": "System.String",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "LastToolType"
+                }
+              ]
+            },
+            {
+              "Id": "6f00fa94-f509-44cc-b710-1b71d7b4bec6",
+              "Name": "QualityWithinTolerancesIn",
+              "DataType": "System.Boolean",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "QualityWithinTolerancesType"
+                }
+              ]
+            },
+            {
+              "Id": "b41b2b7b-600a-46f7-a72e-f33470290b84",
+              "Name": "ReasonForAbortionIn",
+              "DataType": "System.UInt32",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ReasonForAbortionType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "14eb4fbd-40aa-44b3-a573-ca2dc91c2df1",
+          "Name": "Flames_OccupancyReconciliationStateMachine",
+          "InitialData": [
+            "OccupancyReconciliationStateMachineScript.cs"
+          ],
+          "Schema": {
+            "Name": "StateMachine_1",
+            "States": [
+              {
+                "Name": "Idle"
+              },
+              {
+                "Name": "Active"
+              },
+              {
+                "Name": "Cancelled"
+              },
+              {
+                "Name": "Finished"
+              }
+            ],
+            "Transitions": [
+              {
+                "Source": "Idle",
+                "Destination": "Active",
+                "Trigger": "e1"
+              },
+              {
+                "Source": "Active",
+                "Destination": "Finished",
+                "Trigger": "e2"
+              },
+              {
+                "Source": "Finished",
+                "Destination": "Idle",
+                "Trigger": "e3"
+              },
+              {
+                "Source": "Active",
+                "Destination": "Cancelled",
+                "Trigger": "e4"
+              },
+              {
+                "Source": "Cancelled",
+                "Destination": "Idle",
+                "Trigger": "e5"
+              }
+            ],
+            "TriggerEvents": [
+              {
+                "Name": "e1",
+                "Expression": "Event_ValueIn == 1"
+              },
+              {
+                "Name": "e2",
+                "Expression": "Event_ValueIn == 2"
+              },
+              {
+                "Name": "e3",
+                "Expression": "Event_ValueIn == 3"
+              },
+              {
+                "Name": "e4",
+                "Expression": "Event_ValueIn == 4"
+              },
+              {
+                "Name": "e5",
+                "Expression": "Event_ValueIn == 5"
+              }
+            ]
+          },
+          "Type": "StateMachine",
+          "Ports": [
+            {
+              "Name": "Event_ValueIn",
+              "DataType": "System.Int32",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OccupancyReconciliationSMInputType"
+                }
+              ]
+            },
+            {
+              "Name": "State",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OccupancyReconciliationSMOutputType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "bcbb50e2-7ef0-4950-90fe-dbcaac85ccbd",
+          "Name": "Flames_TransportStateMachine",
+          "InitialData": [
+            "TransportStateMachineScript.cs"
+          ],
+          "Schema": {
+            "Name": "StateMachine_1",
+            "States": [
+              {
+                "Name": "Idle"
+              },
+              {
+                "Name": "Preparing"
+              },
+              {
+                "Name": "Active"
+              },
+              {
+                "Name": "Cancelled"
+              },
+              {
+                "Name": "Finished"
+              }
+            ],
+            "Transitions": [
+              {
+                "Source": "Idle",
+                "Destination": "Preparing",
+                "Trigger": "e1"
+              },
+              {
+                "Source": "Preparing",
+                "Destination": "Active",
+                "Trigger": "e2"
+              },
+              {
+                "Source": "Active",
+                "Destination": "Finished",
+                "Trigger": "e3"
+              },
+              {
+                "Source": "Finished",
+                "Destination": "Idle",
+                "Trigger": "e4"
+              },
+              {
+                "Source": "Preparing",
+                "Destination": "Cancelled",
+                "Trigger": "e5"
+              },
+              {
+                "Source": "Cancelled",
+                "Destination": "Idle",
+                "Trigger": "e6"
+              },
+              {
+                "Source": "Active",
+                "Destination": "Cancelled",
+                "Trigger": "e7"
+              }
+            ],
+            "TriggerEvents": [
+              {
+                "Name": "e1",
+                "Expression": "Event_ValueIn == 1"
+              },
+              {
+                "Name": "e2",
+                "Expression": "Event_ValueIn == 2"
+              },
+              {
+                "Name": "e3",
+                "Expression": "Event_ValueIn == 3"
+              },
+              {
+                "Name": "e4",
+                "Expression": "Event_ValueIn == 4"
+              },
+              {
+                "Name": "e5",
+                "Expression": "Event_ValueIn == 5"
+              },
+              {
+                "Name": "e6",
+                "Expression": "Event_ValueIn == 6"
+              },
+              {
+                "Name": "e7",
+                "Expression": "Event_ValueIn == 7"
+              }
+            ]
+          },
+          "Type": "StateMachine",
+          "Ports": [
+            {
+              "Name": "Event_ValueIn",
+              "DataType": "System.Int32",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "TransportSMInputType"
+                }
+              ]
+            },
+            {
+              "Name": "State",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "TransportSMOutputType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "e1c3775f-215f-4097-9698-ba516f26755e",
+          "Name": "Flames_ToolUsedEvent",
+          "InitialData": [
+            "ToolUsedEventScript.cs"
+          ],
+          "Type": "CSharpScriptProcessingNode",
+          "Ports": [
+            {
+              "Name": "InputTool",
+              "DataType": "System.Int32",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolUsedEventToolType"
+                }
+              ]
+            },
+            {
+              "Name": "Output",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OutputToolUsedEventType"
+                }
+              ]
+            },
+            {
+              "Id": "53aeaabe-e8d0-4934-93f8-8512b1507db6",
+              "Name": "InputOrigDiam",
+              "DataType": "System.Double",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolUsedEventOrigDiameterType"
+                }
+              ]
+            },
+            {
+              "Id": "8fd20c98-6290-4c3e-be21-9a8b733fc2fb",
+              "Name": "InputOrigWidth",
+              "DataType": "System.Double",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolUsedEventOrigWidthType"
+                }
+              ]
+            },
+            {
+              "Id": "513d2dc7-5cd5-494d-913c-52a5edcce8a0",
+              "Name": "InputDiam",
+              "DataType": "System.Double",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolUsedEventDiameterType"
+                }
+              ]
+            },
+            {
+              "Id": "64c8f4c4-408b-4000-8ee8-66c56bc0d748",
+              "Name": "InputWidth",
+              "DataType": "System.Double",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolUsedEventWidthType"
+                }
+              ]
+            },
+            {
+              "Id": "642e6ca7-177b-4436-87ad-ce6477002c81",
+              "Name": "InputMinWidth",
+              "DataType": "System.Double",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolUsedEventMinWidthType"
+                }
+              ]
+            },
+            {
+              "Id": "2bcba2f5-5b54-4195-9fca-5ad15ebd0bcd",
+              "Name": "InputMinDiam",
+              "DataType": "System.Double",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolUsedEventMinDiameterType"
+                }
+              ]
+            },
+            {
+              "Id": "9a360de8-0fc8-44a5-b5d6-53db5f77d227",
+              "Name": "InputToolUsedUpdated",
+              "DataType": "System.Int32",
+              "Public": true,
+              "TriggerType": "OnChange",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolUsedUpdatedType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "093a6a34-2cbb-47d5-9e1d-830fd1eacd87",
+          "Name": "Flames_AutomationStateChangedEvent",
+          "InitialData": [
+            "AutomationStateChangedEventScript.cs"
+          ],
+          "Type": "CSharpScriptProcessingNode",
+          "Ports": [
+            {
+              "Name": "Output",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OutputAutomationStateChangedType"
+                }
+              ]
+            },
+            {
+              "Id": "513d2dc7-5cd5-494d-913c-52a5edcce8a0",
+              "Name": "InputRemoteMode",
+              "DataType": "System.Boolean",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "InputRemoteModeType"
+                }
+              ]
+            },
+            {
+              "Id": "5a4a138b-048e-40e9-8883-cd3a9290fabe",
+              "Name": "InputOperationState",
+              "DataType": "System.Int32",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "InputOperationStateType"
+                }
+              ]
+            },
+            {
+              "Id": "d76c6a45-22d9-4a76-8d66-46176eb7353d",
+              "Name": "InputServiceRequest",
+              "DataType": "System.Int32",
+              "Public": true,
+              "TriggerType": "None",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "InputServiceRequestType"
+                }
+              ]
+            },
+            {
+              "Id": "b8ff1174-5363-4c76-a1e8-a2f122b907f3",
+              "Name": "InputTrigger",
+              "DataType": "System.Int32",
+              "Public": true,
+              "TriggerType": "OnChange",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "InputAutomationStateChangedTriggerType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "b8357239-357a-4d2c-87a9-81ea49243582",
+          "Name": "Flames_ToolLoadedEvent",
+          "InitialData": [
+            "ToolLoadedEventScript.cs"
+          ],
+          "Type": "CSharpScriptProcessingNode",
+          "Ports": [
+            {
+              "Name": "Output",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "OutputToolLoadedType"
+                }
+              ]
+            },
+            {
+              "Id": "64c8f4c4-408b-4000-8ee8-66c56bc0d748",
+              "Name": "InputTrigger",
+              "DataType": "System.Int32",
+              "Public": true,
+              "TriggerType": "OnChange",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolLoadedInputTriggerType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "cfd803cc-5c9d-48ef-a4da-607f590f459e",
+          "Name": "Flames_UpdateTools",
+          "InitialData": [
+            "UpdateToolsScript.cs"
+          ],
+          "Type": "CSharpScriptProcessingNode",
+          "Ports": [
+            {
+              "Name": "Output",
+              "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity, HumanOS.Kernel.Base",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": []
+            },
+            {
+              "Id": "64c8f4c4-408b-4000-8ee8-66c56bc0d748",
+              "Name": "InputNodeVersion",
+              "DataType": "System.String",
+              "Public": true,
+              "TriggerType": "OnChange",
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ToolsDirectoryChangedType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Rules": [
+    {
+      "Id": "b97d54fe-2af8-4336-aa63-23be12a9062c",
+      "Name": "Port Matching Rule",
+      "Type": "PortMatchingRule",
+      "Properties": []
+    }
+  ],
+  "SubDevices": []
+}

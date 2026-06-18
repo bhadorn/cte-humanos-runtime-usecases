@@ -1,0 +1,40 @@
+###########################
+# UaModeler Project File  #
+# Generated at 22.01.2026 #
+###########################
+
+PROJECTNAME = cybertech.iiotgateway.flames
+
+TEMPLATESET = ($TEMPLATES)/net/v4_3/t0/net_server.tt2set
+
+MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
+    flames2.ua \
+    cybertech.iiotgateway.flames.ua
+
+VARIABLES+= flames2.ua: Namespace=FLAMES; Organization=Soflex; \
+    cybertech.iiotgateway.flames.ua: Namespace=FLAMESInt; Organization=Soflex; 
+
+COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
+    flames2.ua: #0000ff\
+    cybertech.iiotgateway.flames.ua: #008000
+
+PROJECTVARIABLES += GenerateDefaultApplication = false \
+    LegacyOutput = false \
+    NetFramework = net8 \
+    NoMethodFiles = false \
+    ProjectNamespace =  \
+    ProjectOrganization =  \
+    PubSubMqttJson = false \
+    RolesAndUsers = false
+
+OUTPUTPATH = ../../../../Downloads
+
+GENERATE += flames2.ua \
+    cybertech.iiotgateway.flames.ua
+
+NODEACCESSINFOROLES += Administrator \
+    SecurityAdmin \
+    ConfigurationAdmin \
+    Operator \
+    Observer
+
