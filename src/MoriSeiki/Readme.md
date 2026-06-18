@@ -42,7 +42,7 @@ OPC-UA Server (port 4840)
 
 The machine streams newline-separated ASCII frames. Each frame contains one or more pipe-delimited (`|`) key/value pairs in the form:
 
-```
+```text
 |<name>|<value>|<name>|<value>|…
 ```
 
@@ -55,7 +55,7 @@ The `MoriSeikiPayloadProcessor` reads up to 40 000 bytes per cycle, splits on ne
 | `AVAILABLE`   | `True`    |
 | `UNAVAILABLE` | `False`   |
 
-## Device Template — `MoriSeiki.json`
+## Device Template: `MoriSeiki.json`
 
 The device template defines the full set of data nodes acquired from the controller:
 

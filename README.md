@@ -1,7 +1,7 @@
 ---
 id: humanos-runtime-usecases
 title: "HumanOS Runtime UseCases"
-subject: "HumanOS IoT Runtime — Integration Examples"
+subject: "HumanOS IoT Runtime: Integration Examples"
 keywords: [HumanOS, IoT, Runtime, use cases, industrial automation, OPC-UA, MQTT, REST API, CNC]
 ---
 
@@ -17,7 +17,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 
 **Essential**:
 
-- [HumanOS IoT Designer](https://data.cybertech.swiss/public.php/dav/files/LgBzNjG2wtRPXFM/?accept=zip) — includes the trial runtime for local testing
+- [HumanOS IoT Designer](https://data.cybertech.swiss/public.php/dav/files/LgBzNjG2wtRPXFM/?accept=zip): includes the trial runtime for local testing
 
 **Depending on the use case**:
 
@@ -32,12 +32,13 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 - **Sinumerik PowerLine**: Siemens Sinumerik 840D PL controller or simulator
 - **SmartFactory Simulator**: [vHub](https://api.vhub.ch) API token for robot waypoint data (optional MQTT broker)
 - **SparkPlug Alarming**: FANUC controller or simulator, MQTT broker (e.g. [Mosquitto](https://mosquitto.org)), [MQTT Explorer](https://mqtt-explorer.com)
+- **TCP/IP Demo**: .NET 10 SDK to build and run the included test TCP server (`TestServerClient/`)
 - **Temperature Reporter**: No additional hardware required (file-based simulator included)
 - **Timing Example**: No additional hardware required (file-based simulator included)
 
 **Recommended general tooling**:
 
-- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html) — OPC-UA client for inspecting OPC-UA server output
+- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): OPC-UA client for inspecting OPC-UA server output
 
 ## Use Cases
 
@@ -55,6 +56,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [Sinumerik 840D PowerLine](./src/SinumerikPowerLine/Readme.md)                     | SinumerikControl                  | DNC file transfer and OEE/MDE data acquisition from CNC                                                                     |
 | [SmartFactory Simulator](./src/SmartFactorySimulator/Readme.md)                    | FileReader + WebControl           | Full factory simulation: robots, test machines, storage, OEE                                                                |
 | [SparkPlug Alarming](./src/SparkPlugAlarming/Readme.md)                            | FanucControl + SparkPlug          | Alarm forwarding from FANUC controller via MQTT SparkPlug                                                                   |
+| [TCP/IP Demo](./src/TCPIPDemo/Readme.md)                                           | TcpClientControl                  | CSV stream acquisition over raw TCP/IP with OEE state derivation; includes .NET 8 test server simulator                     |
 | [Temperature Reporter](./src/TemperatureReporter/Readme.md)                        | FileReader (simulator)            | Threshold-based alerting with multiple alarm levels                                                                         |
 | [Timing Example](./src/TimingExample/Readme.md)                                    | FileReader (simulator)            | Example how to use timers to execute commands                                                                               |
 

@@ -7,7 +7,7 @@ keywords: [HumanOS, Ansible, Semaphore, REST API, WebControl, workflow, ICT auto
 
 # Ansible Agent
 
-Integrates [Ansible Semaphore](https://semaphoreui.com) — an open-source web UI and REST API wrapper for Ansible — into HumanOS Platform Pipelines. The agent provisions all required Semaphore resources (project, repository, environment, inventory, SSH key, playbook template) on the fly, starts a task, polls for completion, and returns structured JSON feedback to the HumanOS workflow engine.
+Integrates [Ansible Semaphore](https://semaphoreui.com): an open-source web UI and REST API wrapper for Ansible: into HumanOS Platform Pipelines. The agent provisions all required Semaphore resources (project, repository, environment, inventory, SSH key, playbook template) on the fly, starts a task, polls for completion, and returns structured JSON feedback to the HumanOS workflow engine.
 
 ## Architecture
 
@@ -37,7 +37,7 @@ The HumanOS **workflow engine** manages the full asynchronous lifecycle: start, 
 
 ## Key Components
 
-### Device Template — `SemaphoreAPI.json`
+### Device Template: `SemaphoreAPI.json`
 
 Defines the REST API interface using the **WebControl connector**. Each command maps to a Semaphore API endpoint. Data nodes expose job status and output to the HumanOS NodeSpace (and optionally to OPC-UA).
 
@@ -66,7 +66,7 @@ Defines the REST API interface using the **WebControl connector**. Each command 
 | `UHAL_GetJobStatus.cs` | Polls task status with authenticated session; returns `running`, `success`, or `error` |
 | `UHAL_GetJobOutput.cs` | Extracts JSON-structured feedback from task log output                                 |
 
-### Workflow — `JobOperation.cs`
+### Workflow: `JobOperation.cs`
 
 An async HumanOS workflow that:
 

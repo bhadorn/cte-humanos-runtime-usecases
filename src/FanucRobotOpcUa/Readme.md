@@ -1,13 +1,13 @@
 ---
 id: usecase-fanuc-robot-opcua
 title: "Use Case: FANUC Robot OPC-UA Bridge"
-subject: "FANUC R-30iB Plus — OPC-UA to OPC-UA Bridge via HumanOS"
+subject: "FANUC R-30iB Plus: OPC-UA to OPC-UA Bridge via HumanOS"
 keywords: [HumanOS, FANUC, OPC-UA, robot, R-30iB, NanoUaServer, bridge, motion, robotics, industrial automation]
 ---
 
 # FANUC Robot OPC-UA Bridge
 
-Connects a **FANUC R-30iB Plus** robot controller to HumanOS IoT Runtime via its built-in OPC-UA interface (FANUC NanoUaServer). All robot telemetry — axis positions, torques, operational state, alarms, and Modbus arrays — is read from the controller and re-published through HumanOS's own OPC-UA server, making it accessible to any standard OPC-UA client without custom programming.
+Connects a **FANUC R-30iB Plus** robot controller to HumanOS IoT Runtime via its built-in OPC-UA interface (FANUC NanoUaServer). All robot telemetry: axis positions, torques, operational state, alarms, and Modbus arrays: is read from the controller and re-published through HumanOS's own OPC-UA server, making it accessible to any standard OPC-UA client without custom programming.
 
 ## Architecture
 
@@ -36,7 +36,7 @@ FANUC R-30iB Plus
 
 ## Key Components
 
-### Device Template — `FanucRobotOpcUa_v1.json`
+### Device Template: `FanucRobotOpcUa_v1.json`
 
 Declares all data nodes grouped into four namespaces:
 
@@ -47,11 +47,11 @@ Declares all data nodes grouped into four namespaces:
 | **ModbusArrays** | DiscreteInput[], Coils[], InputRegisters[], HoldingRegisters[], Command[] | Read / Read-Write / Write |
 | **Root** | Available, SignOfLife | Read |
 
-### OPC-UA Driver — `HumanOS.UHAL.OpcUaControl`
+### OPC-UA Driver: `HumanOS.UHAL.OpcUaControl`
 
 Connects to the FANUC NanoUaServer and polls all mapped nodes every **500 ms**. Certificates are auto-generated; all peer certificates are accepted (development profile). Reconnects automatically after a 10-second delay on connection loss.
 
-### OPC-UA Server — `HumanOS.PeSeL.OPCUAServer`
+### OPC-UA Server: `HumanOS.PeSeL.OPCUAServer`
 
 Exposes the HumanOS node space on **port 4840** under the root browse name `HumanOS`. All nodes are addressable via `ns=1;s=<path>`.
 
@@ -62,7 +62,7 @@ Exposes the HumanOS node space on **port 4840** under the root browse name `Huma
 | Node | Type | Description |
 | :--- | :--- | :---------- |
 | `ServoState` | Byte | `0` = Servo OFF, `1` = Servo ON |
-| `OperationState` | UInt16 | Bitmask — E-STOP, Fault, Program running, Paused, Held, TP enabled, Battery alarm, Busy |
+| `OperationState` | UInt16 | Bitmask: E-STOP, Fault, Program running, Paused, Held, TP enabled, Battery alarm, Busy |
 | `ModeState` | String | `AUTOMATIC`, `MANUAL` (T1), `MANUAL_DATA_INPUT` (T2) |
 | `ProgramSpeed` | Byte | Override speed in % |
 | `Position` | Single[] | Current joint/Cartesian positions (up to 6 axes), unit: deg / mm |
@@ -73,11 +73,11 @@ Exposes the HumanOS node space on **port 4840** under the root browse name `Huma
 
 Follows the **OPC-UA for Robotics** information model:
 
-- `MotionDevice_1/SpeedOverride` — programmatic speed override (read/write, %)
-- `MotionDevice_1/J1`–`J6_ActualPosition` — individual axis positions in °
-- `SafetyState_1/OperationalMode` — `0` OTHER · `1` T1 · `2` T2 · `3` AUTO_LOCAL · `4` AUTO_REMOTE
-- `SafetyState_1/EmergencyStop` / `ProtectiveStop` — Boolean safety signals
-- `Controller_1/TaskProgramName` / `TaskProgramLoaded` — active program info
+- `MotionDevice_1/SpeedOverride`: programmatic speed override (read/write, %)
+- `MotionDevice_1/J1`–`J6_ActualPosition`: individual axis positions in °
+- `SafetyState_1/OperationalMode`: `0` OTHER · `1` T1 · `2` T2 · `3` AUTO_LOCAL · `4` AUTO_REMOTE
+- `SafetyState_1/EmergencyStop` / `ProtectiveStop`: Boolean safety signals
+- `Controller_1/TaskProgramName` / `TaskProgramLoaded`: active program info
 
 ### ModbusArrays
 

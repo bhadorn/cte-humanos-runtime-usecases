@@ -1,0 +1,167 @@
+
+root = true
+
+[*]
+charset = utf-8
+tab_width = 2
+indent_size = 2
+indent_style = space
+
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+end_of_line = crlf
+dotnet_style_coalesce_expression = true:suggestion
+dotnet_style_null_propagation = true:suggestion
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
+dotnet_style_prefer_auto_properties = true:silent
+dotnet_style_object_initializer = true:suggestion
+dotnet_style_collection_initializer = true:suggestion
+dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
+dotnet_style_prefer_conditional_expression_over_assignment = true:silent
+
+[*.cs]
+csharp_indent_labels = one_less_than_current
+csharp_using_directive_placement = outside_namespace:silent
+csharp_prefer_simple_using_statement = true:suggestion
+csharp_prefer_braces = true:silent
+csharp_style_namespace_declarations = block_scoped:silent
+csharp_style_prefer_method_group_conversion = true:silent
+csharp_style_prefer_top_level_statements = true:silent
+csharp_style_prefer_primary_constructors = true:suggestion
+csharp_style_expression_bodied_methods = false:silent
+csharp_style_expression_bodied_constructors = false:silent
+csharp_style_expression_bodied_operators = false:silent
+csharp_style_expression_bodied_properties = true:silent
+csharp_style_expression_bodied_indexers = true:silent
+csharp_style_expression_bodied_accessors = true:silent
+csharp_style_expression_bodied_lambdas = true:silent
+csharp_style_expression_bodied_local_functions = false:silent
+csharp_space_around_binary_operators = before_and_after
+
+
+# Naming Rule for interfaces: Must start with 'I'
+dotnet_naming_style.interface_style.capitalization = pascal_case
+dotnet_naming_style.interface_style.required_prefix = I
+
+dotnet_naming_symbols.interface_symbol.applicable_kinds = interface
+dotnet_naming_symbols.interface_symbol.applicable_accessibilities = *
+
+dotnet_naming_rule.interface_rule.symbols = interface_symbol
+dotnet_naming_rule.interface_rule.style = interface_style
+dotnet_naming_rule.interface_rule.severity = warning
+
+
+#Naming Rule for classes: Must start with 'T'
+dotnet_naming_style.class_style.capitalization = pascal_case
+dotnet_naming_style.class_style.required_prefix = T
+
+dotnet_naming_symbols.class_symbol.applicable_kinds = class
+dotnet_naming_symbols.class_symbol.applicable_accessibilities = public
+
+dotnet_naming_rule.class_rule.symbols = class_symbol
+dotnet_naming_rule.class_rule.style = class_style
+dotnet_naming_rule.class_rule.severity = warning
+
+
+#Naming Rule for enums: Must start with 'E'
+dotnet_naming_style.enum_style.capitalization = pascal_case
+dotnet_naming_style.enum_style.required_prefix = E
+
+dotnet_naming_symbols.enum_symbol.applicable_kinds = enum
+dotnet_naming_symbols.enum_symbol.applicable_accessibilities = *
+
+dotnet_naming_rule.enum_rule.symbols = enum_symbol
+dotnet_naming_rule.enum_rule.style = enum_style
+dotnet_naming_rule.enum_rule.severity = warning
+
+
+#Naming Rule for delegate: Must start with 'D'
+dotnet_naming_style.delegate_style.capitalization = pascal_case
+dotnet_naming_style.delegate_style.required_prefix = D
+
+dotnet_naming_symbols.delegate_symbol.applicable_kinds = delegate
+dotnet_naming_symbols.delegate_symbol.applicable_accessibilities = *
+
+dotnet_naming_rule.delegate_rule.symbols = delegate_symbol
+dotnet_naming_rule.delegate_rule.style = delegate_style
+dotnet_naming_rule.delegate_rule.severity = warning
+
+
+# Naming Rule for methods: Must be in camel case
+dotnet_naming_symbols.method_symbol.applicable_kinds = method
+dotnet_naming_symbols.method_symbol.applicable_accessibilities = *
+
+dotnet_naming_style.method_style.capitalization = camel_case
+
+dotnet_naming_rule.method_rule.symbols = method_symbol
+dotnet_naming_rule.method_rule.style = method_style
+dotnet_naming_rule.method_rule.severity = warning
+
+
+# Naming Rule for async methods: Must be in camel case and end with Async
+dotnet_naming_symbols.async_method_symbol.applicable_kinds = method
+dotnet_naming_symbols.async_method_symbol.applicable_accessibilities = *
+dotnet_naming_symbols.async_method_symbol.required_modifiers = async
+
+dotnet_naming_style.async_method_style.capitalization = camel_case
+dotnet_naming_style.async_method_style.required_prefix = 
+dotnet_naming_style.async_method_style.required_suffix = Async
+dotnet_naming_style.async_method_style.word_separator = 
+
+dotnet_naming_rule.async_method_rule.severity = warning
+dotnet_naming_rule.async_method_rule.symbols = async_method_symbol
+dotnet_naming_rule.async_method_rule.style = async_method_style
+
+# Naming Rule for events: Must be in camel case and start with 'On'
+dotnet_naming_symbols.event_symbol.applicable_kinds = event
+dotnet_naming_symbols.event_symbol.applicable_accessibilities = *
+
+dotnet_naming_style.event_style.capitalization = pascal_case
+dotnet_naming_style.event_style.required_prefix = On
+
+dotnet_naming_rule.event_rule.symbols = event_symbol
+dotnet_naming_rule.event_rule.style = event_style
+dotnet_naming_rule.event_rule.severity = warning
+
+
+# Naming Rule for Properties
+dotnet_naming_symbols.property_symbol.applicable_kinds = property
+dotnet_naming_symbols.property_symbol.applicable_accessibilities = *
+
+dotnet_naming_style.property_style.capitalization = pascal_case
+dotnet_naming_style.property_style.required_prefix =
+
+dotnet_naming_rule.property_rule.symbols = property_symbol
+dotnet_naming_rule.property_rule.style = const_style
+dotnet_naming_rule.property_rule.severity = warning
+
+# Naming Rule for Constants
+dotnet_naming_symbols.const_symbol.applicable_kinds = field
+dotnet_naming_symbols.const_symbol.applicable_accessibilities = *
+dotnet_naming_symbols.const_symbol.required_modifiers = const
+
+dotnet_naming_style.const_style.capitalization = pascal_case
+dotnet_naming_style.const_style.required_prefix =
+
+dotnet_naming_rule.const_rule.symbols = const_symbol
+dotnet_naming_rule.const_rule.style = const_style
+dotnet_naming_rule.const_rule.severity = warning
+
+
+# Naming Rule for private fields
+dotnet_naming_symbols.private_fields_symbol.applicable_kinds = field
+dotnet_naming_symbols.private_fields_symbol.applicable_accessibilities = private
+
+dotnet_naming_symbols.private_static_fields_symbol.applicable_kinds = field
+dotnet_naming_symbols.private_static_fields_symbol.applicable_accessibilities = private
+dotnet_naming_symbols.private_static_fields_symbol.required_modifiers = static
+
+dotnet_naming_style.private_fields_style.capitalization = pascal_case, camel_case
+dotnet_naming_style.private_fields_style.required_prefix = m_
+
+dotnet_naming_rule.private_fields_underscored.symbols = private_fields_symbol
+dotnet_naming_rule.private_fields_underscored.style = private_fields_style
+dotnet_naming_rule.private_fields_underscored.severity = warning
+
+dotnet_naming_rule.private_static_fields_underscored.symbols = private_static_fields_symbol
+dotnet_naming_rule.private_static_fields_underscored.style = private_fields_style
+dotnet_naming_rule.private_static_fields_underscored.severity = warning

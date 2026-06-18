@@ -1,0 +1,134 @@
+{
+  "Path": "cte.h2proj",
+  "Name": "cte",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "82ad96a4-5e4c-4fa6-b302-219cd92731bd",
+      "Path": "cteCsv.json",
+      "Id": "d1888ee8-4264-43ae-a6a0-4354d1778cbc",
+      "Name": "cteCsv",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n39343938316465623966346163383265393666313062646330303463363963623636313538633736\r\n6331643338326331386433323264636533343032656461390a303432343761636666316665656462\r\n65663765356339633131393437353734333561326234663266633230383632363832376164363162\r\n3139626236643462640a633931363563373531616134366461626638303230366664376138636164\r\n30623966343862653036396266633830613330336332366238383937643863326632323037613334\r\n3061363631316262316630396439656162663362396335323930\r\n"
+      }
+    ],
+    "Id": "c72f69e4-e199-4f34-a38f-80a39785d529",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "6ffa6b87-fce1-406e-b8a3-16d6ce198de8",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86",
+      "RuntimeVersion": "2.9",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "6ffa6b87-fce1-406e-b8a3-16d6ce198de8",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "HumanOS.SharedNodeSpace.Type": "",
+        "HumanOS.SharedNodeSpace.Address": "localhost",
+        "HumanOS.SharedNodeSpace.MasterSystemControllerId": "6bbca83f-8bba-48f6-8d70-1113094e5c42",
+        "HumanOS.RuntimeVersion": "2.9"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "localhost:7872",
+          "DeviceTemplateId": "d1888ee8-4264-43ae-a6a0-4354d1778cbc",
+          "DriverId": "82ad96a4-5e4c-4fa6-b302-219cd92731bd",
+          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+          "SubDevices": [],
+          "Type": "cte Device",
+          "Variables": [],
+          "Path": "Machine.json",
+          "Id": "405d6173-c952-4583-b3c5-cb036c9bfbe4",
+          "Name": "Machine",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "ctePayloadProcessor.cs",
+              "Id": "d842c795-b6bf-403e-ae69-69e30d625609",
+              "Name": "ctePayloadProcessor.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.TcpClientControl",
+          "Id": "82ad96a4-5e4c-4fa6-b302-219cd92731bd",
+          "Name": "HumanOS.UHAL.TcpClientControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

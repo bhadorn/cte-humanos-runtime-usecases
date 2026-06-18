@@ -1,13 +1,13 @@
 ---
 id: fanuc-data-aggregation
-title: "Use Case: FANUC — Data Aggregation"
+title: "Use Case: FANUC: Data Aggregation"
 subject: "Aggregating multiple FANUC CNC controller data nodes into a unified entity and exposing it via OPC-UA in HumanOS"
 keywords: [HumanOS, FANUC, OPC-UA, data aggregation, CNC, controller, DataAggregator, no-code]
 ---
 
-# Use Case: FANUC — Data Aggregation
+# Use Case: FANUC: Data Aggregation
 
-Shows how to collect several individual **FANUC CNC controller signals** (availability, program name, operation mode, part counter) and combine them into a single **aggregated entity node** using the HumanOS DataAggregator processing network — without writing any C# script. The aggregated result is then exposed as a unified OPC-UA node.
+Shows how to collect several individual **FANUC CNC controller signals** (availability, program name, operation mode, part counter) and combine them into a single **aggregated entity node** using the HumanOS DataAggregator processing network: without writing any C# script. The aggregated result is then exposed as a unified OPC-UA node.
 
 A **FANUC NCGUIDE simulator** (`NCGUIDE!`) is pre-configured as the device, so no physical CNC hardware is required.
 
@@ -20,10 +20,10 @@ FANUC CNC Controller (or NCGUIDE simulator)
 Device: FanucSimulator  (type: FANUC 0i-F, address: NCGUIDE!)
         │
         ├─ Controller group
-        │    ├─ Available      (Int32)   — machine availability status
-        │    ├─ MainProgram    (String)  — active NC program name
-        │    ├─ OperationMode  (String)  — Manual / Automatic / MDI
-        │    └─ PartCounter    (Int32)   — workpiece count
+        │    ├─ Available      (Int32)  : machine availability status
+        │    ├─ MainProgram    (String) : active NC program name
+        │    ├─ OperationMode  (String) : Manual / Automatic / MDI
+        │    └─ PartCounter    (Int32)  : workpiece count
         │
         ▼
 Processing Network: DataAggregator
@@ -41,8 +41,8 @@ OPC-UA Client (e.g. UAExpert)
 ## Prerequisites
 
 - HumanOS IoT Designer ≥ 2.6
-- `FANUC NCGuide`— included as the pre-configured simulator device
-- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html) — recommended for browsing the OPC-UA output
+- `FANUC NCGuide`:  included as the pre-configured simulator device
+- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing the OPC-UA output
 
 ## See Also
 

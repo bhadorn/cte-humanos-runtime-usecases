@@ -29,7 +29,7 @@ Gateway: default  (port 4840)
 
         │  OPC-UA subscription
         ▼
-OPC-UA Client — connects and sees data from default
+OPC-UA Client: connects and sees data from default
 ```
 
 ## Device: JSON Simulator
@@ -42,45 +42,45 @@ The device exposes the following OPC-UA node hierarchy:
 
 #### Top-level nodes
 
-| Node | JSON path | Type | Enabled outputs |
-| :--- | :--- | :--- | :--- |
-| `Available` | `$.Available` | Int32 | AzureIoT, Influx, MQTT, REST, RMQ |
+| Node         | JSON path      | Type  | Enabled outputs                   |
+| :----------- | :------------- | :---- | :-------------------------------- |
+| `Available`  | `$.Available`  | Int32 | AzureIoT, Influx, MQTT, REST, RMQ |
 | `SignOfLife` | `$.SignOfLife` | Int32 | AzureIoT, Influx, MQTT, REST, RMQ |
 
 #### Group: `Controller`
 
-| Node | JSON path | Type | Unit |
-| :--- | :--- | :--- | :--- |
-| `AlarmState` | `$.AlarmState` | Int32 | — |
-| `OperationMode` | `$.OperationMode` | Int32 | — |
-| `RunningState` | `$.RunningState` | Int32 | — |
-| `PartCounter` | `$.PartCounter` | Int32 | — |
-| `FeedrateOverride` | `$.FeedrateOverride` | Double | % |
-| `SpindleOverride` | `$.SpindleOverride` | Double | % |
-| `CuttingTime` | `$.CuttingTime` | Double (Stream) | min |
-| `OperationTime` | `$.OperationTime` | Double (Stream) | min |
-| `PowerOnTime` | `$.PowerOnTime` | Double (Stream) | min |
+| Node               | JSON path            | Type            | Unit |
+| :----------------- | :------------------- | :-------------- | :--- |
+| `AlarmState`       | `$.AlarmState`       | Int32           |      |
+| `OperationMode`    | `$.OperationMode`    | Int32           |      |
+| `RunningState`     | `$.RunningState`     | Int32           |      |
+| `PartCounter`      | `$.PartCounter`      | Int32           |      |
+| `FeedrateOverride` | `$.FeedrateOverride` | Double          | %    |
+| `SpindleOverride`  | `$.SpindleOverride`  | Double          | %    |
+| `CuttingTime`      | `$.CuttingTime`      | Double (Stream) | min  |
+| `OperationTime`    | `$.OperationTime`    | Double (Stream) | min  |
+| `PowerOnTime`      | `$.PowerOnTime`      | Double (Stream) | min  |
 
 #### Group: `Controller/NCPath1`
 
-| Node | JSON path | Type | Unit |
-| :--- | :--- | :--- | :--- |
-| `CurrentFeed` | `$.CurrentFeed` | Double | — |
-| `CurrentNcBlock` | `$.CurrentNcBlock` | String | — |
-| `CurrentProgram` | `$.CurrentProgram` | String | — |
-| `CurrentSequenceNr` | `$.CurrentSequenceNr` | String | — |
-| `CurrentSpindleSpeed` | `$.CurrentSpindleSpeed` | Double | 1/min |
-| `CurrentToolId` | `$.CurrentToolId` | String | — |
-| `MainProgram` | `$.MainProgram` | String | — |
-| `MainProgramHeader` | `$.MainProgramHeader` | String | — |
-| `ProgrammedFeed` | `$.ProgrammedFeed` | Double | mm/min |
-| `ProgrammedSpindleSpeed` | `$.ProgrammedSpindleSpeed` | Double | 1/min |
+| Node                     | JSON path                  | Type   | Unit   |
+| :----------------------- | :------------------------- | :----- | :----- |
+| `CurrentFeed`            | `$.CurrentFeed`            | Double |        |
+| `CurrentNcBlock`         | `$.CurrentNcBlock`         | String |        |
+| `CurrentProgram`         | `$.CurrentProgram`         | String |        |
+| `CurrentSequenceNr`      | `$.CurrentSequenceNr`      | String |        |
+| `CurrentSpindleSpeed`    | `$.CurrentSpindleSpeed`    | Double | 1/min  |
+| `CurrentToolId`          | `$.CurrentToolId`          | String |        |
+| `MainProgram`            | `$.MainProgram`            | String |        |
+| `MainProgramHeader`      | `$.MainProgramHeader`      | String |        |
+| `ProgrammedFeed`         | `$.ProgrammedFeed`         | Double | mm/min |
+| `ProgrammedSpindleSpeed` | `$.ProgrammedSpindleSpeed` | Double | 1/min  |
 
 #### Alarm pool: `MachineAlarming`
 
-| Task | JSON path | Retention | Sampling rate |
-| :--- | :--- | :--- | :--- |
-| `SystemAlarms` | `$.Alarms` | 720 h | 2000 ms |
+| Task           | JSON path  | Retention | Sampling rate |
+| :------------- | :--------- | :-------- | :------------ |
+| `SystemAlarms` | `$.Alarms` | 720 h     | 2000 ms       |
 
 ### Sample `TestFile.json`
 
@@ -113,18 +113,18 @@ The device exposes the following OPC-UA node hierarchy:
 
 ## OPC-UA Server Configuration (`default` gateway)
 
-| Setting | Value |
-| :--- | :--- |
-| Port | `4840` |
-| Server URI | `urn:localhost:HumanOS:OpcUaServer` |
-| Root browse name | `HumanOS` |
-| Service rule | Bind/unbind all nodes automatically |
+| Setting          | Value                               |
+| :--------------- | :---------------------------------- |
+| Port             | `4840`                              |
+| Server URI       | `urn:localhost:HumanOS:OpcUaServer` |
+| Root browse name | `HumanOS`                           |
+| Service rule     | Bind/unbind all nodes automatically |
 
 ## Prerequisites
 
 - HumanOS IoT Designer ≥ 2.10
 - A JSON file at `C:\Temp\TestFile.json` (see sample above)
-- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html) — recommended for browsing both OPC-UA servers
+- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing both OPC-UA servers
 
 ## See Also
 

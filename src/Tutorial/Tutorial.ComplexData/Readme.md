@@ -7,11 +7,12 @@ keywords: [HumanOS, FileReader, JSON, OPC-UA, complex data, nested, data model, 
 
 # Tutorial: Complex Data
 
-Shows how to read a **nested JSON file** and automatically expose every field as a typed OPC-UA node — without writing any C# script. The HumanOS FileReader driver traverses the JSON structure and maps each value to a corresponding node in the OPC-UA address space.
+Shows how to read a **nested JSON file** and automatically expose every field as a typed OPC-UA node: without writing any C# script. The HumanOS FileReader driver traverses the JSON structure and maps each value to a corresponding node in the OPC-UA address space.
 
 A **file-based simulator** is included (`C:\Temp\TestFile.json`), so no physical hardware is required.
 
 ## Step by Step Guide
+
 In [Complex Data Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial7/02_Example.md) you can find a step-by-step instruction of this tutorial.
 
 ## Architecture
@@ -34,7 +35,7 @@ OPC-UA Client (e.g. UAExpert)
 
 - HumanOS IoT Designer ≥ 2.10
 - A JSON file at `C:\Temp\TestFile.json` (create manually or copy the template from `DeviceTemplates/`)
-- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html) — recommended for browsing the OPC-UA output
+- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing the OPC-UA output
 
 ## See Also
 

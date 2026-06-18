@@ -7,7 +7,7 @@ keywords: [HumanOS, timer, OnTimer, GenericRule, TCommandHelper, scheduling, Fil
 
 # Timer-Driven Command Execution
 
-Demonstrates how to use **HumanOS Timers** to execute commands on a configurable periodic schedule. A timer fires at a fixed interval, triggering a rule whose C# script iterates over all connected devices and issues a `ReadFile` command to each — showing the general pattern for any repeating, device-spanning operation.
+Demonstrates how to use **HumanOS Timers** to execute commands on a configurable periodic schedule. A timer fires at a fixed interval, triggering a rule whose C# script iterates over all connected devices and issues a `ReadFile` command to each: showing the general pattern for any repeating, device-spanning operation.
 
 A **file-based simulator** is included, so no physical hardware is required to run this example.
 
@@ -84,15 +84,15 @@ foreach (IGroupRelation Device in Kernel.NodeSpace.queryNodes(n => n.hasProperty
 
 ## Key Components
 
-### Data Model — `MyTimer.json`
+### Data Model: `MyTimer.json`
 
 Defines the `Timer` object (2 s interval, infinite repeat) and the associated `GenericRule` that binds the `OnTimer` event to `Timer_Script.cs`. Both are placed in the `default` environment's `DataModel/Objects` folder.
 
-### Device Template — `Simulator_v1.json`
+### Device Template: `Simulator_v1.json`
 
 Configures the **FileReader plugin** (`HumanOS.UHAL.FileReader`) as the data source and exposes a single `ReadFile` command. The command accepts a `Name` input (file path) and returns a `Content` output (file content as string).
 
-### Script — `Timer_Script.cs`
+### Script: `Timer_Script.cs`
 
 Queries all devices with a `DriverId` property and calls `ReadFile` on each. Logs success or failure for every device. This pattern scales to any command available on the matched devices.
 
@@ -108,7 +108,7 @@ Queries all devices with a `DriverId` property and calls `ReadFile` on each. Log
 ## Extending the Example
 
 - **Change the interval**: Adjust `Interval` (ms) in `MyTimer.json` to suit the required polling frequency.
-- **Replace the command**: Substitute `ReadFile` with any other device command — read sensor values, trigger a write, or call an HTTP endpoint.
+- **Replace the command**: Substitute `ReadFile` with any other device command: read sensor values, trigger a write, or call an HTTP endpoint.
 - **Add a condition**: Set `TriggerCondition` on the rule to a logical expression so the script only runs when a runtime condition is met.
 - **Process results**: Forward command outputs to a data node, OPC-UA server, or historian by wiring output ports in the processing network.
 - **Connect real hardware**: Replace the FileReader device with any HumanOS-supported connector (FANUC, Sinumerik, OPC-UA, etc.) and adjust the command name and arguments accordingly.
