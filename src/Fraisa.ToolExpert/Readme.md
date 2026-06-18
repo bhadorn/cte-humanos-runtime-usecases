@@ -35,11 +35,11 @@ Parsed tool data returned to OPC-UA command output
 
 ## Key Components
 
-### Device Template — `ToolExpert_v1.json`
+### Device Template: `ToolExpert_v1.json`
 
 Defines one command node that accepts an article number as input and returns the parsed tool data as JSON output. Uses the **WebControl connector** for the HTTP transport.
 
-### Script — `ToolExpert_ImportResourceData.cs`
+### Script: `ToolExpert_ImportResourceData.cs`
 
 A `TAbstractHttpScriptObject`-based script that:
 

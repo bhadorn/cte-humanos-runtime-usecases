@@ -7,7 +7,7 @@ keywords: [HumanOS, threshold, OnThreshold, alerting, temperature, TThresholdCal
 
 # Temperature Reporting using Threshold Triggers
 
-Demonstrates the **OnThreshold trigger type** in HumanOS data nodes and processing ports. Instead of polling on a fixed interval, data is forwarded only when a value crosses a configured threshold — reducing unnecessary processing and network traffic. The use case also shows how to implement multiple alert levels using the `TThresholdCalculator` helper class.
+Demonstrates the **OnThreshold trigger type** in HumanOS data nodes and processing ports. Instead of polling on a fixed interval, data is forwarded only when a value crosses a configured threshold: reducing unnecessary processing and network traffic. The use case also shows how to implement multiple alert levels using the `TThresholdCalculator` helper class.
 
 A **file-based simulator** is included, so no physical hardware is required to run this example.
 
@@ -65,18 +65,18 @@ Each calculator independently reports whether the temperature is currently in th
 
 ## Key Components
 
-### Device Template — `Simulator_v1.json`
+### Device Template: `Simulator_v1.json`
 
 - Configures the **FileReader plugin** (`HumanOS.UHAL.FileReader`) as the data source
 - Defines data nodes with `TriggerType: OnThreshold` and per-level threshold settings
 - Wires the processing network: `AlertProcessingScript` feeds into `ReportProcessingScript`
 - Groups alert levels (50 °C, 60 °C, 70 °C) into a nested node structure for clarity
 
-### Script — `AlertProcessingScript.cs`
+### Script: `AlertProcessingScript.cs`
 
 Receives the current temperature value, evaluates all three `TThresholdCalculator` instances, and outputs the active alert level (0 = none, 1/2/3 = corresponding level). Implements hysteresis to avoid alert flickering on noisy readings.
 
-### Script — `ReportProcessingScript.cs`
+### Script: `ReportProcessingScript.cs`
 
 Receives the alert level and the raw temperature value, logs the current state, and forwards the temperature value to the output port for downstream consumers (OPC-UA, historian, etc.).
 

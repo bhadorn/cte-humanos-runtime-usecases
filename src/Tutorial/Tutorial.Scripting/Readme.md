@@ -12,6 +12,7 @@ Demonstrates three scripting patterns in a single project: a **WebControl HTTP s
 The data source is the public Mazak MTConnect demo server at `http://mtconnect.mazakcorp.com:5719`.
 
 ## Step by Step Guide
+
 In [Scripting Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial4/02_Example.md) you can find a step-by-step instruction of this tutorial.
 
 ## Architecture
@@ -25,7 +26,7 @@ MTConnectPayloadProcessor.cs
         │  extracts OperationMode (string) → Node "OperationMode"
         │  extracts PartCountAct (int)    → Node "PartCounter"
         ▼
-Device: Mazak  — live data nodes in node space
+Device: Mazak : live data nodes in node space
 
         │  MQTT publisher subscribes to nodes with EnableMqtt=true
         ▼
@@ -35,9 +36,9 @@ MqttPayloadScript.cs
         ▼
 MQTT Broker (localhost)  →  topic: mazak/data/<node-name>
 
-OPC-UA Server (port 4840)   — exposes all nodes in parallel
-WebService    (REST)        — exposes gateway via HTTP
-Global Command: Command1    — example callable command
+OPC-UA Server (port 4840)  : exposes all nodes in parallel
+WebService    (REST)       : exposes gateway via HTTP
+Global Command: Command1   : example callable command
 ```
 
 ## Prerequisites
@@ -45,7 +46,7 @@ Global Command: Command1    — example callable command
 - HumanOS IoT Designer ≥ 2.10
 - Internet access to `http://mtconnect.mazakcorp.com:5719` (public Mazak demo)
 - A running MQTT broker on `localhost` (e.g. [Mosquitto](https://mosquitto.org)) for the MQTT output
-- [MQTT Explorer](https://mqtt-explorer.com) — recommended to inspect published messages
+- [MQTT Explorer](https://mqtt-explorer.com): recommended to inspect published messages
 
 ## See Also
 

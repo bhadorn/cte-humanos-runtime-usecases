@@ -31,7 +31,7 @@ HumanOS IoT Runtime
 
 ## Device Templates
 
-### `Sinumerik_DNC.json` — DNC Communication
+### `Sinumerik_DNC.json`: DNC Communication
 
 Handles bi-directional exchange of NC programs and tool data between the controller and a DNC system. Key data nodes cover:
 
@@ -41,7 +41,7 @@ Handles bi-directional exchange of NC programs and tool data between the control
 
 This template uses the **HumanOS DNC information model** (`HumanOS.DNC`) and integrates with the DNC Client plugin for file management workflows.
 
-### `Sinumerik_OEE.json` — OEE and MDE Data Acquisition
+### `Sinumerik_OEE.json`: OEE and MDE Data Acquisition
 
 Acquires real-time production data from the controller and maps it to the **HumanOS OEE information model** (`HumanOS.OEE`). Typical data points include:
 

@@ -11,11 +11,12 @@ A HumanOS IoT Gateway tutorial project demonstrating JSON device integration, cu
 - Exposing live data over OPC-UA
 
 ## Step by Step Guide
+
 In [Coffee Report Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial6/04_Example.md) you can find a step-by-step instruction of this tutorial.
 
 ## Architecture overview
 
-```
+```text
 coffee.json (file)
       │
       ▼
@@ -35,30 +36,30 @@ coffee.json (file)
 
 ### Raw data (read from JSON file)
 
-| Node | Type | JSON path |
-|------|------|-----------|
-| Brand | String | `$.brand` |
-| Name | String | `$.name` |
-| CoffeeAmount | String | `$.coffeeamount` |
-| MilkAmount | String | `$.milkamount` |
-| Strength | String | `$.strength` |
+| Node             | Type   | JSON path            |
+| ---------------- | ------ | -------------------- |
+| Brand            | String | `$.brand`            |
+| Name             | String | `$.name`             |
+| CoffeeAmount     | String | `$.coffeeamount`     |
+| MilkAmount       | String | `$.milkamount`       |
+| Strength         | String | `$.strength`         |
 | CapsuleNetWeight | String | `$.capsulenetweight` |
 
 ### Processed data (output of CoffeeProcessor script)
 
-| Node | Type | Unit | Description |
-|------|------|------|-------------|
-| CoffeeAmount | Double | ml | Coffee volume (×2 conversion applied) |
-| MilkAmount | Double | ml | Milk volume (×2 conversion applied) |
-| CoffeePercent | Double | % | Coffee share of total liquid |
-| MilkPercent | Double | % | Milk share of total liquid |
-| StrengthPercent | Double | % | Strength as percentage (X/Y × 100) |
-| CapsuleNetWeight | Double | g | Capsule weight (÷1000 then ×2) |
+| Node             | Type   | Unit | Description                           |
+| ---------------- | ------ | ---- | ------------------------------------- |
+| CoffeeAmount     | Double | ml   | Coffee volume (×2 conversion applied) |
+| MilkAmount       | Double | ml   | Milk volume (×2 conversion applied)   |
+| CoffeePercent    | Double | %    | Coffee share of total liquid          |
+| MilkPercent      | Double | %    | Milk share of total liquid            |
+| StrengthPercent  | Double | %    | Strength as percentage (X/Y × 100)    |
+| CapsuleNetWeight | Double | g    | Capsule weight (÷1000 then ×2)        |
 
 ## Prerequisites
 
-| Requirement | Detail |
-|-------------|--------|
-| HumanOS Runtime | win-x86 TRIAL, version 2.6 |
-| Input file | `C:\Temp\CoffeeProject\coffee.json` |
-| MySQL | localhost, database `humanos.datalogger`, user `humanos` / `humanos` |
+| Requirement     | Detail                                                               |
+| --------------- | -------------------------------------------------------------------- |
+| HumanOS Runtime | win-x86 TRIAL, version 2.6                                           |
+| Input file      | `C:\Temp\CoffeeProject\coffee.json`                                  |
+| MySQL           | localhost, database `humanos.datalogger`, user `humanos` / `humanos` |

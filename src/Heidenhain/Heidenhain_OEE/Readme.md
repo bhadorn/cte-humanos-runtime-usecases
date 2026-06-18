@@ -10,7 +10,7 @@ In this use case the HumanOS® IoT Designer is used to build a bridge between a 
 
    The bridge can be extended with:
 
-   - History Mode: Enable historical recording for selected nodes (e.g. `OperationMode`) with a configurable sampling rate and retention time — viewable as a trend in UAExpert.
+   - History Mode: Enable historical recording for selected nodes (e.g. `OperationMode`) with a configurable sampling rate and retention time: viewable as a trend in UAExpert.
    - Commands: Execute actions on the controller via OPC-UA, e.g. `ReadFile` to read NC programs directly from the machine.
    - Alarm & Event Handling: A `MachineAlarming` node captures controller alarms (e.g. button presses in the simulator) and forwards them as OPC-UA events, visible in UAExpert's event view.
 

@@ -5,7 +5,7 @@ In this use case the HumanOS® IoT Designer is used to log data from a Heidenhai
 ## Main Steps
 
 1. Setup Connection to Heidenhain Simulator - Start the Heidenhain Simulator and make sure HeidenhainDNC is configured correctly
-2. Create an IoT Project with DataLogger - Add a Heidenhain OEE device template and configure the `CsvDataLogger` plugin — set the output file to `C:\Temp\HeidenhainData.csv`. Then tag the data nodes `OEEMachineState`, `OEEMachineStateName`, `OEEProductName`, and `OEEProductionStep` with an `EnableCsv = true` property so the node filter picks them up.
+2. Create an IoT Project with DataLogger - Add a Heidenhain OEE device template and configure the `CsvDataLogger` plugin: set the output file to `C:\Temp\HeidenhainData.csv`. Then tag the data nodes `OEEMachineState`, `OEEMachineStateName`, `OEEProductName`, and `OEEProductionStep` with an `EnableCsv = true` property so the node filter picks them up.
 3. Create Heidenhain Device & Verify - Deploy the Heidenhain device, start the IoT Gateway, run an NC program on the simulator, and open the CSV file to verify the logged data.
 
 The project can be extended with `Alarm Event Logging`

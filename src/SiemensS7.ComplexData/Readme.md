@@ -1,13 +1,13 @@
 ---
 id: siemenss7-complex-data
-title: "Use Case: Siemens S7 — Complex Data"
+title: "Use Case: Siemens S7: Complex Data"
 subject: "Reading structured entity data from a Siemens S7 PLC and exposing it via OPC-UA in HumanOS"
 keywords: [HumanOS, Siemens S7, OPC-UA, complex data, entity type, DataBlock, struct, no-code]
 ---
 
-# Use Case: Siemens S7 — Complex Data
+# Use Case: Siemens S7: Complex Data
 
-Shows how to read a **structured data block from a Siemens S7 PLC** and automatically map it to a typed OPC-UA node using a custom **EntityType** — without writing any C# script. The HumanOS SiemensS7Control driver reads a raw byte array from the PLC DataBlock, deserializes it into a strongly-typed entity (`ComplexTypeA`), and exposes every field as a named OPC-UA node.
+Shows how to read a **structured data block from a Siemens S7 PLC** and automatically map it to a typed OPC-UA node using a custom **EntityType**: without writing any C# script. The HumanOS SiemensS7Control driver reads a raw byte array from the PLC DataBlock, deserializes it into a strongly-typed entity (`ComplexTypeA`), and exposes every field as a named OPC-UA node.
 
 ## Architecture
 
@@ -34,7 +34,7 @@ OPC-UA Client (e.g. UAExpert)
 
 - HumanOS IoT Designer ≥ 2.6
 - A reachable Siemens S7 PLC with the matching DataBlock configured
-- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html) — recommended for browsing the OPC-UA output
+- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing the OPC-UA output
 
 ## See Also
 

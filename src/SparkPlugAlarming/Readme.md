@@ -36,7 +36,7 @@ SparkPlug Client  →  MQTT Broker  →  SparkPlug subscribers
 
 ## Key Components
 
-### Device Template — `FanucAlarms_v1.json`
+### Device Template: `FanucAlarms_v1.json`
 
 Configures:
 
@@ -46,7 +46,7 @@ Configures:
 - A **data node** that holds the current alarm stream as a JSON string
 - A **SparkPlug Client** plugin that publishes the data node value as a SparkPlug metric on change
 
-### Script — `AlarmProcessorScript.cs`
+### Script: `AlarmProcessorScript.cs`
 
 Runs on a 30-second cycle. Reads all active alarms from the AlarmEvent Pool, serializes them into a JSON array (preserving alarm code, message, and severity), and writes the result to the output port connected to the alarm stream data node.
 

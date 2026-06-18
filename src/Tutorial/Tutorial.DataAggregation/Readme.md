@@ -7,11 +7,12 @@ keywords: [HumanOS, FileReader, JSON, aggregation, OPC-UA, JSONAggregator, data 
 
 # Tutorial: Data Aggregation
 
-Shows how to use the **JSONAggregator** device type to merge values from multiple JSON sources into a single, unified node in the OPC-UA address space — without writing any C# script.
+Shows how to use the **JSONAggregator** device type to merge values from multiple JSON sources into a single, unified node in the OPC-UA address space: without writing any C# script.
 
 A **file-based simulator** (`C:\Temp\TestFile.json`) is used as the data source.
 
 ## Step by Step Guide
+
 In [Data Aggregation Step by Step Guide](https://doc.cybertech.swiss/runtime/Tutorials/Tutorial6/02_Example.md) you can find a step-by-step instruction of this tutorial.
 
 ## Architecture
@@ -34,7 +35,7 @@ OPC-UA Client (e.g. UAExpert)
 
 - HumanOS IoT Designer ≥ 2.10
 - A JSON file at `C:\Temp\TestFile.json`
-- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html) — recommended for browsing the OPC-UA output
+- [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing the OPC-UA output
 
 ## See Also
 
