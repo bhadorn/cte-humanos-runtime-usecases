@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HumanOS Runtime UseCases — CyberTech</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ct-navy:      #1c2237;
+      --ct-navy-mid:  #253047;
+      --ct-blue:      #2e7bdf;
+      --ct-blue-dark: #1a5bbf;
+      --ct-blue-light:#e8f1fc;
+      --ct-text:      #1a1f2e;
+      --ct-muted:     #5c6478;
+      --ct-border:    #dde3ed;
+      --ct-bg:        #f7f8fa;
+      --ct-white:     #ffffff;
+      --radius:       6px;
+      --shadow:       0 1px 4px rgba(0,0,0,.10), 0 4px 16px rgba(0,0,0,.06);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--ct-bg);
+      color: var(--ct-text);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--ct-navy);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      height: 56px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    }
+    .nav-logo {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: .01em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+    }
+    .nav-logo .brand { color: var(--ct-blue); }
+    .nav-sep { color: rgba(255,255,255,.25); font-size: .9rem; }
+    .nav-links { margin-left: auto; display: flex; gap: 1.25rem; }
+    .nav-links a {
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      font-size: .875rem;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: #fff; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--ct-navy) 0%, var(--ct-navy-mid) 60%, #1e3a6e 100%);
+      color: #fff;
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ct-blue);
+      margin-bottom: .75rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.72);
+      max-width: 600px;
+      margin: 0 auto 1.75rem;
+    }
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      background: var(--ct-blue);
+      color: #fff;
+      padding: .65rem 1.4rem;
+      border-radius: var(--radius);
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .hero-btn:hover { background: var(--ct-blue-dark); }
+    .hero-btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.35);
+      margin-left: .5rem;
+    }
+    .hero-btn-ghost:hover { background: rgba(255,255,255,.1); }
+
+    /* ── MAIN LAYOUT ── */
+    main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+    /* ── SECTION HEADINGS ── */
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ct-text);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--ct-border);
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .section-title .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--ct-blue);
+      flex-shrink: 0;
+    }
+
+    /* ── TOOLING CARDS ── */
+    .tooling-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: .75rem;
+      margin-bottom: 1rem;
+    }
+    .tool-card {
+      background: var(--ct-white);
+      border: 1px solid var(--ct-border);
+      border-radius: var(--radius);
+      padding: .85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      box-shadow: var(--shadow);
+    }
+    .tool-card .tool-name {
+      font-weight: 600;
+      font-size: .875rem;
+      color: var(--ct-text);
+    }
+    .tool-card .tool-name a {
+      color: var(--ct-blue);
+      text-decoration: none;
+    }
+    .tool-card .tool-name a:hover { text-decoration: underline; }
+    .tool-card .tool-desc {
+      font-size: .8rem;
+      color: var(--ct-muted);
+    }
+    .tool-badge {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 600;
+      padding: .15rem .45rem;
+      border-radius: 3px;
+      background: var(--ct-blue-light);
+      color: var(--ct-blue-dark);
+      width: fit-content;
+      margin-bottom: .1rem;
+    }
+    .tool-badge.optional {
+      background: #f0f0f0;
+      color: var(--ct-muted);
+    }
+
+    /* ── TABLE ── */
+    .table-wrap { overflow-x: auto; margin-top: .5rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--ct-white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      font-size: .875rem;
+    }
+    thead tr { background: var(--ct-navy); color: #fff; }
+    thead th {
+      padding: .75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: .8rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    tbody tr { border-bottom: 1px solid var(--ct-border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--ct-blue-light); }
+    tbody td { padding: .7rem 1rem; vertical-align: top; }
+    tbody td:first-child a {
+      color: var(--ct-blue);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    tbody td:first-child a:hover { text-decoration: underline; }
+    .connector-tag {
+      display: inline-block;
+      font-size: .72rem;
+      padding: .15rem .5rem;
+      border-radius: 3px;
+      background: #eef2f8;
+      color: var(--ct-navy-mid);
+      font-weight: 500;
+    }
+    tbody td:last-child { color: var(--ct-muted); }
+
+    /* ── LINKS SECTION ── */
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: .5rem;
+    }
+    .links-row a {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .55rem 1rem;
+      border: 1px solid var(--ct-border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--ct-text);
+      font-size: .875rem;
+      background: var(--ct-white);
+      box-shadow: var(--shadow);
+      transition: border-color .15s, color .15s;
+    }
+    .links-row a:hover { border-color: var(--ct-blue); color: var(--ct-blue); }
+    .links-row a svg { opacity: .5; flex-shrink: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ct-navy);
+      color: rgba(255,255,255,.5);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: .8rem;
+    }
+    footer a { color: rgba(255,255,255,.7); text-decoration: none; }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="https://doc.cybertech.swiss/">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="9" height="9" rx="1.5" fill="#2e7bdf"/>
+      <rect x="13" y="2" width="9" height="9" rx="1.5" fill="rgba(255,255,255,.4)"/>
+      <rect x="2" y="13" width="9" height="9" rx="1.5" fill="rgba(255,255,255,.4)"/>
+      <rect x="13" y="13" width="9" height="9" rx="1.5" fill="rgba(255,255,255,.2)"/>
+    </svg>
+    <span><span class="brand">CyberTech</span> HumanOS</span>
+  </a>
+  <span class="nav-sep">/</span>
+  <span style="color:rgba(255,255,255,.6);font-size:.875rem;">Runtime UseCases</span>
+  <div class="nav-links">
+    <a href="https://doc.cybertech.swiss/runtime/intro">Docs</a>
+    <a href="https://doc.cybertech.swiss/runtime/Tutorials/">Tutorials</a>
+    <a href="https://github.com/bhadorn/cte-humanos-runtime-usecases">GitHub</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">HumanOS IoT Runtime</div>
+  <h1>Runtime UseCases</h1>
+  <p>Self-contained integration examples for industrial automation — OPC-UA, MQTT, REST API, CNC machine connectivity, and more.</p>
+  <a class="hero-btn" href="https://data.cybertech.swiss/public.php/dav/files/LgBzNjG2wtRPXFM/?accept=zip">
+    <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L9 12.586V3a1 1 0 0 1 1-1z"/><path d="M3 17a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"/></svg>
+    Download HumanOS IoT Designer
+  </a>
+  <a class="hero-btn hero-btn-ghost" href="https://doc.cybertech.swiss/runtime/intro">
+    View Documentation
+  </a>
+</div>
+
+<main>
+
+  <!-- TOOLING -->
+  <h2 class="section-title"><span class="dot"></span>Required Tooling</h2>
+
+  <div class="tooling-grid">
+    <div class="tool-card">
+      <span class="tool-badge">Essential</span>
+      <div class="tool-name"><a href="https://data.cybertech.swiss/public.php/dav/files/LgBzNjG2wtRPXFM/?accept=zip">HumanOS IoT Designer</a></div>
+      <div class="tool-desc">Includes the trial runtime for local testing. Required for all use cases.</div>
+    </div>
+    <div class="tool-card">
+      <span class="tool-badge optional">Optional</span>
+      <div class="tool-name"><a href="https://semaphoreui.com">Semaphore / Ansible</a></div>
+      <div class="tool-desc">Required for the Ansible Agent use case.</div>
+    </div>
+    <div class="tool-card">
+      <span class="tool-badge optional">Optional</span>
+      <div class="tool-name">FANUC NCGuide</div>
+      <div class="tool-desc">Simulator or physical controller for FANUC use cases.</div>
+    </div>
+    <div class="tool-card">
+      <span class="tool-badge optional">Optional</span>
+      <div class="tool-name">Heidenhain iTNC530</div>
+      <div class="tool-desc">Simulator with HeidenhainDNC on <code>localhost:19000</code>.</div>
+    </div>
+    <div class="tool-card">
+      <span class="tool-badge optional">Optional</span>
+      <div class="tool-name"><a href="https://mosquitto.org">MQTT Broker</a></div>
+      <div class="tool-desc">e.g. Mosquitto — required for SparkPlug Alarming.</div>
+    </div>
+    <div class="tool-card">
+      <span class="tool-badge optional">Optional</span>
+      <div class="tool-name"><a href="https://www.unified-automation.com/products/development-tools/uaexpert.html">UAExpert</a></div>
+      <div class="tool-desc">Recommended OPC-UA client for inspecting server output.</div>
+    </div>
+  </div>
+
+  <!-- USE CASES TABLE -->
+  <h2 class="section-title"><span class="dot"></span>Use Cases</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Use Case</th>
+          <th>Connector</th>
+          <th>Key Feature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/AnsibleAgent/Readme.md">Ansible Agent</a></td>
+          <td><span class="connector-tag">WebControl (REST)</span></td>
+          <td>IT automation via Semaphore API and HumanOS workflows</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/FANUC.DataAggregation/Readme.md">FANUC Data Aggregation</a></td>
+          <td><span class="connector-tag">FanucControl</span></td>
+          <td>Aggregating CNC controller data into a unified OPC-UA entity</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/FanucRobotOpcUa/Readme.md">FANUC Robot OPC-UA</a></td>
+          <td><span class="connector-tag">OpcUaControl</span></td>
+          <td>OPC-UA bridge: FANUC R-30iB Plus robot telemetry re-published via HumanOS OPC-UA server</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/FLAMESDemo/Readme.md">FLAMES Demo</a></td>
+          <td><span class="connector-tag">FileReader + OPC-UA</span></td>
+          <td>FLAMES OPC-UA companion spec: state machines, event handling, tool management</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Fraisa.ToolExpert/Readme.md">Fraisa ToolExpert</a></td>
+          <td><span class="connector-tag">WebControl (REST)</span></td>
+          <td>Tool lookup from cloud API, exposed via OPC-UA</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Heidenhain/Heidenhain_CSV_DataLogger/Readme.md">Heidenhain CSV Data Logger</a></td>
+          <td><span class="connector-tag">HeidenhainControl + CSV</span></td>
+          <td>CSV data logging from Heidenhain iTNC530</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Heidenhain/Heidenhain_OEE/Readme.md">Heidenhain OEE</a></td>
+          <td><span class="connector-tag">HeidenhainControl + OPC-UA</span></td>
+          <td>OEE data from Heidenhain iTNC530 via OPC-UA</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/MoriSeiki/Readme.md">Mori Seiki</a></td>
+          <td><span class="connector-tag">TCP/IP</span></td>
+          <td>Machine data acquisition using native TCP/IP protocol</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/SiemensS7.ComplexData/Readme.md">Siemens S7 Complex Data</a></td>
+          <td><span class="connector-tag">SiemensS7Control</span></td>
+          <td>Reading a typed entity struct from S7 DataBlock via OPC-UA</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/SinumerikPowerLine/Readme.md">Sinumerik 840D PowerLine</a></td>
+          <td><span class="connector-tag">SinumerikControl</span></td>
+          <td>DNC file transfer and OEE/MDE data acquisition from CNC</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/SmartFactorySimulator/Readme.md">SmartFactory Simulator</a></td>
+          <td><span class="connector-tag">FileReader + WebControl</span></td>
+          <td>Full factory simulation: robots, test machines, storage, OEE</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/SparkPlugAlarming/Readme.md">SparkPlug Alarming</a></td>
+          <td><span class="connector-tag">FanucControl + SparkPlug</span></td>
+          <td>Alarm forwarding from FANUC controller via MQTT SparkPlug</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/TCPIPDemo/Readme.md">TCP/IP Demo</a></td>
+          <td><span class="connector-tag">TcpClientControl</span></td>
+          <td>CSV stream over raw TCP/IP with OEE state derivation; includes .NET test server</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/TemperatureReporter/Readme.md">Temperature Reporter</a></td>
+          <td><span class="connector-tag">FileReader</span></td>
+          <td>Threshold-based alerting with multiple alarm levels</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/TimingExample/Readme.md">Timing Example</a></td>
+          <td><span class="connector-tag">FileReader</span></td>
+          <td>Example how to use timers to execute commands</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Traub/Readme.md">Traub CNC</a></td>
+          <td><span class="connector-tag">OpcUaControl</span></td>
+          <td>OPC-UA bridge with OEE state derivation and NC program header parsing; includes full machine simulator</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TUTORIALS TABLE -->
+  <h2 class="section-title"><span class="dot"></span>Tutorials</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tutorial</th>
+          <th>Connector</th>
+          <th>Key Feature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.CoffeeReport">Coffee Report</a></td>
+          <td><span class="connector-tag">FileReader + SQL Logger</span></td>
+          <td>Custom C# script processing with dual-export to OPC-UA and MySQL</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.CommandWorkflow">Command Workflow</a></td>
+          <td><span class="connector-tag">HostControl</span></td>
+          <td>Commands, injection rules, and scripted multi-step workflows</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.ComplexData">Complex Data</a></td>
+          <td><span class="connector-tag">FileReader (JSON)</span></td>
+          <td>Reading nested JSON data structures and exposing them via OPC-UA</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.CSVDataLogger">CSV Data Logger</a></td>
+          <td><span class="connector-tag">FileReader + CSV Logger</span></td>
+          <td>Logging device data to CSV files with a custom file-reader script</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.DataAggregation">Data Aggregation</a></td>
+          <td><span class="connector-tag">FileReader (JSONAggregator)</span></td>
+          <td>Aggregating values from multiple JSON sources into a single OPC-UA node</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.OPCUABridge">OPC-UA Bridge</a></td>
+          <td><span class="connector-tag">FileReader + OPC-UA</span></td>
+          <td>Bridging device data across two independent OPC-UA gateway instances</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.OPCUABridgeExtension">OPC-UA Bridge Extension</a></td>
+          <td><span class="connector-tag">FileReader + OPC-UA</span></td>
+          <td>Extending the OPC-UA bridge with a custom C# file-reader script</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.MDE">OPC-UA Bridge MDE</a></td>
+          <td><span class="connector-tag">FileReader + OPC-UA</span></td>
+          <td>Extending the OPC-UA bridge with a MDE structure</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.Scripting">Scripting</a></td>
+          <td><span class="connector-tag">WebControl + MQTT</span></td>
+          <td>Custom payload processing for a Mazak CNC machine with MQTT forwarding</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/bhadorn/cte-humanos-runtime-usecases/blob/main/src/Tutorial/Tutorial.WebService">Web Service</a></td>
+          <td><span class="connector-tag">WebService</span></td>
+          <td>Exposing gateway data via a REST endpoint with a custom payload script</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DOCS LINKS -->
+  <h2 class="section-title"><span class="dot"></span>HumanOS Runtime</h2>
+  <div class="links-row">
+    <a href="https://doc.cybertech.swiss/runtime/intro">
+      <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.804A7.968 7.968 0 0 0 5.145 4c-1.255 0-2.443.29-3.499.8A.75.75 0 0 0 1 5.5v12.25c0 .596.644.965 1.168.67A6.464 6.464 0 0 1 5.145 17.5c1.583 0 3.032.57 4.14 1.507.222.183.525.183.747 0A6.464 6.464 0 0 1 14.855 17.5a6.464 6.464 0 0 1 2.977.42c.524.295 1.168-.074 1.168-.67V5.5a.75.75 0 0 0-.646-.696A7.968 7.968 0 0 0 14.855 4 7.968 7.968 0 0 0 11 4.804V12.5a.5.5 0 0 1-1 0V4.804z"/></svg>
+      Reference Manual
+    </a>
+    <a href="https://doc.cybertech.swiss/runtime/Tutorials/">
+      <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75z"/><path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z"/></svg>
+      Tutorials
+    </a>
+    <a href="https://data.cybertech.swiss/public.php/dav/files/LgBzNjG2wtRPXFM/?accept=zip">
+      <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L9 12.586V3a1 1 0 0 1 1-1z"/><path d="M3 17a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"/></svg>
+      Download IoT Designer
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  &copy; <a href="https://cybertech.swiss">CyberTech AG</a> &mdash; HumanOS Runtime UseCases
+</footer>
+
+</body>
+</html>
