@@ -1,0 +1,14 @@
+{
+  "Disabled": false,
+  "Devices": [
+    {
+      "MainTaskProcessor": {
+        "Name": "Main TaskProcessor",
+        "ProcessingPriority": "AboveNormal",
+        "MaxSchedulingTimeSlice": 100,
+        "MinSchedulingTimeSlice": 10,
+        "EnableCycleTimeSurveillance": true
+      }
+    }
+  ]
+}

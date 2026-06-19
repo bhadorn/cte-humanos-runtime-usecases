@@ -62,6 +62,11 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [Timing Example](./src/TimingExample/Readme.md)                                    | FileReader (simulator)            | Example how to use timers to execute commands                                                                               |
 | [Traub CNC](./src/Traub/Readme.md)                                                 | OpcUaControl                      | OPC-UA bridge with OEE state derivation and NC program header parsing; includes a full machine simulator                    |
 
+## DNC
+
+| Use Case                                                                           | Connector                         | Key Feature                                                                                                                 |
+| :--------------------------------------------------------------------------------- | :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+
 ## Tutorials
 
 | Tutorial                                                                | Connector                     | Key Feature                                                             |
