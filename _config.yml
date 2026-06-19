@@ -1,7 +1,3 @@
-_includes:
-  head.html: |
-    <meta name="google-site-verification" content="IHR_VERIFIZIERUNGS_CODE" />
-
 title: CTE HumanOS Runtime UseCases
 theme: jekyll-theme-cayman
 
