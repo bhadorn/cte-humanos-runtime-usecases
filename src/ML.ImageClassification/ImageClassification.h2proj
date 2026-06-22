@@ -1,0 +1,157 @@
+{
+  "Path": "imageclassification.h2proj",
+  "Name": "ImageClassification",
+  "Description": "Demonstrates how images from webcam can be processed and classified using the machine learing plugin",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "51f3d53d-8353-4bdc-b037-39c2644d0d6a",
+      "Path": "WebCam_v1.json",
+      "Id": "33370abd-f6cb-4c04-82c0-f0bcdd979139",
+      "Name": "WebCam_v1",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n31376530366335383566663266633265373335333039323336396630316465663636383432343666\r\n6530353865636639663735303265623131323630333435300a636634363562366534633762343661\r\n66386136333531646331393532343264313536623933353862316561303934353532643864373930\r\n3961633138353234350a313435316165373563666231356366626636366637346566623766666433\r\n62623366343066363437323734303866356531633733656537323236653434653237313235363465\r\n3633653636646336376337333134383139616130643962626461\r\n"
+      }
+    ],
+    "Id": "b529961b-ec1b-42de-b81e-25fe2f4f65e0",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "c36420b5-c4a7-4e49-95a0-b35d717253f0",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x64",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "c36420b5-c4a7-4e49-95a0-b35d717253f0",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.11",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "@device:pnp:\\\\?\\usb#vid_045e&pid_0990&mi_00#6&db32c28&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+          "DeviceTemplateId": "33370abd-f6cb-4c04-82c0-f0bcdd979139",
+          "DriverId": "51f3d53d-8353-4bdc-b037-39c2644d0d6a",
+          "SubDevices": [],
+          "Type": "CAM",
+          "Variables": [],
+          "Path": "WebCam.json",
+          "Id": "373617f8-ac85-42c3-9fd0-0c357a2c1a71",
+          "Name": "WebCam",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.UsbDeviceDetectors",
+          "Id": "f4de1753-da46-4c0c-b34b-96b550f4fc17",
+          "Name": "HumanOS.UHAL.UsbDeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [
+            {
+              "Path": "resnet18_Opset18_timm.onnx",
+              "Id": "edfdafc4-9ed8-4403-b62e-28787d26ac9c",
+              "Name": "resnet18_Opset18_timm.onnx",
+              "Description": ""
+            },
+            {
+              "Path": "labels.txt",
+              "Id": "b9e0943f-716a-4ca9-bf6f-7a06ca415c69",
+              "Name": "labels.txt",
+              "Description": ""
+            }
+          ],
+          "ScriptFiles": [
+            {
+              "Path": "ClassificationSelectionProcessor.cs",
+              "Id": "201da0be-9859-4bf9-a29d-77940bd23862",
+              "Name": "ClassificationSelectionProcessor.cs",
+              "Description": ""
+            },
+            {
+              "Path": "ImagePreprocessing.cs",
+              "Id": "f9fbe694-5228-41fa-9692-a5cb432fda8d",
+              "Name": "ImagePreprocessing.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.VideoCamera",
+          "Id": "51f3d53d-8353-4bdc-b037-39c2644d0d6a",
+          "Name": "HumanOS.UHAL.VideoCamera",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

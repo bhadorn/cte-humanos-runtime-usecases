@@ -28,6 +28,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 - **FLAMES Demo**: No additional hardware required (file-based simulator included)
 - **Fraisa ToolExpert**: Network access to [toolexpert.fraisa.com](https://toolexpert.fraisa.com)
 - **Heidenhain CSV Data Logger, Heidenhain OEE**: Heidenhain iTNC530 simulator with HeidenhainDNC configured (connection `ItncSim` → `localhost:19000`)
+- **ML Image Classification**: A USB/PnP webcam plus the Machine Learning (`HumanOS.PeMiL.MachineLearning`) and Video Camera (`HumanOS.UHAL.VideoCamera`) plugins; optional CUDA-capable GPU for accelerated inference
 - **DMG MoriSeiki**: Reading data from older MoriSeiki machines
 - **Siemens S7 Complex Data**: Siemens S7 PLC with the matching DataBlock configured
 - **Sinumerik PowerLine**: Siemens Sinumerik 840D PL controller or simulator
@@ -53,6 +54,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [Fraisa ToolExpert](./src/Fraisa.ToolExpert/Readme.md)                             | WebControl (REST)                 | Tool lookup from cloud API, exposed via OPC-UA                                                                              |
 | [Heidenhain CSV data logger](./src/Heidenhain/Heidenhain_CSV_DataLogger/Readme.md) | HeidenhainControl + CSV Logger    | CSV data logging from Heidenhain iTNC530                                                                                    |
 | [Heidenhain OEE](./src/Heidenhain/Heidenhain_OEE/Readme.md)                        | HeidenhainControl + OPC-UA Server | OEE data from Heidenhain iTNC530 via OPC-UA                                                                                 |
+| [ML Image Classification](./src/ML.ImageClassification/Readme.md)                  | VideoCamera + ML (ONNX)           | Real-time webcam image classification with a ResNet-18 ONNX model via the Machine Learning plugin, published over OPC-UA    |
 | [Mori Seiki](./src/MoriSeiki/Readme.md)                                            | TCP/IP Connector                  | Machine data acquisition (MDA) using native TCP/IP protocol                                                                 |
 | [Siemens S7 Complex Data](./src/SiemensS7.ComplexData/Readme.md)                   | SiemensS7Control                  | Reading a typed entity struct from S7 DataBlock via OPC-UA                                                                  |
 | [Sinumerik 840D PowerLine](./src/SinumerikPowerLine/Readme.md)                     | SinumerikControl                  | DNC file transfer and OEE/MDE data acquisition from CNC                                                                     |

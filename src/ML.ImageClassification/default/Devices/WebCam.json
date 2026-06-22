@@ -1,0 +1,323 @@
+{
+  "Id": "373617f8-ac85-42c3-9fd0-0c357a2c1a71",
+  "Name": "WebCam",
+  "DriverId": "51f3d53d-8353-4bdc-b037-39c2644d0d6a",
+  "Address": "@device:pnp:\\\\?\\usb#vid_045e&pid_0990&mi_00#6&db32c28&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+  "Properties": [
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "CAM"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "c37f7911-8f83-447a-aa99-cb6ee1d77c4f",
+      "Name": "VideoStream",
+      "Address": "Video.Stream",
+      "DataType": "System.Byte[]",
+      "Unit": "",
+      "DataClass": "Stream",
+      "Access": {
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "opc-ua:DataType",
+          "DataType": "System.String",
+          "Value": "i=2002"
+        },
+        {
+          "Name": "opc-ua:ValueRank",
+          "DataType": "System.Int32",
+          "Value": "-1"
+        },
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "RawImageType"
+        }
+      ]
+    },
+    {
+      "Id": "ac6e90fc-7487-4a76-8ddd-11322684b64c",
+      "Name": "DetectedClassification",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "PortMatchId",
+          "DataType": "System.String",
+          "Value": "ClassificationType"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "1248f2cb-5b2e-42fe-b36d-af1025dc7ae3",
+      "Name": "Start",
+      "Address": "Video.Start",
+      "ScriptFile": "",
+      "Type": "CommandNode",
+      "Arguments": [],
+      "Properties": []
+    },
+    {
+      "Id": "895c87c0-0f31-4b3e-b960-c99ae8453024",
+      "Name": "Stop",
+      "Address": "Video.Stop",
+      "ScriptFile": "",
+      "Type": "CommandNode",
+      "Arguments": [],
+      "Properties": []
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [
+    {
+      "Id": "4708abe2-0717-43ee-8d8b-cad908001a46",
+      "Name": "Blank Processing Network",
+      "DataNodes": [],
+      "Links": [
+        {
+          "DataType": "System.Single[]",
+          "Node1RefName": "ImageVectorOutputPort",
+          "Node2RefName": "ImageVectorInputPort",
+          "Id": "4e3956e7-8688-4edc-91cd-ff7d6884c076",
+          "Name": "ImageVectorLink",
+          "Properties": []
+        },
+        {
+          "DataType": "System.Single[]",
+          "Node1RefName": "ClassificationVectorOutputPort",
+          "Node2RefName": "ClassificationVectorInputPort",
+          "Id": "ade8eac4-80c2-49e4-9e94-4336ba257f43",
+          "Name": "ClassificationVectorLink",
+          "Properties": []
+        }
+      ],
+      "Processors": [
+        {
+          "Id": "63607e59-88fd-45f5-aef2-36c4f17649e0",
+          "Name": "ImageClassificationProcessor",
+          "InitialData": [],
+          "Type": "EventProcessingProxyNode",
+          "Ports": [
+            {
+              "Name": "ImageVectorInputPort",
+              "DataType": "System.Single[]",
+              "Protocol": "Streaming",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "NormalizedImageType"
+                }
+              ]
+            },
+            {
+              "Name": "ClassificationVectorOutputPort",
+              "DataType": "System.Single[]",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ClassificationVectorType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "FallbackToCpu",
+              "DataType": "System.Boolean",
+              "Value": "true"
+            },
+            {
+              "Name": "GpuDeviceId",
+              "DataType": "System.Int32",
+              "Value": "-1"
+            },
+            {
+              "Name": "ModelFileName",
+              "DataType": "System.String",
+              "Value": "$(HumanOS:ConfigPath)HumanOS.UHAL.VideoCamera\\resnet18_Opset18_timm.onnx"
+            },
+            {
+              "Name": "ProcessorType",
+              "DataType": "System.String",
+              "Value": "HumanOS.PeMiL.MachineLearning.Processors.TNeuralNetworkProcessor, HumanOS.PeMiL.MachineLearning"
+            },
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "723af23b-eebb-4c1d-865e-e64c635c312c",
+          "Name": "ClassificationSelectionProcessor",
+          "InitialData": [
+            "ClassificationSelectionProcessor.cs"
+          ],
+          "Type": "CSharpScriptProcessingNode",
+          "Ports": [
+            {
+              "Name": "ClassificationVectorInputPort",
+              "DataType": "System.Single[]",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ClassificationVectorType"
+                }
+              ]
+            },
+            {
+              "Name": "DetectedClassificationOutputPort",
+              "DataType": "System.String",
+              "FlowDirection": "Output",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "ClassificationType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "ThresholdLevel",
+              "DataType": "System.Double",
+              "Value": "0.2"
+            },
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        },
+        {
+          "Id": "9edf1a42-a838-4816-8a41-070aff512bb3",
+          "Name": "ImagePreprocessing",
+          "InitialData": [
+            "ImagePreprocessing.cs"
+          ],
+          "SamplingRate": 0.2,
+          "Type": "CSharpScriptProcessingNode",
+          "Ports": [
+            {
+              "Id": "7b098df0-1310-4d18-ac14-b1214530bde9",
+              "Name": "ImageVectorOutputPort",
+              "DataType": "System.Single[]",
+              "FlowDirection": "Output",
+              "Protocol": "Streaming",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "NormalizedImageType"
+                }
+              ]
+            },
+            {
+              "Id": "7e96e967-0c00-48f0-90e7-bcbfa6cee121",
+              "Name": "ImageInputPort",
+              "DataType": "System.Byte[]",
+              "Protocol": "Streaming",
+              "Public": true,
+              "Properties": [
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "RawImageType"
+                }
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "Name": "Planes",
+              "DataType": "System.Int32",
+              "Value": "3"
+            },
+            {
+              "Name": "TargetHeight",
+              "DataType": "System.Int32",
+              "Value": "224"
+            },
+            {
+              "Name": "TargetWidth",
+              "DataType": "System.Int32",
+              "Value": "224"
+            },
+            {
+              "Name": "DelayTime",
+              "DataType": "System.Int32",
+              "Value": 0
+            }
+          ]
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Rules": [
+    {
+      "Id": "a3ebcdb2-4538-4d69-9739-53e736fc681d",
+      "Name": "Port Matching Rule",
+      "Type": "PortMatchingRule",
+      "Properties": []
+    }
+  ],
+  "SubDevices": []
+}

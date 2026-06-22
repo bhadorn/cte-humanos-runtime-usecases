@@ -1,0 +1,17 @@
+{
+  "FileName": "c:\\projects\\cte-humanos-runtime\\demo\\imageclassification\\globalids.json",
+  "Ids": {
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1": "574c963f-7a77-4e2b-a803-8ced43957e44",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/Start": "1248f2cb-5b2e-42fe-b36d-af1025dc7ae3",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/Stop": "895c87c0-0f31-4b3e-b960-c99ae8453024",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/RawImage": "00381985-48eb-4a15-859a-f2ce1459ce0c",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/VideoStream": "c37f7911-8f83-447a-aa99-cb6ee1d77c4f",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/Blank Processing Network": "4708abe2-0717-43ee-8d8b-cad908001a46",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/Blank Processing Network/DetectionProcessor": "2c274dcc-f022-4611-a765-a74cbcbb83a9",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/Blank Processing Network/ImageClassificationProcessor": "63607e59-88fd-45f5-aef2-36c4f17649e0",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/Blank Processing Network/ImagePreprocessing": "9edf1a42-a838-4816-8a41-070aff512bb3",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/DetectedClassification": "ac6e90fc-7487-4a76-8ddd-11322684b64c",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/Blank Processing Network/ClassificationSelectionProcessor": "723af23b-eebb-4c1d-865e-e64c635c312c",
+    "373617f8-ac85-42c3-9fd0-0c357a2c1a71/WebCam_v1/Port Matching Rule": "a3ebcdb2-4538-4d69-9739-53e736fc681d"
+  }
+}
