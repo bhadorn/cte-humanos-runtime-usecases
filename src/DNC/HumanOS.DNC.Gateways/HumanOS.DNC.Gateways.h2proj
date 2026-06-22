@@ -1,0 +1,214 @@
+{
+  "Path": "HumanOS.DNC.Gateways.h2proj",
+  "Name": "HumanOS.DNC.Gateways",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "",
+  "DeviceTemplates": [
+    {
+      "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+      "Path": "HeidenhainDNC_v1.json",
+      "Id": "ac695898-5f94-4cf7-85a8-a7ef4d6da65c",
+      "Name": "HeidenhainDNC_v1",
+      "Description": ""
+    },
+    {
+      "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+      "Path": "FanucDNC_v1.json",
+      "Id": "49d026fb-bcd0-477b-b37a-fae5bad879df",
+      "Name": "FanucDNC_v1",
+      "Description": ""
+    },
+    {
+      "DriverId": "4cac473d-0369-43ec-9765-903b23c564be",
+      "Path": "OkumaDNC_v1.json",
+      "Id": "86964505-ba87-4ea0-a0c7-83a3049059ad",
+      "Name": "OkumaDNC_v1",
+      "Description": ""
+    },
+    {
+      "DriverId": "b657332c-a383-47ee-bedd-6156af9c9083",
+      "Path": "SinumerikDNC_v1.json",
+      "Id": "c3aab1af-0d03-4fcd-b17d-d0a8fc62fce5",
+      "Name": "SinumerikDNC_v1",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n64366631376362393037383665636131343563333632303838323630383633616662396563653035\r\n3331323562313833383565396232666637643961633538300a313832653638653235616562613037\r\n66373766373464353532373561663836353466663261663338366136616365613761326339636336\r\n3263303438333939630a376466376664326430366331373435666131323535333161666664356466\r\n37636264333237343634623236393562616265636230353764663361633064373933326361376431\r\n3836373463326533633963663562306538636335376233373439\r\n"
+      }
+    ],
+    "Id": "0aaca0f5-7000-42b6-83a6-b3d0474b222e",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "562c7ccb-5d04-4342-81ff-06ce35554556",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "562c7ccb-5d04-4342-81ff-06ce35554556",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.11"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.HeidenhainControl",
+          "Id": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+          "Name": "HumanOS.UHAL.HeidenhainControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.FanucControl",
+          "Id": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "Name": "HumanOS.UHAL.FanucControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.OkumaControl",
+          "Id": "4cac473d-0369-43ec-9765-903b23c564be",
+          "Name": "HumanOS.UHAL.OkumaControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.SinumerikControl",
+          "Id": "b657332c-a383-47ee-bedd-6156af9c9083",
+          "Name": "HumanOS.UHAL.SinumerikControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    },
+    {
+      "Path": "HermleC41",
+      "Id": "860ac873-28db-4e45-a88a-d638e932bfea",
+      "Name": "HermleC41",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.11",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "HumanOS.SharedNodeSpace.Type": "",
+        "HumanOS.SharedNodeSpace.Address": "localhost",
+        "AppConfig.LogMinimumLevel": "Information",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "AppConfig.LogRetentionDays": "7",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "HumanOS.ServiceId": "860ac873-28db-4e45-a88a-d638e932bfea",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.RuntimeVersion": "2.11"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "ItncSimDev",
+          "DeviceTemplateId": "ac695898-5f94-4cf7-85a8-a7ef4d6da65c",
+          "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
+          "SubDevices": [],
+          "Type": "iTNC530",
+          "Variables": [],
+          "Path": "HermleC41.json",
+          "Id": "61d050db-4d3d-42b6-a6ac-40c92818a7ca",
+          "Name": "HermleC41",
+          "Description": ""
+        }
+      ],
+      "Plugins": [],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

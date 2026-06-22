@@ -22,6 +22,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 **Depending on the use case**:
 
 - **Ansible Agent**: Running [Semaphore](https://semaphoreui.com) instance with Ansible configured
+- **DNC for Different Machine Controls**: The control plugin(s) for the targeted controllers (FANUC, Heidenhain, Okuma, Sinumerik) plus a physical controller or vendor simulator; the included `HermleC41` machine uses the Heidenhain iTNC530 simulator
 - **FANUC Data Aggregation**: `FANUC NCGuide` simulator (pre-configured) or physical FANUC controller
 - **FANUC Robot OPC-UA**: FANUC R-30iB Plus controller with OPC-UA option enabled
 - **FLAMES Demo**: No additional hardware required (file-based simulator included)
@@ -61,6 +62,14 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [Temperature Reporter](./src/TemperatureReporter/Readme.md)                        | FileReader (simulator)            | Threshold-based alerting with multiple alarm levels                                                                         |
 | [Timing Example](./src/TimingExample/Readme.md)                                    | FileReader (simulator)            | Example how to use timers to execute commands                                                                               |
 | [Traub CNC](./src/Traub/Readme.md)                                                 | OpcUaControl                      | OPC-UA bridge with OEE state derivation and NC program header parsing; includes a full machine simulator                    |
+
+## DNC
+
+DNC (Direct Numerical Control) file and tool-data exchange exposed through a uniform, control-independent command set. A single [DNC use case](./src/DNC/Readme.md) provides device templates for the four major controller families and a companion OPC-UA [DNC client](./src/DNC/HumanOS.DNC.Client/readme.md).
+
+| Use Case                                                                           | Connector                         | Key Feature                                                                                                                 |
+| :--------------------------------------------------------------------------------- | :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| [DNC for Different Machine Controls](./src/DNC/Readme.md)                          | Fanuc / Heidenhain / Okuma / Sinumerik | Uniform DNC file streaming, directory and tool-record commands across FANUC, Heidenhain, Okuma and Sinumerik, published via OPC-UA |
 
 ## Tutorials
 
