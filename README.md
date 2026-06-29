@@ -24,6 +24,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 - **Ansible Agent**: Running [Semaphore](https://semaphoreui.com) instance with Ansible configured
 - **DNC for Different Machine Controls**: The control plugin(s) for the targeted controllers (FANUC, Heidenhain, Okuma, Sinumerik) plus a physical controller or vendor simulator; the included `HermleC41` machine uses the Heidenhain iTNC530 simulator
 - **FANUC Data Aggregation**: `FANUC NCGuide` simulator (pre-configured) or physical FANUC controller
+- **FANUC MCP Server**: `FANUC NCGuide` simulator (pre-configured) or physical FANUC controller, plus an MCP-capable AI agent/LLM or MCP test client
 - **FANUC Robot OPC-UA**: FANUC R-30iB Plus controller with OPC-UA option enabled
 - **FLAMES Demo**: No additional hardware required (file-based simulator included)
 - **Fraisa ToolExpert**: Network access to [toolexpert.fraisa.com](https://toolexpert.fraisa.com)
@@ -49,6 +50,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | :--------------------------------------------------------------------------------- | :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
 | [Ansible Agent](./src/AnsibleAgent/Readme.md)                                      | WebControl (REST)                 | IT automation via Semaphore API and HumanOS workflows                                                                       |
 | [FANUC Data Aggregation](./src/FANUC.DataAggregation/Readme.md)                    | FanucControl                      | Aggregating CNC controller data into a unified OPC-UA entity                                                                |
+| [FANUC MCP Server](./src/FanucMcpServer/Readme.md)                                 | FanucControl + MCP Server         | Exposing live FANUC CNC data and gateway tools to AI agents/LLMs over the Model Context Protocol (HTTP/SSE)                 |
 | [FANUC Robot OPC-UA](./src/FanucRobotOpcUa/Readme.md)                              | OpcUaControl                      | OPC-UA bridge: FANUC R-30iB Plus robot telemetry re-published via HumanOS OPC-UA server                                     |
 | [FLAMES Demo](./src/FLAMESDemo/Readme.md)                                          | FileReader + OPC-UA Server        | FLAMES OPC-UA companion spec: state machines, event handling, tool management, and dynamic FileSystem mapped via flames.xml |
 | [Fraisa ToolExpert](./src/Fraisa.ToolExpert/Readme.md)                             | WebControl (REST)                 | Tool lookup from cloud API, exposed via OPC-UA                                                                              |
