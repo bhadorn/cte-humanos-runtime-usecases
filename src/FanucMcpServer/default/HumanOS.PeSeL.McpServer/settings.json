@@ -1,0 +1,30 @@
+{
+  "Services": [
+    {
+      "Id": "9c2c2d4e-6b2e-4f2a-9c0b-7e2b9d1f4a10",
+      "Name": "FactoryFloor",
+      "AllowedOrigins": [
+        "*"
+      ],
+      "AuthenticationSecretName": "",
+      "DataAccessTimeoutSeconds": 5.0,
+      "ExpandToolsToNodeSpace": true,
+      "HostName": "localhost",
+      "MessagePath": "/message",
+      "Port": 8080,
+      "SsePath": "/sse",
+      "X509CertificateFile": "",
+      "X509CertificatePassword": "",
+      "Tools": [],
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "24a5d9e9-5f48-4e42-8050-f3c985a15097",
+        "Devices": [],
+        "Drivers": [],
+        "UnbindingRuleId": "09fda84c-575f-48bf-b228-1611f0aa7a6e",
+        "Properties": {}
+      }
+    }
+  ],
+  "Properties": {}
+}
