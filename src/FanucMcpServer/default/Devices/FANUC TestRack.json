@@ -700,6 +700,12 @@
           "Type": "CommandNode",
           "Arguments": [
             {
+              "Name": "Content",
+              "Type": "Output",
+              "DataType": "System.String",
+              "Description": "File Content"
+            },
+            {
               "Name": "Name",
               "DataType": "System.String",
               "Description": "File name"
@@ -708,15 +714,15 @@
               "Name": "Type",
               "DataType": "System.Int32",
               "Description": "File type. 0 = ISO"
-            },
-            {
-              "Name": "Content",
-              "Type": "Output",
-              "DataType": "System.String",
-              "Description": "File Content"
             }
           ],
-          "Properties": []
+          "Properties": [
+            {
+              "Name": "Mcp:ToolName",
+              "DataType": "System.String",
+              "Value": "read_file"
+            }
+          ]
         }
       ],
       "Groups": [
