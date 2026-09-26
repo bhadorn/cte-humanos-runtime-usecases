@@ -1,5 +1,5 @@
 {
-  "FileName": "C:\\Projects\\Public\\cte-humanos-runtime-usecases\\src\\FanucControl500i\\globalids.json",
+  "FileName": "c:\\projects\\public\\cte-humanos-runtime-usecases\\src\\fanuccontrol500i\\globalids.json",
   "Ids": {
     "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1": "27af1ab8-ce20-4d7a-a34d-a8410e15d467",
     "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/Available": "a0c6d937-0aa4-4f09-a703-340609aef36f",
@@ -37,6 +37,14 @@
     "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/DataProcessors": "9451ac4a-7a9e-445b-be36-ae27981bc5a7",
     "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/DataProcessors/FeedrateOverrideProcessor": "083269f1-c266-4f57-bf27-c299068bb777",
     "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/DataProcessors/SpindleOverrideProcessor": "afcb3e3b-f8dd-4c0f-8ba2-83472be3dc90",
-    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/PortMatchingRule": "7c6aeebb-a550-40ca-980e-56a87265fa45"
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/PortMatchingRule": "7c6aeebb-a550-40ca-980e-56a87265fa45",
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/Controller/NCPath1/CustomValue900": "3f7b5621-366f-408e-a3da-c31c6d1cefdb",
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/OperatorPanel": "df7ef5e5-3383-4f7f-8b1f-253aacdb3c9d",
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/OperatorPanel/X-Axis-Button Pushed": "5a304775-e27d-4098-8806-d99cb9883e54",
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/OperatorPanel/Y-Axis-Button Pushed": "00ec7955-ab91-45f6-b151-c78a8a741963",
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/OperatorPanel/Z-Axis-Button Pushed": "2bca49a1-7bd4-4fe8-a895-9d910f7bb609",
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/OperatorPanel/X-Axis-Selected": "dc0583e6-a821-4d3b-bd20-8449c509defe",
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/OperatorPanel/Y-Axis-Selected": "3735332e-4b33-4556-842e-524b72f11853",
+    "9448a212-f246-4321-89f8-b0971b75c4a8/FanucControl500i_v1/OperatorPanel/Z-Axis-Selected": "761ef761-2a7e-41e5-9a85-86cf8b825bd0"
   }
 }

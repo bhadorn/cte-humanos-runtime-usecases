@@ -465,6 +465,21 @@
                 "Receive": true
               },
               "Properties": []
+            },
+            {
+              "Id": "7168cdd9-e0b3-4961-961f-95ecfd468a36",
+              "Name": "CustomValue900",
+              "Address": "Nc1.CustomMV.Float64:900",
+              "DataType": "System.Double",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "Write": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
             }
           ],
           "ConstantNodes": [],
@@ -524,6 +539,61 @@
           "Groups": []
         }
       ]
+    },
+    {
+      "Id": "15d104de-831f-4e59-a0c7-b8e886bbab70",
+      "Name": "OperatorPanel",
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "140fd8f4-8ea8-4a9f-8a06-f2a4fa7f8d47",
+          "Name": "X-Axis-Selected",
+          "Address": "Pmc1.Pmc_D.Bool:15.0",
+          "DataType": "System.Boolean",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "56a7659d-1636-40c2-8d4c-09b15e154996",
+          "Name": "Y-Axis-Selected",
+          "Address": "Pmc1.Pmc_D.Bool:15.1",
+          "DataType": "System.Boolean",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "ed118ff4-aed1-4f4c-873b-e9b04b3602a1",
+          "Name": "Z-Axis-Selected",
+          "Address": "Pmc1.Pmc_D.Bool:15.2",
+          "DataType": "System.Boolean",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": []
     }
   ],
   "AlarmEventPool": {

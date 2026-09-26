@@ -209,7 +209,7 @@
         {
           "Id": "52e397a4-4f9d-448a-8d26-f9ab150f8104",
           "Name": "PartCounter",
-          "Address": "Nc1.Parts.Int32:22",
+          "Address": "Nc1.TimerAndParts.Int32:22",
           "DataType": "System.Int32",
           "Unit": "",
           "Access": {
@@ -497,6 +497,21 @@
                 "Receive": true
               },
               "Properties": []
+            },
+            {
+              "Id": "3f7b5621-366f-408e-a3da-c31c6d1cefdb",
+              "Name": "CustomValue900",
+              "Address": "Nc1.CustomMV.Float64:900",
+              "DataType": "System.Double",
+              "Unit": "",
+              "Access": {
+                "Read": true,
+                "ReadConversion": {},
+                "Receive": true,
+                "Write": true,
+                "WriteConversion": {}
+              },
+              "Properties": []
             }
           ],
           "ConstantNodes": [],
@@ -556,6 +571,61 @@
           "Groups": []
         }
       ]
+    },
+    {
+      "Id": "df7ef5e5-3383-4f7f-8b1f-253aacdb3c9d",
+      "Name": "OperatorPanel",
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "dc0583e6-a821-4d3b-bd20-8449c509defe",
+          "Name": "X-Axis-Selected",
+          "Address": "Pmc1.Pmc_D.Bool:15.0",
+          "DataType": "System.Boolean",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "3735332e-4b33-4556-842e-524b72f11853",
+          "Name": "Y-Axis-Selected",
+          "Address": "Pmc1.Pmc_D.Bool:15.1",
+          "DataType": "System.Boolean",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        },
+        {
+          "Id": "761ef761-2a7e-41e5-9a85-86cf8b825bd0",
+          "Name": "Z-Axis-Selected",
+          "Address": "Pmc1.Pmc_D.Bool:15.2",
+          "DataType": "System.Boolean",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "ReadConversion": {},
+            "Receive": true,
+            "Write": true,
+            "WriteConversion": {}
+          },
+          "Properties": []
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": []
     }
   ],
   "AlarmEventPool": {
