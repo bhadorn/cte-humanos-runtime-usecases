@@ -177,7 +177,7 @@
         {
           "Id": "f9b4a696-a174-4806-b99e-75c5411a8d5e",
           "Name": "PartCounter",
-          "Address": "Nc1.Parts.Int32:22",
+          "Address": "Nc1.TimerAndParts.Int32:22",
           "DataType": "System.Int32",
           "Unit": "",
           "Access": {
