@@ -1,0 +1,145 @@
+{
+  "Path": "FanucControl500i.h2proj",
+  "Name": "FanucControl500i",
+  "Description": "",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "1.0",
+  "DeviceTemplates": [
+    {
+      "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+      "Path": "FanucControl500i_v1.json",
+      "Id": "409d7452-c4c6-4601-8c98-818548692b2f",
+      "Name": "FanucControl500i_v1",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n32306437343731333536386563353166323233316264366665333165373633366236373561623061\r\n6465313139663732326363336235373334326666313438660a343031656131333737343261303066\r\n33386339623166366339646139653364326639656432656534313061393637653737376665356432\r\n6135653234343434380a653035323363663337366262323966346134373064346331393163333966\r\n30303337643136623765643932346135396132373062393035386232646533613063656663313164\r\n3634353863623233623931396366393465396233366331356135\r\n"
+      },
+      {
+        "Description": "Username and password needed to login over FOCAS3",
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "Id": "bb4ce537-bba8-43b8-ba58-fa9eee91edb4",
+        "KeyName": "FanucCredentials",
+        "Type": "UserPassword",
+        "UserName": "CncguideAdmin",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n63373830656535643638396535323465303561323264613963653633393237666165373663376664\r\n3632343763643666633465633261613234613766626566350a323963313436333331616136666330\r\n66643265386562383264306265663337616464313666626633316236323136303137373264623664\r\n3138376337373864640a306230303533623763663039613538343363363764626338613162323633\r\n6638\r\n"
+      }
+    ],
+    "Id": "73686a9e-60fd-4023-b948-d07df574ceb5",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "888288a2-eb31-49a3-9df9-6a54a16552f7",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.12",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "888288a2-eb31-49a3-9df9-6a54a16552f7",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.12",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "focas3://127.0.0.1:8193",
+          "DeviceTemplateId": "409d7452-c4c6-4601-8c98-818548692b2f",
+          "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "MachineName": "CNC GUIDE 2",
+          "SubDevices": [],
+          "Type": "500i-A",
+          "Variables": [
+            {
+              "Name": "SecretName",
+              "DataType": "System.String",
+              "Value": "FanucCredentials"
+            }
+          ],
+          "Path": "FanucControl.json",
+          "Id": "9448a212-f246-4321-89f8-b0971b75c4a8",
+          "Name": "FanucControl",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.FanucControl",
+          "Id": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "Name": "HumanOS.UHAL.FanucControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
