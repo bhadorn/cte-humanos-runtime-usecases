@@ -75,8 +75,8 @@ namespace HumanOS.IoT.Designer.Library.Scripts
         
         using (SKBitmap resizedBitmap = new SKBitmap(targetInfo))
         {
-          // 3. Bild skalieren mit hoher Qualität
-          sourceBitmap.ScalePixels(resizedBitmap, SKFilterQuality.High);
+          // 3. Bild skalieren mit hoher Qualität (Mitchell-Kubik entspricht dem früheren SKFilterQuality.High)
+          sourceBitmap.ScalePixels(resizedBitmap, new SKSamplingOptions(SKCubicResampler.Mitchell));
 
           // 4. Pixel als sicheren Lese-Span abgreifen (Kein unsafe / kein Zeiger nötig)
           ReadOnlySpan<byte> pixelSpan = resizedBitmap.GetPixelSpan();

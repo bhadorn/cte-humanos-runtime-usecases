@@ -122,7 +122,7 @@ The device exposes the following OPC-UA node hierarchy:
 
 ## Prerequisites
 
-- HumanOS IoT Designer ≥ 2.10
+- HumanOS IoT Designer ≥ 2.12
 - A JSON file at `C:\Temp\TestFile.json` (see sample above)
 - [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing both OPC-UA servers
 

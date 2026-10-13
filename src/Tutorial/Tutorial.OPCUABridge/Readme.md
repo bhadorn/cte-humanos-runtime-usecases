@@ -37,7 +37,7 @@ OPC-UA Client: connects to port 4841, sees data from default
 
 ## Prerequisites
 
-- HumanOS IoT Designer ≥ 2.10
+- HumanOS IoT Designer ≥ 2.12
 - A JSON file at `C:\Temp\TestFile.json`
 - [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing both OPC-UA servers
 

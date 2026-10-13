@@ -60,6 +60,6 @@ coffee.json (file)
 
 | Requirement     | Detail                                                               |
 | --------------- | -------------------------------------------------------------------- |
-| HumanOS Runtime | win-x86 TRIAL, version 2.6                                           |
+| HumanOS Runtime | win-x86 TRIAL, version 2.12                                          |
 | Input file      | `C:\Temp\CoffeeProject\coffee.json`                                  |
 | MySQL           | localhost, database `humanos.datalogger`, user `humanos` / `humanos` |

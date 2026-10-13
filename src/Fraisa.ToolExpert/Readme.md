@@ -29,7 +29,7 @@ Parsed tool data returned to OPC-UA command output
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.11
+- HumanOS IoT Runtime ≥ 2.12
 - Outbound HTTPS access from the gateway to `toolexpert.fraisa.com`
 - An OPC-UA client (e.g. [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html)) to invoke the command and inspect results
 

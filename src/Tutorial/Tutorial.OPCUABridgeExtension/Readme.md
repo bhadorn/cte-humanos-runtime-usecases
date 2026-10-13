@@ -30,7 +30,7 @@ Gateway: default  (port 4840)
 
 ## Prerequisites
 
-- HumanOS IoT Designer ≥ 2.10
+- HumanOS IoT Designer ≥ 2.12
 - A JSON file accessible at the path configured in the device properties
 - [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing the OPC-UA output
 

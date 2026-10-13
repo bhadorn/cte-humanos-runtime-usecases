@@ -37,7 +37,7 @@ OPC-UA Server (port 4840) :  exposes device nodes in parallel
 
 ## Prerequisites
 
-- HumanOS IoT Designer ≥ 2.10
+- HumanOS IoT Designer ≥ 2.12
 - A JSON file at `C:\Temp\TestFile.json`
 - No additional hardware required
 

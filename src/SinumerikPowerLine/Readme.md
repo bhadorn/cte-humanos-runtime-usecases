@@ -23,7 +23,7 @@ HumanOS IoT Runtime
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.9
+- HumanOS IoT Runtime ≥ 2.12
 - SinumerikControl plugin licensed and installed on the gateway
 - Network access from the gateway to the Sinumerik controller (default: `10.1.6.2`, protocol `s840d.pl://`)
 - For DNC: DNC Client plugin configured on the gateway
@@ -74,7 +74,7 @@ The `default` target configuration points to `10.1.6.2` via the `s840d.pl://` pr
 
 ## See Also
 
-- [Sinumerik Connector Manual](https://doc.cybertech.swiss/runtime/2.11/Manuals/HumanOS.UHAL.SinumerikControl/)
+- [Sinumerik Connector Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.UHAL.SinumerikControl/)
 - [HumanOS OEE Model](https://doc.cybertech.swiss/runtime/Models/HumanOS.OEE/)
 - [HumanOS DNC Model](https://doc.cybertech.swiss/runtime/Models/HumanOS.DNC/)
 - [DNC Client Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.PeSeL.DncClient/)

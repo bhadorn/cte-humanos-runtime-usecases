@@ -40,7 +40,7 @@ OPC-UA Client (e.g. UAExpert)
 
 ## Prerequisites
 
-- HumanOS IoT Designer ≥ 2.6
+- HumanOS IoT Designer ≥ 2.12
 - `FANUC NCGuide`:  included as the pre-configured simulator device
 - [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html): recommended for browsing the OPC-UA output
 

@@ -104,7 +104,7 @@ Key processor properties (configurable in the Designer):
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.11 with the **Machine Learning plugin** (`HumanOS.PeMiL.MachineLearning`)
+- HumanOS IoT Runtime ≥ 2.12 with the **Machine Learning plugin** (`HumanOS.PeMiL.MachineLearning`)
   and the **Video Camera plugin** (`HumanOS.UHAL.VideoCamera`) licensed and installed
 - A USB / PnP webcam (the included instance is bound to a specific device address — adjust it to your
   own camera, see *Configuration*)

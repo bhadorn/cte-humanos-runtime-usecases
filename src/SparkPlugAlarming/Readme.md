@@ -29,7 +29,7 @@ SparkPlug Client  →  MQTT Broker  →  SparkPlug subscribers
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.10
+- HumanOS IoT Runtime ≥ 2.12
 - FANUC controller accessible from the gateway (default: `192.168.0.1`, port `8193`)
 - MQTT broker reachable from the gateway (e.g. [Mosquitto](https://mosquitto.org))
 - Optional: [MQTT Explorer](https://mqtt-explorer.com) for inspecting published SparkPlug metrics

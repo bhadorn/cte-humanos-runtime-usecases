@@ -30,7 +30,7 @@ The HumanOS **workflow engine** manages the full asynchronous lifecycle: start, 
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.11
+- HumanOS IoT Runtime ≥ 2.12
 - Running Semaphore instance accessible from the gateway (default: `http://192.168.0.55`)
 - Semaphore credentials stored in the project's encrypted vault (`SemaphoreLogin`)
 - Ansible playbooks already present in the configured Git repository

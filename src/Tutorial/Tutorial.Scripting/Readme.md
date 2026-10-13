@@ -43,7 +43,7 @@ Global Command: Command1   : example callable command
 
 ## Prerequisites
 
-- HumanOS IoT Designer ≥ 2.10
+- HumanOS IoT Designer ≥ 2.12
 - Internet access to `http://mtconnect.mazakcorp.com:5719` (public Mazak demo)
 - A running MQTT broker on `localhost` (e.g. [Mosquitto](https://mosquitto.org)) for the MQTT output
 - [MQTT Explorer](https://mqtt-explorer.com): recommended to inspect published messages

@@ -33,7 +33,7 @@ OPC-UA Server (port 4840)
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.9
+- HumanOS IoT Runtime ≥ 2.12
 - TcpClientControl plugin licensed and installed on the gateway
 - Network access from the gateway to the Mori Seiki controller (default: `192.168.0.10`, TCP port `7878`)
 - OPC-UA client (e.g. [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html)) for inspecting acquired data

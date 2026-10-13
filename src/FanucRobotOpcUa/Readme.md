@@ -30,7 +30,7 @@ FANUC R-30iB Plus
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.11
+- HumanOS IoT Runtime ≥ 2.12
 - FANUC R-30iB Plus controller with OPC-UA option enabled, reachable from the gateway (default: `192.168.1.100`, port `4880`)
 - Optional: [UAExpert](https://www.unified-automation.com/products/development-tools/uaexpert.html) to browse the exposed OPC-UA address space
 

@@ -94,7 +94,7 @@ In addition, the templates publish read-only monitoring nodes such as `CurrentPr
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.11
+- HumanOS IoT Runtime ≥ 2.12
 - The control plugin(s) for the controllers you want to integrate, licensed and installed on the
   gateway: `FanucControl`, `HeidenhainControl`, `OkumaControl` and/or `SinumerikControl`
 - Network access from the gateway to each controller (or a vendor simulator, e.g. the Heidenhain

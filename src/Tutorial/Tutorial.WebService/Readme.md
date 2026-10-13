@@ -36,7 +36,7 @@ HTTP Client  receives response
 
 ## Prerequisites
 
-- HumanOS IoT Designer ≥ 2.10
+- HumanOS IoT Designer ≥ 2.12
 - No additional hardware required
 - A REST client ([Postman](https://www.postman.com)) to test endpoints
 

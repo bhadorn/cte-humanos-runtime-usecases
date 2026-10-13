@@ -39,7 +39,7 @@ Device node: schema nodes appended at runtime
 
 ## Prerequisites
 
-- HumanOS IoT Designer ≥ 2.10
+- HumanOS IoT Designer ≥ 2.12
 - No additional hardware required
 
 ## See Also

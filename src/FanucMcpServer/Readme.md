@@ -120,7 +120,7 @@ Processors and data nodes are wired by **port matching** (`PortMatchId`) rather 
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.11 with the **MCP Server plugin** (`HumanOS.PeSeL.McpServer`) and the
+- HumanOS IoT Runtime ≥ 2.12 with the **MCP Server plugin** (`HumanOS.PeSeL.McpServer`) and the
   **FANUC Control plugin** (`HumanOS.UHAL.FanucControl`) licensed and installed
 - `FANUC NCGuide` simulator (the device is pre-configured for address `NCGUIDE!`) — or a physical FANUC
   controller reachable at the configured address

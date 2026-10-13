@@ -47,7 +47,7 @@
 - [HumanOS Runtime Reference Manual](https://doc.cybertech.swiss/runtime/intro): Full documentation for connectors, device templates, scripts, plugins, and deployment.
 - [WebControl Connector Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.UHAL.WebControl/): REST API connector used in AnsibleAgent and FraisaToolExpert.
 - [SparkPlug Client Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.PeSeL.SparkPlugClient/): MQTT SparkPlug B publisher used in SparkPlugAlarming.
-- [Sinumerik Connector Manual](https://doc.cybertech.swiss/runtime/2.11/Manuals/HumanOS.UHAL.SinumerikControl/): CNC connector used in SinumerikPowerLine.
+- [Sinumerik Connector Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.UHAL.SinumerikControl/): CNC connector used in SinumerikPowerLine.
 - [Trigger Types Reference](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.Runtime/GenericInformationModelNodes/DataNodes.md#trigger-types): Documents OnThreshold, OnChange, and other trigger types used across use cases.
 - [Tutorials](https://doc.cybertech.swiss/runtime/Tutorials/): Step-by-step guides from getting started to complex data types and WebService integration.
 

@@ -31,7 +31,7 @@ ReportProcessingScript  →  output / log
 
 ## Prerequisites
 
-- HumanOS IoT Runtime ≥ 2.11
+- HumanOS IoT Runtime ≥ 2.12
 - No additional hardware required; the included simulator reads from a local JSON file
 
 ## Key Concepts
