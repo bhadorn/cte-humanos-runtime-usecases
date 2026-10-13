@@ -1,15 +1,16 @@
 {
-  "Path": "imageclassification.h2proj",
+  "Path": "ImageClassification.h2proj",
   "Name": "ImageClassification",
   "Description": "Demonstrates how images from webcam can be processed and classified using the machine learing plugin",
   "Author": "",
   "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
   "PlatformURL": "",
   "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
   "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
   "SecurityMode": "StoreKeyInProject",
   "SyntaxVersion": "2.0",
-  "Version": "",
+  "Version": "1.0",
   "DeviceTemplates": [
     {
       "DriverId": "51f3d53d-8353-4bdc-b037-39c2644d0d6a",
@@ -40,12 +41,17 @@
       "DisplayName": "Default IoT Gateway",
       "Description": "",
       "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
       "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
       "Protected": true,
       "PublishScript": "",
       "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
       "Runtime": "HumanOS.IoT.Runtime win-x64",
-      "RuntimeVersion": "2.11",
+      "RuntimeVersion": "2.12",
       "ServiceDescription": "",
       "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
       "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
@@ -60,7 +66,8 @@
         "HumanOS.Repository.Connection": "",
         "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
         "HumanOS.RuntimeVersion": "2.11",
-        "SecretManager.Path": "$(AppSettingsDir)Secrets\\"
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
       },
       "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
       "DataModel": {

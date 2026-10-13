@@ -4,11 +4,12 @@
   "Description": "",
   "Author": "",
   "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
   "PlatformURL": "",
   "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
   "SecurityMode": "StoreKeyInProject",
   "SyntaxVersion": "2.0",
-  "Version": "",
+  "Version": "1.0",
   "DeviceTemplates": [
     {
       "DriverId": "b657332c-a383-47ee-bedd-6156af9c9083",
@@ -46,12 +47,17 @@
       "DisplayName": "Default IoT Gateway",
       "Description": "",
       "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
       "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
       "Protected": true,
       "PublishScript": "",
       "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
       "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
-      "RuntimeVersion": "2.11",
+      "RuntimeVersion": "2.12",
       "ServiceDescription": "",
       "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
       "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
@@ -66,7 +72,8 @@
         "HumanOS.Repository.Connection": "",
         "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
         "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
-        "HumanOS.RuntimeVersion": "2.9"
+        "HumanOS.RuntimeVersion": "2.12",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
       },
       "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
       "DataModel": {
@@ -79,7 +86,7 @@
       "Devices": [
         {
           "Address": "s840d.pl://10.1.6.2?nck-mpi=3",
-          "DeviceTemplateId": "033d32a6-f503-466b-a274-ea4f34fedb13",
+          "DeviceTemplateId": "bc89c9b8-efd3-461b-a75f-97ecd9c847f1",
           "DriverId": "b657332c-a383-47ee-bedd-6156af9c9083",
           "SubDevices": [],
           "Type": "840D PL",

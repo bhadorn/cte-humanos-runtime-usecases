@@ -1,8 +1,8 @@
 {
-  "Id": "83f6d7ae-6f1a-42ba-9418-4d4d3f6d14a3",
+  "Id": "fa1331fb-95b3-4a00-95ba-24411520f209",
   "Name": "Heidenhain iTNC530 Simulator",
   "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
-  "Address": "ItncSim",
+  "Address": "ItncSimDev",
   "Properties": [
     {
       "Name": "Description",
@@ -31,13 +31,21 @@
       "DataType": "System.String"
     },
     {
+      "Name": "MachineYearOfConstruction",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineCriticality",
+      "DataType": "System.String"
+    },
+    {
       "Name": "SupplierName",
       "DataType": "System.String"
     }
   ],
   "DataNodes": [
     {
-      "Id": "5cbf1d13-61c4-4fd6-a45c-de1609a3f086",
+      "Id": "11316e86-1f6b-4484-8819-d5d63373c764",
       "Name": "Available",
       "Address": "Nc1.Info.Int32:0",
       "DataType": "System.Int32",
@@ -95,7 +103,7 @@
       ]
     },
     {
-      "Id": "d0d136fb-2ec4-431b-b7d6-b49f1a024a82",
+      "Id": "3b09d22a-76c8-4e5d-a1ef-08db636105ea",
       "Name": "SignOfLife",
       "Address": "Nc1.Info.Int32:4",
       "DataType": "System.Int32",
@@ -133,7 +141,7 @@
       ]
     },
     {
-      "Id": "0a583f0e-6e5d-4852-92cd-fd72ad719f0b",
+      "Id": "b267c304-5efc-4ed5-b9f1-6e368388fd11",
       "Name": "OEEMachineState",
       "DataType": "System.Int32",
       "Unit": "",
@@ -191,7 +199,7 @@
       ]
     },
     {
-      "Id": "17a8b9db-2f32-45e8-9ad5-aae29f5b9f67",
+      "Id": "607850d7-f493-4d67-98ed-4d01abfe454d",
       "Name": "OEEMachineStateName",
       "DataType": "System.String",
       "Unit": "",
@@ -234,7 +242,7 @@
       ]
     },
     {
-      "Id": "b9833e45-0ffc-41eb-87e2-8407f2ce524e",
+      "Id": "e7306fd1-b096-4990-a773-63acb610a672",
       "Name": "OEEProductionStep",
       "DataType": "System.String",
       "Unit": "",
@@ -285,7 +293,7 @@
       ]
     },
     {
-      "Id": "f2343a56-79a1-41a1-8c88-9291cc01fbd4",
+      "Id": "c68a319b-8c9a-46cc-a8a3-7920851b0257",
       "Name": "OEEProductName",
       "DataType": "System.String",
       "Unit": "",
@@ -340,7 +348,7 @@
   "Commands": [],
   "Groups": [
     {
-      "Id": "e9a36e52-00a6-4bd4-ae08-24824dc198fa",
+      "Id": "5fcce195-ac8e-4545-bf30-46a52b9f0eff",
       "Name": "Controller",
       "Properties": [
         {
@@ -356,7 +364,7 @@
       ],
       "DataNodes": [
         {
-          "Id": "b72019ab-dfbd-4f09-afe6-7c0b740c2aa9",
+          "Id": "d1588aad-66e8-42b2-aa27-f841a5d31b2a",
           "Name": "OperationMode",
           "Address": "Nc1.Automatic.Int32:0",
           "DataType": "System.Int32",
@@ -414,7 +422,7 @@
           ]
         },
         {
-          "Id": "0a87d5d2-8976-4038-8f0b-325dc71a2b6d",
+          "Id": "2de9efcd-dc4c-4e50-a304-5f1e521f75ab",
           "Name": "RunningState",
           "Address": "Nc1.Automatic.Int32:1",
           "DataType": "System.Int32",
@@ -472,7 +480,7 @@
           ]
         },
         {
-          "Id": "25ce8fb2-3b88-41ce-9f06-586a80b6f355",
+          "Id": "087d65c3-5ece-4c2b-b27c-8edbcc9aeb83",
           "Name": "FeedrateOverride",
           "Address": "Nc1.Automatic.Int32:10",
           "DataType": "System.Double",
@@ -500,7 +508,7 @@
           ]
         },
         {
-          "Id": "8ad3fde9-784a-47a3-94ad-55677567141c",
+          "Id": "280a3002-d6ca-4892-a835-a236fe6f9c1c",
           "Name": "SpindleOverride",
           "Address": "Nc1.Automatic.Int32:11",
           "DataType": "System.Double",
@@ -528,7 +536,7 @@
           ]
         },
         {
-          "Id": "e15cbdd2-8dfd-459d-b339-e35ca1a08fcf",
+          "Id": "0debc0bd-a304-4157-b40a-4b52439b0992",
           "Name": "OperationTime",
           "Address": "Nc1.ProcessData.Float64:3",
           "DataType": "System.Double",
@@ -557,7 +565,7 @@
           ]
         },
         {
-          "Id": "edf17370-7929-470c-a012-cb8fce9fc90a",
+          "Id": "dbdc56d9-dd1d-4f83-a944-b139c4b0bc1e",
           "Name": "PowerOnTime",
           "Address": "Nc1.ProcessData.Float64:1",
           "DataType": "System.Double",
@@ -586,7 +594,7 @@
           ]
         },
         {
-          "Id": "ce329062-38df-49b3-b439-58ccca8ea4b6",
+          "Id": "e54218cb-967a-43b1-81c5-9bb16e1cd1a1",
           "Name": "ControllerType",
           "Address": "Nc1.Info.String:1",
           "DataType": "System.String",
@@ -598,7 +606,7 @@
           "Properties": []
         },
         {
-          "Id": "62c01040-288e-4864-9c1c-235e8ede450c",
+          "Id": "0b22f5fe-d243-4710-86ca-d89d23b21cf1",
           "Name": "ControllerNcVersion",
           "Address": "Nc1.Info.String:2",
           "DataType": "System.String",
@@ -610,7 +618,7 @@
           "Properties": []
         },
         {
-          "Id": "6b2bed06-cc6d-4d9a-8753-2258c59001a2",
+          "Id": "f73a5a7f-af55-4933-a575-25eb159c10e7",
           "Name": "ControllerDncVersion",
           "Address": "Nc1.Info.String:3",
           "DataType": "System.String",
@@ -622,7 +630,7 @@
           "Properties": []
         },
         {
-          "Id": "e7ddbed5-1575-47e1-bd2f-7a48abd622ba",
+          "Id": "a9abcc76-ec9d-4314-a544-06d1573d1a9c",
           "Name": "AlarmState",
           "Address": "Nc1.Automatic.Int32:201",
           "DataType": "System.Int32",
@@ -640,7 +648,7 @@
           ]
         },
         {
-          "Id": "a7c41ece-738b-4593-b22a-0a498ef84d27",
+          "Id": "15bd0f02-2a42-4685-b614-0c44181229fa",
           "Name": "EmergencyState",
           "Address": "Nc1.Automatic.Int32:200",
           "DataType": "System.Int32",
@@ -668,7 +676,7 @@
           ]
         },
         {
-          "Id": "2db6078d-3855-4604-880a-3395d960c7e2",
+          "Id": "e5147c7f-9fdf-4ea8-b9a9-d7f51139737d",
           "Name": "CuttingTime",
           "Address": "Nc1.ProcessData.Float64:1",
           "DataType": "System.Double",
@@ -697,7 +705,7 @@
           ]
         },
         {
-          "Id": "0bbc9528-b349-4d03-bd88-9e99479a774b",
+          "Id": "68258e0f-1adc-402a-a025-85995df6bba1",
           "Name": "PartCounter",
           "Address": "",
           "DataType": "System.Int32",
@@ -755,7 +763,7 @@
       "Commands": [],
       "Groups": [
         {
-          "Id": "cc0ad151-4cd7-415d-b862-c20ca103291d",
+          "Id": "b61f27ab-1e5a-4814-8ea9-7b1d4b0677d9",
           "Name": "NCPath1",
           "Properties": [
             {
@@ -771,7 +779,7 @@
           ],
           "DataNodes": [
             {
-              "Id": "657d2707-92ba-45cc-942f-2be0e986b1cd",
+              "Id": "58714f5a-16ef-4e13-ba12-821bb5822a44",
               "Name": "LastToolSpareId",
               "Address": "Nc1.Automatic.Int32:111",
               "DataType": "System.Int32",
@@ -783,7 +791,7 @@
               "Properties": []
             },
             {
-              "Id": "254cad4d-e801-41be-88e2-14d3cccc8474",
+              "Id": "bae34184-abc7-4055-ace5-f2668154d05e",
               "Name": "LastToolIndex",
               "Address": "Nc1.Automatic.Int32:112",
               "DataType": "System.Int32",
@@ -795,7 +803,7 @@
               "Properties": []
             },
             {
-              "Id": "ef6995cb-7ce0-4212-a18b-d8a15b5cbe0f",
+              "Id": "159ffa64-dcde-43b8-957d-da0163913dd4",
               "Name": "LastToolId",
               "Address": "Nc1.Automatic.Int32:110",
               "DataType": "System.Int32",
@@ -807,7 +815,7 @@
               "Properties": []
             },
             {
-              "Id": "0964b472-6087-41da-aa3f-da2be7d9346a",
+              "Id": "1f7e164a-fc24-4976-998b-a5dfe60ac709",
               "Name": "CurrentToolSpareId",
               "Address": "Nc1.Automatic.Int32:101",
               "DataType": "System.Int32",
@@ -819,7 +827,7 @@
               "Properties": []
             },
             {
-              "Id": "d3c72a92-0169-4af4-ad76-085977186e86",
+              "Id": "ce497389-b0a9-4cce-87d1-ff35728adaad",
               "Name": "CurrentToolIndex",
               "Address": "Nc1.Automatic.Int32:102",
               "DataType": "System.Int32",
@@ -831,7 +839,7 @@
               "Properties": []
             },
             {
-              "Id": "a3fe8b30-03b0-4a82-89cf-8edc0fbd1c05",
+              "Id": "59b21c06-9d9c-4128-acbd-1a89fb9c9e3b",
               "Name": "CurrentToolId",
               "Address": "Nc1.Automatic.Int32:100",
               "DataType": "System.String",
@@ -854,7 +862,7 @@
               ]
             },
             {
-              "Id": "062b45cf-8bc3-4aff-bbb3-8e7510a16845",
+              "Id": "4aa7ac98-d9c2-4a12-87d0-b149dbdff9ad",
               "Name": "CurrentProgram",
               "Address": "Nc1.Automatic.String:2",
               "DataType": "System.String",
@@ -887,7 +895,7 @@
               ]
             },
             {
-              "Id": "180631b1-074e-40d4-ba83-713b238d232f",
+              "Id": "0bd06b6b-9503-4ba8-9e41-b9275ba211ec",
               "Name": "MainProgramHeader",
               "Address": "Nc1.Automatic.String:6",
               "DataType": "System.String",
@@ -910,7 +918,7 @@
               ]
             },
             {
-              "Id": "10fc3234-5385-4fcb-8877-bb57cc282a04",
+              "Id": "0b3948fb-c948-4753-b421-404931ea4939",
               "Name": "CurrentFeed",
               "Address": "",
               "DataType": "System.Double",
@@ -939,7 +947,7 @@
               ]
             },
             {
-              "Id": "4f901579-3e54-4275-a36f-b292925d9962",
+              "Id": "c79df42f-e30b-4386-a69f-a7848fe0939f",
               "Name": "CurrentNcBlock",
               "Address": "",
               "DataType": "System.String",
@@ -951,7 +959,7 @@
               "Properties": []
             },
             {
-              "Id": "b4f81865-e5c4-4032-aab8-34686c3585ba",
+              "Id": "56f221b2-19b4-465a-8d9e-0bfd213d17ee",
               "Name": "CurrentSequenceNr",
               "Address": "",
               "DataType": "System.String",
@@ -974,7 +982,7 @@
               ]
             },
             {
-              "Id": "a1efe509-a4d7-44ad-a6e9-6540729f2cb5",
+              "Id": "b5ec66c0-89b9-421f-b894-81dd452d0736",
               "Name": "CurrentSpindleSpeed",
               "Address": "",
               "DataType": "System.Double",
@@ -1003,7 +1011,7 @@
               ]
             },
             {
-              "Id": "69eab5a7-4e95-43e7-8706-a598f9ceafb5",
+              "Id": "647f58d7-af3b-4ab3-b54d-dd912aa0da6f",
               "Name": "MainProgram",
               "Address": "",
               "DataType": "System.String",
@@ -1046,7 +1054,7 @@
               ]
             },
             {
-              "Id": "1c9b4faa-84e7-4a36-a7d5-bae1827e7706",
+              "Id": "7335722e-73b7-47d6-8a99-0c53a5519e74",
               "Name": "ProgrammedFeed",
               "Address": "",
               "DataType": "System.Double",
@@ -1074,7 +1082,7 @@
               ]
             },
             {
-              "Id": "81d91299-4ec7-4cbc-83a1-177acda8eae3",
+              "Id": "fb3a75bc-31c1-4f92-b955-705ca3a86eef",
               "Name": "ProgrammedSpindleSpeed",
               "Address": "",
               "DataType": "System.Double",
@@ -1102,7 +1110,7 @@
               ]
             },
             {
-              "Id": "28a70039-3fe4-4083-a8f2-6266622e5950",
+              "Id": "23dcf814-c366-4aa0-8a0f-3fb6428ae111",
               "Name": "RapidFeed",
               "Address": "Nc1.Automatic.Int32:12",
               "DataType": "System.Int32",
@@ -1122,7 +1130,7 @@
     }
   ],
   "AlarmEventPool": {
-    "Id": "5c32e939-e4d8-4d39-b1ec-0ef616fd128b",
+    "Id": "acb9f929-9fd2-4db5-8faa-e827a7eda0ee",
     "Name": "MachineAlarming",
     "Tasks": [
       {
@@ -1194,13 +1202,13 @@
   "EntityTypes": [],
   "ProcessingNetworks": [
     {
-      "Id": "2bb1f904-cb83-47f4-99ff-247fdebe0316",
+      "Id": "75460715-dff2-45e0-a839-950336835649",
       "Name": "DataProcessors",
       "DataNodes": [],
       "Links": [],
       "Processors": [
         {
-          "Id": "46a55d54-5fb2-4cfd-aa9b-98ecb5ee45fd",
+          "Id": "e7798485-981a-4c5b-a877-336fac7aefb3",
           "Name": "MachineStateProcessor",
           "InitialData": [
             "AvailableState <= 0 => OutputMachineState=900; OutputMachineStateName=\"Power Off\"",
@@ -1341,7 +1349,7 @@
           ]
         },
         {
-          "Id": "ba493b3a-a283-4031-be3d-5d90371b32f3",
+          "Id": "ada5f116-ac93-4d4e-8575-6441b672a541",
           "Name": "MainProgramHeaderProcessor",
           "InitialData": [
             "TMainProgramHeaderProcessorScript.cs"
@@ -1407,7 +1415,7 @@
   ],
   "Rules": [
     {
-      "Id": "8f564509-acd3-4674-9364-8e18f5c5a65d",
+      "Id": "13ca3df6-5fcf-489e-a99e-dbd427badf30",
       "Name": "PortMatchingRule",
       "Type": "PortMatchingRule",
       "Properties": [

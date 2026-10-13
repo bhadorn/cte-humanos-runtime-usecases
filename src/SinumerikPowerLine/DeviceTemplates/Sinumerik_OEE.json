@@ -471,18 +471,20 @@
         {
           "Id": "98e40873-4de6-47b3-89e2-d1b64ffb5279",
           "Name": "FeedrateOverride",
-          "Address": "/Channel/State/feedRateIpoOvr",
+          "Address": "/Channel/State/feedRateIpoOvr[u1]",
           "DataType": "System.Double",
           "Unit": "%",
           "Access": {
             "Read": true,
-            "Receive": true
+            "ReadConversion": {},
+            "Receive": true,
+            "WriteConversion": {}
           },
           "Properties": [
             {
-              "Name": "PortMatchId",
+              "Name": "mtc:DataItemId",
               "DataType": "System.String",
-              "Value": "FeedrateOverrideType"
+              "Value": "LpFovr"
             },
             {
               "Name": "mtc:InformationType",
@@ -490,9 +492,9 @@
               "Value": "PATH_FEEDRATE_OVERRIDE"
             },
             {
-              "Name": "mtc:DataItemId",
+              "Name": "PortMatchId",
               "DataType": "System.String",
-              "Value": "LpFovr"
+              "Value": "FeedrateOverrideType"
             }
           ]
         },
@@ -821,18 +823,20 @@
               "Unit": "",
               "Access": {
                 "Read": true,
-                "Receive": true
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
               },
               "Properties": [
-                {
-                  "Name": "PortMatchId",
-                  "DataType": "System.String",
-                  "Value": "MainProgramHeaderType"
-                },
                 {
                   "Name": "mtc:Ignore",
                   "DataType": "System.Boolean",
                   "Value": "true"
+                },
+                {
+                  "Name": "PortMatchId",
+                  "DataType": "System.String",
+                  "Value": "MainProgramHeaderType"
                 }
               ]
             },
@@ -885,13 +889,15 @@
             {
               "Id": "72b014da-cfe3-441b-acff-30e0b016041d",
               "Name": "CurrentFeed",
-              "Address": "/Channel/State/actfeedrateipo[u1]",
+              "Address": "/Channel/State/actFeedRateIpo[u1]",
               "DataType": "System.Double",
               "Unit": "mm/min",
               "DataClass": "Stream",
               "Access": {
                 "Read": true,
-                "Receive": true
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
               },
               "Properties": [
                 {
@@ -914,13 +920,15 @@
             {
               "Id": "0adcb6dd-abc9-4711-86c0-b92ef5f6e6e5",
               "Name": "CurrentSpindleSpeed",
-              "Address": "/Channel/spindle/actspeed[u1,1]",
+              "Address": "/Channel/Spindle/actSpeed[u1,1]",
               "DataType": "System.Double",
               "Unit": "1/min",
               "DataClass": "Stream",
               "Access": {
                 "Read": true,
-                "Receive": true
+                "ReadConversion": {},
+                "Receive": true,
+                "WriteConversion": {}
               },
               "Properties": [
                 {
@@ -1063,6 +1071,7 @@
       ]
     }
   ],
+  "Agents": [],
   "Skills": [],
   "TaskProcessors": [],
   "EntityTypes": [],
@@ -1207,5 +1216,6 @@
         }
       ]
     }
-  ]
+  ],
+  "SubDevices": []
 }

@@ -4,12 +4,12 @@
   "Description": "",
   "Author": "",
   "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
   "PlatformURL": "",
-  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
   "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
   "SecurityMode": "StoreKeyInProject",
   "SyntaxVersion": "2.0",
-  "Version": "",
+  "Version": "1.0",
   "DeviceTemplates": [
     {
       "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
@@ -47,12 +47,17 @@
       "DisplayName": "Default IoT Gateway",
       "Description": "",
       "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
       "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
       "Protected": true,
       "PublishScript": "",
       "PublishScriptArguments": "",
-      "Runtime": "HumanOS.IoT.Runtime win-x86",
-      "RuntimeVersion": "2.10",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.12",
       "ServiceDescription": "",
       "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
       "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
@@ -66,7 +71,9 @@
         "HumanOS.Repository.Type": "",
         "HumanOS.Repository.Connection": "",
         "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
-        "HumanOS.RuntimeVersion": "2.10"
+        "HumanOS.RuntimeVersion": "2.10",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
       },
       "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
       "DataModel": {
@@ -78,28 +85,14 @@
       },
       "Devices": [
         {
-          "Address": "ItncSim",
-          "DeviceTemplateId": "efb3e6d4-3469-4cc0-919e-04fc83001fb3",
-          "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
-          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
-          "SubDevices": [],
-          "Type": "iTNC530",
-          "Variables": [],
-          "Path": "Heidenhain iTNC530 Simulator.json",
-          "Id": "80ea07c9-503d-4cfe-a005-dc704134d9a7",
-          "Name": "Heidenhain iTNC530 Simulator",
-          "Description": ""
-        },
-        {
-          "Address": "ItncSim",
+          "Address": "ItncSimDev",
           "DeviceTemplateId": "dfb5507b-09ee-42cd-982a-d7cc0a1ddecd",
           "DriverId": "20c836db-38e9-4b04-bfed-542e2ff5c72f",
-          "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
           "SubDevices": [],
           "Type": "iTNC530",
           "Variables": [],
           "Path": "Heidenhain iTNC530 OEE Simulator.json",
-          "Id": "8133f4b6-6e14-4285-9ddd-fed2e6484c2f",
+          "Id": "f97fb62c-d7f2-4154-8d1e-78bdb09833ad",
           "Name": "Heidenhain iTNC530 OEE Simulator",
           "Description": ""
         }

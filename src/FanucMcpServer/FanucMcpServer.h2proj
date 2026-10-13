@@ -4,11 +4,12 @@
   "Description": "",
   "Author": "",
   "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
   "PlatformURL": "",
   "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
   "SecurityMode": "StoreKeyInProject",
   "SyntaxVersion": "2.0",
-  "Version": "",
+  "Version": "1.0",
   "DeviceTemplates": [
     {
       "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
@@ -39,12 +40,17 @@
       "DisplayName": "Default IoT Gateway",
       "Description": "",
       "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
       "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
       "Protected": true,
       "PublishScript": "",
       "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
       "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
-      "RuntimeVersion": "2.11",
+      "RuntimeVersion": "2.12",
       "ServiceDescription": "",
       "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
       "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
@@ -59,7 +65,8 @@
         "HumanOS.Repository.Connection": "",
         "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
         "HumanOS.RuntimeVersion": "2.11",
-        "SecretManager.Path": "$(AppSettingsDir)Secrets\\"
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
       },
       "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
       "DataModel": {
@@ -86,7 +93,14 @@
       "Plugins": [
         {
           "CustomFiles": [],
-          "ScriptFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "Blank_PeSeLMcpScriptObject.cs",
+              "Id": "c59c5dc9-1eb0-4641-b866-8d8e73038581",
+              "Name": "Blank_PeSeLMcpScriptObject.cs",
+              "Description": ""
+            }
+          ],
           "Path": "HumanOS.PeSeL.McpServer",
           "Id": "663934e6-fcf1-496d-a40b-31997ec7bd94",
           "Name": "HumanOS.PeSeL.McpServer",
