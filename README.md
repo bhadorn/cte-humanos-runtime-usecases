@@ -23,6 +23,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 
 - **Ansible Agent**: Running [Semaphore](https://semaphoreui.com) instance with Ansible configured
 - **DNC for Different Machine Controls**: The control plugin(s) for the targeted controllers (FANUC, Heidenhain, Okuma, Sinumerik) plus a physical controller or vendor simulator; the included `HermleC41` machine uses the Heidenhain iTNC530 simulator
+- **Excel-Reader**: A ctProduction test tenant with the configuration of the folder `src/FileReader/ctProduction` applied; Microsoft Excel to change the demo file
 - **FANUC 500i-A Control (FOCAS3)**: `FANUC CNC GUIDE 2` simulator (pre-configured for `focas3://127.0.0.1:8193`) or physical FANUC 500i-A controller with a FOCAS3 user account
 - **FANUC Data Aggregation**: `FANUC NCGuide` simulator (pre-configured) or physical FANUC controller
 - **FANUC MCP Server**: `FANUC NCGuide` simulator (pre-configured) or physical FANUC controller, plus an MCP-capable AI agent/LLM or MCP test client
@@ -50,6 +51,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | Use Case                                                                           | Connector                         | Key Feature                                                                                                                 |
 | :--------------------------------------------------------------------------------- | :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
 | [Ansible Agent](./src/AnsibleAgent/Readme.md)                                      | WebControl (REST)                 | IT automation via Semaphore API and HumanOS workflows                                                                       |
+| [Excel-Reader](./src/FileReader/Readme.md)                                         | FileReader (Excel) + ctProduction | Reads an Excel file and syncs its orders into ctProduction maintenance jobs (create, update, cancel)                        |
 | [FANUC 500i-A Control (FOCAS3)](./src/FanucControl500i/Readme.md)                  | FanucControl (FOCAS3) + OPC-UA    | Authenticated FOCAS3 connection to new FANUC 500i-A controls (credentials from secret store), published via OPC-UA          |
 | [FANUC Data Aggregation](./src/FANUC.DataAggregation/Readme.md)                    | FanucControl                      | Aggregating CNC controller data into a unified OPC-UA entity                                                                |
 | [FANUC MCP Server](./src/FanucMcpServer/Readme.md)                                 | FanucControl + MCP Server         | Exposing live FANUC CNC data and gateway tools to AI agents/LLMs over the Model Context Protocol (HTTP/SSE)                 |

@@ -1,0 +1,61 @@
+{
+  "Id": "7f8589e5-5d29-4a57-8e7c-0472efa82071",
+  "Name": "EXCEL-READER",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "",
+  "Variables": [],
+  "Properties": [],
+  "DataNodes": [
+    {
+      "Id": "f0e58d5e-9932-40a9-9c07-c046f868fe2f",
+      "Name": "SheetData",
+      "Address": "xlsx:$.Tabelle1",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Agents": [
+    {
+      "Id": "9a4912d3-b054-450e-a94a-2dd72f4e545f",
+      "Name": "Actor",
+      "Type": "GenericActor",
+      "Skills": [
+        "9cf292c6-e00b-417f-84e3-00ff754f9ab8"
+      ],
+      "Properties": [
+        {
+          "Name": "Skills",
+          "DataType": "System.Guid[]",
+          "Value": "9cf292c6-e00b-417f-84e3-00ff754f9ab8"
+        },
+        {
+          "Name": "opc-ua:Ignore",
+          "DataType": "System.Boolean",
+          "Value": "true"
+        }
+      ]
+    }
+  ],
+  "Skills": [
+    {
+      "Id": "9cf292c6-e00b-417f-84e3-00ff754f9ab8",
+      "Name": "MaintenanceSync",
+      "Properties": []
+    }
+  ],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

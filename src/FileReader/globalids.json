@@ -1,0 +1,9 @@
+{
+  "FileName": "C:\\Projects\\cte-humanos-runtime-usecases\\src\\FileReader\\globalids.json",
+  "Ids": {
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER": "cb41dc3d-3b31-4d4d-874f-b78c6c4fd6ec",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/SheetData": "b08f64b1-61b2-4433-b808-6d7c99581103",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/Actor": "58eda181-8a43-4a12-9678-8de8380bea96",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/MaintenanceSync": "9cf292c6-e00b-417f-84e3-00ff754f9ab8"
+  }
+}

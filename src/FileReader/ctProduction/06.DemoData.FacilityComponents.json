@@ -1,0 +1,96 @@
+{
+    "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+    "EntityName":  "FacilityComponent",
+    "ExportedBy":  null,
+    "ExportedAt":  null,
+    "Entities":  [
+                     {
+                         "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+                         "Id":  "2b2ba14a-0d04-495b-bde1-10bf70e24f67",
+                         "TimeStamp":  null,
+                         "Fields":  {
+                                        "Name":  "Demo milling center 1",
+                                        "InventoryNumber":  "EQ-DEMO-01",
+                                        "WorkplaceId":  "faf9b713-0ccd-4de2-9295-4100c1aa4e0b",
+                                        "LifeCycleState":  "Active"
+                                    }
+                     },
+                     {
+                         "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+                         "Id":  "2b2a2d07-0113-498a-a2d6-fac9b9511da0",
+                         "TimeStamp":  null,
+                         "Fields":  {
+                                        "Name":  "Demo milling center 2",
+                                        "InventoryNumber":  "EQ-DEMO-02",
+                                        "WorkplaceId":  "faf9b713-0ccd-4de2-9295-4100c1aa4e0b",
+                                        "LifeCycleState":  "Active"
+                                    }
+                     },
+                     {
+                         "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+                         "Id":  "ec824799-19d1-40b9-b8d1-18284bbf48ca",
+                         "TimeStamp":  null,
+                         "Fields":  {
+                                        "Name":  "Demo milling center 3",
+                                        "InventoryNumber":  "EQ-DEMO-03",
+                                        "WorkplaceId":  "faf9b713-0ccd-4de2-9295-4100c1aa4e0b",
+                                        "LifeCycleState":  "Active"
+                                    }
+                     },
+                     {
+                         "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+                         "Id":  "ab7aa69c-2cc7-4cdd-8d46-f499ccdf601c",
+                         "TimeStamp":  null,
+                         "Fields":  {
+                                        "Name":  "Demo milling center 4",
+                                        "InventoryNumber":  "EQ-DEMO-04",
+                                        "WorkplaceId":  "faf9b713-0ccd-4de2-9295-4100c1aa4e0b",
+                                        "LifeCycleState":  "Active"
+                                    }
+                     },
+                     {
+                         "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+                         "Id":  "d1888ce4-dd2e-41f8-9b1c-a2becf8654fb",
+                         "TimeStamp":  null,
+                         "Fields":  {
+                                        "Name":  "Demo milling center 5",
+                                        "InventoryNumber":  "EQ-DEMO-05",
+                                        "WorkplaceId":  "faf9b713-0ccd-4de2-9295-4100c1aa4e0b",
+                                        "LifeCycleState":  "Active"
+                                    }
+                     },
+                     {
+                         "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+                         "Id":  "755a4111-1d28-4073-bdad-fb19b47f76fa",
+                         "TimeStamp":  null,
+                         "Fields":  {
+                                        "Name":  "Demo milling center 6",
+                                        "InventoryNumber":  "EQ-DEMO-06",
+                                        "WorkplaceId":  "faf9b713-0ccd-4de2-9295-4100c1aa4e0b",
+                                        "LifeCycleState":  "Active"
+                                    }
+                     },
+                     {
+                         "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+                         "Id":  "11d56da7-d671-46e8-9286-a45ad4ea7ae1",
+                         "TimeStamp":  null,
+                         "Fields":  {
+                                        "Name":  "Demo milling center 7",
+                                        "InventoryNumber":  "EQ-DEMO-07",
+                                        "WorkplaceId":  "faf9b713-0ccd-4de2-9295-4100c1aa4e0b",
+                                        "LifeCycleState":  "Active"
+                                    }
+                     },
+                     {
+                         "CollectionId":  "6ccc7179-9125-4b4b-baa4-9849351c1187",
+                         "Id":  "f5b845f0-5ea2-4bec-8627-1dc40c2e9bdf",
+                         "TimeStamp":  null,
+                         "Fields":  {
+                                        "Name":  "Demo milling center 8",
+                                        "InventoryNumber":  "EQ-DEMO-08",
+                                        "WorkplaceId":  "faf9b713-0ccd-4de2-9295-4100c1aa4e0b",
+                                        "LifeCycleState":  "Active"
+                                    }
+                     }
+                 ]
+}

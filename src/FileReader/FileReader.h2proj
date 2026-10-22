@@ -1,0 +1,201 @@
+{
+  "Path": "FileReader.h2proj",
+  "Name": "FileReader",
+  "Description": "Reads files with the FileReader. Target ExcelReader reads an Excel file and syncs its orders into ctProduction maintenance jobs.",
+  "Author": "CyberTech Engineering GmbH",
+  "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
+  "PlatformURL": "",
+  "ProductLicenseId": "bf28dd1c-7589-4903-b11e-2e9a249ce5a6",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "1.0",
+  "DeviceTemplates": [
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "EXCEL-READER.json",
+      "Id": "7f8589e5-5d29-4a57-8e7c-0472efa82071",
+      "Name": "EXCEL-READER",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n31653338356261363838616233376638383034376466323931343431346434303738306439633236\r\n3062323235396633383261303633643165666238386266300a323964613339393739373430396131\r\n36343135353432326536373831356565323263316230613364336438303464663063646137643133\r\n3962663361383534610a316431343130313365626662373461373134373039326262383532343633\r\n65663464363737666534343936386166363164663138633134643933383531656530393034353065\r\n6135623330363664343862613038323232346532323162303835\r\n"
+      }
+    ],
+    "Id": "5fb7dc93-1ccd-4eb4-a06f-97ffddb9c646",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "e819bb33-a477-42cf-8885-32c79f4a6cd7",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.12",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "e819bb33-a477-42cf-8885-32c79f4a6cd7",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.12"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.FileReader",
+          "Id": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "Name": "HumanOS.UHAL.FileReader",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    },
+    {
+      "Path": "Excel-Reader",
+      "Id": "e140162b-116f-4401-a83c-7f803d5cdd85",
+      "Name": "Excel-Reader",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86",
+      "RuntimeVersion": "2.12",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "SharedNodeSpacePluginId": "0dae9067-44eb-40b9-9385-dd6efb353e11",
+      "AppSettings": {
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "HumanOS.SharedNodeSpace.Type": "HumanOS.PeMiL.MQTTMessageBus.TSharedNodeSpaceHub, HumanOS.PeMiL.MQTTMessageBus",
+        "HumanOS.SharedNodeSpace.Address": "localhost",
+        "AppConfig.LogMinimumLevel": "Information",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "AppConfig.LogRetentionDays": "7",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\",
+        "HumanOS.ServiceId": "e140162b-116f-4401-a83c-7f803d5cdd85",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.RuntimeVersion": "2.12",
+        "HumanOS.SharedNodeSpace.MasterSystemControllerId": "",
+        "HumanOS.SharedNodeSpace.MasterAgentOrchestratorId": ""
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "..\\..\\..\\MaintenanceOrders.xlsx",
+          "DeviceTemplateId": "7f8589e5-5d29-4a57-8e7c-0472efa82071",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "Excel",
+          "Variables": [],
+          "Path": "ExcelReader.json",
+          "Id": "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70",
+          "Name": "ExcelReader",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [
+          {
+            "Path": "Platform.MaintenanceSync.cs",
+            "Id": "cf236281-0f6c-4066-87ab-a94f1229b7aa",
+            "Name": "Platform.MaintenanceSync.cs",
+            "Description": ""
+          }
+        ],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}
