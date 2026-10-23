@@ -1,7 +1,7 @@
 {
   "Path": "FileReader.h2proj",
   "Name": "FileReader",
-  "Description": "Reads files with the FileReader. Target ExcelReader reads an Excel file and syncs its orders into ctProduction maintenance jobs.",
+  "Description": "Reads files with the FileReader. Target Excel-Reader reads an Excel file and syncs its orders into ctProduction maintenance jobs. The sync runs only when started manually (task Run or REST action sync); saving the file alone does not change jobs.",
   "Author": "CyberTech Engineering GmbH",
   "AutoIncrementPublishNumber": true,
   "PlatformPublishTokenSecret": "",

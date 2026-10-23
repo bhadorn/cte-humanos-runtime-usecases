@@ -9,6 +9,8 @@ keywords: [HumanOS, FileReader, Excel, xlsx, ctProduction, maintenance job, pipe
 
 Shows how the HumanOS **FileReader** reads an Excel file (`xlsx:` addresses) and how a script turns the rows into **maintenance jobs in ctProduction**. A row is an operation of a maintenance order. The sync creates jobs for new rows, updates jobs that are still in the file and cancels jobs whose row disappeared.
 
+> **The sync does not run when the file is saved.** Start it with **Run** on the task `Task.MaintenanceJob.ExcelSync` in the task list, or call the REST action `sync` on `MaintenanceJob`.
+
 The project is called **FileReader** and holds one target per file format. The target **`Excel-Reader`** is described here; everything of this example (device, agent and skill, script, plugin settings) lives in that target, the device comes from the device template `EXCEL-READER`. The target `default` is not part of this example.
 
 ## Architecture
@@ -19,7 +21,11 @@ MaintenanceOrders.xlsx  (edited by hand, e.g. in Excel)
         ▼
 HumanOS gateway ── device ExcelReader ── data node SheetData (whole sheet as JSON array)
         │
-        │  ctProduction action "sync" on MaintenanceJob  ──►  pipeline Pipeline.MaintenanceSync.Sync
+Task.MaintenanceJob.ExcelSync (Run)  ──►  ctProduction action "sync" on MaintenanceJob
+                                                  │
+                                                  ▼
+                                   pipeline Pipeline.MaintenanceSync.Sync
+        │
         ▼
 script Platform.MaintenanceSync.cs  (skill MaintenanceSync)
         │  compares the sheet with the existing MaintenanceJob records
@@ -31,7 +37,7 @@ ctProduction: create / update / cancel maintenance jobs
 
 - A licensed HumanOS IoT Runtime with Excel support in the FileReader: version **2.12.0.6863 or newer**. A trial runtime reads the Excel file but cannot join the platform (it logs "Shared nodespace is not supported") and expires one hour after it was started
 - HumanOS IoT Designer (or the command line `HumanOS.BuildTool`) to build the target
-- A ctProduction **test** tenant, a user with the rights to run the `sync` action, and the configuration of the folder [`ctProduction`](./ctProduction/Readme.md) applied to it
+- A ctProduction **test** tenant, a user with the rights to run the `sync` action, and the configuration of the folder [`ctProduction`](./ctProduction/Readme.md) applied to it. **Use a test tenant. The sync cancels every job that has an order number and an operation and whose row is not in the Excel file — regardless of who created it. In a shared tenant this will cancel jobs created by other users or processes.**
 - Microsoft Excel to change the demo file
 
 ## Quick Start
@@ -48,13 +54,14 @@ The whole example in seven steps; each step is described further down or in the 
 
 ## Key Concepts
 
+- **Manual trigger.** The sync runs only when it is started explicitly — with the button **Run** on the task `Task.MaintenanceJob.ExcelSync` in the ctProduction task list, or by calling the REST action `sync` on `MaintenanceJob`. Saving the Excel file updates the data node on the gateway; the jobs in ctProduction are not changed until you start the sync.
 - **One fixed file.** The FileReader watches exactly one file name (`MaintenanceOrders.xlsx`, next to `FileReader.h2proj`). The file must exist when the gateway starts. It does not watch a folder for new or dated files.
 - **Read only.** Excel addresses are read-only; the gateway never changes the workbook.
 - **The whole sheet as one value.** The address `xlsx:$.Tabelle1` returns every row of the sheet `Tabelle1` as a JSON array. The first row holds the column names, which become the keys. A repeated column name gets the suffix `_2` (the file has two columns `Bezeichnung`). Numbers and dates arrive as text, dates in ISO 8601.
 - **Relative path.** The device address `..\..\..\MaintenanceOrders.xlsx` is resolved against the data folder of the built gateway (`Build\Excel-Reader\Data`), which leads back to the project folder. This holds for a gateway started from the built folder as described below; for a gateway installed somewhere else set the device address to the absolute path of the Excel file.
 - **Identity of a job.** `Auftrag` (order) + `Vorgang` (operation) form the key, stored as `OrderNumber` + `Operation`. The columns `Auftrag`, `Personalnr`, `Vorgang` and `Equipment` are formatted as text: keep them text, because a number typed into a general cell loses its leading zeros (`0010` becomes `10`, which is another operation).
 - **Soft delete.** A job whose row is gone gets `IsCancelled = true`; nothing is deleted. A cancelled or finished job is final: it is never reactivated, and a row for it is ignored.
-- **Which jobs the sync manages.** Jobs that belong to a maintenance task (generated from the maintenance schedule) are never touched. Every other job with an order number and an operation is managed by the sync: if its row is not in the Excel file the job is cancelled. Use a test tenant.
+- **Which jobs the sync manages.** Jobs that belong to a maintenance task (generated from the maintenance schedule) are never touched. **Every other job that has an order number and an operation is managed by the sync: if its row is not in the Excel file the job is cancelled — regardless of who created it.** In a shared tenant this cancels jobs from other sources. Use a test tenant, or add a field `Source = "Excel"` to the model and restrict the sync query to that value so it manages only the jobs it created itself.
 - **Equipment must be known.** A new job needs a workplace. The column `Equipment` must equal the `InventoryNumber` of a `FacilityComponent` (the demo data provides `EQ-DEMO-01` to `EQ-DEMO-08`); otherwise the row is dropped and logged.
 - **Empty sheet.** A sheet without a usable row stops the sync with an error instead of cancelling every job.
 
