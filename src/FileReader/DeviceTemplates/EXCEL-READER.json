@@ -19,40 +19,112 @@
         "WriteConversion": {}
       },
       "Properties": []
+    },
+    {
+      "Id": "aa87c821-bd49-4464-b8d8-fa20cf65e31a",
+      "Name": "Auftrag",
+      "Address": "xlsx:$.Tabelle1[0].Auftrag",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "63a2a74e-f78b-4d39-8b16-a7dbabbf3969",
+      "Name": "AuftragBezeichnung",
+      "Address": "xlsx:$.Tabelle1[0].Auftrag Bezeichnung",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "92e3c35e-48ae-4d81-9486-228a172cc3d1",
+      "Name": "Kurztext",
+      "Address": "xlsx:$.Tabelle1[0].Kurztext",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "860bdf91-c0fb-43d1-be6f-8e72e69eee40",
+      "Name": "Vorgang",
+      "Address": "xlsx:$.Tabelle1[0].Vorgang",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "c0afe3c4-179f-4c9d-b313-22d707595649",
+      "Name": "Equipment",
+      "Address": "xlsx:$.Tabelle1[0].Equipment",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "9ae703bb-b95a-40b0-a69f-b425bee048cc",
+      "Name": "Erfassungsdatum",
+      "Address": "xlsx:$.Tabelle1[0].Erfassungsdatum",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "14b00cab-5808-47d2-b460-0c9f0503beeb",
+      "Name": "Istarbeit",
+      "Address": "xlsx:$.Tabelle1[0].Istarbeit",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
     }
   ],
   "ConstantNodes": [],
   "Commands": [],
   "Groups": [],
-  "Agents": [
-    {
-      "Id": "9a4912d3-b054-450e-a94a-2dd72f4e545f",
-      "Name": "Actor",
-      "Type": "GenericActor",
-      "Skills": [
-        "9cf292c6-e00b-417f-84e3-00ff754f9ab8"
-      ],
-      "Properties": [
-        {
-          "Name": "Skills",
-          "DataType": "System.Guid[]",
-          "Value": "9cf292c6-e00b-417f-84e3-00ff754f9ab8"
-        },
-        {
-          "Name": "opc-ua:Ignore",
-          "DataType": "System.Boolean",
-          "Value": "true"
-        }
-      ]
-    }
-  ],
-  "Skills": [
-    {
-      "Id": "9cf292c6-e00b-417f-84e3-00ff754f9ab8",
-      "Name": "MaintenanceSync",
-      "Properties": []
-    }
-  ],
+  "Agents": [],
+  "Skills": [],
   "TaskProcessors": [],
   "EntityTypes": [],
   "ProcessingNetworks": [],

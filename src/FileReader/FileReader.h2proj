@@ -1,7 +1,7 @@
 {
   "Path": "FileReader.h2proj",
   "Name": "FileReader",
-  "Description": "Reads files with the FileReader. Target Excel-Reader reads an Excel file and syncs its orders into ctProduction maintenance jobs. The sync runs only when started manually (task Run or REST action sync); saving the file alone does not change jobs.",
+  "Description": "Reads files with the FileReader. Target Excel-Reader reads an Excel file and publishes its cells through the OPC-UA server.",
   "Author": "CyberTech Engineering GmbH",
   "AutoIncrementPublishNumber": true,
   "PlatformPublishTokenSecret": "",
@@ -65,7 +65,9 @@
         "HumanOS.Repository.Type": "",
         "HumanOS.Repository.Connection": "",
         "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
-        "HumanOS.RuntimeVersion": "2.12"
+        "HumanOS.RuntimeVersion": "2.12",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
       },
       "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
       "DataModel": {
@@ -125,19 +127,16 @@
       "PlatformLogSecretId": "",
       "PlatformLogUrl": "",
       "PlatformToken": "",
-      "Runtime": "HumanOS.IoT.Runtime win-x86",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
       "RuntimeVersion": "2.12",
       "ServiceDescription": "",
       "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
       "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
       "ServiceStartType": "Automatic",
-      "SharedNodeSpacePluginId": "0dae9067-44eb-40b9-9385-dd6efb353e11",
       "AppSettings": {
         "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
         "HumanOS.Repository.Type": "",
         "HumanOS.Repository.Connection": "",
-        "HumanOS.SharedNodeSpace.Type": "HumanOS.PeMiL.MQTTMessageBus.TSharedNodeSpaceHub, HumanOS.PeMiL.MQTTMessageBus",
-        "HumanOS.SharedNodeSpace.Address": "localhost",
         "AppConfig.LogMinimumLevel": "Information",
         "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
         "AppConfig.LogRetentionDays": "7",
@@ -145,9 +144,7 @@
         "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\",
         "HumanOS.ServiceId": "e140162b-116f-4401-a83c-7f803d5cdd85",
         "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
-        "HumanOS.RuntimeVersion": "2.12",
-        "HumanOS.SharedNodeSpace.MasterSystemControllerId": "",
-        "HumanOS.SharedNodeSpace.MasterAgentOrchestratorId": ""
+        "HumanOS.RuntimeVersion": "2.12"
       },
       "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
       "DataModel": {
@@ -171,28 +168,12 @@
           "Description": ""
         }
       ],
-      "Plugins": [
-        {
-          "CustomFiles": [],
-          "ScriptFiles": [],
-          "Path": "HumanOS.PeSeL.OPCUAServer",
-          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
-          "Name": "HumanOS.PeSeL.OPCUAServer",
-          "Description": ""
-        }
-      ],
+      "Plugins": [],
       "Scripts": {
         "Commands": [],
         "Processing": [],
         "Rules": [],
-        "Workflows": [
-          {
-            "Path": "Platform.MaintenanceSync.cs",
-            "Id": "cf236281-0f6c-4066-87ab-a94f1229b7aa",
-            "Name": "Platform.MaintenanceSync.cs",
-            "Description": ""
-          }
-        ],
+        "Workflows": [],
         "Path": "Scripts",
         "Name": "Scripts"
       }

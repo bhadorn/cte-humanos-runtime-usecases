@@ -3,7 +3,12 @@
   "Ids": {
     "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER": "cb41dc3d-3b31-4d4d-874f-b78c6c4fd6ec",
     "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/SheetData": "b08f64b1-61b2-4433-b808-6d7c99581103",
-    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/Actor": "58eda181-8a43-4a12-9678-8de8380bea96",
-    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/MaintenanceSync": "9cf292c6-e00b-417f-84e3-00ff754f9ab8"
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/Auftrag": "4109317c-8beb-45c3-a4d0-1d8ddb44bdac",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/AuftragBezeichnung": "36484c96-a471-46db-9044-51beb8d03fc3",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/Kurztext": "063c70f8-359e-4e3f-ba97-52188b5067e1",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/Vorgang": "5a19640c-feac-40d9-bcf1-56cb5f920748",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/Equipment": "fd2b97ce-c8bf-4254-91a4-7bdc202331cb",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/Erfassungsdatum": "02183301-8fd2-4030-9333-f7f935acfc6d",
+    "fdaaf19c-1a4a-4f0d-ad25-74e05ad18e70/EXCEL-READER/Istarbeit": "ca6cf3b0-3395-4bda-b6f7-76dd74bae386"
   }
 }
