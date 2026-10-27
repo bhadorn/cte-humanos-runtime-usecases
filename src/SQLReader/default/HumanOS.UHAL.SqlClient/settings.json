@@ -1,0 +1,14 @@
+{
+  "Disabled": false,
+  "Devices": [
+    {
+      "MainTaskProcessor": {
+        "Name": "SqlTaskProcessor",
+        "ProcessingPriority": "Normal",
+        "MaxSchedulingTimeSlice": 20,
+        "MinSchedulingTimeSlice": 1,
+        "EnableCycleTimeSurveillance": true
+      }
+    }
+  ]
+}

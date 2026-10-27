@@ -1,0 +1,49 @@
+{
+  "Id": "1deaf21c-aa6c-4e5a-9217-a362d1bcecf7",
+  "Name": "Polling Timer",
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [
+    {
+      "Id": "bba00ae6-263a-4737-a1bd-147958721757",
+      "Name": "RunProductionOrderMonitor",
+      "Action": {
+        "ScriptFile": "ProductionOrderMonitor.cs",
+        "Type": "ScriptFile",
+        "Arguments": []
+      },
+      "TriggerCondition": "",
+      "TriggerEvent": "OnTimer",
+      "TriggerEventParameter": "",
+      "Type": "GenericRule",
+      "Properties": []
+    }
+  ],
+  "Skills": [],
+  "Timers": [
+    {
+      "Id": "49e74382-4a29-4dca-8b5d-10b77bc5c7d3",
+      "Name": "Timer",
+      "TriggerConfig": {
+        "Id": "cdf489d7-e44c-43e5-8f0a-79dbb5b9d1c5",
+        "Interval": 10,
+        "IntervalUnit": "Second",
+        "RepeatCount": 2147483647
+      },
+      "Properties": []
+    }
+  ],
+  "Workflows": []
+}

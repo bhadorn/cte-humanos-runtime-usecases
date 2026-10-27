@@ -1,0 +1,65 @@
+{
+  "Id": "480c7ece-484c-40d3-a610-debcd922d1f6",
+  "Publishers": [
+    {
+      "ErrorHandlingPolicy": "ReconnectLogger",
+      "Id": "3917896b-b168-401e-84a3-8ab0e3241697",
+      "Name": "PoPublisher",
+      "ConnectionSecret": "",
+      "DataSets": [
+        {
+          "Name": "PoEvents",
+          "Fields": [
+            {
+              "Name": "Name",
+              "DataType": "System.String",
+              "Query": "item.Node.Name",
+              "Tag": "",
+              "Properties": {}
+            },
+            {
+              "Name": "Value",
+              "DataType": "System.Int32",
+              "Query": "item.Value",
+              "Tag": "",
+              "Properties": {}
+            }
+          ],
+          "NodeFilter": "node.hasProperty<bool>(\"EnableMqtt\", true)",
+          "Tag": "",
+          "Type": "DataNode",
+          "Properties": {}
+        }
+      ],
+      "NetworkTimeout": 10000.0,
+      "PayloadScriptFile": "PoPayload.cs",
+      "SamplerType": "AllData",
+      "Address": "192.168.0.20",
+      "CleanSession": true,
+      "ClientCaCertificateFile": "",
+      "ClientCertificateFile": "$(AppConfig:CommonAppPath)Certificates\\mqtt-client.pfx",
+      "ClientCertificatePassword": "<PFX-Passwort>",
+      "Password": "",
+      "TransportLayerSecurity": "Tls12",
+      "Username": "",
+      "ProtocolVersion": "V500",
+      "ClientId": "PoTracker",
+      "QualityOfService": 1,
+      "ServerPort": 8883,
+      "Topic": "company/line1",
+      "Properties": {},
+      "ServiceRule": {
+        "BindingRuleId": "d1ac78bd-cac8-4fc3-a017-82d8de098170",
+        "Devices": [
+          "994b13b6-e9c7-465c-8847-0ba0aaae105e"
+        ],
+        "Drivers": [],
+        "Type": "SelectedDevices",
+        "UnbindingRuleId": "956a92d6-0e99-4abb-bd49-39664bbe39cd",
+        "Properties": {}
+      }
+    }
+  ],
+  "Subscribers": [],
+  "Properties": {}
+}

@@ -1,0 +1,127 @@
+{
+  "Id": "9048a66e-1801-4d7b-9381-9ba29c4a27ef",
+  "Name": "MES MySQL",
+  "DriverId": "510ae5c1-aa0b-4882-8406-a24191f17049",
+  "Address": "",
+  "Variables": [
+    {
+      "Name": "DB_SECRET",
+      "DataType": "System.String",
+      "Value": ""
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "Role",
+      "DataType": "System.String",
+      "Value": "MesDB"
+    },
+    {
+      "Name": "SecretName",
+      "DataType": "System.String",
+      "Value": "$(DB_SECRET)"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "2592cce5-f8aa-4ee9-a02b-c88bc68161bf",
+      "Name": "PoStart",
+      "Address": "",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "TriggerType": "OnEvent",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "EnableMqtt",
+          "DataType": "System.Boolean",
+          "Value": "True"
+        }
+      ]
+    },
+    {
+      "Id": "6d14fde4-8f4c-4614-b00f-b3b695f8d1c7",
+      "Name": "PoFinish",
+      "Address": "",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "TriggerType": "OnEvent",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": [
+        {
+          "Name": "EnableMqtt",
+          "DataType": "System.Boolean",
+          "Value": "True"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "62eb6b00-0676-4ae3-9849-5bbf5a4f808f",
+      "Name": "ReadEntities",
+      "Address": "Sql.ReadEntities",
+      "ScriptFile": "",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "QueryCommand",
+          "DataType": "System.String",
+          "Description": "The SELECT statement to execute. Its result columns must be named after the entity type fields."
+        },
+        {
+          "Name": "EntityTypeNodeId",
+          "DataType": "System.Guid",
+          "Description": "Id of the entity type node describing the field/column mapping (keys and non-keys)."
+        },
+        {
+          "Name": "Data",
+          "Type": "Output",
+          "DataType": "HumanOS.Kernel.DataModel.Entity.TGenericEntity[], HumanOS.Kernel.Base",
+          "Description": "The result rows, one entity per row (empty if no rows)."
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [
+    {
+      "Id": "07b56f22-21eb-46b5-b5c9-066abe08710e",
+      "Name": "active_order",
+      "Fields": [
+        {
+          "Name": "PoNumber",
+          "DataType": "System.Int32",
+          "IsKey": true,
+          "ArraySize": 1
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}
