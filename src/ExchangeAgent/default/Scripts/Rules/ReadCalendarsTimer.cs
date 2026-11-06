@@ -1,7 +1,8 @@
 /*****************************************************************************
- * Rule script of the timer "Timer" in the DataModel object "ReadCalendars".
+ * Rule script of the timer "Timer" in the DataModel object "CalendarPolling".
  *
- * The timer fires 10 s after the start of the runtime and then every 60 s (see DataModel/Objects/ReadCalendars.json).
+ * The timer fires 10 s after the start of the runtime and then every 60 s (see DataModel/Objects/CalendarPolling.json).
+ * The object must not have the same name as the command ReadCalendars: the lookup by name would find the object.
  * Every tick starts the command ReadCalendars. The same command can be started by any other trigger, for
  * example a workflow, or by an Agent of the HumanOS Platform: the trial runtime has no shared node space
  * and therefore no Platform, so a local trigger like this timer is needed.

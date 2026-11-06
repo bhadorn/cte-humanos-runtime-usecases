@@ -95,7 +95,7 @@ namespace HumanOS.IoT.Designer.Library.Scripts
           if (strRoomId.isEmpty() || strRoomId.StartsWith("<"))
           {
             iSkipped++;
-            setValue(Room, "Status", "Not configured: the property RoomId of this group is empty");
+            setValue(Room, "Status", "Not configured: the property RoomId of this group is empty or still a placeholder");
             Logger.writeInfo($"Room '{Room.Name}': no RoomId configured, skipped.");
             continue;
           }
