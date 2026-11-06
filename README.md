@@ -2,7 +2,7 @@
 id: humanos-runtime-usecases
 title: "HumanOS Runtime UseCases"
 subject: "HumanOS IoT Runtime: Integration Examples"
-keywords: [HumanOS, IoT, Runtime, use cases, industrial automation, OPC-UA, MQTT, REST API, CNC, FANUC, FOCAS3, SQL, MySQL]
+keywords: [HumanOS, IoT, Runtime, use cases, industrial automation, OPC-UA, MQTT, REST API, CNC, FANUC, FOCAS3, SQL, MySQL, Outlook, Microsoft Graph]
 ---
 
 # HumanOS Runtime UseCases
@@ -24,6 +24,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 - **Ansible Agent**: Running [Semaphore](https://semaphoreui.com) instance with Ansible configured
 - **DNC for Different Machine Controls**: The control plugin(s) for the targeted controllers (FANUC, Heidenhain, Okuma, Sinumerik) plus a physical controller or vendor simulator; the included `HermleC41` machine uses the Heidenhain iTNC530 simulator
 - **Excel-Reader**: Microsoft Excel to change the demo file; an OPC-UA client (for example UaExpert) to look at the result
+- **Exchange Agent**: A Microsoft 365 directory (Entra and Exchange Online) with an app registration and a room mailbox, or Python 3 for the included mock server; an OPC-UA client (for example UaExpert) to look at the result
 - **FANUC 500i-A Control (FOCAS3)**: `FANUC CNC GUIDE 2` simulator (pre-configured for `focas3://127.0.0.1:8193`) or physical FANUC 500i-A controller with a FOCAS3 user account
 - **FANUC Data Aggregation**: `FANUC NCGuide` simulator (pre-configured) or physical FANUC controller
 - **FANUC MCP Server**: `FANUC NCGuide` simulator (pre-configured) or physical FANUC controller, plus an MCP-capable AI agent/LLM or MCP test client
@@ -53,6 +54,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | :--------------------------------------------------------------------------------- | :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
 | [Ansible Agent](./src/AnsibleAgent/Readme.md)                                      | WebControl (REST)                 | IT automation via Semaphore API and HumanOS workflows                                                                       |
 | [Excel-Reader](./src/FileReader/Readme.md)                                         | FileReader (Excel)                | Reads an Excel file and publishes its cells through the OPC-UA server                                                       |
+| [Exchange Agent](./src/ExchangeAgent/Readme.md)                                    | WebControl (Microsoft Graph) + NoDevice + OPC-UA | Reads Outlook room calendars through Microsoft Graph (Entra client credentials, read only, paging) and publishes the events as OPC-UA variables |
 | [FANUC 500i-A Control (FOCAS3)](./src/FanucControl500i/Readme.md)                  | FanucControl (FOCAS3) + OPC-UA    | Authenticated FOCAS3 connection to new FANUC 500i-A controls (credentials from secret store), published via OPC-UA          |
 | [FANUC Data Aggregation](./src/FANUC.DataAggregation/Readme.md)                    | FanucControl                      | Aggregating CNC controller data into a unified OPC-UA entity                                                                |
 | [FANUC MCP Server](./src/FanucMcpServer/Readme.md)                                 | FanucControl + MCP Server         | Exposing live FANUC CNC data and gateway tools to AI agents/LLMs over the Model Context Protocol (HTTP/SSE)                 |

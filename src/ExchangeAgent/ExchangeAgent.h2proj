@@ -1,0 +1,212 @@
+{
+  "Path": "ExchangeAgent.h2proj",
+  "Name": "ExchangeAgent",
+  "Description": "Reads the calendars of Outlook meeting rooms through Microsoft Graph (read only) and publishes the events as OPC-UA variables.",
+  "Author": "CyberTech Engineering GmbH",
+  "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "1.0",
+  "DeviceTemplates": [
+    {
+      "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+      "Path": "MicrosoftGraph.json",
+      "Id": "ab303dc5-a892-46bc-babf-2b0ecffc5d2e",
+      "Name": "MicrosoftGraph",
+      "Description": "Microsoft Graph client with Entra client-credentials login (HumanOS.UHAL.WebControl)"
+    },
+    {
+      "DriverId": "9cccefec-180b-4d47-ac70-99360649856a",
+      "Path": "RoomCalendars.json",
+      "Id": "a1ecc277-cf11-4ed4-88b1-3c6b25785c15",
+      "Name": "RoomCalendars",
+      "Description": "RAM-only device that carries the OPC-UA nodes of the room calendars (HumanOS.UHAL.NoDevice)"
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n30316132666263383638333033663531623966376465316433326238333861306133393631353533\r\n3831613061303032316134303236396231636434633734350a313566666432656231366330326232\r\n62656130373762306637333364333762376532613238396564363466633231303531313032653338\r\n3934373662336234300a633030616535643135393864313034333963366163613937356234356464\r\n35326266323333633936323765373833616230313862303638336237373934643164353130383865\r\n3466333664623138323739396638623734396366353037366234\r\n"
+      }
+    ],
+    "Id": "0d60db5b-f3bd-40c3-8240-0315c94821c1",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "5564030d-5c9b-4bd6-8282-e4207c3ed876",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.12",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "5564030d-5c9b-4bd6-8282-e4207c3ed876",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.12",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [
+          {
+            "Path": "CalendarPolling.json",
+            "Id": "97977902-f68b-452e-882e-d6c2e1315279",
+            "Name": "CalendarPolling.json",
+            "Description": ""
+          }
+        ],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "https://graph.microsoft.com/v1.0",
+          "DeviceTemplateId": "ab303dc5-a892-46bc-babf-2b0ecffc5d2e",
+          "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "MachineInventoryNumber": "",
+          "MachineName": "",
+          "MachineSerialNumber": "",
+          "MachineType": "",
+          "SubDevices": [],
+          "Type": "WebControl",
+          "Variables": [
+            {
+              "Name": "GRAPH_TENANT_ID",
+              "DataType": "System.String",
+              "Value": "<TENANT-ID>"
+            },
+            {
+              "Name": "GRAPH_CLIENT_ID",
+              "DataType": "System.String",
+              "Value": "<CLIENT-ID>"
+            },
+            {
+              "Name": "GRAPH_SECRET_NAME",
+              "DataType": "System.String",
+              "Value": "GraphClientSecret"
+            }
+          ],
+          "Path": "GraphClient.json",
+          "Id": "776345ab-a30f-4845-b77a-f08c19ec9e3e",
+          "Name": "GraphClient",
+          "Description": "Microsoft Graph (read only)"
+        },
+        {
+          "Address": "RAM",
+          "DeviceTemplateId": "a1ecc277-cf11-4ed4-88b1-3c6b25785c15",
+          "DriverId": "9cccefec-180b-4d47-ac70-99360649856a",
+          "MachineInventoryNumber": "",
+          "MachineName": "",
+          "MachineSerialNumber": "",
+          "MachineType": "",
+          "SubDevices": [],
+          "Type": "NoDevice",
+          "Variables": [],
+          "Path": "RoomCalendars.json",
+          "Id": "a2b21daf-4ac1-47c4-8a8e-82168ac55b35",
+          "Name": "RoomCalendars",
+          "Description": "Calendars of the meeting rooms as OPC-UA variables"
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "GetCalendarView.cs",
+              "Id": "49e5d022-fd57-4757-9c82-468c53da15cf",
+              "Name": "GetCalendarView.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetNextPage.cs",
+              "Id": "29053d16-1188-4c3a-839a-8220a19348a5",
+              "Name": "GetNextPage.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.WebControl",
+          "Id": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "Name": "HumanOS.UHAL.WebControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.NoDevice",
+          "Id": "9cccefec-180b-4d47-ac70-99360649856a",
+          "Name": "HumanOS.UHAL.NoDevice",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [
+          {
+            "Path": "ReadCalendars.cs",
+            "Id": "40dd6027-7b61-44e8-a53f-046bfd198b05",
+            "Name": "ReadCalendars.cs",
+            "Description": ""
+          }
+        ],
+        "Processing": [],
+        "Rules": [
+          {
+            "Path": "ReadCalendarsTimer.cs",
+            "Id": "592f656b-8d2b-401b-8fb2-6a049d88a315",
+            "Name": "ReadCalendarsTimer.cs",
+            "Description": ""
+          }
+        ],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1784 @@
+{
+  "Id": "a2b21daf-4ac1-47c4-8a8e-82168ac55b35",
+  "Name": "RoomCalendars",
+  "DriverId": "9cccefec-180b-4d47-ac70-99360649856a",
+  "Address": "RAM",
+  "Properties": [
+    {
+      "Name": "Endpoint",
+      "DataType": "System.String",
+      "Value": "Calendar"
+    },
+    {
+      "Name": "LookAheadHours",
+      "DataType": "System.Int32",
+      "Value": 168
+    },
+    {
+      "Name": "PageSize",
+      "DataType": "System.Int32",
+      "Value": 50
+    },
+    {
+      "Name": "IncludeMailAddresses",
+      "DataType": "System.Boolean",
+      "Value": false
+    },
+    {
+      "Name": "EnableOpcUa",
+      "DataType": "System.Boolean",
+      "Value": true
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "NoDevice"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineYearOfConstruction",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineCriticality",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "c1f72553-a2f6-4d17-a764-94a9cbce88dc",
+      "Name": "Status",
+      "Address": "",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "ad7aa7e1-8a39-4555-b668-4459b60515aa",
+      "Name": "LastRun",
+      "Address": "",
+      "DataType": "System.DateTime",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "3cdb00f0-0c2e-4a5a-82dd-c674d529c0ec",
+      "Name": "Room1",
+      "Properties": [
+        {
+          "Name": "Role",
+          "DataType": "System.String",
+          "Value": "Room"
+        },
+        {
+          "Name": "RoomId",
+          "DataType": "System.String",
+          "Value": ""
+        }
+      ],
+      "DataNodes": [
+        {
+          "Id": "6623a136-d049-4a48-a34a-323ff9862e00",
+          "Name": "Status",
+          "Address": "",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "17d117e9-8a2b-479d-a48d-65154276023b",
+          "Name": "LastUpdate",
+          "Address": "",
+          "DataType": "System.DateTime",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "cf4ef5dc-f60c-4561-a4ff-0dc5541334ae",
+          "Name": "EventCount",
+          "Address": "",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "fbf49c83-dec9-4110-955f-279b50a77535",
+          "Name": "Busy",
+          "Address": "",
+          "DataType": "System.Boolean",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "c972ab3e-bf82-4497-ae67-11973b1684aa",
+          "Name": "Events",
+          "Address": "",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": [
+        {
+          "Id": "b0b350b2-84fb-4bb4-afd4-2dc97e3bd156",
+          "Name": "Event01",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "fd74b4d5-863b-4142-a667-77ae4c59ece2",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "47aa3645-24b2-427e-80f3-c0eecd6fc38a",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "1aad31d9-0ccd-460f-951c-6870cfb40939",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "04591147-d532-4421-bb87-937f1f8613c9",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "537ba4a3-7122-4989-9631-e624e94e4340",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "98b979ef-50f7-47c5-8148-1c82a21c2727",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "f64b607a-dd4c-408c-ba3e-3e34647707e2",
+          "Name": "Event02",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "375ca638-5093-4f74-8b53-dc7c89d58c42",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "a2007533-cd5c-49e9-92c6-798e249ecbd8",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "6330a11c-1e85-41c7-8503-6670938452d0",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "19064273-174a-454e-8fe8-45b110c653e6",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "ef9ecfa0-da33-4b4c-8d3a-51cd3eb26489",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "9c1ae57d-6168-4742-9784-ecef85655438",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "809c7525-0597-477c-b3b3-b82aaa194c82",
+          "Name": "Event03",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "1224816b-684a-4d52-9b61-f8f353f4297c",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "9b5e17c5-b2a7-4d12-9978-0c91644acb3a",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "17d2a293-06b0-4533-8c3f-f9d2e1b7ae02",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "1aeeb1ed-9c48-4dc7-8c6d-5a4f2bcdae92",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "1e0a7b6a-be9e-48d2-82bc-bf801dd46ed6",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "87d7a7ef-221b-4e57-9dad-3c404c6beec3",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "6d8388ea-02d5-4eee-8bab-5af35f862e56",
+          "Name": "Event04",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "ebc2ac5a-fa6f-4882-a996-5856a3baea98",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "7535d566-b7b5-4e52-8d09-0efc89993127",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "1885875d-8ad5-49c4-abc8-bc3995232d17",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "f99da99a-bb7a-47d1-9cba-1e450c8e0b58",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "a6b28a4c-20e1-4b6f-9d4c-d654dfbfe942",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "999e38ad-b698-4d1c-aadc-f8d1c00e3657",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "32a891bc-d57f-4b35-bad1-27d0121a05ba",
+          "Name": "Event05",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "56490dd9-70d4-4c82-bf5d-c5cfaff2af47",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "c57c9514-29b0-44e5-8d7b-4702b626816e",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "56744d94-2351-49e2-8497-2871bc6725f2",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "67b32ebb-fde3-4a2c-9f41-96f109e682f2",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "0ca40656-3e53-433d-8955-58b0d9ae6c62",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "f54f35ae-992d-4820-9b52-0b6e6036cfb0",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "e109ed09-05a9-4b9b-b6bb-a8cc2646ff1b",
+          "Name": "Event06",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "2b78c839-f2fc-4a3c-ac9f-74d3f8cc51e9",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "51742e48-390e-43f8-b36f-1d2bb287fe4b",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "1bd4e3c9-e0f0-43a8-ae94-3855feb6d244",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "b48a6852-d08b-4e9e-b948-06af5016b9f1",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "ec8bdeb3-f744-4582-9028-a8de3161b176",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "c0b264fc-d1f4-477a-91ee-fef026e61afe",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "36d8a37f-b454-4370-b7f0-dd1b83fec976",
+          "Name": "Event07",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "48698148-b4f7-4a50-bf51-364c84e9aff4",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "cd9e5a98-9698-41b3-8a9b-de2045e737f0",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "02b663a2-53b7-4ef3-84fa-5dada550f12a",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "a91c642c-fdc7-402f-beed-3be8f3c773a7",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "29dcbb0e-b8f5-4221-8013-9b49d5e491cb",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "a0d12724-a855-4a3e-862d-03666e6a2494",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "a9e8defb-95fc-438e-87bc-f3fd2ed5cb74",
+          "Name": "Event08",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "2d28fe8f-6c35-407e-a781-8a7d8fb938a7",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "880848b4-66f1-4a6b-a45e-ca5445e6c0ba",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "eed0c227-b96d-4f58-9281-029ee20433a6",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "d184d565-fb4c-412a-bdd0-abd34ed2ef35",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "a36370eb-7285-4e37-9b88-12a738fd22e3",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "9568dece-8bbd-4ce4-bb8b-13c190ea2c9f",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "fced7024-819c-4d3e-b1da-939c0d23a4d8",
+          "Name": "Event09",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "26d10db6-758a-435a-8165-7242a0c42647",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "b656bfd5-10ac-44f1-a32a-e3cdc75adf68",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "a706a393-cfd1-4ff6-bceb-4b0913004db4",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "e2c3dea8-9604-47ba-9eb0-6b0edf243aad",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "1bc95fd2-2691-4a4f-a35d-e6a79f35f777",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "3b73ba4f-994c-477b-94c2-16fb4be57b91",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "d8055457-65fe-4a57-9617-e3c12643df78",
+          "Name": "Event10",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "a1ebe609-ec0c-4590-beae-c12283296c1f",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "d2418657-1561-4bcc-bfb1-3a78ab29f430",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "6b722e76-e010-41ce-b75b-224bcc183a48",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "55563845-e34a-48e4-a848-c8846c806032",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "0b8ffe7f-afd2-453b-96bd-89ab6b13fed5",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "a47db036-9371-45b2-a5f9-3d2b7ee95fea",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        }
+      ]
+    },
+    {
+      "Id": "7b14b073-a71f-4911-a9d2-920f48cbd417",
+      "Name": "Room2",
+      "Properties": [
+        {
+          "Name": "Role",
+          "DataType": "System.String",
+          "Value": "Room"
+        },
+        {
+          "Name": "RoomId",
+          "DataType": "System.String",
+          "Value": ""
+        }
+      ],
+      "DataNodes": [
+        {
+          "Id": "93ffb828-f173-49d0-beb2-94ddf10b31ee",
+          "Name": "Status",
+          "Address": "",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "2f3a5b98-1b7d-4a38-9ddf-537f3467d211",
+          "Name": "LastUpdate",
+          "Address": "",
+          "DataType": "System.DateTime",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "563e23f7-3266-4bab-be21-0508cacee183",
+          "Name": "EventCount",
+          "Address": "",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "2b82b570-d90c-470b-afde-945fb318df39",
+          "Name": "Busy",
+          "Address": "",
+          "DataType": "System.Boolean",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "1a3b21b4-55fd-430a-bcd8-21b2e460fdad",
+          "Name": "Events",
+          "Address": "",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true
+          },
+          "Properties": []
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": [
+        {
+          "Id": "db1b0aab-30f2-4b2c-ba2a-274f26654832",
+          "Name": "Event01",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "5f9d0eef-a97f-430f-9832-e29ccb5eab7b",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "f58b6da7-8a4c-443b-9593-a3ab534dbc22",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "fb361602-004d-4637-8bc8-81701256645a",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "91f7033a-d946-479c-9352-8ca9b788dc1b",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "9ea802d2-9bab-44e4-8bf7-b380357e2354",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "42ee3f1c-06ff-4e57-96d1-fccca173f9d9",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "e215f4f8-6c8f-4bb3-a83f-ee9274ba02be",
+          "Name": "Event02",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "80bfbedb-562f-4831-a842-8e00cd759c16",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "3c9be73d-ab18-4e56-90b6-f813e99d348f",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "b6615305-02f0-449e-a426-610c3c07fc89",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "ebfaf9fc-bff7-42b4-8d58-7d15f4567e2a",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "4b41ec6c-39ac-4a8f-b0af-c84561446b54",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "ae3076a4-6012-44d9-ac11-d718e97261b2",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "f47288d1-3d7a-4b76-9245-3d3f559a29e1",
+          "Name": "Event03",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "bb06ad7d-5d64-49ed-8477-565d5bb7ed61",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "13217ef5-7e39-4b3c-b56e-d417617b9ea6",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "14bbd799-71da-4f58-9fdb-7ec970229e9f",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "e83b05c0-eb87-4e81-ac5a-b47c8c7011e6",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "04d9a84e-9b0d-4678-911a-00c485c6c244",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "feae56d8-4d36-4151-b401-d352643d1597",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "ff9b7365-bc65-4cb2-8d26-5dd919479a11",
+          "Name": "Event04",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "5612cd87-dc00-45ae-b7b0-edd2a723b20e",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "58c4bd5d-accc-403c-8d25-d814a17d548b",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "d6bd8944-6140-4c19-83c1-996b55ee3360",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "22dffd15-a3ba-4027-ba06-164bd8d0e4c9",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "2a2fb2b3-008b-48e3-9bce-df554e269945",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "68e2618b-d988-499f-ba98-8b80fdd33d6f",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "e0422f87-bef1-4636-873f-99d8a8aa28cb",
+          "Name": "Event05",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "ae69f10a-fede-4b41-9244-04bca0370274",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "71d05ee9-a348-42b4-98ae-839a0f0408af",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "3d08033c-bebb-415e-a0d5-045a498e6082",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "fefe5878-9b7c-4766-92e3-0f57755268fc",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "038bb654-e4ef-4be4-aa56-f3ec429d7a2d",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "8dcde14a-ba85-4636-97a7-d50d12f3b0b6",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "c66b2fa2-e8c2-4343-b075-d7ed7de2ddaa",
+          "Name": "Event06",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "1b249ae5-96ed-45da-a93b-97d7dd7aae58",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "67b9bb3c-d69f-46bb-aa64-c302112dd9fd",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "bf807beb-d00a-4a6d-af23-b5ffe23b38ea",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "99d74c37-0da0-4432-b523-61be81836433",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "37413cfa-5004-443c-a835-30481543889e",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "905036f9-7a64-4554-8feb-220ab8a09041",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "f4c70bcf-ef7f-4e9f-acce-4a17a8554d3c",
+          "Name": "Event07",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "eee7ec3d-a1a1-4540-9b85-87ee50ed9813",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "6c9ee974-6719-435c-8736-d3466a397d5f",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "8deef1ee-0ae5-45c2-a41a-46420aa72102",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "8ecfc1ce-7cbd-48d2-b72f-1e7cc2c219fb",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "92c3a886-84ef-4f73-830a-36ba58272730",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "d0c215b5-364b-41ac-b337-5497f27719e7",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "5eeb16c8-f0f9-49d8-9fc5-484a83e5f58f",
+          "Name": "Event08",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "e5968d41-225e-4cb4-81ac-95bef251e77b",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "e539cbf6-f6d4-4b03-a891-af8cd8f1f65c",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "d5830065-0961-4ddd-b357-d75e8fc889a0",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "d97b7f32-d720-477c-b1d2-c465884707cf",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "7141658e-8350-47e4-b175-db1e830ec526",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "8a5fe55c-d9de-4f56-bf42-4d3d57b7310a",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "7e398b78-eeb8-41a3-a182-f765a517c4bf",
+          "Name": "Event09",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "decc48c6-9e66-4619-b974-0f9549d781ce",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "867b56e4-7e89-4632-8d2d-2fe36b9ec131",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "28a6f07d-51cb-4bb1-885d-27afc19b3349",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "7318aef1-e969-4025-934c-7b02df637414",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "2f48e050-011b-4608-9e6c-bf7c680a671c",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "bdf8c008-2404-4b10-b609-794bf3e51bd3",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        },
+        {
+          "Id": "7a8f9eb7-5f79-4e40-836d-c6b3da941988",
+          "Name": "Event10",
+          "Properties": [],
+          "DataNodes": [
+            {
+              "Id": "ca325cc0-d6f6-42b3-a137-41c480eb4d0a",
+              "Name": "Subject",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "08426d02-440b-41ac-a1a9-e43ea8897fc3",
+              "Name": "Start",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "f0dedc15-656e-48cb-a111-4087be3dc2d4",
+              "Name": "End",
+              "Address": "",
+              "DataType": "System.DateTime",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "5e96af04-b085-4705-a5c2-bba02d9a45a3",
+              "Name": "Organizer",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "506b067c-6783-4012-83c2-6527d9815160",
+              "Name": "AttendeeCount",
+              "Address": "",
+              "DataType": "System.Int32",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            },
+            {
+              "Id": "5e715596-6233-46f6-b9c4-f0986c6cacdc",
+              "Name": "EventId",
+              "Address": "",
+              "DataType": "System.String",
+              "Unit": "",
+              "Access": {
+                "Read": true
+              },
+              "Properties": []
+            }
+          ],
+          "ConstantNodes": [],
+          "Commands": [],
+          "Groups": []
+        }
+      ]
+    }
+  ],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

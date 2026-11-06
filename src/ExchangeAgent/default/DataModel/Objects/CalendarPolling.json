@@ -1,0 +1,65 @@
+{
+  "Id": "97977902-f68b-452e-882e-d6c2e1315279",
+  "Name": "CalendarPolling",
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [
+    {
+      "Id": "99514a44-c723-4a2b-9c08-135ca71ea6c7",
+      "Name": "ReadCalendars",
+      "Type": "CSharpScriptCommandNode",
+      "Arguments": [],
+      "Properties": [
+        {
+          "Name": "ScriptFileName",
+          "DataType": "System.String",
+          "Value": "ReadCalendars.cs"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [
+    {
+      "Id": "856bfe22-b48e-4f88-ac05-0ea112a3255b",
+      "Name": "RunReadCalendars",
+      "Type": "GenericRule",
+      "TriggerEvent": "OnTimer",
+      "TriggerEventParameter": "",
+      "TriggerCondition": "",
+      "Action": {
+        "ScriptFile": "ReadCalendarsTimer.cs",
+        "Type": "ScriptFile",
+        "Arguments": []
+      },
+      "Properties": []
+    }
+  ],
+  "Skills": [],
+  "Timers": [
+    {
+      "Id": "40add7e9-e860-4165-b89b-bfd6bcc0c919",
+      "Name": "Timer",
+      "TriggerConfig": {
+        "Id": "5b59e40f-a89c-4bc8-a3b7-f73f88e2ae11",
+        "Mode": "Sampler",
+        "Interval": 60,
+        "IntervalUnit": "Second",
+        "InitialDelay": "0.0:00:10.00",
+        "RepeatCount": 2147483647
+      },
+      "Properties": []
+    }
+  ],
+  "Workflows": []
+}
