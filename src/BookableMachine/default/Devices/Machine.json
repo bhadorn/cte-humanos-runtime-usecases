@@ -1,0 +1,127 @@
+{
+  "Id": "d46dedb3-bdaf-4933-8c6f-cf1ad5721685",
+  "Name": "Machine",
+  "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+  "Address": "focas2://hssb@NCGUIDE",
+  "Properties": [
+    {
+      "Name": "Endpoint",
+      "DataType": "System.String",
+      "Value": "Machine"
+    },
+    {
+      "Name": "EnableOpcUa",
+      "DataType": "System.Boolean",
+      "Value": true
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "FANUC 0i-F"
+    }
+  ],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [
+    {
+      "Id": "9aefe7bd-3123-412e-8b2c-b6a5596afb42",
+      "Name": "Controller",
+      "Properties": [],
+      "DataNodes": [
+        {
+          "Id": "49974794-ba9c-4dc0-9c4a-8045ca3df727",
+          "Name": "Available",
+          "Address": "Global.System.Int32:1",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "9d2448de-5f0e-4e0e-b532-9a579ea214c3",
+          "Name": "RunningState",
+          "Address": "Nc1.Dynamic.Float64:5",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "97fa2b1c-986d-4181-8f0b-296d7e3df3f9",
+          "Name": "AlarmState",
+          "Address": "Nc1.Dynamic.Float64:6",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "d4e8fcd5-c7bd-4512-a4fc-ed0ab3fb5f68",
+          "Name": "OperationMode",
+          "Address": "Nc1.Dynamic.Float64:8",
+          "DataType": "System.Int32",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": []
+        },
+        {
+          "Id": "7ce1fa8c-0563-4498-a1f9-00e285f01e53",
+          "Name": "MainProgram",
+          "Address": "Nc1.Dynamic.Float64:0",
+          "DataType": "System.String",
+          "Unit": "",
+          "Access": {
+            "Read": true,
+            "Receive": true
+          },
+          "Properties": []
+        }
+      ],
+      "ConstantNodes": [],
+      "Commands": [],
+      "Groups": []
+    }
+  ],
+  "Skills": [],
+  "TaskProcessors": [],
+  "ProcessingNetworks": [],
+  "Rules": []
+}

@@ -1,0 +1,219 @@
+{
+  "Id": "ab303dc5-a892-46bc-babf-2b0ecffc5d2e",
+  "Name": "MicrosoftGraph",
+  "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+  "Address": "https://graph.microsoft.com/v1.0",
+  "Properties": [
+    {
+      "Name": "Endpoint",
+      "DataType": "System.String",
+      "Value": "Exchange"
+    },
+    {
+      "Name": "Accept",
+      "DataType": "System.String",
+      "Value": "application/json"
+    },
+    {
+      "Name": "ContentType",
+      "DataType": "System.String",
+      "Value": "application/json"
+    },
+    {
+      "Name": "OAuthEnable",
+      "DataType": "System.Boolean",
+      "Value": "true"
+    },
+    {
+      "Name": "OAuthProvider",
+      "DataType": "System.String",
+      "Value": "Entra"
+    },
+    {
+      "Name": "OAuthProviderEndpoint",
+      "DataType": "System.String",
+      "Value": "https://login.microsoftonline.com"
+    },
+    {
+      "Name": "OAuthClientId",
+      "DataType": "System.String",
+      "Value": "$(GRAPH_CLIENT_ID)"
+    },
+    {
+      "Name": "OAuthDirectoryId",
+      "DataType": "System.String",
+      "Value": "$(GRAPH_TENANT_ID)"
+    },
+    {
+      "Name": "OAuthScopes",
+      "DataType": "System.String[]",
+      "Value": "https://graph.microsoft.com/.default"
+    },
+    {
+      "Name": "OAuthSecretSource",
+      "DataType": "System.String",
+      "Value": "$(GRAPH_SECRET_NAME)"
+    },
+    {
+      "Name": "OAuthSecretSourceType",
+      "DataType": "System.String",
+      "Value": "Password"
+    },
+    {
+      "Name": "OAuthSecretSourcePath",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "OAuthSecretSourceStoreLocation",
+      "DataType": "System.String",
+      "Value": "CurrentUser"
+    },
+    {
+      "Name": "OAuthSecretSourceStoreName",
+      "DataType": "System.String",
+      "Value": "My"
+    },
+    {
+      "Name": "OAuthSecretSourceSubjectName",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "OAuthTokenType",
+      "DataType": "System.String",
+      "Value": "Bearer"
+    },
+    {
+      "Name": "OAuthDisableCertificateVerification",
+      "DataType": "System.Boolean",
+      "Value": "false"
+    },
+    {
+      "Name": "OAuthEnableLogging",
+      "DataType": "System.Boolean",
+      "Value": "false"
+    },
+    {
+      "Name": "UHAL:LogFileName",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "UHAL:LogMinimumTrace",
+      "DataType": "System.String",
+      "Value": "Information"
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "WebControl"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineYearOfConstruction",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineCriticality",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    }
+  ],
+  "DataNodes": [],
+  "ConstantNodes": [],
+  "Commands": [
+    {
+      "Id": "dc309050-c0ab-474b-8864-1e21254daaf4",
+      "Name": "GetCalendarView",
+      "Address": "users/$(UserId)/calendar/calendarView?startDateTime=$(From)&endDateTime=$(To)&$top=$(PageSize)&$select=id,subject,start,end,isAllDay,isCancelled,organizer,attendees",
+      "ScriptFile": "GetCalendarView.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "UserId",
+          "DataType": "System.String",
+          "Description": "Object id of the room mailbox"
+        },
+        {
+          "Name": "From",
+          "DataType": "System.String",
+          "Description": "Start of the window, ISO 8601 UTC"
+        },
+        {
+          "Name": "To",
+          "DataType": "System.String",
+          "Description": "End of the window, ISO 8601 UTC"
+        },
+        {
+          "Name": "PageSize",
+          "DataType": "System.String",
+          "Description": "Events per page ($top)"
+        }
+      ],
+      "Properties": []
+    },
+    {
+      "Id": "99de0b98-7a9b-46b3-b5c5-388c192f6c79",
+      "Name": "GetNextPage",
+      "Address": "placeholderTheScriptReplacesTheAddress",
+      "ScriptFile": "GetNextPage.cs",
+      "Type": "CommandNode",
+      "Arguments": [
+        {
+          "Name": "Content",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": ""
+        },
+        {
+          "Name": "Url",
+          "DataType": "System.String",
+          "Description": "Value of @odata.nextLink of the previous page"
+        }
+      ],
+      "Properties": []
+    }
+  ],
+  "Groups": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}
