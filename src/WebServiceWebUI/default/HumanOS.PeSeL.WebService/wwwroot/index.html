@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machine – HumanOS WebUI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="kopf">
+    <a class="marke" href="https://www.cybertech.swiss">HumanOS® Runtime</a>
+  </header>
+
+  <main>
+    <h1>Machine</h1>
+    <p class="lede">Live data and commands of the simulated machine, served by the web service of the agent.</p>
+
+    <h2>Live data</h2>
+    <div class="raster">
+      <section class="kachel">
+        <span class="label">Temperature</span>
+        <p class="wert"><span id="temperature">–</span> <span class="einheit">°C</span></p>
+        <span class="klein" id="temperatureInfo">waiting for data</span>
+      </section>
+      <section class="kachel">
+        <span class="label">Setpoint</span>
+        <p class="wert"><span id="setpoint">–</span> <span class="einheit">°C</span></p>
+        <span class="klein" id="setpointInfo">waiting for data</span>
+      </section>
+    </div>
+
+    <h2>Commands</h2>
+    <div class="raster">
+      <section class="kachel">
+        <h3>Set setpoint</h3>
+        <form id="setpointForm" novalidate>
+          <label class="feld">
+            <span>New setpoint in °C (5 – 40)</span>
+            <input id="setpointInput" type="number" step="0.1" min="5" max="40" value="22.0" aria-describedby="setpointError">
+            <p class="meldung klein" id="setpointError"></p>
+          </label>
+          <button class="knopf" type="submit">Set setpoint</button>
+        </form>
+        <p class="ergebnis klein" id="setpointResult"></p>
+      </section>
+      <section class="kachel">
+        <h3>Read machine state</h3>
+        <p class="klein">Compares temperature and setpoint in the agent and returns the state.</p>
+        <button class="knopf" id="stateButton" type="button">Read state</button>
+        <p class="ergebnis klein" id="stateResult"></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="fuss">
+    <p><span class="label">HumanOS® WebService</span>
+      <span class="klein">Example page served from wwwroot. Data refresh every 2 seconds.</span></p>
+  </footer>
+
+  <script>
+    // Ids from the project: data nodes in default/Devices/Machine.json, commands in
+    // default/DataModel/Objects/MachineCommands.json
+    const CONFIG = {
+      temperatureId: 'f39b74d4-5aad-4368-8560-70984a31d469',
+      setpointId: '988fc706-9252-4a11-9757-0f37ea079c4b',
+      setSetpointCommandId: '7d85a20a-9a01-4323-b3b9-c2298b4c6bb4',
+      getMachineStateCommandId: 'c53ec28a-3a07-4450-a6f5-b7d836bb6563',
+      refreshMs: 2000
+    };
+
+    // Calls the REST API of this web service (same origin) and returns the parsed XML document
+    async function callApi(method, url, body) {
+      const response = await fetch(url, {
+        method: method,
+        headers: { 'Accept': 'text/xml', 'Content-Type': 'text/xml' },
+        body: body
+      });
+      if (!response.ok) {
+        throw new Error(response.status + ' ' + response.statusText);
+      }
+      return new DOMParser().parseFromString(await response.text(), 'text/xml');
+    }
+
+    // Escapes a value for an XML text node
+    function escapeXml(value) {
+      return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    // Formats a number with one decimal
+    function formatValue(text) {
+      const value = parseFloat(text);
+      return isNaN(value) ? '–' : value.toFixed(1);
+    }
+
+    // Reads one data node and shows value and time
+    async function showDataNode(id, valueElement, infoElement) {
+      try {
+        const doc = await callApi('GET', '/nodes/data?id=' + encodeURIComponent(id));
+        const value = doc.querySelector('Data > Value');
+        valueElement.textContent = formatValue(value ? value.textContent : '');
+        infoElement.textContent = 'updated ' + new Date().toLocaleTimeString();
+      } catch (error) {
+        valueElement.textContent = '–';
+        infoElement.textContent = 'not available: ' + error.message;
+      }
+    }
+
+    async function refreshData() {
+      await Promise.all([
+        showDataNode(CONFIG.temperatureId, document.getElementById('temperature'), document.getElementById('temperatureInfo')),
+        showDataNode(CONFIG.setpointId, document.getElementById('setpoint'), document.getElementById('setpointInfo'))
+      ]);
+    }
+
+    // Executes a command; arguments: [{ name, type, value }]. Returns { ok, error, outputs }
+    async function executeCommand(id, args) {
+      const argumentXml = args.map(a =>
+        '<Argument name="' + a.name + '" datatype="' + a.type + '">' + escapeXml(a.value) + '</Argument>').join('');
+      const doc = await callApi('POST', '/nodes/command?id=' + encodeURIComponent(id),
+                                '<HumanOS.Stream><Command>' + argumentXml + '</Command></HumanOS.Stream>');
+      const returnCode = doc.querySelector('Command > ReturnCode');
+      const exception = doc.querySelector('Command > Exception');
+      const outputs = {};
+      doc.querySelectorAll('Command > Argument').forEach(a => { outputs[a.getAttribute('name')] = a.textContent; });
+      return {
+        ok: returnCode !== null && returnCode.textContent === 'Good',
+        error: (exception && exception.textContent) || (returnCode ? returnCode.textContent : 'no return code'),
+        outputs: outputs
+      };
+    }
+
+    // Shows a command result: green = OK, red = error
+    function showResult(element, ok, text) {
+      element.className = 'ergebnis klein ' + (ok ? 'ok' : 'fehler');
+      element.textContent = text;
+    }
+
+    document.getElementById('setpointForm').addEventListener('submit', async event => {
+      event.preventDefault();
+      const input = document.getElementById('setpointInput');
+      const error = document.getElementById('setpointError');
+      const result = document.getElementById('setpointResult');
+      const button = event.target.querySelector('button');
+      const value = parseFloat(input.value);
+
+      if (isNaN(value) || value < 5 || value > 40) {
+        input.setAttribute('aria-invalid', 'true');
+        error.textContent = 'Please enter a number between 5 and 40.';
+      } else {
+        input.removeAttribute('aria-invalid');
+        error.textContent = '';
+        button.disabled = true;
+        try {
+          const answer = await executeCommand(CONFIG.setSetpointCommandId,
+                                              [{ name: 'Setpoint', type: 'System.Double', value: value }]);
+          showResult(result, answer.ok, answer.ok ? answer.outputs.Result : answer.error);
+          await refreshData();
+        } catch (e) {
+          showResult(result, false, e.message);
+        }
+        button.disabled = false;
+      }
+    });
+
+    document.getElementById('stateButton').addEventListener('click', async event => {
+      const result = document.getElementById('stateResult');
+      event.target.disabled = true;
+      try {
+        const answer = await executeCommand(CONFIG.getMachineStateCommandId, []);
+        showResult(result, answer.ok, answer.ok ?
+                     answer.outputs.State + ' (deviation ' + formatValue(answer.outputs.Deviation) + ' °C)' :
+                     answer.error);
+      } catch (e) {
+        showResult(result, false, e.message);
+      }
+      event.target.disabled = false;
+    });
+
+    refreshData();
+    setInterval(refreshData, CONFIG.refreshMs);
+  </script>
+</body>
+</html>

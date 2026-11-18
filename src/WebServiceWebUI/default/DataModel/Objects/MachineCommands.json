@@ -1,0 +1,75 @@
+{
+  "Id": "63a4fb9a-7b7c-44c4-8d22-d30c45ad9c55",
+  "Name": "MachineCommands",
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [
+    {
+      "Id": "7d85a20a-9a01-4323-b3b9-c2298b4c6bb4",
+      "Name": "SetSetpoint",
+      "Type": "CSharpScriptCommandNode",
+      "Arguments": [
+        {
+          "Name": "Setpoint",
+          "Type": "Input",
+          "DataType": "System.Double",
+          "Description": "New setpoint in °C"
+        },
+        {
+          "Name": "Result",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": "Confirmation with the old and the new setpoint"
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "ScriptFileName",
+          "DataType": "System.String",
+          "Value": "SetSetpoint.cs"
+        }
+      ]
+    },
+    {
+      "Id": "c53ec28a-3a07-4450-a6f5-b7d836bb6563",
+      "Name": "GetMachineState",
+      "Type": "CSharpScriptCommandNode",
+      "Arguments": [
+        {
+          "Name": "State",
+          "Type": "Output",
+          "DataType": "System.String",
+          "Description": "Heating, Cooling or At setpoint"
+        },
+        {
+          "Name": "Deviation",
+          "Type": "Output",
+          "DataType": "System.Double",
+          "Description": "Temperature minus setpoint in °C"
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "ScriptFileName",
+          "DataType": "System.String",
+          "Value": "GetMachineState.cs"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [],
+  "Skills": [],
+  "Timers": [],
+  "Workflows": []
+}

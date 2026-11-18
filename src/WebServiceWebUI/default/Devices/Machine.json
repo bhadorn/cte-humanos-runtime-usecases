@@ -1,0 +1,54 @@
+{
+  "Id": "7d275c0e-84c6-424d-adf8-0a2bb708714e",
+  "Name": "Machine",
+  "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+  "Address": "C:\\Temp\\HumanOS.WebUI\\Machine.json",
+  "Properties": [
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "JsonMachine"
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "f39b74d4-5aad-4368-8560-70984a31d469",
+      "Name": "Temperature",
+      "Address": "$.Temperature",
+      "DataType": "System.Double",
+      "Unit": "°C",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    },
+    {
+      "Id": "988fc706-9252-4a11-9757-0f37ea079c4b",
+      "Name": "Setpoint",
+      "Address": "$.Setpoint",
+      "DataType": "System.Double",
+      "Unit": "°C",
+      "Access": {
+        "Read": true,
+        "ReadConversion": {},
+        "Receive": true,
+        "Write": true,
+        "WriteConversion": {}
+      },
+      "Properties": []
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Groups": [],
+  "Agents": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}

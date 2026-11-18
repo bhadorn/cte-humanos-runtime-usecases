@@ -1,0 +1,27 @@
+{
+  "Services": [
+    {
+      "Id": "f0dcf5bd-97d7-4288-9425-b8f34b4ffd66",
+      "Name": "REST",
+      "Port": 8080,
+      "X509CertificateFile": "",
+      "X509CertificatePassword": "",
+      "AcceptedCalls": [],
+      "Modules": [],
+      "WebRoot": {
+        "Enabled": true,
+        "Folder": "wwwroot",
+        "DefaultFile": "index.html",
+        "Properties": {}
+      },
+      "Properties": {},
+      "ServiceRule": {
+        "Devices": [],
+        "Drivers": [],
+        "Properties": {}
+      }
+    }
+  ],
+  "Proxies": [],
+  "Properties": {}
+}

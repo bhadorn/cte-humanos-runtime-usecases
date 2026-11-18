@@ -74,6 +74,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | [Temperature Reporter](./src/TemperatureReporter/Readme.md)                        | FileReader (simulator)            | Threshold-based alerting with multiple alarm levels                                                                         |
 | [Timing Example](./src/TimingExample/Readme.md)                                    | FileReader (simulator)            | Example how to use timers to execute commands                                                                               |
 | [Traub CNC](./src/Traub/Readme.md)                                                 | OpcUaControl                      | OPC-UA bridge with OEE state derivation and NC program header parsing; includes a full machine simulator                    |
+| [WebService WebUI](./src/WebServiceWebUI/Readme.md)                                | FileReader + WebService            | HTML page served by the agent: reads data nodes and executes command scripts via REST                                       |
 
 ## DNC
 

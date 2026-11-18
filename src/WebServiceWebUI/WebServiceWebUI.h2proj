@@ -1,0 +1,149 @@
+{
+  "Path": "WebServiceWebUI.h2proj",
+  "Name": "WebServiceWebUI",
+  "Description": "JSON simulator with scripted commands, operated from a WebUI served by the WebService plugin",
+  "Author": "",
+  "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "1.0",
+  "DeviceTemplates": [
+    {
+      "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+      "Path": "JsonMachine.json",
+      "Id": "9529ef1b-e62e-4cbc-a6f4-9bea697516b3",
+      "Name": "JsonMachine",
+      "Description": ""
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n66613538326164383538373464636639616130393166333361323532643838383466303638343430\r\n3766666336373830643664363331656663313865653464380a623436653463633232313366313930\r\n35363666303132326465363131623537343332366461643863623232336539626363343064306631\r\n6637323134646132340a343634333966333066303434363062636438313761333431333039353866\r\n62386132363838383235333165383238313037343931323162376333636565613537366531323463\r\n3264303435313234393432613664323366383964323336353063\r\n"
+      }
+    ],
+    "Id": "c498089d-d77d-4799-9679-2d38f6f54b44",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "82a53f95-f99c-49d6-ae1d-d35c83c44adf",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.13",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "82a53f95-f99c-49d6-ae1d-d35c83c44adf",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "HumanOS.Repository.Type": "",
+        "HumanOS.Repository.Connection": "",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.13",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [
+          {
+            "Path": "MachineCommands.json",
+            "Id": "4ef90d9a-a93c-48ff-86cd-60b62b28160b",
+            "Name": "MachineCommands.json",
+            "Description": ""
+          }
+        ],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "C:\\Temp\\HumanOS.WebUI\\Machine.json",
+          "DeviceTemplateId": "9529ef1b-e62e-4cbc-a6f4-9bea697516b3",
+          "DriverId": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "SubDevices": [],
+          "Type": "JsonMachine",
+          "Variables": [],
+          "Path": "Machine.json",
+          "Id": "7d275c0e-84c6-424d-adf8-0a2bb708714e",
+          "Name": "Machine",
+          "Description": ""
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.FileReader",
+          "Id": "94cafec2-7910-41f6-8185-c35ca768faba",
+          "Name": "HumanOS.UHAL.FileReader",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.WebService",
+          "Id": "650a866d-5958-4ff6-bb11-b0a74cc76151",
+          "Name": "HumanOS.PeSeL.WebService",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [
+          {
+            "Path": "SetSetpoint.cs",
+            "Id": "99b6f34a-dc66-4cfd-a00b-e29c6727d85d",
+            "Name": "SetSetpoint.cs",
+            "Description": ""
+          },
+          {
+            "Path": "GetMachineState.cs",
+            "Id": "f64aa77b-b111-4195-a934-ac5773d53c6d",
+            "Name": "GetMachineState.cs",
+            "Description": ""
+          }
+        ],
+        "Processing": [],
+        "Rules": [],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

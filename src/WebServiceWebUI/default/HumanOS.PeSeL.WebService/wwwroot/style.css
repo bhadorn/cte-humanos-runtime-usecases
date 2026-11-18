@@ -1,0 +1,202 @@
+/* CyberTech style guide (Software): tokens for light and dark, IBM Plex embedded as woff2 */
+
+@font-face { font-family: "IBM Plex Sans"; font-weight: 300; font-display: swap; src: url("fonts/IBMPlexSans-Light.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 400; font-display: swap; src: url("fonts/IBMPlexSans-Regular.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 600; font-display: swap; src: url("fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans Condensed"; font-weight: 300; font-display: swap; src: url("fonts/IBMPlexSansCondensed-Light.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans Condensed"; font-weight: 400; font-display: swap; src: url("fonts/IBMPlexSansCondensed-Regular.woff2") format("woff2"); }
+
+:root {
+  /* Colours: light theme */
+  --grund: #FFFFFF;
+  --grund-2: #F5F7FA;
+  --tinte: #1F2933;
+  --tinte-2: #52606D;
+  --linie: #CBD2D9;
+  --akzent: #2680C2;
+  --akzent-text: #186FAF;
+  --akzent-flaeche: #DCEEFB;
+  --lila: #724BB7;
+  --gewinn: #2F8132;
+  --verlust: #BA2525;
+  --warnung: #F0B429;
+  --nachtblau: #011D31;
+  --blau-300: #84C5F4;
+
+  /* Buttons keep Blau 700/600 in both themes: white text needs the contrast */
+  --knopf: #186FAF;
+  --knopf-hover: #2680C2;
+
+  /* Type scale */
+  --font-condensed: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "IBM Plex Sans", Arial, sans-serif;
+  --fs-display: clamp(2.4rem, 5vw, 4.8rem);
+  --fs-headline: clamp(2rem, 3.5vw, 3.4rem);
+  --fs-title: clamp(1.5rem, 3vw, 2.1rem);
+  --fs-lede: clamp(1.06rem, 1.6vw, 1.2rem);
+  --fs-body: 1.0625rem;
+  --fs-ui: 0.9375rem;
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --lh-tight: 1.1;
+  --lh-title: 1.3;
+  --lh-text: 1.7;
+  --lh-ui: 1.5;
+
+  /* Radii */
+  --radius-feld: 4px;
+  --radius-kachel: 14px;
+  --radius-anzeige: 20px;
+  --radius-pill: 999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grund: #011D31;
+    --grund-2: color-mix(in srgb, #011D31 88%, #F5F7FA);
+    --tinte: #F5F7FA;
+    --tinte-2: #9AA5B1;
+    --linie: #52606D;
+    --akzent: #4098D7;
+    --akzent-text: #62B0E8;
+    --akzent-flaeche: color-mix(in srgb, #011D31 75%, #4098D7);
+    --lila: #A081D9;
+    --gewinn: #57AE5B;
+    --verlust: #E66A6A;
+    --warnung: #F7C948;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--tinte-2);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-text);
+}
+
+main, .kopf { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header: brand label top left */
+.kopf { padding-top: 1.5rem; }
+.marke {
+  color: var(--tinte);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 2.5rem 0 0.5rem;
+  color: var(--tinte);
+  font-family: var(--font-condensed);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-tight);
+}
+h2 {
+  margin: 3rem 0 1rem;
+  color: var(--tinte);
+  font-family: var(--font-condensed);
+  font-size: var(--fs-headline);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+}
+h3 {
+  margin: 0 0 0.75rem;
+  color: var(--tinte);
+  font-family: var(--font-condensed);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-title);
+}
+.lede { max-width: 46rem; margin: 0; font-size: var(--fs-lede); }
+
+.label {
+  display: block;
+  color: var(--tinte-2);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.klein { font-size: var(--fs-small); font-weight: var(--fw-regular); line-height: var(--lh-ui); }
+
+/* Tiles */
+.raster { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; }
+.kachel {
+  padding: 1.5rem;
+  background: var(--grund-2);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-kachel);
+}
+
+/* Live machine data in violet */
+.wert {
+  margin: 0.25rem 0;
+  color: var(--lila);
+  font-family: var(--font-condensed);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-tight);
+}
+.einheit { font-size: var(--fs-title); }
+
+/* Input field */
+.feld { display: block; margin-bottom: 1rem; }
+.feld span { display: block; margin-bottom: 0.25rem; font-size: var(--fs-ui); font-weight: var(--fw-regular); }
+.feld input {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  background: var(--grund);
+  color: var(--tinte);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-feld);
+  font: inherit;
+  font-weight: var(--fw-regular);
+}
+.feld input:focus { outline: none; border: 2px solid var(--akzent); box-shadow: 0 0 0 3px var(--akzent-flaeche); }
+.feld input[aria-invalid="true"] { border: 2px solid var(--verlust); }
+.feld .meldung { min-height: 1.5em; margin: 0.25rem 0 0; color: var(--verlust); }
+
+/* Continue button */
+.knopf {
+  padding: 0.7rem 1.6rem;
+  background: var(--knopf);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: var(--fs-ui);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-ui);
+  cursor: pointer;
+}
+.knopf:hover { background: var(--knopf-hover); }
+.knopf:focus-visible { outline: 3px solid var(--akzent-flaeche); outline-offset: 2px; }
+.knopf:disabled { opacity: 0.6; cursor: wait; }
+
+/* Results: green = OK, red = error, nothing else */
+.ergebnis { min-height: 1.5em; margin: 1rem 0 0; color: var(--tinte); }
+.ergebnis.ok { color: var(--gewinn); }
+.ergebnis.fehler { color: var(--verlust); }
+
+/* Footer: dark island, night blue in both themes */
+.fuss {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background: var(--nachtblau);
+  color: #FFFFFF;
+}
+.fuss .label { color: var(--blau-300); }
+.fuss p { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
