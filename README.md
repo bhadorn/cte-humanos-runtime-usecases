@@ -22,6 +22,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 **Depending on the use case**:
 
 - **Ansible Agent**: Running [Semaphore](https://semaphoreui.com) instance with Ansible configured
+- **Bookable Machine**: A Microsoft 365 directory (Entra and Exchange Online) with an app registration and an equipment or room mailbox for the machine, or Python 3 for the mock server of the Exchange Agent; the `FANUC NCGuide` simulator (pre-configured) or a physical FANUC controller (FOCAS2, 0i-D/F); an OPC-UA client (for example UaExpert) to look at the result
 - **DNC for Different Machine Controls**: The control plugin(s) for the targeted controllers (FANUC, Heidenhain, Okuma, Sinumerik) plus a physical controller or vendor simulator; the included `HermleC41` machine uses the Heidenhain iTNC530 simulator
 - **Excel-Reader**: Microsoft Excel to change the demo file; an OPC-UA client (for example UaExpert) to look at the result
 - **Exchange Agent**: A Microsoft 365 directory (Entra and Exchange Online) with an app registration and a room mailbox, or Python 3 for the included mock server; an OPC-UA client (for example UaExpert) to look at the result
@@ -53,6 +54,7 @@ Each use case is a self-contained [HumanOS IoT Designer](https://doc.cybertech.s
 | Use Case                                                                           | Connector                         | Key Feature                                                                                                                 |
 | :--------------------------------------------------------------------------------- | :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
 | [Ansible Agent](./src/AnsibleAgent/Readme.md)                                      | WebControl (REST)                 | IT automation via Semaphore API and HumanOS workflows                                                                       |
+| [Bookable Machine](./src/BookableMachine/Readme.md)                                | WebControl (Microsoft Graph) + FanucControl + NoDevice + OPC-UA | Books a machine through an Outlook equipment calendar (read only) and compares the booking with the running state of a FANUC controller: `Usage` and `Mismatch` as OPC-UA variables |
 | [Excel-Reader](./src/FileReader/Readme.md)                                         | FileReader (Excel)                | Reads an Excel file and publishes its cells through the OPC-UA server                                                       |
 | [Exchange Agent](./src/ExchangeAgent/Readme.md)                                    | WebControl (Microsoft Graph) + NoDevice + OPC-UA | Reads Outlook room calendars through Microsoft Graph (Entra client credentials, read only, paging) and publishes the events as OPC-UA variables |
 | [FANUC 500i-A Control (FOCAS3)](./src/FanucControl500i/Readme.md)                  | FanucControl (FOCAS3) + OPC-UA    | Authenticated FOCAS3 connection to new FANUC 500i-A controls (credentials from secret store), published via OPC-UA          |

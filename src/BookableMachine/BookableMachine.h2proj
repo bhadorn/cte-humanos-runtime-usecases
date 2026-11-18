@@ -1,0 +1,239 @@
+{
+  "Path": "BookableMachine.h2proj",
+  "Name": "BookableMachine",
+  "Description": "Books a machine through an Outlook equipment calendar and compares the booking with the state of a FANUC controller (OPC-UA).",
+  "Author": "CyberTech Engineering GmbH",
+  "AutoIncrementPublishNumber": true,
+  "PlatformPublishTokenSecret": "",
+  "PlatformURL": "",
+  "ProjectVaultKey": "uRNSgLTCTUjcyT2W1ecXv/3wBjiZLlzrZIoYzh10jsOmg70Clh0fZyCb2hPXVThJGATBPReTmQMgAfrffqv299VTJtg1PLByuP9xXgEKe1Q=",
+  "SecurityMode": "StoreKeyInProject",
+  "SyntaxVersion": "2.0",
+  "Version": "1.0",
+  "DeviceTemplates": [
+    {
+      "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+      "Path": "MicrosoftGraph.json",
+      "Id": "ab303dc5-a892-46bc-babf-2b0ecffc5d2e",
+      "Name": "MicrosoftGraph",
+      "Description": "Microsoft Graph client with Entra client-credentials login (HumanOS.UHAL.WebControl)"
+    },
+    {
+      "DriverId": "9cccefec-180b-4d47-ac70-99360649856a",
+      "Path": "MachineBooking.json",
+      "Id": "875f42d2-75f6-4299-92b7-d37ec13b0192",
+      "Name": "MachineBooking",
+      "Description": "RAM-only device that carries the booking and usage nodes (HumanOS.UHAL.NoDevice)"
+    },
+    {
+      "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+      "Path": "Machine.json",
+      "Id": "f8161e6f-eb5b-441b-b338-a98b5cfc5083",
+      "Name": "Machine",
+      "Description": "FANUC controller (HumanOS.UHAL.FanucControl): NCGuide simulator or real control"
+    }
+  ],
+  "SecretDatabase": {
+    "Secrets": [
+      {
+        "Locked": true,
+        "Expiration": "9999-12-31T23:59:59.9999999",
+        "KeyName": "ProjectVaultKey",
+        "Vault": "$ANSIBLE_VAULT;1.1;AES256\r\n30316132666263383638333033663531623966376465316433326238333861306133393631353533\r\n3831613061303032316134303236396231636434633734350a313566666432656231366330326232\r\n62656130373762306637333364333762376532613238396564363466633231303531313032653338\r\n3934373662336234300a633030616535643135393864313034333963366163613937356234356464\r\n35326266323333633936323765373833616230313862303638336237373934643164353130383865\r\n3466333664623138323739396638623734396366353037366234\r\n"
+      }
+    ],
+    "Id": "0d60db5b-f3bd-40c3-8240-0315c94821c1",
+    "Name": "Secrets Database",
+    "Description": ""
+  },
+  "Targets": [
+    {
+      "Path": "default",
+      "Id": "ffdfd170-709e-4c53-8062-509091616a41",
+      "Name": "default",
+      "DisplayName": "Default IoT Gateway",
+      "Description": "",
+      "DirectoryPublishPath": "",
+      "LicenseRefreshIntervalHours": 24,
+      "OutPath": "$(Project.Directory)\\Build\\$(Target.Name)\\",
+      "Protected": true,
+      "PublishScript": "",
+      "PublishScriptArguments": "",
+      "PlatformLogMinimumLevel": "Warning",
+      "PlatformLogSecretId": "",
+      "PlatformLogUrl": "",
+      "PlatformToken": "",
+      "Runtime": "HumanOS.IoT.Runtime win-x86 TRIAL",
+      "RuntimeVersion": "2.12",
+      "ServiceDescription": "",
+      "ServiceDisplayName": "HumanOS.IoT.Gateway for $(Target.Name)",
+      "ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+      "ServiceStartType": "Automatic",
+      "AppSettings": {
+        "AppConfig.LogMinimumLevel": "Information",
+        "AppConfig.LogRetentionDays": "7",
+        "HumanOS.ServiceId": "ffdfd170-709e-4c53-8062-509091616a41",
+        "HumanOS.ServiceName": "HumanOS.IoT.Gateway.$(Target.Name)",
+        "HumanOS.LocalNodeSpace.Type": "HumanOS.Kernel.DataModel.Space.TInMemoryNodeSpace, HumanOS.Kernel",
+        "Serilog.WriteTo[?(@.Name == 'File')].Args.path": "$(AppConfig:CommonAppPath)Logs\\$(HumanOS:ServiceName)-.log",
+        "HumanOS.RuntimeVersion": "2.12",
+        "SecretManager.Path": "$(AppSettingsDir)Secrets\\",
+        "CertificateManager.Path": "$(AppSettingsDir)Config\\CertificateSources\\"
+      },
+      "VaultKeyEnvironmentVariableName": "HumanOSVaultKey",
+      "DataModel": {
+        "Objects": [
+          {
+            "Path": "BookingPolling.json",
+            "Id": "25cf3813-393c-4f0b-8115-e3b1b4a525e2",
+            "Name": "BookingPolling.json",
+            "Description": ""
+          }
+        ],
+        "Rules": [],
+        "Schema": [],
+        "Path": "DataModel",
+        "Name": "DataModel"
+      },
+      "Devices": [
+        {
+          "Address": "https://graph.microsoft.com/v1.0",
+          "DeviceTemplateId": "ab303dc5-a892-46bc-babf-2b0ecffc5d2e",
+          "DriverId": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "MachineInventoryNumber": "",
+          "MachineName": "",
+          "MachineSerialNumber": "",
+          "MachineType": "",
+          "SubDevices": [],
+          "Type": "WebControl",
+          "Variables": [
+            {
+              "Name": "GRAPH_TENANT_ID",
+              "DataType": "System.String",
+              "Value": "<TENANT-ID>"
+            },
+            {
+              "Name": "GRAPH_CLIENT_ID",
+              "DataType": "System.String",
+              "Value": "<CLIENT-ID>"
+            },
+            {
+              "Name": "GRAPH_SECRET_NAME",
+              "DataType": "System.String",
+              "Value": "GraphClientSecret"
+            }
+          ],
+          "Path": "GraphClient.json",
+          "Id": "776345ab-a30f-4845-b77a-f08c19ec9e3e",
+          "Name": "GraphClient",
+          "Description": "Microsoft Graph (read only)"
+        },
+        {
+          "Address": "RAM",
+          "DeviceTemplateId": "875f42d2-75f6-4299-92b7-d37ec13b0192",
+          "DriverId": "9cccefec-180b-4d47-ac70-99360649856a",
+          "MachineInventoryNumber": "",
+          "MachineName": "",
+          "MachineSerialNumber": "",
+          "MachineType": "",
+          "SubDevices": [],
+          "Type": "NoDevice",
+          "Variables": [],
+          "Path": "MachineBooking.json",
+          "Id": "df01d954-df3d-4e56-a536-a386f3d21bfb",
+          "Name": "MachineBooking",
+          "Description": "Booking calendar and usage of the machine as OPC-UA variables"
+        },
+        {
+          "Address": "focas2://hssb@NCGUIDE",
+          "DeviceTemplateId": "f8161e6f-eb5b-441b-b338-a98b5cfc5083",
+          "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "SubDevices": [],
+          "Type": "FANUC 0i-F",
+          "Variables": [],
+          "Path": "Machine.json",
+          "Id": "d46dedb3-bdaf-4933-8c6f-cf1ad5721685",
+          "Name": "Machine",
+          "Description": "FANUC controller (NCGuide simulator by default)"
+        }
+      ],
+      "Plugins": [
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.DeviceDetectors",
+          "Id": "9d078b95-6322-44d2-989d-87a1fca283b9",
+          "Name": "HumanOS.UHAL.DeviceDetectors",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [
+            {
+              "Path": "GetCalendarView.cs",
+              "Id": "49e5d022-fd57-4757-9c82-468c53da15cf",
+              "Name": "GetCalendarView.cs",
+              "Description": ""
+            },
+            {
+              "Path": "GetNextPage.cs",
+              "Id": "29053d16-1188-4c3a-839a-8220a19348a5",
+              "Name": "GetNextPage.cs",
+              "Description": ""
+            }
+          ],
+          "Path": "HumanOS.UHAL.WebControl",
+          "Id": "be79a86b-38ee-4faa-805a-1db46a06e65d",
+          "Name": "HumanOS.UHAL.WebControl",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.NoDevice",
+          "Id": "9cccefec-180b-4d47-ac70-99360649856a",
+          "Name": "HumanOS.UHAL.NoDevice",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.PeSeL.OPCUAServer",
+          "Id": "3b3421cb-92e5-4d51-b172-33a180f21824",
+          "Name": "HumanOS.PeSeL.OPCUAServer",
+          "Description": ""
+        },
+        {
+          "CustomFiles": [],
+          "ScriptFiles": [],
+          "Path": "HumanOS.UHAL.FanucControl",
+          "Id": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
+          "Name": "HumanOS.UHAL.FanucControl",
+          "Description": ""
+        }
+      ],
+      "Scripts": {
+        "Commands": [
+          {
+            "Path": "ReadBooking.cs",
+            "Id": "bd1ee392-4634-43e5-be96-b0f5042e32b3",
+            "Name": "ReadBooking.cs",
+            "Description": ""
+          }
+        ],
+        "Processing": [],
+        "Rules": [
+          {
+            "Path": "ReadBookingTimer.cs",
+            "Id": "d004e2ab-d239-4017-bc31-7dfb40c12edd",
+            "Name": "ReadBookingTimer.cs",
+            "Description": ""
+          }
+        ],
+        "Workflows": [],
+        "Path": "Scripts",
+        "Name": "Scripts"
+      }
+    }
+  ]
+}

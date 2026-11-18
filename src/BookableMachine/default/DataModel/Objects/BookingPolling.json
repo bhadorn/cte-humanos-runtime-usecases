@@ -1,0 +1,65 @@
+{
+  "Id": "25cf3813-393c-4f0b-8115-e3b1b4a525e2",
+  "Name": "BookingPolling",
+  "PersistanceMode": "Volatile",
+  "Properties": [],
+  "EntityTypes": [],
+  "Agents": [],
+  "AlarmEventPools": [],
+  "Classes": [],
+  "Commands": [
+    {
+      "Id": "62109b40-a803-4dc0-ba7c-cd2426cf91cc",
+      "Name": "ReadBooking",
+      "Type": "CSharpScriptCommandNode",
+      "Arguments": [],
+      "Properties": [
+        {
+          "Name": "ScriptFileName",
+          "DataType": "System.String",
+          "Value": "ReadBooking.cs"
+        }
+      ]
+    }
+  ],
+  "ConstantNodes": [],
+  "CustomNodes": [],
+  "DataNodes": [],
+  "EntityCollections": [],
+  "Groups": [],
+  "ProcessingNetworks": [],
+  "Relations": [],
+  "Rules": [
+    {
+      "Id": "dff25425-dbc0-400c-a030-0cf63fb71548",
+      "Name": "RunReadBooking",
+      "Type": "GenericRule",
+      "TriggerEvent": "OnTimer",
+      "TriggerEventParameter": "",
+      "TriggerCondition": "",
+      "Action": {
+        "ScriptFile": "ReadBookingTimer.cs",
+        "Type": "ScriptFile",
+        "Arguments": []
+      },
+      "Properties": []
+    }
+  ],
+  "Skills": [],
+  "Timers": [
+    {
+      "Id": "b1a315b2-72aa-49f0-8704-1e659b4b0452",
+      "Name": "Timer",
+      "TriggerConfig": {
+        "Id": "7bd8ab3a-1943-4dec-87b8-8251115edf4d",
+        "Mode": "Sampler",
+        "Interval": 15,
+        "IntervalUnit": "Second",
+        "InitialDelay": "0.0:00:10.00",
+        "RepeatCount": 2147483647
+      },
+      "Properties": []
+    }
+  ],
+  "Workflows": []
+}

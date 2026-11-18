@@ -1,0 +1,245 @@
+{
+  "Id": "df01d954-df3d-4e56-a536-a386f3d21bfb",
+  "Name": "MachineBooking",
+  "DriverId": "9cccefec-180b-4d47-ac70-99360649856a",
+  "Address": "RAM",
+  "Properties": [
+    {
+      "Name": "Endpoint",
+      "DataType": "System.String",
+      "Value": "Calendar"
+    },
+    {
+      "Name": "ResourceId",
+      "DataType": "System.String",
+      "Value": "<MAILBOX-OBJECT-ID>"
+    },
+    {
+      "Name": "LookAheadHours",
+      "DataType": "System.Int32",
+      "Value": 48
+    },
+    {
+      "Name": "PageSize",
+      "DataType": "System.Int32",
+      "Value": 50
+    },
+    {
+      "Name": "IncludeMailAddresses",
+      "DataType": "System.Boolean",
+      "Value": false
+    },
+    {
+      "Name": "EnableOpcUa",
+      "DataType": "System.Boolean",
+      "Value": true
+    },
+    {
+      "Name": "Type",
+      "DataType": "System.String",
+      "Value": "NoDevice"
+    },
+    {
+      "Name": "MachineType",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineSerialNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineInventoryNumber",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineYearOfConstruction",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "MachineCriticality",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Description",
+      "DataType": "System.String",
+      "Value": ""
+    },
+    {
+      "Name": "SupplierName",
+      "DataType": "System.String"
+    },
+    {
+      "Name": "Revision",
+      "DataType": "System.Int32",
+      "Value": 0
+    }
+  ],
+  "DataNodes": [
+    {
+      "Id": "bc372e2f-c5be-468b-811a-7ec65bcb19e7",
+      "Name": "Status",
+      "Address": "",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "8edcbce7-6496-49be-89dc-80af8ba5ac68",
+      "Name": "LastRun",
+      "Address": "",
+      "DataType": "System.DateTime",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "dd774d6a-1d6e-4de1-ac0a-e4d3f685b682",
+      "Name": "LastUpdate",
+      "Address": "",
+      "DataType": "System.DateTime",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "55e59e75-888e-44d8-acbf-ad9d7756b4fe",
+      "Name": "EventCount",
+      "Address": "",
+      "DataType": "System.Int32",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "9b6549aa-4132-4340-8184-008be5734bbd",
+      "Name": "Booked",
+      "Address": "",
+      "DataType": "System.Boolean",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "503ae28f-1235-4a23-8951-ffbc7c8f9777",
+      "Name": "BookedBy",
+      "Address": "",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "8cdac48d-2c58-4b5d-af5c-4ce5665fe7f6",
+      "Name": "BookedSubject",
+      "Address": "",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "2e50ebe0-6780-4a8f-9f14-1bf4f6aeca5e",
+      "Name": "BookedUntil",
+      "Address": "",
+      "DataType": "System.DateTime",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "17d3970d-fb28-4fa7-8510-3cad0c470d6e",
+      "Name": "NextStart",
+      "Address": "",
+      "DataType": "System.DateTime",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "0cea2548-9041-46a5-9f9e-2ec148911a5b",
+      "Name": "NextBookedBy",
+      "Address": "",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "78ea8f62-8061-44ce-9aba-2938ff833f12",
+      "Name": "MachineRunning",
+      "Address": "",
+      "DataType": "System.Boolean",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "8d2ca5aa-0cc2-4628-9f0f-729afaa52f8d",
+      "Name": "Usage",
+      "Address": "",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "e4404291-e277-4601-9441-56826489e031",
+      "Name": "Mismatch",
+      "Address": "",
+      "DataType": "System.Boolean",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    },
+    {
+      "Id": "9fba536a-191b-47d1-8d04-ccfc3d52089f",
+      "Name": "Events",
+      "Address": "",
+      "DataType": "System.String",
+      "Unit": "",
+      "Access": {
+        "Read": true
+      },
+      "Properties": []
+    }
+  ],
+  "ConstantNodes": [],
+  "Commands": [],
+  "Skills": [],
+  "TaskProcessors": [],
+  "EntityTypes": [],
+  "ProcessingNetworks": [],
+  "Rules": [],
+  "SubDevices": []
+}
