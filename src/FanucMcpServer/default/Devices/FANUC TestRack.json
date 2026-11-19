@@ -2,7 +2,7 @@
   "Id": "383c3a8c-06fd-4ecb-bb85-a124b28b3734",
   "Name": "FANUC TestRack",
   "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
-  "Address": "NCGUIDE!",
+  "Address": "focas2://hssb@NCGUIDE",
   "Properties": [
     {
       "Name": "Description",

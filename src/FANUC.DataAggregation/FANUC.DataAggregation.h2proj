@@ -78,7 +78,7 @@
       },
       "Devices": [
         {
-          "Address": "NCGUIDE!",
+          "Address": "focas2://hssb@NCGUIDE",
           "DeviceTemplateId": "dc5304b8-527b-4502-9261-652f80a67ebf",
           "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
           "SubDevices": [],

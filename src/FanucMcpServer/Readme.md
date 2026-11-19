@@ -14,7 +14,7 @@ NC file from the controller.
 
 The MCP endpoint is provided by the **HumanOS MCP Server plugin** (`HumanOS.PeSeL.McpServer`). The
 machine data and commands come from a single FANUC device (`FanucOEE` template) connected to the
-**FANUC NCGUIDE simulator** (`NCGUIDE!`), so no physical CNC hardware is required. With
+**FANUC NCGUIDE simulator** (`focas2://hssb@NCGUIDE`), so no physical CNC hardware is required. With
 `ExpandToolsToNodeSpace` enabled, the device's entire node space — every data node, command and skill —
 is automatically published as MCP tools the agent can discover and call.
 
@@ -46,7 +46,7 @@ server plugin into reads/writes/command-invocations against the gateway's data m
 | `FanucMcpServer.h2proj`                               | HumanOS IoT Designer project file (target, plugins, device instance)                     |
 | `DeviceTemplates/FanucOEE.json`                       | Device template: FANUC data nodes, `ReadFile` command, `ProgramManagement` skill and the OEE processing network |
 | `default/`                                            | Default IoT Gateway target                                                               |
-| `default/Devices/FANUC TestRack.json`                 | Concrete FANUC device instance (address `NCGUIDE!`, type `0i-TF`)                        |
+| `default/Devices/FANUC TestRack.json`                 | Concrete FANUC device instance (address `focas2://hssb@NCGUIDE`, type `0i-TF`)                        |
 | `default/HumanOS.PeSeL.McpServer/settings.json`       | MCP server service (`FactoryFloor`) — endpoint, transport paths, CORS and tool exposure  |
 | `default/HumanOS.UHAL.FanucControl/`                  | FANUC control driver config and the `Fanuc_ProductProcessor.cs` script                   |
 | `default/HumanOS.UHAL.DeviceDetectors/`               | Device-detector plugin (enabled)                                                         |
@@ -79,7 +79,7 @@ http://localhost:8080/message    (JSON-RPC message POST)
 
 ## The FANUC Device (`FanucOEE`)
 
-The `FANUC TestRack` device (template `FanucOEE`, FANUC type `0i-TF`, address `NCGUIDE!`) supplies the
+The `FANUC TestRack` device (template `FanucOEE`, FANUC type `0i-TF`, address `focas2://hssb@NCGUIDE`) supplies the
 data and tools the agent sees. The most relevant items:
 
 | Node / Command / Skill          | Type      | Purpose                                                                  |
@@ -122,7 +122,7 @@ Processors and data nodes are wired by **port matching** (`PortMatchId`) rather 
 
 - HumanOS IoT Runtime ≥ 2.12 with the **MCP Server plugin** (`HumanOS.PeSeL.McpServer`) and the
   **FANUC Control plugin** (`HumanOS.UHAL.FanucControl`) licensed and installed
-- `FANUC NCGuide` simulator (the device is pre-configured for address `NCGUIDE!`) — or a physical FANUC
+- `FANUC NCGuide` simulator (the device is pre-configured for address `focas2://hssb@NCGUIDE`) — or a physical FANUC
   controller reachable at the configured address
 - An **MCP client**: an MCP-capable AI agent/LLM, or a generic MCP inspector/test client to browse the
   tools and read nodes
@@ -137,7 +137,7 @@ Processors and data nodes are wired by **port matching** (`PortMatchId`) rather 
 - **Exposed tools**: keep `ExpandToolsToNodeSpace = true` to publish the whole node space, or set it to
   `false` and list specific tools explicitly under `Tools` to limit what the agent can see.
 - **Target controller**: in the `default` target, edit `Devices/FANUC TestRack.json` (and the device
-  entry in `FanucMcpServer.h2proj`) and set `Address` to your controller (default `NCGUIDE!` for the
+  entry in `FanucMcpServer.h2proj`) and set `Address` to your controller (default `focas2://hssb@NCGUIDE` for the
   simulator) and the FANUC `Type`.
 - **Deployment**: the `Build/` folder contains the published, deployment-ready target, including
   `RegisterService.ps1` / `UnRegisterService.ps1` to install the gateway as a Windows service.

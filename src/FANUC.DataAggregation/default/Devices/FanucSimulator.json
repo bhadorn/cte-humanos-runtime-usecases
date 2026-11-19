@@ -2,7 +2,7 @@
   "Id": "4f296eb4-e448-4e54-bb1f-db05900b723e",
   "Name": "FanucSimulator",
   "DriverId": "b3ccd1a7-a49b-46fc-b983-5284992f6444",
-  "Address": "NCGUIDE!",
+  "Address": "focas2://hssb@NCGUIDE",
   "Properties": [
     {
       "Name": "MachineType",

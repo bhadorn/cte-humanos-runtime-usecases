@@ -9,7 +9,7 @@ keywords: [HumanOS, FANUC, OPC-UA, data aggregation, CNC, controller, DataAggreg
 
 Shows how to collect several individual **FANUC CNC controller signals** (availability, program name, operation mode, part counter) and combine them into a single **aggregated entity node** using the HumanOS DataAggregator processing network: without writing any C# script. The aggregated result is then exposed as a unified OPC-UA node.
 
-A **FANUC NCGUIDE simulator** (`NCGUIDE!`) is pre-configured as the device, so no physical CNC hardware is required.
+A **FANUC NCGUIDE simulator** (`focas2://hssb@NCGUIDE`) is pre-configured as the device, so no physical CNC hardware is required.
 
 ## Architecture
 
@@ -17,7 +17,7 @@ A **FANUC NCGUIDE simulator** (`NCGUIDE!`) is pre-configured as the device, so n
 FANUC CNC Controller (or NCGUIDE simulator)
         │  polled by FanucControl driver
         ▼
-Device: FanucSimulator  (type: FANUC 0i-F, address: NCGUIDE!)
+Device: FanucSimulator  (type: FANUC 0i-F, address: focas2://hssb@NCGUIDE)
         │
         ├─ Controller group
         │    ├─ Available      (Int32)  : machine availability status

@@ -10,7 +10,7 @@ keywords: [HumanOS, FANUC, 500i-A, FOCAS3, CNC, OPC-UA, NCGuide, CNC GUIDE 2, cr
 Shows how to connect a **new-generation FANUC Series 500i-A controller** to a HumanOS IoT gateway using
 the **FOCAS3** interface and publish the machine data through the HumanOS OPC-UA server.
 
-Unlike the classic FOCAS2 connection used by the older FANUC examples (e.g. address `NCGUIDE!`),
+Unlike the classic FOCAS2 connection used by the older FANUC examples (e.g. address `focas2://hssb@NCGUIDE`),
 FOCAS3 is a TCP-based protocol that **requires a user login** on the controller. The protocol is selected
 by the `focas3://` address scheme, and the username/password is taken from the project's encrypted
 secret store (`FanucCredentials`), so no credentials are stored in plain text in the device configuration.
@@ -135,7 +135,7 @@ program-related commands.
 
 ## See Also
 
-- [FANUC Data Aggregation](../FANUC.DataAggregation/Readme.md) — classic FOCAS2 connection (`NCGUIDE!`)
+- [FANUC Data Aggregation](../FANUC.DataAggregation/Readme.md) — classic FOCAS2 connection (`focas2://hssb@NCGUIDE`)
 - [FANUC MCP Server](../FanucMcpServer/Readme.md) — FANUC data exposed to AI agents via MCP
 - [FANUC Control Driver Manual](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.UHAL.FanucControl/)
 - [HumanOS Runtime Reference Manual](https://doc.cybertech.swiss/runtime/intro)
