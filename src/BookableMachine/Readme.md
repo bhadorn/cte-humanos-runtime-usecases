@@ -49,7 +49,7 @@ It is built from the [Exchange Agent](../ExchangeAgent/Readme.md) example (same 
 ## Prerequisites
 
 - Everything the [Exchange Agent](../ExchangeAgent/Readme.md#prerequisites) needs, with an **equipment mailbox** (or a room mailbox) for the machine instead of a meeting room. Without a Microsoft 365 tenant you can use the mock server of the Exchange Agent (see [Try it without Microsoft 365](#try-it-without-microsoft-365-mock-server)).
-- The **FANUC NCGuide** simulator (the project is pre-configured for it) **or** a physical FANUC control with FOCAS2 over Ethernet (0i-D/F; the FANUC option *OpenCNC* must be enabled for Ethernet). The FANUC library `fwlib32.dll` must be on the computer. It belongs to FANUC and is **not** part of this repository.
+- The **FANUC NCGuide** simulator (the project is pre-configured for it) **or** a physical FANUC control with FOCAS2 over Ethernet (0i-D/F; the FANUC option *OpenCNC* must be enabled for Ethernet). The FANUC library `Fwlib32.dll` is part of the runtime installation (it was found in the folder of the trial runtime 2.12); it belongs to FANUC and is **not** part of this repository.
 - HumanOS IoT Designer 2.12 (includes the trial runtime), an OPC-UA client such as UaExpert.
 
 ## Project contents
@@ -164,7 +164,7 @@ The device `Machine` is pre-configured for the NCGuide simulator. For a real con
 - **Secret**, if the control asks for authentication: a secret in the secret database and the property `SecretName` of the device (see the [FANUC driver reference](https://doc.cybertech.swiss/runtime/Manuals/HumanOS.UHAL.FanucControl/)). A wrong secret shows as `Authentication error ... EW_AUTH` in the log.
 - The addresses of the nodes (`Nc1.Dynamic.Float64:5` for the running state) are the standard ones of the driver and need no change for 0i-D/F.
 
-NCGuide: the address of the simulator changed in newer runtimes. `focas2://hssb@NCGUIDE` (and the short form `NCGUIDE`) is valid, the old `NCGUIDE!` is **refused** (`Invalid address 'focas2://hssb@NCGUIDE!'`). NCGuide itself and `fwlib32.dll` must be installed, otherwise the driver logs `NCGUIDE not running or driver DLL not available ... EW_MMCSYS` and the usage is `MachineUnknown`.
+NCGuide: the address of the simulator changed in newer runtimes. `focas2://hssb@NCGUIDE` (and the short form `NCGUIDE`) is valid, the old `NCGUIDE!` is **refused** (`Invalid address 'focas2://hssb@NCGUIDE!'`). NCGuide itself must be installed and running, otherwise the driver logs `NCGUIDE not running or driver DLL not available ... EW_MMCSYS` and the usage is `MachineUnknown`.
 
 ## How it works
 
@@ -193,7 +193,7 @@ What was run, and what was not (state of 9 November 2026):
 
 | Symptom                                                        | Cause and remedy                                                                                              |
 | :------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| `Usage` is `MachineUnknown`                                    | The controller is not connected (log of `FanucControlDriver`): NCGuide not running, `fwlib32.dll` missing, wrong address. A first run right after the start can show it once. |
+| `Usage` is `MachineUnknown`                                    | The controller is not connected (log of `FanucControlDriver`): NCGuide or the control not running or not reachable, wrong address. A first run right after the start can show it once. |
 | `Invalid address 'focas2://hssb@NCGUIDE!'`                     | Old address notation. Use `focas2://hssb@NCGUIDE`.                                                            |
 | `Usage` is `BookingUnknown`, `Status` says `Error: ...`        | The calendar could not be read: HTTP 403 (access policy or consent), 404 (wrong `ResourceId`), `AADSTS...` (login). See the troubleshooting of the [Exchange Agent](../ExchangeAgent/Readme.md#troubleshooting). |
 | `Status` says *Not configured*                                 | `ResourceId` of `MachineBooking` is empty or still `<MAILBOX-OBJECT-ID>`. The calendar is not read, the verdict is `BookingUnknown`. |
